@@ -13,26 +13,25 @@
 
 <body>
     <header>
-        <span class="logo">
-            <link rel="stylesheet" href="#"><img src="" alt="logo"></link>
-        </span>
+        <span class="header">
+            <!--crio um span geral para a caixa grande e outros 3 para as caixas de dentro?-->
 
-        <span class="search">
-            <form action="">
+            <!--redirecionar para página inicial-->
+            <a rel="stylesheet" href="#"><img class="logo-loja" src="" alt="logo da loja"></a>
+
+            <form class="search" action="">
                 <label for="search"></label>
                 <input type="text" id="search" name="search" placeholder="pesquisar itens">
-            </form>
-            <!--o ideal seria um botão ou um link?????-->
-            <!-- <link rel="stylesheet" href="#"><img src="../img/logo-lupa.png" alt="pesquisar"></link> -->
-            <button type="submit"><img src="../img/logo-lupa.png" alt="pesquisar"></button>
-        </span>
 
-        <span class="acess-links">
-            <a rel="stylesheet" href="./login.html"><img src="../img/logo-login.png" alt="logo-login"></a>
+                <button type="submit"><img class="logo-pesquisar" src="../img/logo-lupa.png" alt="pesquisar"></button>
+            </form>
+
+            <a rel="stylesheet" href="./login.html"><img class="acess-links" src="../img/logo-login.png" alt="logo-login"></a>
+
             <a rel="stylesheet" href="#"><img src="../img/logo-carrinho.png" alt="logo-carrinho"></a>
         </span>
 
-        <div class="links-tipo-produto">
+        <div class="links-departamentos">
             <span>
                 <!--precisa da tag "link" ou pode usar só a tag "a"?-->
                 <link rel="stylesheet" href=""><a href="https://www.petz.com.br/" target="_blank">Cachorros</a></link>
@@ -52,7 +51,7 @@
             <h2>Acesse sua conta</h2>
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="email@email.com.br">
-        
+
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
 
@@ -65,11 +64,12 @@
 
     <footer>
 
-        <span clas="contato">
-            <link rel="stylesheet" href=""><a href="https://www.google.com.br/maps" target="_blank"><img src="../img/googlemaps.png" alt="mapa de endereço"></a></link>
-            
+        <span class="contato">
             <h3>Endereço:</h3>
-            <p>Rua dos Bobos, 000</p>
+            <p>Rua dos Bobos, 000, Cidade da Fantasia</p>
+            <p>SAC: 0800.000.000</p>
+
+            <a href="https://www.google.com.br/maps" target="_blank"><img class="googlemaps" src="../img/googlemaps.png" alt="mapa de endereço"></a>
         </span>
 
         <span class="links-footer">
@@ -81,9 +81,11 @@
         </span>
 
         <span class="social-medias">
-            <link rel="stylesheet" href="#"><img src="../img/faebook-logo.png" alt="logo-facebook"></link>
-            <link rel="stylesheet" href="#"><img src="../img/instagran-logo.png" alt="logo-instagram"></link>
-            <link rel="stylesheet" href="#"><img src="../img/youtube-logo.png" alt="logo-youtube"></link>
+            <a rel="stylesheet" href="http://www.facebook.com/" target="_blank"><img src="../img/faebook-logo.png" alt="logo-facebook"></a>
+
+            <a rel="stylesheet" href="http://instagram.com/" target="_blank"><img src="../img/instagran-logo.png" alt="logo-instagram"></a>
+
+            <a rel="stylesheet" href="http://youtube.com/" target="_blank"><img src="../img/youtube-logo.png" alt="logo-youtube"></a>
         </span>
 
 
