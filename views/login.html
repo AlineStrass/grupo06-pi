@@ -1,17 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pagina-login.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <title>Página de login</title>
 </head>
+
 <body>
-    <header></header>
+    <header>
+        <span class="logo">
+            <link rel="stylesheet" href="#"><img src="" alt="logo"></link>
+        </span>
 
-    <main></main>
+        <span class="search">
+            <form action="">
+                <label for="search"></label>
+                <input type="text" id="search" name="search" placeholder="pesquisar itens">
+            </form>
+            <!--o ideal seria um botão ou um link?????-->
+            <!-- <link rel="stylesheet" href="#"><img src="../img/logo-lupa.png" alt="pesquisar"></link> -->
+            <button type="submit"><img src="../img/logo-lupa.png" alt="pesquisar"></button>
+        </span>
 
-    <footer></footer>
+        <span class="acess-links">
+            <a rel="stylesheet" href="./login.html"><img src="../img/logo-login.png" alt="logo-login"></a>
+            <a rel="stylesheet" href="#"><img src="../img/logo-carrinho.png" alt="logo-carrinho"></a>
+        </span>
+
+        <div class="links-tipo-produto">
+            <span>
+                <!--precisa da tag "link" ou pode usar só a tag "a"?-->
+                <link rel="stylesheet" href=""><a href="https://www.petz.com.br/" target="_blank">Cachorros</a></link>
+                <a href="https://www.petz.com.br/" target="_blank">Gatos</a>
+                <a href="#" target="_blank">Pássaros</a>
+                <a href="#" target="_blank">Peixes</a>
+                <a href="#" target="_blank">Outros Pets</a>
+                <a href="#" target="_blank">Promoções</a>
+            </span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <form action="">
+            <h2>Acesse sua conta</h2>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@email.com.br">
+        
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <a href="./register.html">Não tem cadastro? Cadastre-se aqui!</a>
+
+    </main>
+
+    <footer>
+
+        <span clas="contato">
+            <link rel="stylesheet" href=""><a href="https://www.google.com.br/maps" target="_blank"><img src="../img/googlemaps.png" alt="mapa de endereço"></a></link>
+            
+            <h3>Endereço:</h3>
+            <p>Rua dos Bobos, 000</p>
+        </span>
+
+        <span class="links-footer">
+            <link rel="stylesheet" href=""><a href="#">Sobre nós</a></link>
+            <link rel="stylesheet" href=""><a href="#">Trocas e devoluções</a></link>
+            <link rel="stylesheet" href=""><a href="#">Fale conosco</a></link>
+            <link rel="stylesheet" href=""><a href="#">Dúvidas frequntes</a></link>
+            <link rel="stylesheet" href=""><a href="#">Trabalhe conosco</a></link>
+        </span>
+
+        <span class="social-medias">
+            <link rel="stylesheet" href="#"><img src="../img/faebook-logo.png" alt="logo-facebook"></link>
+            <link rel="stylesheet" href="#"><img src="../img/instagran-logo.png" alt="logo-instagram"></link>
+            <link rel="stylesheet" href="#"><img src="../img/youtube-logo.png" alt="logo-youtube"></link>
+        </span>
+
+
+    </footer>
 
 </body>
+
 </html>
