@@ -18,10 +18,11 @@ body {
 /* header ----------------------------- */
 header div.logo-site {
     border: none;
-    padding: 15px;
     max-width: 100%;
     width: 1000px;
-    margin: 15px auto;
+    margin: 5px auto;
+    margin-top: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 header a {
@@ -29,6 +30,10 @@ header a {
     margin: 5px auto;
     text-align: center;
     padding: 25px;
+}
+
+header div.logo-site img {
+    width: 90px;
 }
 
 /* formulario ------------------------- */
@@ -44,14 +49,14 @@ main {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     width: 1000px;
-    margin: 15px auto;
+    margin: 5px auto;
 }
 
 
 main form.criar-conta {
     background-color: #6A5495;
     color: #EFEFEF;
-    margin: 15px auto;
+    margin: 5px auto;
     text-align: center;
     padding: 90px;
     display: block;
