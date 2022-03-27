@@ -8,88 +8,41 @@
     <link rel="stylesheet" href="../css/pagina-login.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family= Comfortaa:wght@300;400;700 & display=swap" rel="stylesheet">
+
     <title>Página de login</title>
 </head>
 
 <body>
     <header>
-        <span class="header">
-            <!--crio um span geral para a caixa grande e outros 3 para as caixas de dentro?-->
-
+        <div class="logo-site">
             <!--redirecionar para página inicial-->
-            <a rel="stylesheet" href="#"><img class="logo-loja" src="" alt="logo da loja"></a>
-
-            <form class="search" action="">
-                <label for="search"></label>
-                <input type="text" id="search" name="search" placeholder="pesquisar itens">
-
-                <button type="submit"><img class="logo-pesquisar" src="../img/logo-lupa.png" alt="pesquisar"></button>
-            </form>
-
-            <a rel="stylesheet" href="./login.html"><img class="acess-links" src="../img/logo-login.png" alt="logo-login"></a>
-
-            <a rel="stylesheet" href="#"><img src="../img/logo-carrinho.png" alt="logo-carrinho"></a>
-        </span>
-
-        <div class="links-departamentos">
-            <span>
-                <!--precisa da tag "link" ou pode usar só a tag "a"?-->
-                <link rel="stylesheet" href=""><a href="https://www.petz.com.br/" target="_blank">Cachorros</a></link>
-                <a href="https://www.petz.com.br/" target="_blank">Gatos</a>
-                <a href="#" target="_blank">Pássaros</a>
-                <a href="#" target="_blank">Peixes</a>
-                <a href="#" target="_blank">Outros Pets</a>
-                <a href="#" target="_blank">Promoções</a>
-            </span>
+            <a rel="stylesheet" href="#"><img class="logo-loja" src="../img/logos/logo-loja.jpg" alt="logo da loja"></a>
         </div>
 
     </header>
 
     <main>
 
-        <form action="">
+        <form class="acessar-conta">
             <h2>Acesse sua conta</h2>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="email@email.com.br">
+            <div class="formulario">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="email@email.com.br">
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <label for="senha"></label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            </div>
+            <a href="#">Esqueci minha senha</a>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Entrar</button>
         </form>
 
-        <a href="./register.html">Não tem cadastro? Cadastre-se aqui!</a>
+        <a href="./register.html">Não tem cadastro? Crie uma aqui!</a>
 
     </main>
 
-    <footer>
-
-        <span class="contato">
-            <h3>Endereço:</h3>
-            <p>Rua dos Bobos, 000, Cidade da Fantasia</p>
-            <p>SAC: 0800.000.000</p>
-
-            <a href="https://www.google.com.br/maps" target="_blank"><img class="googlemaps" src="../img/googlemaps.png" alt="mapa de endereço"></a>
-        </span>
-
-        <span class="links-footer">
-            <link rel="stylesheet" href=""><a href="#">Sobre nós</a></link>
-            <link rel="stylesheet" href=""><a href="#">Trocas e devoluções</a></link>
-            <link rel="stylesheet" href=""><a href="#">Fale conosco</a></link>
-            <link rel="stylesheet" href=""><a href="#">Dúvidas frequntes</a></link>
-            <link rel="stylesheet" href=""><a href="#">Trabalhe conosco</a></link>
-        </span>
-
-        <span class="social-medias">
-            <a rel="stylesheet" href="http://www.facebook.com/" target="_blank"><img src="../img/faebook-logo.png" alt="logo-facebook"></a>
-
-            <a rel="stylesheet" href="http://instagram.com/" target="_blank"><img src="../img/instagran-logo.png" alt="logo-instagram"></a>
-
-            <a rel="stylesheet" href="http://youtube.com/" target="_blank"><img src="../img/youtube-logo.png" alt="logo-youtube"></a>
-        </span>
-
-
-    </footer>
 
 </body>
 
