@@ -1,0 +1,195 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Comfortaa', cursive;
+    background-color: #D1D1D1;
+}
+
+header{
+    box-shadow: 0 10px 0 rgb(211, 16, 136); /*sombra entre header e section*/
+    background-color: #6A5495; 
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    justify-content: space-around; /*usado para alinhar os elementos ao longo do eixo principal */
+    padding: 30px 0px;
+    flex-direction: row;
+    flex wrap: nowrap;
+
+}
+
+header img{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:#8BDB81;
+    padding: 20px
+}
+
+header button{
+
+    width: 8%;
+    background-color: #8BDB81;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+}
+
+
+.meus-dados{
+    display: flex;
+    flex-direction: column; 
+    align-items: left;
+    justify-content: center; 
+    width: 100%;
+    margin-top: 0vh;
+
+}
+
+h2{
+    padding: 10px 0 20px 0;
+    font-weight: bold;
+    justify-content: center;
+}
+
+section button{
+    width: 8%;
+    background-color: #8BDB81;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+section div{
+ 
+    padding: 10px 0 2px 0px;
+    font-weight: bold;
+    background-color: #D1D1D1;
+}
+
+h3{
+    padding: 10px 0 20px 0;
+    font-weight: bold; 
+    justify-content: center;
+    font-size: 25px;
+    
+}
+
+.historico-de-compras {
+    display: flex;
+    font-weight: bold;  
+    align-items: left;
+    justify-content: center; 
+    flex-direction: column; 
+    width: 100%;
+    margin-top: 0vh;
+    background-color: #E7ED9B
+}
+
+main ul{
+    display: flex; 
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0px;
+    flex-direction: row;
+    flex wrap: nowrap;
+    padding: 5px 30px 5px 10px;
+    
+}
+
+#btn-1 {
+    width: 8%;
+    background-color: #ED5EDD;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer; 
+    height: 50px;
+   
+}
+
+#btn-2{
+    width: 10%; /*tamanho do botão*/
+    background-color: #ED5EDD;
+    border-radius: 40px; /*circulo em volta*/
+    font-weight: bold; 
+    cursor: pointer; 
+    height: 50px; /*altura dos boxes*/
+
+    
+}
+
+h4{
+    padding: 10px 0 20px 0;
+    font-weight: bold; 
+    justify-content: center;
+    font-size: 25px;
+    
+}
+
+h5{
+    padding: 10px 0 10px 0;
+    font-weight: bold; 
+    justify-content: center;
+    font-size: 25px;
+    background-color: #6A5495; 
+}
+
+.contato p{
+    font-weight: bold; 
+    background-color: #6A5495; 
+    
+}
+
+
+.social-medias img{
+    
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    width: 100px;
+    padding: 20px;
+
+ 
+}
+
+.links-footer a{
+
+    display: inline-block;
+    color:#8BDB81;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-wrap: center; 
+    background-color: #6A5495; 
+    text-decoration: none;
+
+
+} 
+
+
+
+
+
+
+
+
+
+/*.mapa{
+  width: 50px;
+  height: 50px;
+}/*
