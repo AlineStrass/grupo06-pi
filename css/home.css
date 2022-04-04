@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: comfortaa;
+    background: #EFEFEF;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: #6A5495;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+ol{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+    display: flex;
+    width: 100%;
+    background-color: #6A5495;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+ol li{
+    margin: 0 2px;
+    margin-bottom: 15px;
+}
+
+ol li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+ol li:hover a{
+    background: #fff;
+    color: #6A5495; 
+}
+.barra-de-pesquisa{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+
+}    
+
+.barra-de-pesquisa input{
+    border:none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+
+.barra-de-pesquisa button{
+    cursor: pointer;
+    color: white;
+    background-color:#6A5495;
+    font-size: 20px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+
+
+.barra-de-pesquisa input{
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+}
+
+.barra-de-pesquisa button{
+    border: none;
+}
+
+.perfil button{
+    font-size: 50px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    
+}
+
+.carrinho-de-compras button{
+    font-size: 50px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    
+}
+
+button:hover{
+    background: #fff;
+    color: #6A5495;
+}
+
+section.banner .carousel{
+    width: 907px;
+}
+
+section.banner .carousel>img{
+    width: 100%;
+}
+
+section.banner .carousel{
+    margin: auto auto;
+    position: relative;
+}
+
+section.banner .carousel .controls{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.banner .carousel .controls button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border:none;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+section.banner .carousel .controls button img{
+    width: 15px;
+}
+
+section.produtos .container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+section.produtos article{
+    width: 350px;
+    background-color: rgb(189, 189, 189);
+}
+
+section.produtos article img{
+    width: 125px;
+    height: 250px;
+
+}
+
+section.produtos article  .info{
+    padding: 15px;
+}
+
+section.produtos article  .info>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.produtos article .price{
+    font-size: 25px;
+    color: black;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+footer{
+    background-color: #6A5495;
+    color: #fff;
+    padding: 50px 50px;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .container .mapa iframe{
+    border-radius: 10px;
+    height: 300px;
+}
+
+footer a{
+    color:#fff;
+}
+
+footer .social-medias ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-medias button{
+    font-size: 30px;
+    border: solid transparent;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+    background-color:#6A5495;
+    font-size: 20px;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+footer .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 800px){
+    footer .container{
+        flex-wrap: wrap;
+        padding: 0 50px;
+        justify-content: center;
+    }
+
+
+    footer .container .mapa iframe{
+        max-width: 100%
+    }
+
+    footer .container .info{
+        text-align: center;
+    }
+
+    footer .container .info .social-medias ul{
+        justify-content:center;
+    }
+
+    section.lofts article{
+        margin: 10px;
+    }
+
+    .container{
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 600px){
+    section.lofts .container{
+        flex-wrap: wrap;
+    }
+
+    section.lofts article{
+        width: 100%;
+    }
+}
