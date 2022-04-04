@@ -15,25 +15,22 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo-site">
-            <!--redirecionar para página inicial-->
-            <a rel="stylesheet" href="#"><img class="logo-loja" src="../img/logos/logo-fundo-roxo.jpg" alt="logo da loja"></a>
+    <header class="menu-principal">
+        <img class="logo" src="../img/logos/logo-roxo-escrita-em-baixo.jpg" alt="logo">
+        <div class="barra-de-pesquisa">
+            <input class="search-txt" type="text" name="" placeholder="O que seu pet precisa?" required />
+            <button type="submit"><img class="fas fa-search"></img></button>
+        </div>
+        <div class="perfil">
+            <button type="submit"><i class="fa-solid fa-user"></i></button>
+        </div>
+
+        <div class="carrinho-de-compras">
+            <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
     </header>
 
     <main>
-    <div class="carrossel">
-        <p>Aproveite e leve também</p>
-        <section class="imagens-carrossel">
-            <div class="fotos">
-                <img src="../img/imagens-carrossel/arranhador.png" alt="foto1">
-                <img src="../img/imagens-carrossel/pedigree-lata.jpg" alt="foto2">
-                <img src="../img/imagens-carrossel/toca-gato.webp" alt="foto3">
-                <img src="../img/imagens-carrossel/wiskas-gato-lata.png" alt="foto4">
-                <img src="../img/imagens-carrossel/arranhador.png" alt="foto1">
-            </div>
-        </section>
 
         <section class="cesta-produtos">
 
@@ -61,7 +58,49 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <section class="container">
+
+            <div class="localizacao">
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29259.124051186343!2d-46.634810433842276!3d-23.554414419392366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1648321963229!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contato">
+                    <p>Endereço:</p>
+                    <p>Rua dos Bobos, 000, Cidade da Fantasia</p>
+                    <p>
+                        <a href="tel:0800000000">SAC: 0800.000.000</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="links-footer">
+                <link rel="stylesheet" href=""><a href="#">Sobre nós</a></link>
+                <link rel="stylesheet" href=""><a href="#">Trocas e devoluções</a></link>
+                <link rel="stylesheet" href=""><a href="#">Fale conosco</a></link>
+                <link rel="stylesheet" href=""><a href="#">Dúvidas frequntes</a></link>
+                <link rel="stylesheet" href=""><a href="#">Trabalhe conosco</a></link>
+            </div>
+
+            <div class="social-medias">
+                <ul>
+                    <li><a rel="stylesheet" href="http://www.facebook.com/" target="_blank"><img
+                                src="../img/logos/faebook-logo.png" alt="logo-facebook"></a></li>
+
+                    <li><a rel="stylesheet" href="http://instagram.com/" target="_blank"><img
+                                src="../img/logos/instagran-logo.png" alt="logo-instagram"></a></li>
+
+                    <li><a rel="stylesheet" href="http://youtube.com/" target="_blank"><img
+                                src="../img/logos/youtube-logo.png" alt="logo-youtube"></a></li>
+                </ul>
+
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>
