@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do Usuario</title>
-    <link rel="stylesheet" href="../css/painelUsuario.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f981ec0698.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/painelUsuario.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@400;700&display=swap');
+        </style>
+    
+        <title>Happy Pet</title>
+    
+    </head>
+    
+
 <body>
-  <header>
-        <h1>Nosso Pet</h1>
+ <!-- MEU HEADER
+     
+    <header>
+        <h1>HAPPY PET</h1>
         <p>Seu pet, sempre happy!</p>
         <img src="../img/logo-loja.jpg"  alt="img de animais">
         
@@ -24,72 +34,106 @@
          <button>perfil</button>
          <button>carrinho</button>
 
-    </header>  
+    </header>  -->
+
+    <!--header do Pablo-->
+    
+
+        <header class="menu-principal">
+            <img class="logo" src="../img/logo.jpg" alt="logo">
+           
+            <div class="barra-de-pesquisa">
+                <input class="search-txt" type="text" name="" placeholder="O que seu pet precisa?" required />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="perfil">
+                <button type="submit"><i class="fa-solid fa-user"></i></button>
+            </div>
+    
+            <div class="carrinho-de-compras">
+                <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </header>
+    
+        <section class="coisas">
+            <div class="servicos"></div>
+            <ol>
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Outros Pets</a></li>
+                <li><a href="#">Raças</a></li>
+                <li><a href="#">Marcas</a></li>
+                <li><a href="#">Acessorios</a></li>
+    
+            </ol>
+        </section>
 
 <section class ='meus-dados'>
- <h2>MEUS DADOS</h2>
- 
-    <div class = 'nome'>Nome Completo*
-    <input type="nome" name="nome" placeholder="Digite seu nome completo"
-    <div/>
+  <h2>MEUS DADOS</h2>
+</section>
 
-    <Data class = 'data de nascimento'>Data de nascimento*
-    <input type="nascimento" name="data de nascimento" placeholder="Digite seu nascimento"
+<section class ='dados-container'>
+    
+
+    <div class = 'nome'>Nome Completo*
+       <input type="text" required
+       name="nome" placeholder="Digite seu nome completo">
+    </div>
+
+    <div class = 'data-de-nascimento'>Data de nascimento*
+       <input type="text" name="data de nascimento" placeholder="Digite seu nascimento">
     </div>
   
-    <div class = 'Sua Foto'>Sua foto*
-    <input type="Sua foto" name="Sua foto" placeholder="Sua FOTO aqui"
+    <div class = 'SuaFoto'>Sua foto*
+       <input type="text" name="Sua foto" placeholder="Sua FOTO aqui">
     </div>
 
     <div class = 'telefone'>DDD + Telefone*
-    <input type="telefone" name="telefone" placeholder="DDD + Telefone"
+    <input type="text" name="telefone" placeholder="DDD + Telefone">
     </div>
   
     <div class = 'sexo'>Sexo*
-    <input type="sexo" name="sexo" placeholder="Sexo"
+    <input type="text" name="sexo" placeholder="Sexo">
     </div>
   
     <div class = 'cpf'>CPF*
-    <input type="cpf" name="cpf" placeholder="Seu CPF"
+    <input type="text" name="cpf" placeholder="Seu CPF">
     </div>
 
     <div class = 'senha'>Senha*
-    <input type="senha" name="senha" placeholder="Digite sua SENHA"
+    <input type="text" name="senha" placeholder="Digite sua SENHA">
     </div>
  
-    <div class = 'confirmar senha'>Confirme sua Senha*
-    <input type="conf senha" name="conf senha" placeholder="Digite sua SENHA novamente"
+    <div class = 'confirmar-senha'>Confirme sua Senha*
+    <input type="text" name="conf senha" placeholder="Digite sua SENHA novamente">
     </div>
     
     <div class = 'endereco'>Endereço*
-    <input type="endereco" name="endereco" placeholder="Digite sua Endereço"
+    <input type="text" name="endereco" placeholder="Digite sua Endereço">
     </div>
     
     <div class = 'cep'>CEP*
-    <input type="cep" name="cep" placeholder="Digite seu CEP"
+    <input type="text" name="cep" placeholder="Digite seu CEP">
     </div>
-  
+    
     <button>salvar</button>
 
 </section>
 
-<main class = "historico-de-compras">
-  <h3>Histórico de compras</h3>
-
-  <ul>
-      <li>Número-17151821
-      </li>
-      <li>Data-13/03/2022
-      </li>
-      <li>Total-R$65,00
-      </li>
-      <li>Status-Entregue
-      </li>
-      <li>Detalhes-Finalizado
-      </li>
-  </ul>
+<div class = 'container pedidos'> 
+    <h3>Resumo do pedido</h3>
+</div>
+<div class = 'container-resumo'>
+  <thead>
+      <th>Número</th>
+      <th>Data</th>
+      <th>Status</th>
+      <th id="detalhes-do-pedido">Detalhes</th>
+     
+    </thead>
+</div>
 <span class = "resumo-do-pedido">
-  <h4>Resumo do pedido</h4>
+
    
   <p>Osso Bonpet Natural para Cão
       <ul>Quantidade
@@ -108,7 +152,9 @@
 <button id="btn-2">Ver mais Detalhes</button>
 
  </main>
-<footer>
+<!-- MEU FOOTER
+    
+    <footer>
     
     <span class="contato">
         <h5>Endereço:</h5>
@@ -124,13 +170,9 @@
             <link rel="stylesheet" href=""><a href="#">Dúvidas frequntes</a></link>
             <link rel="stylesheet" href=""><a href="#">Trabalhe conosco</a></link>
         
-    </span>
+    </span> 
 
-    <!--<div class="mapa">
-    <a href="https://www.google.com.br/maps" target="_blank"><img class="googlemaps" src="../img/googlemaps.png" alt="mapa de endereço"></a>
-    </div>-->
-  
-    <span class="social-medias">
+     <span class="social-medias">
        
         <a rel="stylesheet" href="http://www.facebook.com/" target="_blank"><img src="../img/faebook-logo.png" alt="logo-facebook"></a>
 
@@ -139,8 +181,56 @@
         <a rel="stylesheet" href="http://youtube.com/" target="_blank"><img src="../img/youtube-logo.png" alt="logo-youtube"></a>
       
     </span>
+-->
 
+    <!--<div class="mapa">
+    <a href="https://www.google.com.br/maps" target="_blank"><img class="googlemaps" src="../img/googlemaps.png" alt="mapa de endereço"></a>
+    </div>-->
+  
+   
+    <footer>
+        <div class="container">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.372172194117!2d-46.798959485020994!3d-23.626839084650385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5492713d128d%3A0x32379aed41a05d93!2sR.%20Est%C3%A2ncia%20Velha%2C%20215%20-%20Jardim%20Record%2C%20Tabo%C3%A3o%20da%20Serra%20-%20SP%2C%2006784-160!5e0!3m2!1spt-BR!2sbr!4v1648335925608!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  </footer>
+            </div>
+
+            <div class="info">
+
+                <p>Happy Pet <br> <br> Seu bicho feliz :)</p>
+                <p>São Paulo, Brasil</p>
+
+                <p><a href="tel:+55986494613">+ (11) 98649-4613</a></p>
+                <p><a href="mailto:bichofeliz@gmail.com">bcihofeliz@gmail.com</a></p>
+
+                <h4>Nossas redes sociais</h4>
+                <div class="social-medias">
+                    <ul>
+                        <li>
+                            <a href="" target="_blank">
+                                <button class="fa-brands fa-whatsapp"></button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <button class="fa-brands fa-instagram"></button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <button class="fa-brands fa-facebook"></button>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
  </body>
 </html>
