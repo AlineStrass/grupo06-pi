@@ -42,19 +42,6 @@ header div.logo-site img {
     margin-top: 5px;
 }
 
-/* carrosse -------------------------- */
-/*
-main section.imagens-carrossel {
-    width: 640px;
-    height: 160px;
-    overflow: hidden;
-}
-
-.imagens-carrossel .fotos {
-    border: solid 1px;
-    width: 500%;
-}
-*/
 
 /* cesta produtos ---------------------- */
 section.cesta-produtos{
@@ -67,13 +54,16 @@ section div.lista-produtos {
     margin: 10px 0;
     padding: 10px;
     font-size: 15px;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-around;
+    width: 70%;
+    margin-bottom: 100px;
 }
 
 section div p {
-    
-
+    font-size: 17px;
+    margin: 10px;
+    padding: 5px;
+    justify-content: left;
 }
 
 
@@ -81,19 +71,28 @@ section div p {
 /* frete  ---------------------- */
 section div.frete {
     display: block;
-    margin: 10px 0;
-    padding: 10px;
+    margin: 20px;
+    font-size: 17px;
+    
+}
+
+section div.frete p{
+    display: block;
+    padding:0;
+    margin-top: 0;
     font-size: 15px;
 }
 
 section div input {
-    width: 80px;   
+    width: 90px; 
+    margin: 10px;
+    text-align: center;
 }
 
 button.continuar {
     cursor: pointer;
     display: block;
-    margin: 30px auto;
+    margin: 30px;
     padding: 7px 50px;
     border-radius: 5px;
     margin-top: 30px;
@@ -105,5 +104,5 @@ button.continuar {
 button.continuar:hover {
     opacity: 0.9;
     padding: 9px 52px;
-    margin: 28px auto;
+    margin: 28px;
 }
