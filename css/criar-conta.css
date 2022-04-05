@@ -9,10 +9,9 @@ body {
     font-family: 'Confortaa', cursiva;
     background-color: #EFEFEF;
     display: block;
-    justify-content: center;
+    /*justify-content: center;*/
     height: 100vh;
     overflow-x: hidden;
-    /*overflow-y: hidden;*/
 }
 
 /* header ----------------------------- */
@@ -54,6 +53,8 @@ main {
 
 
 main form.criar-conta {
+    align-content: space-between;
+    
     background-color: #6A5495;
     color: #EFEFEF;
     margin: 5px auto;
@@ -74,14 +75,17 @@ main form h2 {
 }
 
 main form div.dados-cadastrais {
+    flex-wrap: wrap;
     padding-bottom: 0.2px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: row;
     text-align: center;
-    
+    justify-content: space-evenly
 }
 
 main form input {
+    flex-wrap: wrap;
+    flex-direction: row;
     background-color: #EFEFEF;
     margin: 10px 50px;
     text-align: center;
@@ -89,8 +93,9 @@ main form input {
     font-size: 15px;
     border-radius: 5px;
     border: none;
-    display: inline-block;
+    display: block;
 }
+
 
 main a {
     font-size: 15px;
@@ -105,6 +110,7 @@ main a:hover {
 main p {
     font-size: 15px;
     color: #EFEFEF;
+    margin-top: 20px;
 }
 
 form button {
@@ -125,3 +131,20 @@ form button:hover {
     margin: 28px auto;
 }
 
+/* responsivo ------------------------ */
+@media (max-width: 500px) {
+    main form.acessar-conta {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body {
+        height: 90vh;
+    }
+
+    main form h2 {
+        font-size: 27px;
+   
+    }
+}
