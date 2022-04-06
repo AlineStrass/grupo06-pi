@@ -12,6 +12,7 @@ body{
 header{
     display: flex;
     width: 100%;
+    max-width: 100%;
     background-color: #6A5495;
     position: relative;
     justify-content: space-between;
@@ -93,7 +94,7 @@ ol li:hover a{
 .barra-de-pesquisa input, .barra-de-pesquisa button{
     font-size: 20px;
     border: none;
-    padding: 5px;
+    padding: 15px;
 
 }
 
@@ -160,9 +161,12 @@ header button{
     border:10px;
     width: 100%;
     float: left;
-    margin-top: 20px; 
-    margin-block-end: 20px; 
+    margin-top: 10px; 
+    margin-block-end: 20px;
+    text-align: left;
+    margin-left: 30px; 
 }
+
 
 .dados-container{
     
@@ -174,21 +178,25 @@ header button{
     border: 5px solid #6A5495 
 }
 
+
 section button{
     width: 15%;
-    background-color: rgb(184, 129, 172);
+    background-color: #ED5EDD;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     height: 40px;
-    margin: 2%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 2%;
+
     padding: 10px;
     
     
 }
 
 
-input[type="text"]{
+input[type='text']{
     display: block;
     width: 70%;
     height: 40px; 
@@ -209,14 +217,17 @@ input[type="text"]{
 
     }
 
-.container-pedidos{
-    width:100%;
-    
-    }
+.logo-perfil img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
 
 /*até aqui dados MEU CADASTRO */
 
 
+
+@media (max-width: 800px){
 .container.pedidos{
     
     width: 100%;
@@ -224,7 +235,41 @@ input[type="text"]{
     padding-right: 10%;
     padding-left: 10%;
     background-color: #D1D1D1;
+}  
+}
+
+.container.pedidos{ 
     
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 20px;
+    text-align: left;
+    margin-left: 30px;
+    font-size: 25px; 
+
+}
+
+.container-resumo{
+
+    font-size: bold;
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 30px;
+    text-align: left;
+    margin-left: 30px;
+    display: flex;
+}
+
+.click-pedido{
+    display: inline;
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 30px;
+    text-align: left;
+    margin-left: 30px;
 }
 
 

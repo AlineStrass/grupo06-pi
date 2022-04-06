@@ -72,81 +72,104 @@
   <h2>MEUS DADOS</h2>
 </section>
 
+
+
 <section class ='dados-container'>
+   <form> 
+    <div class = 'logo-perfil'>
+  
+        <img src="https://images.unsplash.com/photo-1582415892501-9d50fafdbd9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" srcset="">
+     
+     </div>
+
+
+    <label for = 'nome'>Nome Completo*</label>
+       <input type="text" id="nome"
+       name="nome" placeholder="Digite seu nome completo" required>
+
+
+    <label for = 'data-de-nascimento'>Data de nascimento*</label>
+       <input type="text" id="data-de-nascimento" 
+       name="data de nascimento" placeholder="Digite seu nascimento" required>
+  
+  
+    <label for= 'Email'>Seu e-mail*</label>
+       <input type="text" id="email"
+       name="email" placeholder="Seu e-mail aqui" required>
+   
+    <label for= 'telefone'>DDD + Telefone*</label>
+    <input type="text" id="telefone"
+     name="telefone" placeholder="DDD + Telefone" required>
+    
+  
+    <label for= 'sexo'>Sexo*</label>
+    <input type="text" id='sexo'
+    name="sexo" placeholder="Sexo" required>
+    
+  
+    <label for='cpf'>CPF*</label>
+    <input type="text" id='cpf'
+    name="cpf" placeholder="Seu CPF" required>
     
 
-    <div class = 'nome'>Nome Completo*
-       <input type="text" required
-       name="nome" placeholder="Digite seu nome completo">
-    </div>
-
-    <div class = 'data-de-nascimento'>Data de nascimento*
-       <input type="text" name="data de nascimento" placeholder="Digite seu nascimento">
-    </div>
-  
-    <div class = 'SuaFoto'>Sua foto*
-       <input type="text" name="Sua foto" placeholder="Sua FOTO aqui">
-    </div>
-
-    <div class = 'telefone'>DDD + Telefone*
-    <input type="text" name="telefone" placeholder="DDD + Telefone">
-    </div>
-  
-    <div class = 'sexo'>Sexo*
-    <input type="text" name="sexo" placeholder="Sexo">
-    </div>
-  
-    <div class = 'cpf'>CPF*
-    <input type="text" name="cpf" placeholder="Seu CPF">
-    </div>
-
-    <div class = 'senha'>Senha*
-    <input type="text" name="senha" placeholder="Digite sua SENHA">
-    </div>
+    <label for= 'senha'>Senha*</label>
+    <input type="text" id="senha"
+    name="senha" placeholder="Digite sua SENHA" required>
+    
  
-    <div class = 'confirmar-senha'>Confirme sua Senha*
-    <input type="text" name="conf senha" placeholder="Digite sua SENHA novamente">
-    </div>
+    <label for= 'confirmar-senha'>Confirme sua Senha*</label>
+    <input type="text" id="confirmar senha"
+    name="conf senha" placeholder="Digite sua SENHA novamente" required>
     
-    <div class = 'endereco'>Endereço*
-    <input type="text" name="endereco" placeholder="Digite sua Endereço">
-    </div>
     
-    <div class = 'cep'>CEP*
-    <input type="text" name="cep" placeholder="Digite seu CEP">
-    </div>
+    <label for= 'endereco'>Endereço*</label>
+    <input type="text" id="endereço"
+    name="endereco" placeholder="Digite sua Endereço" required>
+    
+    
+    <label for= 'cep'>CEP*</label>
+    <input type="text" id="CEP"
+    name="cep" placeholder="Digite seu CEP" required>
+    
     
     <button>salvar</button>
 
+</form>
 </section>
 
-<div class = 'container pedidos'> 
-    <h3>Resumo do pedido</h3>
-</div>
-<div class = 'container-resumo'>
-  <thead>
-      <th>Número</th>
-      <th>Data</th>
-      <th>Status</th>
-      <th id="detalhes-do-pedido">Detalhes</th>
-     
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
     </thead>
-</div>
-<span class = "resumo-do-pedido">
-
-   
-  <p>Osso Bonpet Natural para Cão
-      <ul>Quantidade
-          <il>Preço-R$25,00</il> 
-      </ul>
-  </p>
-
-  <p>Fungicida Forth 500ml
-      <ul>Quantidade
-          <il>Preço-R$40,00</il>
-      </ul>
-  </p>
-</span>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
 
 <button id="btn-1">Repetir Pedido</button>
 <button id="btn-2">Ver mais Detalhes</button>
