@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+/*até aqui DADOS DO HEADER*/
+
+.dados-container{
+
+    width: 100%;
+    margin: center;
+    padding-right: 200px;
+    padding-left: 400px;
+    background-color: #EFEFEF;
+    border: 5px solid #6A5495;
+}
+/* css do botao de salvar dos meus dados */
+#submit-button{
+    padding: 10px 80px;
+    border-radius: 4px;
+    background-color: #6A5495;
+    border: none;
+}
+#submit-button:hover{
+    background-color: #4d3a74;
+}
+/* css do botao de salvar dos meus dados */
+/* css do botao de resumoo do pedido */
+button#pedido{
+    background: #6A5495;
+    border: none;
+}
+/* css do botao de resumoo do pedido */
+.dados-container div{
+ font-size: 100%;
+ margin: auto;
+}
+/* -----------------INICIO AJUSTES ALINE  -------------------*/
+.paine-usuario-conteudo h2, label, select.form-control, input.form-control {
+    color: #6A5495;
+}
+
+
+
+th, td {
+    color: #6A5495;
+}
+
+
+#button-detalhes {
+    background-color: #ED5EDD;
+}
+
+
+
+/* -----------------FIM AJUSTES ALINE  -------------------*/
+
+/*até aqui dados MEU CADASTRO */
+@media (max-width: 800px){
+.container.pedidos{
+    width: 100%;
+    margin: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+    background-color: #EFEFEF;
+}  
+}
+.container.pedidos{ 
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 20px;
+    text-align: left;
+    margin-left: 30px;
+    font-size: 25px; 
+}
+.container-resumo{
+    font-size: bold;
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 30px;
+    text-align: left;
+    margin-left: 30px;
+    display: flex;
+}
+.click-pedido{
+    display: inline;
+    border:10px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-block-end: 30px;
+    text-align: left;
+    margin-left: 30px;
+}
