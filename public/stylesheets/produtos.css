@@ -33,27 +33,33 @@
 }
 
 #img-1{
-    background-image: url('../img/produtos/racao1.jpg');
+    background-image: url('/images/produtos/racao1.jpg');
+    width: 100%;
 }
 
 #img-2{
-    background-image: url('../img/produtos/casarosa2.jpg');
+    background-image: url('/images/produtos/casarosa2.jpg');
+    width: 100%;
 }
 
 #img-3{
-    background-image: url('../img/produtos/toalha3.jpg');
+    background-image: url('/images/produtos/toalha3.jpg');
+    width: 100%;
 }
 
 #img-4{
-    background-image: url('../img/produtos/caixatrans4.jpg');
+    background-image: url('/images/produtos/caixatrans4.jpg');
+    width: 100%;
 }
 
 #img-5{
-    background-image: url('../img/produtos/maquinatosa5.jpg');
+    background-image: url('/images/produtos/maquinatosa5.jpg');
+    width: 100%;
 }
 
 #img-6{
-    background-image: url('../img/produtos/cama6.jpg');
+    background-image: url('/images/produtos/cama6.jpg');
+    width: 100%;
 }
 
 h3{
@@ -75,7 +81,7 @@ h3{
     text-transform: uppercase;
     text-decoration: none;
     background-color: #6A5495;
-    color: #fff;
+    color: #EFEFEF;
     padding: 15px;
     border-radius: 5px;
     transition: .5s;
@@ -83,4 +89,8 @@ h3{
 
 .btn:hover{
     background-color: #403653;
+}
+
+p.prosutos, span {
+    color: #6a5495;
 }
