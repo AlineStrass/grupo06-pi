@@ -48,6 +48,13 @@ header .container-header .logo-header img {
     width: 270px;
     height: 28px;
 }
+
+.barra-de-pesquisa button {
+    height: 35px;
+    width: 35px;
+
+}
+
 .fa-solid {
     color: #EFEFEF;
 }
