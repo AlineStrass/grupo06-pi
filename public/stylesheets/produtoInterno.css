@@ -44,7 +44,7 @@ h2, h3, h4, li {
     color: #6A5495;
 }
 
-.flex-container {
+.flex-container-produtointerno {
     display: flex;
     align-items: center;
     justify-content:space-around;
