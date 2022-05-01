@@ -21,7 +21,7 @@ header {
     border-bottom: 2px solid #ED5EDD;
 }
 
-.logo {
+.logo-carrinho {
     color: #6A5495;
     padding-top: 0;
     border-top: 0;
@@ -29,19 +29,19 @@ header {
     height: 50px;
 }
 
-.logo h2 {
+.logo-carrinho h2 {
     font-weight: normal;
     color: #6A5495;
 }
 
-.logo img {
+.logo-carrinho img {
     width: 200px;
     padding-top: 0;
     border-top: 0;
     height: 100px;
 }
 
-.menu {
+.menu-carrinho {
     width: 90%;
     text-align: right;
     color: #EFEFEF;
@@ -49,7 +49,7 @@ header {
     margin-top: 25px;
 }
 
-.menu a {
+.menu-carrinho a {
     color: #EFEFEF;
     font-size: 14px;
     text-decoration: none;
@@ -57,11 +57,11 @@ header {
     transition: 0.4s;
 }
 
-.menu a:hover {
+.menu-carrinho a:hover {
     color: #ED5EDD;
 }
 
-.menu .btn-menu {
+.menu-carrinho .btn-menu-carrinho {
     background-color: #EFEFEF;
     display: inline-block;
     padding: 8px 16px;
@@ -69,39 +69,39 @@ header {
     border-radius: 5px;
 }
 
-.menu .btn-menu:hover {
+.menu-carrinho .btn-menu-carrinho:hover {
     background-color: #ED5EDD;
     color: #EFEFEF;
 }
 
-/* Section Main */
+/* Section main-carrinho */
 
-section.main {
+section.main-carrinho {
     padding: 5px 0px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.main__cta {
+.main-carrinho__cta {
     width: 100%;
     margin: 60px 0;
     text-align: center;
 }
 
-.main__cta h2 {
+.main-carrinho__cta h2 {
     color: #6A5495;
     font-size: 40px;
 }
 
-.main__cta p {
+.main-carrinho__cta p {
     color: #6A5495;
     font-size: 19px;
     margin: 10px 0 50px 0;
 
 }
 
-button {
+button.calcular-frete-carrinho {
     background-color: #6A5495;
     display: inline-block;
     padding: 8px 30px;
@@ -117,7 +117,14 @@ button:hover {
     background-color: #ED5EDD;
 }
 
-.section {
+section.finalizacao-container-carrinho {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+
+}
+
+section.escolher-carrinho{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;

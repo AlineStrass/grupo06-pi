@@ -74,7 +74,7 @@ main form h2 {
 
 }
 
-main form div.dados-cadastrais {
+main form div.dados-cadastrais-conta {
     flex-wrap: wrap;
     padding-bottom: 0.2px;
     display: flex;
