@@ -8,7 +8,16 @@
 body {
     font-family: 'Confortaa', cursiva;
     background: #EFEFEF;
+
+   /* BODY do css de CRIAR CONTA
+   
+   display: block;
+    /*justify-content: center;
+    height: 100vh;
+    overflow-x: hidden*/
+
 } 
+
 
 /*estilo Página PRODUTOS*/
 
@@ -102,8 +111,15 @@ body {
     color: #6a5495;
 }
 
-/*pagina de finalizacao,FINALIZAR,OBRIGADO,CARRINHO*/
+/*CSS de FINALIZAR,OBRIGADO e CARRINHO*/
 
+
+
+header.finalizacao { /*header*/
+    background-color: #6A5495;
+    padding: 30px 0;
+    border-bottom: 2px solid #ED5EDD;
+}
 
 .center-finalizacao{
     max-width: 1100px;
@@ -115,30 +131,12 @@ body {
 
 }
 
-header {
-    background-color: #6A5495;
-    padding: 30px 0;
-    border-bottom: 2px solid #ED5EDD;
-}
-
 .logo-finalizacao {
     color: #6A5495;
     padding-top: 0;
     border-top: 0;
     width: 50px;
     height: 50px;
-}
-
-.logo-finalizacao h2 {
-    font-weight: normal;
-    color: #6A5495;
-}
-
-.logo-finalizacao img {
-    width: 200px;
-    padding-top: 0;
-    border-top: 0;
-    height: 100px;
 }
 
 .menu-finalizacao {
@@ -174,7 +172,20 @@ header {
     color: #EFEFEF;
 }
 
-/* Section main-finalizacao */
+
+.logo-finalizacao h2 {
+    font-weight: normal;
+    color: #6A5495;
+}
+
+.logo-finalizacao img {
+    width: 200px;
+    padding-top: 0;
+    border-top: 0;
+    height: 100px;
+}
+
+/* -------------Section main-finalizar */
 
 section.main-finalizacao {
     padding: 5px 0px;
@@ -201,7 +212,7 @@ section.main-finalizacao {
 
 }
 
-button.calcular-frete-finalizacao {
+button.calcular-frete-carrinho {
     background-color: #6A5495;
     display: inline-block;
     padding: 8px 30px;
@@ -217,14 +228,14 @@ button:hover {
     background-color: #ED5EDD;
 }
 
-section.finalizacao-container-finalizacao {
+section.finalizacao-container {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
 
 }
 
-section.escolher-finalizacao{
+section.escolher-carrinho{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
@@ -268,9 +279,30 @@ input {
     height: 30px;
 }
 
-/*CRIARCONTA*/
+/*css da CRIARCONTA*/
 
+/* header ----------------------------- */
+header div.logo-site {
+    border: none;
+    max-width: 100%;
+    width: 1000px;
+    margin: 5px auto;
+    margin-top: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
 
+header a {
+    text-decoration: none;
+    margin: 5px auto;
+    text-align: center;
+    padding: 25px;
+}
+
+header div.logo-site img {
+    width: 90px;
+}
+
+/* formulario ------------------------- */
 main {
     background-color: #6A5495;
     text-align: center;
@@ -462,7 +494,12 @@ form button:hover {
     margin: 28px auto;
 }
 
-/*PRODUTOINTERNO*/
+
+
+/*Css da PRODUTOINTERNO*/
+
+/* ---------as section não estão no PRODUTOINTERNO.EJS, eram referente ao HEADER??------*/
+
 section.produtos .container{
     display: flex;
     justify-content: space-between;
@@ -496,18 +533,18 @@ section.produtos article .price{
     margin: 5px 0;
 }
 
-h2, h3, h4, li {
-    color: #6A5495;
-}
-
-.flex-container-produtointerno {
+.flex-container-produto-interno {
     display: flex;
     align-items: center;
     justify-content:space-around;
     height: 80vh;
 }
 
-.botao {
+h2, h3, h4, ul.produto-interno{
+    color: #6A5495;
+}
+
+.botao-produto-interno {
     color:#EFEFEF;
     background-color: #6A5482;
     
@@ -515,8 +552,364 @@ h2, h3, h4, li {
     padding: 10px;
 }
 
-.botao:hover {
+.botao-produto-interno:hover {
     background-color: #ED5EDD;
     border-color: #ED5EDD;
 }
   
+/*CSS da página PAINEL DO USUÁRIO */
+
+/* -------css do botao de salvar dos meus dados */
+#submit-button{
+    padding: 10px 80px;
+    border-radius: 4px;
+    background-color: #6A5495;
+    border: none;
+}
+#submit-button:hover{
+    background-color: #4d3a74;
+}
+/* ---------css do botao de salvar dos meus dados */
+/* ---------css do botao de resumoo do pedido */
+button#pedido{
+    background: #6A5495;
+    border: none;
+}
+/* css do botao de resumoo do pedido */
+.dados-container div{
+ font-size: 100%;
+ margin: auto;
+}
+/* -----------------INICIO AJUSTES ALINE  -------------------*/
+.paine-usuario-conteudo h2, label, select.form-control, input.form-control {
+    color: #6A5495;
+}
+
+
+
+th, td {
+    color: #6A5495;
+}
+
+
+#button-detalhes {
+    background-color: #ED5EDD;
+}
+
+
+
+/* -----------------FIM AJUSTES ALINE  -------------------*/
+
+
+/* CSS da pagina HOME/*
+/* ------- CONTEUDO PRINCIPAL -------*/
+section.banner-home .carousel-home {
+    width: 907px;
+}
+
+section.banner-home .carousel-home>img {
+    width: 100%;
+    height: 50vh;
+}
+
+section.banner-home .carousel-home {
+    margin: auto auto;
+    position: relative;
+}
+
+section.banner-home .carousel-home .controls-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.banner-home .carousel-home .controls-home button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+section.banner-home .carousel-home .controls-home button img {
+    width: 15px;
+}
+
+section.produtos-home .container-home {
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+section.produtos-home article {
+    width: 350px;
+    background-color: rgb(189, 189, 189);
+}
+
+section.produtos-home article img {
+    width: 125px;
+    height: 250px;
+
+}
+
+section.produtos-home article .info-home {
+    padding: 15px;
+}
+
+section.produtos-home article .info-home>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.produtos-home article .price-home {
+    font-size: 25px;
+    color: black;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+/* css PÁGINA LOGIN */
+
+.body-login header div main {
+    font-family: 'Confortaa', cursiva;
+    background-color: #EFEFEF;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* header ----------------------------- */
+header div.logo-site-login {
+    border: none;
+    max-width: 100%;
+    width: 1000px;
+    margin: 5px auto;
+    margin-top: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+header div a {
+    text-decoration: none;
+    margin: 5px auto;
+    text-align: center;
+    padding: 25px;
+}
+
+header div.logo-site img {
+    width: 90px;
+}
+
+/* formulario ------------------------- */
+main .formulario-login {
+    background-color: #6A5495;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-size: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 1000px;
+    margin: 5px auto;
+}
+
+main.formulario-login form.acessar-conta-login {
+    background-color: #6A5495;
+    color: #EFEFEF;
+    margin: 15px auto;
+    text-align: center;
+    padding: 120px;
+    display: block;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+main.formulario-login h2 {
+    padding-bottom: 30px;
+}
+
+main.formulario-login div.formulario {
+    padding-bottom: 0.2px;
+}
+
+main.formulario-login input {
+    background-color: #EFEFEF;
+    margin: 15px auto;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+main.formulario-login a {
+    font-size: 15px;
+    color: #EFEFEF;
+}
+
+main.formulario-login a:hover {
+    text-decoration: underline 2px #EFEFEF;
+    font-size: 17px;
+}
+
+main.formulario-login button {
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    padding: 15px 80px;
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    border: none;
+    opacity: 0.8;
+}
+
+main.formulario-login button:hover {
+    opacity: 0.5;
+    padding: 17px 82px;
+    margin: 28px auto;
+}
+
+
+
+
+/*MEDIA painelUsuario*/
+@media (max-width: 800px){
+    .container.pedidos{
+        width: 100%;
+        margin: auto;
+        padding-right: 10%;
+        padding-left: 10%;
+        background-color: #EFEFEF;
+    }  
+    }
+    .container.pedidos{ 
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 20px;
+        text-align: left;
+        margin-left: 30px;
+        font-size: 25px; 
+    }
+    .container-resumo{
+        font-size: bold;
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 30px;
+        text-align: left;
+        margin-left: 30px;
+        display: flex;
+    }
+    .click-pedido{
+        display: inline;
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 30px;
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+/*MEDIA produtoInterno*/
+@media (max-width: 800px){
+    section.lofts article{
+        margin: 10px;
+    }
+
+    .container{
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 600px){
+    section.lofts .container{
+        flex-wrap: wrap;
+    }
+
+    section.lofts article{
+        width: 100%;
+    }
+}
+
+/*MEDIA criarConta*/
+@media (max-width: 500px) {
+    main form.acessar-conta {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body {
+        height: 90vh;
+    }
+
+    main form h2 {
+        font-size: 27px;
+   
+    }
+}
+
+/*MEDIA pagina HOME*/
+@media (max-width: 800px) {
+    section.lofts article {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    section.lofts .container {
+        flex-wrap: wrap;
+    }
+
+    section.lofts article {
+        width: 100%;
+    }
+}
+
+/*media pagina LOGIN */
+/* responsivo ------------------------ */
+@media (max-width: 500px) {
+    main form.acessar-conta {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body {
+        height: 90vh;
+    }
+}
+
+/* Página de cadastro--------EM LOGIN---------- */
+mains form.criar-conta {
+    display: inline;
+}

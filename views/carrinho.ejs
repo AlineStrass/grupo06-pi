@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/carrinho.css">
-</head>
-
+<%- include('./partials/header') %>
 
 <body>
 
-    <header>
-        <div class="carrinho-center">
-            <div class="logo-carrinho" style="display:flex; align-items:center;">
+    <header class = 'finalizacao'>
+        <div class="center-finalizacao">
+            <div class="logo-finalizacao" style="display:flex; align-items:center;">
                 <img src="/images/logos/logo-roxo-escrita-em-baixo.jpg" alt="foto logo" width="60" height="60">
 
             </div>
             <!--logo-->
 
-            <div class="menu-carrinho">
+            <div class="menu-finalizacao">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <a href="#">Sacola</a>
 
@@ -36,7 +28,7 @@
                 <i class="fa-solid fa-id-card"></i>
                 <a href="#">Minha conta</a>
 
-                <a class="btn-menu" href="#">Sair</a>
+                <a class="btn-menu-finalizacao" href="#">Sair</a>
             </div>
             <!--menu-->
         </div>
@@ -44,10 +36,10 @@
 
     </header>
 
-    <section class="main-carrinho">
-        <div class="carrinho-center">
+    <section class="main-finalizacao">
+        <div class="center-finalizacao">
 
-            <div class="main__cta">
+            <div class="main-finalizacao__cta">
                 <h2>Happy Pet</h2>
 
                 <p>Calcule o frete e prazo</p>
@@ -63,7 +55,7 @@
 
             <!--main-cta-->
 
-            <section class="finalizacao-container-carrinho"
+            <section class="finalizacao-container"
                 style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
                 <article>
                     <h2>Descrição</h2>
@@ -85,7 +77,7 @@
                 </article>
             </section>
 
-            <div class="main__cta">
+            <div class="main-finalizacao__cta">
                 <section class="escolher-carrinho" style="margin-top: 50px;">
                     <h2><button>Escolher mais produtos</button></h2>
                 </section>
@@ -102,3 +94,5 @@
 </body>
 
 </html>
+
+<!--carrinho mantive sem footer/INCLUDE (BIA)-->

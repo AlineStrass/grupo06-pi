@@ -1,4 +1,4 @@
-/* estilos globais ---------------------*/
+/* estilos globais ---------------------
 * {
     padding: 0;
     margin: 0;
@@ -19,7 +19,7 @@ body {
     overflow-y: hidden;
 }
 
-/* header ----------------------------- */
+/* header ----------------------------- 
 header div.logo-site {
     border: none;
     max-width: 100%;
@@ -40,7 +40,7 @@ header div.logo-site img {
     width: 90px;
 }
 
-/* formulario ------------------------- */
+/* formulario ------------------------- 
 main {
     background-color: #6A5495;
     text-align: center;
@@ -117,7 +117,7 @@ form button:hover {
     margin: 28px auto;
 }
 
-/* responsivo ------------------------ */
+/* responsivo ------------------------ 
 @media (max-width: 500px) {
     main form.acessar-conta {
         width: 100%;
@@ -130,7 +130,7 @@ form button:hover {
     }
 }
 
-/* Página de cadastro------------------- */
+/* Página de cadastro------------------- 
 mains form.criar-conta {
     display: inline;
 }

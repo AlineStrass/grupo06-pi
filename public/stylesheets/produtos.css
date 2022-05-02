@@ -1,10 +1,11 @@
+/*
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/*Grid de produtos*/
+/*Grid de produtos
 .produtos-container{
     background-color: #EFEFEF;
     min-height: 60vh;

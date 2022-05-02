@@ -1,7 +1,8 @@
+/*
 *{
     box-sizing: border-box;
 }
-/*até aqui DADOS DO HEADER*/
+/*até aqui DADOS DO HEADER
 
 .dados-container{
 
@@ -12,7 +13,7 @@
     background-color: #EFEFEF;
     border: 5px solid #6A5495;
 }
-/* css do botao de salvar dos meus dados */
+/* css do botao de salvar dos meus dados 
 #submit-button{
     padding: 10px 80px;
     border-radius: 4px;
@@ -23,17 +24,17 @@
     background-color: #4d3a74;
 }
 /* css do botao de salvar dos meus dados */
-/* css do botao de resumoo do pedido */
+/* css do botao de resumoo do pedido 
 button#pedido{
     background: #6A5495;
     border: none;
 }
-/* css do botao de resumoo do pedido */
+/* css do botao de resumoo do pedido 
 .dados-container div{
  font-size: 100%;
  margin: auto;
 }
-/* -----------------INICIO AJUSTES ALINE  -------------------*/
+/* -----------------INICIO AJUSTES ALINE  -------------------
 .paine-usuario-conteudo h2, label, select.form-control, input.form-control {
     color: #6A5495;
 }

@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/carrinho.css">
-</head>
+<%- include('./partials/header') %>
 
 
 <body>
 
-    <header>
+    <header class="finalizacao">
         <div class="center-finalizacao">
             <div class="logo-finalizacao" style="display:flex; align-items:center;">
                 <img src="/images/logos/logo-roxo-escrita-em-baixo.jpg" alt="foto logo" width="60" height="60">
@@ -36,7 +29,7 @@
                 <i class="fa-solid fa-id-card"></i>
                 <a href="#">Minha conta</a>
 
-                <a class="btn-menu" href="#">Sair</a>
+                <a class="btn-menu-finalizacao" href="#">Sair</a>
             </div>
             <!--menu-->
         </div>
@@ -46,12 +39,12 @@
 
     <section class="main-finalizacao">
         <div class="center-finalizacao">
-            <div class="main__cta">
+            <div class="main-finalizacao__cta">
                 <h2>Happy Pet</h2>
                 <p>Seu Pet Feliz</p>
             </div>
             
-            <section class="finalizacao container" style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
+            <section class="finalizacao-container" style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
                 <article>
                     <h2>Confirmação final</h2>
                     <h5>Dados do comprador</h5>
@@ -83,12 +76,12 @@
                 </article>
             </section>
 
-            <section class="entrega" style="margin-top: 50px;">
+            <section class="entrega-finalizacao" style="margin-top: 50px;">
                 <h2>Previsão de entrega</h2>
                 <p>o prazo de entrega começ a contar apos aprovação da instituição financeira</p>
             </section>
 
-            <div class="main__cta">
+            <div class="main-finalizacao__cta">
                 <button>Finalizar Compra</button>
             </div>
             <!--main-cta-->
@@ -103,3 +96,5 @@
 </body>
 
 </html>
+
+<!--finalizar mantive sem footer/INCLUDE (BIA)-->

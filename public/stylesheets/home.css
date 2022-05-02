@@ -1,3 +1,5 @@
+/* 
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ body {
     background: #EFEFEF;
 }
 
-/* ------- CONTEUDO PRINCIPAL -------*/
+/* ------- CONTEUDO PRINCIPAL -------
 section.banner .carousel {
     width: 907px;
 }
