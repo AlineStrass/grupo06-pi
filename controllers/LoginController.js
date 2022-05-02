@@ -1,7 +1,9 @@
+
 const LoginController = {
     index: (req, res) => {
-        return res.render('login')
+        return res.render('pagina-login')
     }
 }
 
 module.exports = LoginController;
+
