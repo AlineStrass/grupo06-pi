@@ -1,23 +1,26 @@
-<!--não inclui o header/include para ver com a Myllena se ainda sim, na 'login' será necessário (Bia)-->
 <%- include('./partials/header') %>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
 
 <body class="body-login">
     
 
-    <main classes="formulario-login">
+    <main class="formulario-login">
 
         <form class="acessar-conta-login">
-            <h2>Acesse sua conta</h2>
-            <div class="formulario">
+            <h2 class="login">Acesse sua conta</h2>
+            <div class="formulario-email-senha-login">
                 <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="email@email.com.br">
+                <input class="input-login" type="email" id="email" name="email" placeholder="email@email.com.br">
 
                 <label for="senha"></label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <input class="input-login" type="password" id="senha" name="senha" placeholder="Digite sua senha">
             </div>
             <a href="#">Esqueci minha senha</a>
 
-            <button type="submit">Entrar</button>
+            <button class="login" type="submit">Entrar</button>
         </form>
 
         <a href="/criarConta">Não tem cadastro? Crie uma aqui!</a>
