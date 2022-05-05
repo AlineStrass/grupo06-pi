@@ -247,15 +247,24 @@ footer {
     margin-top: 5px;
 }
 
-.botao-footer button{
+textarea.footer, input {
     color: #6A5495;
+}
+
+button#button-form-contato{
+    color: #6A5495;
+    border: solid #EFEFEF;
     width: 100%;
     margin-top: 5px;
     cursor: pointer;
 }
 
-.botao-footer button:hover {
+button#button-form-contato:hover {
     opacity: 0.5;
+    background-color: #6A5495;
+    color: #EFEFEF;
+    border: solid #EFEFEF;
+
 }
 
 @media (max-width: 900px) {
