@@ -172,11 +172,13 @@ footer {
 .caixa h2.footer {
     font-size: 18px;
     font-weight: 600;
+    color: #EFEFEF;
 }
 
 .caixa p.footer {
     text-align: justify;
     margin-top: 10px;
+    color: #EFEFEF;
 }
 
 .caixa .content-footer {

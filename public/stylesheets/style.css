@@ -494,9 +494,13 @@ th, td {
 
 
 /* ------- PAGINA HOME -----------------------*/
-/* ------- CONTEUDO PRINCIPAL -------*/
+
 section.banner-home .carousel-home {
     width: 907px;
+}
+
+h1.home, li.home {
+    color: #6A5495;
 }
 
 img.home-carousel {
@@ -537,7 +541,7 @@ section.banner-home .carousel-home .controls-home button img {
 
 section.produtos-home .container-home {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -546,6 +550,10 @@ section.produtos-home .container-home {
 section.produtos-home article {
     width: 350px;
     background-color: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 section.produtos-home article img {
@@ -558,21 +566,18 @@ section.produtos-home article .info-home {
     padding: 15px;
 }
 
-section.produtos-home article .info-home>div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 section.produtos-home article .price-home {
     font-size: 25px;
-    color: black;
+    color: #6A5495;
     font-weight: 400;
     margin: 5px 0;
+
 }
 
 img.home-produtos {
     width: 20px;
+    align-items: center;
+
 }
 
 
