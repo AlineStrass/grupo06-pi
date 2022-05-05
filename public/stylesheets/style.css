@@ -280,14 +280,21 @@ input {
     height: 30px;
 }
 
-/*css da CRIARCONTA*/
-
-/* formulario Login-------------------- */
-
+/*------- LOGIN E CRIARCONTA -----------------*/
+/*1*/
+.body-login {
+    background-color: #EFEFEF;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+/*2*/
 main.formulario-login {
     background-color: #6A5495;
     text-align: center;
     padding: 25px;
+    display: block;
     font-size: 20px;
     max-width: 100%;
     align-items: center;
@@ -296,16 +303,8 @@ main.formulario-login {
     border-radius: 5px;
     width: 1000px;
     margin: 5px auto;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
 }
-
-form.acessar-conta-login {
-    padding: 50px;
-}
-
+/*3*/
 main form.criar-conta {
     align-content: space-between;
     background-color: #6A5495;
@@ -320,156 +319,64 @@ main form.criar-conta {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 }
-
+/*4*/
 h2.login {
     padding: 0px 0px 15px;
     margin-top: 0px;
     color: #EFEFEF;
-
 }
-
+/*5*/
 main form div.dados-cadastrais-conta {
     flex-wrap: wrap;
     padding-bottom: 0.2px;
     display: flex;
-    flex-direction: row;
     text-align: center;
-    justify-content: space-evenly
-}
-
-main form input {
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #EFEFEF;
-    margin: 8px 70px;
-    text-align: center;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-    display: block;
-}
-
-
-main a {
-    font-size: 15px;
-    color: #EFEFEF;
-    text-decoration: underline 2px #ED5EDD;
-}
-main a:hover {
-    text-decoration: underline 2px #ED5EDD;
-    background-color: #ED5EDD
-}
-
-main p {
-    font-size: 15px;
-    color: #EFEFEF;
-    margin-top: 20px;
-}
-
-form button.login {
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    padding: 5px 75px;
-    border-radius: 5px;
-    margin-top: 30px;
-    color: #6A5495;
-    background-color: #EFEFEF;
-    border: none;
-    opacity: 0.8;
-}
-
-form button.login:hover {
-    opacity: 0.5;
-    padding: 6px 77px;
-    margin: 28px auto;
-}
-main.formulario-login {
-    background-color: #6A5495;
-    text-align: center;
-    padding: 25px;
-    display: block;
-    font-size: 20px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 1000px;
-    margin: 5px auto;
-}
-
-
-main form.criar-conta {
-    align-content: space-between;
-    background-color: #6A5495;
-    color: #EFEFEF;
-    margin: 5px auto;
-    text-align: center;
-    padding: 50px;
-    display: block;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-main form h2.login {
-    padding: 0px 0px 15px;
-    margin-top: 0px;
-
-}
-
-main form div.dados-cadastrais-conta {
-    padding-bottom: 0.2px;
-    display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
 }
-
+/*7*/
+label.inserir-dados-cadastro {
+    color: #EFEFEF;
+}
+/*8*/
 input.inserir-dados-cadastro {
     flex-wrap: wrap;
     flex-direction: row;
     background-color: #EFEFEF;
-    margin: 10px 50px;
+    margin: 8px 50px;
     text-align: center;
-    padding: 15px 70px;
     font-size: 15px;
     border-radius: 5px;
     border: none;
     display: block;
+    padding: 15px 70px;
 }
-
-label.inserir-dados-cadastro {
-    color: #EFEFEF;
-}
-
-main a {
+/*9*/
+main a.termosCondicoes {
     font-size: 15px;
     color: #EFEFEF;
     text-decoration: underline 2px #ED5EDD;
 }
-main a:hover {
+/*9.1*/
+main a.termosCondicoes:hover {
     text-decoration: underline 2px #ED5EDD;
     background-color: #ED5EDD
 }
 
-main p.termos {
+/*10*/
+main p.termo {
     font-size: 15px;
     color: #EFEFEF;
     margin-top: 20px;
 }
-
-form button.login {
+/*11*/
+button.login-cadastro {
     cursor: pointer;
     display: block;
     margin: 30px auto;
-    padding: 7px 75px;
+    padding: 1px 120px;
     border-radius: 5px;
     margin-top: 30px;
     color: #6A5495;
@@ -477,15 +384,16 @@ form button.login {
     border: none;
     opacity: 0.8;
 }
-
-form button.login:hover {
+/*11.1*/
+form button.login-cadastro:hover {
     opacity: 0.5;
-    padding: 9px 77px;
-    margin: 28px auto;
+    padding: 2px 122px;
+    margin: 29px auto;
 }
 
+
 @media (max-width: 500px) {
-    main form.acessar-conta {
+    main form.formulario-login {
         width: 100%;
         padding: 30px;
         margin-top: 20px;
@@ -685,115 +593,7 @@ img.home-produtos {
     width: 20px;
 }
 
-/* css PÁGINA LOGIN */
 
-.body-login header div main {
-    font-family: 'Confortaa', cursiva;
-    background-color: #EFEFEF;
-    display: block;
-    justify-content: center;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-/* header ----------------------------- */
-header div.logo-site-login {
-    border: none;
-    max-width: 100%;
-    width: 1000px;
-    margin: 5px auto;
-    margin-top: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-}
-
-header div a {
-    text-decoration: none;
-    margin: 5px auto;
-    text-align: center;
-    padding: 25px;
-}
-
-header div.logo-site img {
-    width: 90px;
-}
-
-/* formulario ------------------------- */
-main .formulario-login {
-    background-color: #6A5495;
-    text-align: center;
-    padding: 25px;
-    display: block;
-    font-size: 20px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 1000px;
-    margin: 5px auto;
-}
-
-main.formulario-login form.acessar-conta-login {
-    background-color: #6A5495;
-    color: #EFEFEF;
-    margin: 15px auto;
-    text-align: center;
-    padding: 120px;
-    display: block;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-main.formulario-login h2 {
-    padding-bottom: 30px;
-}
-
-main.formulario-login div.formulario {
-    padding-bottom: 0.2px;
-}
-
-main.formulario-login input {
-    background-color: #EFEFEF;
-    margin: 15px auto;
-    text-align: center;
-    padding: 5px;
-    display: block;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-main.formulario-login a {
-    font-size: 15px;
-    color: #EFEFEF;
-}
-
-main.formulario-login a:hover {
-    text-decoration: underline 2px #EFEFEF;
-    font-size: 17px;
-}
-
-main.formulario-login button {
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    padding: 15px 80px;
-    border-radius: 5px;
-    margin-top: 30px;
-    background-color: #EFEFEF;
-    border: none;
-    opacity: 0.8;
-}
-
-main.formulario-login button:hover {
-    opacity: 0.5;
-    padding: 17px 82px;
-    margin: 28px auto;
-}
 
 
 
