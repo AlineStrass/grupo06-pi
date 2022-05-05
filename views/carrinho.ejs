@@ -1,11 +1,12 @@
 <%- include('./partials/header') %>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
 
-    <header class = 'finalizacao'>
+    <section class = 'finalizacao'>
         <div class="center-finalizacao">
     
             <div class="menu-finalizacao">
@@ -32,7 +33,7 @@
         </div>
         <!--center-->
 
-    </header>
+    </section>
 
     <section class="main-finalizacao">
         <div class="center-finalizacao">
@@ -42,18 +43,18 @@
 
                 <p>Calcule o frete e prazo</p>
                 <label for="text"></label>
-                <input type="text" id="frete" name="frete" placeholder="">
+                <input type="text" id="frete" name="frete" placeholder="CEP">
 
                 <button class="calcular-frete-carrinho">Calcular</button>
 
                 <button class="calcular-frete-carrinho">Não sei meu CEP</button>
 
-                <button>Finalizar Compra</button>
+                <button class="calcular-frete-carrinho">Finalizar Compra</button>
             </div>
 
             <!--main-cta-->
 
-            <section class="finalizacao-container"
+           <section class="finalizacao-container"
                 style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
                 <article>
                     <h2>Descrição</h2>
@@ -73,15 +74,17 @@
                     <p>Desconto</p>
                     <p>Total</p>
                 </article>
-            </section>
+            </section> 
 
             <div class="main-finalizacao__cta">
                 <section class="escolher-carrinho" style="margin-top: 50px;">
-                    <h2><button>Escolher mais produtos</button></h2>
-                </section>
+                   <h2><button class="calcular-frete-carrinho">Escolher mais produtos</button></h2>
+                </section> 
 
     </section>
     <!--main-->
+
+
 
     
 

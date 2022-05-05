@@ -319,7 +319,7 @@ form button.login-cadastro:hover {
 
 /*CSS de FINALIZAR,OBRIGADO e CARRINHO*/
 
-.finalizacao { /*header*/
+section.finalizacao { 
     background-color: #6A5495;
     padding: 30px 0;
     border-bottom: 2px solid #ED5EDD;
@@ -329,8 +329,8 @@ form button.login-cadastro:hover {
 .center-finalizacao{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2%;
-    display: flex;
+    padding: 0 13%;
+    display: flex; 
     flex-wrap: wrap;
     align-items: center;
 
@@ -344,7 +344,7 @@ form button.login-cadastro:hover {
     height: 50px;
 }
 
-.menu-finalizacao {
+.div .menu-finalizacao {
     width: 90%;
     text-align: right;
     color: #EFEFEF;
@@ -360,9 +360,10 @@ form button.login-cadastro:hover {
     transition: 0.4s;
 }
 
-.menu-finalizacao a:hover {
+.menu-finalizacao .a:hover {
     color: #ED5EDD;
 }
+
 
 .menu-finalizacao .btn-menu-finalizacao {
     background-color: #EFEFEF;
@@ -370,6 +371,7 @@ form button.login-cadastro:hover {
     padding: 8px 16px;
     color: #6A5495;
     border-radius: 5px;
+    align-items: right;
 }
 
 .menu-finalizacao .btn-menu-finalizacao:hover {
@@ -429,6 +431,18 @@ button.calcular-frete-carrinho {
     margin: 15px 0;
 }
 
+button.finalizar {
+    background-color: #6A5495;
+    display: inline-block;
+    padding: 8px 30px;
+    color: #EFEFEF;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
 button:hover {
     background-color: #ED5EDD;
 }
@@ -444,9 +458,9 @@ section.escolher-carrinho{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
-
 }
 
+/*ver onde puxa estes 'difencial-single' */
 .diferencial-single {
     border-radius: 10px;
     background-color: #EFEFEF;
@@ -468,7 +482,7 @@ section.escolher-carrinho{
     font-size: 15px;
 }
 
-article h2 {
+.main__cta-obrigado h2 p {
     color: #6A5495;
 }
 
@@ -478,13 +492,11 @@ article p {
 
 h5, h2, p {
     color: #6A5495;
-}
+}*/
 
 input {
     height: 30px;
 }
-
-
 
 
 /*Css da PRODUTOINTERNO*/
@@ -524,6 +536,10 @@ section.produtos article .price{
     margin: 5px 0;
 }
 
+/*h2, h3, h4, li {
+    color: #6A5495;
+} constava na pasta mas não estava aqui, testar Bia*/ 
+
 .flex-container-produto-interno {
     display: flex;
     align-items: center;
@@ -532,7 +548,7 @@ section.produtos article .price{
 }
 
 h2, h3, h4, ul.produto-interno{
-    color: #6A5495;
+    color: #6A5495; /*não achei na pasta anterior bia) */
 }
 
 .botao-produto-interno {
@@ -549,7 +565,15 @@ h2, h3, h4, ul.produto-interno{
 }
   
 /*CSS da página PAINEL DO USUÁRIO */
+/*.dados-container{ VERIFICAR USO
 
+    width: 100%;
+    margin: center;
+    padding-right: 200px;
+    padding-left: 400px;
+    background-color: #EFEFEF;
+    border: 5px solid #6A5495;
+}*/
 /* -------css do botao de salvar dos meus dados */
 #submit-button{
     padding: 10px 80px;
