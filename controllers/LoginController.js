@@ -1,7 +1,7 @@
 
 const LoginController = {
     index: (req, res) => {
-        return res.render('pagina-login')
+        return res.render('login')
     }
 }
 

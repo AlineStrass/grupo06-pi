@@ -1,4 +1,4 @@
-/*estilo CSS global*/
+/*---------- estilo CSS global ------------*/
 * {
     padding: 0;
     margin: 0;
@@ -8,18 +8,131 @@
 body {
     font-family: 'Confortaa', cursiva;
     background: #EFEFEF;
-
-   /* BODY do css de CRIAR CONTA
-   
-   display: block;
-    /*justify-content: center;
-    height: 100vh;
-    overflow-x: hidden*/
-
 } 
 
+/*--------- LOGIN E CRIAR CONTA --------- CSS OK --------*/
+.body-login {
+    background-color: #EFEFEF;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
 
-/*estilo Página PRODUTOS*/
+main.formulario-login {
+    background-color: #6A5495;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-size: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 1000px;
+    margin: 5px auto;
+}
+
+main form.criar-conta {
+    align-content: space-between;
+    background-color: #6A5495;
+    color: #EFEFEF;
+    margin: 5px auto;
+    text-align: center;
+    padding: 90px;
+    display: block;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+h2.login {
+    padding: 0px 0px 15px;
+    margin-top: 0px;
+    color: #EFEFEF;
+}
+
+main form div.dados-cadastrais-conta {
+    flex-wrap: wrap;
+    padding-bottom: 0.2px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label.inserir-dados-cadastro {
+    color: #EFEFEF;
+}
+
+input.inserir-dados-cadastro {
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #EFEFEF;
+    margin: 8px 50px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    padding: 15px 70px;
+}
+
+main a.termosCondicoes {
+    font-size: 15px;
+    color: #EFEFEF;
+    text-decoration: underline 2px #ED5EDD;
+}
+
+main a.termosCondicoes:hover {
+    text-decoration: underline 2px #ED5EDD;
+    background-color: #ED5EDD
+}
+
+main p.termo {
+    font-size: 15px;
+    color: #EFEFEF;
+    margin-top: 20px;
+}
+
+button.login-cadastro {
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    padding: 1px 120px;
+    border-radius: 5px;
+    margin-top: 30px;
+    color: #6A5495;
+    background-color: #EFEFEF;
+    border: none;
+    opacity: 0.8;
+}
+
+form button.login-cadastro:hover {
+    opacity: 0.5;
+    padding: 2px 122px;
+    margin: 29px auto;
+}
+
+@media (max-width: 500px) {
+    main form.formulario-login {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body.body-login {
+        height: 90vh;
+    }
+}
+/*--------- FINAL DO LOGIN E CRIAR CONTA --------------*/
+
+/*--------------- estilo Página PRODUTOS ----------------*/
 
 .produtos-container{
     background-color: #EFEFEF;
@@ -112,8 +225,6 @@ body {
 }
 
 /*CSS de FINALIZAR,OBRIGADO e CARRINHO*/
-
-
 
 .finalizacao { /*header*/
     background-color: #6A5495;
@@ -280,129 +391,7 @@ input {
     height: 30px;
 }
 
-/*------- LOGIN E CRIARCONTA -----------------*/
-/*1*/
-.body-login {
-    background-color: #EFEFEF;
-    display: block;
-    justify-content: center;
-    height: 100vh;
-    overflow-x: hidden;
-}
-/*2*/
-main.formulario-login {
-    background-color: #6A5495;
-    text-align: center;
-    padding: 25px;
-    display: block;
-    font-size: 20px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 1000px;
-    margin: 5px auto;
-}
-/*3*/
-main form.criar-conta {
-    align-content: space-between;
-    background-color: #6A5495;
-    color: #EFEFEF;
-    margin: 5px auto;
-    text-align: center;
-    padding: 90px;
-    display: block;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-/*4*/
-h2.login {
-    padding: 0px 0px 15px;
-    margin-top: 0px;
-    color: #EFEFEF;
-}
-/*5*/
-main form div.dados-cadastrais-conta {
-    flex-wrap: wrap;
-    padding-bottom: 0.2px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-between;
-    align-items: center;
-}
-/*7*/
-label.inserir-dados-cadastro {
-    color: #EFEFEF;
-}
-/*8*/
-input.inserir-dados-cadastro {
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #EFEFEF;
-    margin: 8px 50px;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-    display: block;
-    padding: 15px 70px;
-}
-/*9*/
-main a.termosCondicoes {
-    font-size: 15px;
-    color: #EFEFEF;
-    text-decoration: underline 2px #ED5EDD;
-}
-/*9.1*/
-main a.termosCondicoes:hover {
-    text-decoration: underline 2px #ED5EDD;
-    background-color: #ED5EDD
-}
 
-/*10*/
-main p.termo {
-    font-size: 15px;
-    color: #EFEFEF;
-    margin-top: 20px;
-}
-/*11*/
-button.login-cadastro {
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    padding: 1px 120px;
-    border-radius: 5px;
-    margin-top: 30px;
-    color: #6A5495;
-    background-color: #EFEFEF;
-    border: none;
-    opacity: 0.8;
-}
-/*11.1*/
-form button.login-cadastro:hover {
-    opacity: 0.5;
-    padding: 2px 122px;
-    margin: 29px auto;
-}
-
-
-@media (max-width: 500px) {
-    main form.formulario-login {
-        width: 100%;
-        padding: 30px;
-        margin-top: 20px;
-    }
-
-    body.body-login {
-        height: 90vh;
-    }
-}
 
 
 /*Css da PRODUTOINTERNO*/
@@ -489,17 +478,14 @@ button#pedido{
  font-size: 100%;
  margin: auto;
 }
-/* -----------------INICIO AJUSTES ALINE  -------------------*/
+
 .paine-usuario-conteudo h2, label, select.form-control, input.form-control {
     color: #6A5495;
 }
 
-
-
 th, td {
     color: #6A5495;
 }
-
 
 #button-detalhes {
     background-color: #ED5EDD;
@@ -507,10 +493,7 @@ th, td {
 
 
 
-/* -----------------FIM AJUSTES ALINE  -------------------*/
-
-
-/* CSS da pagina HOME/*
+/* ------- PAGINA HOME -----------------------*/
 /* ------- CONTEUDO PRINCIPAL -------*/
 section.banner-home .carousel-home {
     width: 907px;
@@ -525,7 +508,6 @@ img.home-carousel {
     margin: auto auto;
     position: relative;
 }
-
 
 section.banner-home .carousel-home .controls-home {
     position: absolute;
@@ -595,10 +577,7 @@ img.home-produtos {
 
 
 
-
-
-
-/*MEDIA painelUsuario*/
+/*-------------- MEDIA painelUsuario ------------------*/
 @media (max-width: 800px){
     .container.pedidos{
         width: 100%;
@@ -648,7 +627,6 @@ img.home-produtos {
     }
 
 }
-
 
 @media (max-width: 600px){
     section.lofts .container{
