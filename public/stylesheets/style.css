@@ -407,7 +407,7 @@ main form.criar-conta {
     color: #EFEFEF;
     margin: 5px auto;
     text-align: center;
-    padding: 90px;
+    padding: 50px;
     display: block;
     max-width: 100%;
     align-items: center;
@@ -416,32 +416,37 @@ main form.criar-conta {
     border-radius: 5px;
 }
 
-main form h2 {
+main form h2.login {
     padding: 0px 0px 15px;
     margin-top: 0px;
 
 }
 
 main form div.dados-cadastrais-conta {
-    flex-wrap: wrap;
     padding-bottom: 0.2px;
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-evenly
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-main form input {
+input.inserir-dados-cadastro {
     flex-wrap: wrap;
     flex-direction: row;
     background-color: #EFEFEF;
     margin: 10px 50px;
     text-align: center;
-    padding: 5px;
+    padding: 15px 70px;
     font-size: 15px;
     border-radius: 5px;
     border: none;
     display: block;
+}
+
+label.inserir-dados-cadastro {
+    color: #EFEFEF;
 }
 
 main a {
@@ -454,13 +459,13 @@ main a:hover {
     background-color: #ED5EDD
 }
 
-main p {
+main p.termos {
     font-size: 15px;
     color: #EFEFEF;
     margin-top: 20px;
 }
 
-form button {
+form button.login {
     cursor: pointer;
     display: block;
     margin: 30px auto;
@@ -473,7 +478,7 @@ form button {
     opacity: 0.8;
 }
 
-form button:hover {
+form button.login:hover {
     opacity: 0.5;
     padding: 9px 77px;
     margin: 28px auto;
