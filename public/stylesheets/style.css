@@ -1,4 +1,4 @@
-/*estilo CSS global*/
+/*---------- estilo CSS global ------------*/
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +10,226 @@ body {
     background: #EFEFEF;
 } 
 
-/*estilo Página PRODUTOS*/
+/* ------- PAGINA HOME -----------------------*/
+.banner-home {
+    overflow-x: hidden;
+}
+
+h1.home, li.home {
+    color: #6A5495;
+}
+
+img.home-carousel {
+    width: 25%;
+    height: 50vh;
+}
+
+.carousel-home {
+    margin: auto auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+}
+
+section.banner-home .carousel-home .controls-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.banner-home .carousel-home .controls-home button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+section.banner-home .carousel-home .controls-home button img {
+    width: 15px;
+}
+
+section.produtos-home .container-home {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100vw;
+}
+
+section.produtos-home article {
+    width: 400px;
+    border: solid 1px #ED5EDD;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.produtos-home article img {
+    width: 125px;
+    height: 250px;
+
+}
+
+section.produtos-home article .info-home {
+    padding: 15px;
+}
+
+section.produtos-home article .price-home {
+    font-size: 25px;
+    color: #6A5495;
+    font-weight: 400;
+    margin: 5px 0;
+
+}
+
+img.home-produtos {
+    width: 20px;
+    align-items: center;
+
+}
+
+/* ------- FIM DA PAGINA HOME -----------------------*/
+
+/*--------- LOGIN E CRIAR CONTA --------- CSS OK --------*/
+.body-login {
+    background-color: #EFEFEF;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main.formulario-login {
+    background-color: #6A5495;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-size: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 1000px;
+    margin: 5px auto;
+}
+
+main form.criar-conta {
+    align-content: space-between;
+    background-color: #6A5495;
+    color: #EFEFEF;
+    margin: 5px auto;
+    text-align: center;
+    padding: 90px;
+    display: block;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+h2.login {
+    padding: 0px 0px 15px;
+    margin-top: 0px;
+    color: #EFEFEF;
+}
+
+main form div.dados-cadastrais-conta {
+    flex-wrap: wrap;
+    padding-bottom: 0.2px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label.inserir-dados-cadastro {
+    color: #EFEFEF;
+}
+
+input.inserir-dados-cadastro {
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #EFEFEF;
+    margin: 5px 50px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    padding: 10px 70px;
+}
+
+main a.termosCondicoes {
+    font-size: 15px;
+    color: #EFEFEF;
+    text-decoration: underline 2px #ED5EDD;
+}
+
+main a.termosCondicoes:hover {
+    text-decoration: underline 2px #ED5EDD;
+    background-color: #ED5EDD
+}
+
+main p.termo {
+    font-size: 15px;
+    color: #EFEFEF;
+    margin-top: 20px;
+}
+
+button.login-cadastro {
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    padding: 1px 120px;
+    border-radius: 5px;
+    margin-top: 30px;
+    color: #6A5495;
+    background-color: #EFEFEF;
+    border: none;
+    opacity: 0.8;
+    border: solid #EFEFEF;;
+}
+
+form button.login-cadastro:hover {
+    opacity: 0.5;
+    padding: 2px 122px;
+    margin: 29px auto;
+    background-color: #6A5495;
+    color: #EFEFEF;
+    border: solid #EFEFEF;
+}
+
+@media (max-width: 500px) {
+    main form.formulario-login {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body.body-login {
+        height: 90vh;
+    }
+}
+/*--------- FINAL DO LOGIN E CRIAR CONTA --------------*/
+
+/*--------------- estilo Página PRODUTOS ----------------*/
 
 .produtos-container{
     background-color: #EFEFEF;
@@ -102,23 +321,23 @@ body {
     color: #6a5495;
 }
 
-/*pagina de finalizacao,FINALIZAR,OBRIGADO,CARRINHO*/
+/*CSS de FINALIZAR,OBRIGADO e CARRINHO*/
 
+section.finalizacao { 
+    background-color: #6A5495;
+    padding: 30px 0;
+    border-bottom: 2px solid #ED5EDD;
+    margin: 20px;
+}
 
 .center-finalizacao{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2%;
-    display: flex;
+    padding: 0 13%;
+    display: flex; 
     flex-wrap: wrap;
     align-items: center;
 
-}
-
-header {
-    background-color: #6A5495;
-    padding: 30px 0;
-    border-bottom: 2px solid #ED5EDD;
 }
 
 .logo-finalizacao {
@@ -129,19 +348,7 @@ header {
     height: 50px;
 }
 
-.logo-finalizacao h2 {
-    font-weight: normal;
-    color: #6A5495;
-}
-
-.logo-finalizacao img {
-    width: 200px;
-    padding-top: 0;
-    border-top: 0;
-    height: 100px;
-}
-
-.menu-finalizacao {
+.div .menu-finalizacao {
     width: 90%;
     text-align: right;
     color: #EFEFEF;
@@ -157,9 +364,10 @@ header {
     transition: 0.4s;
 }
 
-.menu-finalizacao a:hover {
+.menu-finalizacao .a:hover {
     color: #ED5EDD;
 }
+
 
 .menu-finalizacao .btn-menu-finalizacao {
     background-color: #EFEFEF;
@@ -167,6 +375,7 @@ header {
     padding: 8px 16px;
     color: #6A5495;
     border-radius: 5px;
+    align-items: right;
 }
 
 .menu-finalizacao .btn-menu-finalizacao:hover {
@@ -174,7 +383,20 @@ header {
     color: #EFEFEF;
 }
 
-/* Section main-finalizacao */
+
+.logo-finalizacao h2 {
+    font-weight: normal;
+    color: #6A5495;
+}
+
+.logo-finalizacao img {
+    width: 200px;
+    padding-top: 0;
+    border-top: 0;
+    height: 100px;
+}
+
+/* -------------Section main-finalizar */
 
 section.main-finalizacao {
     padding: 5px 0px;
@@ -201,7 +423,19 @@ section.main-finalizacao {
 
 }
 
-button.calcular-frete-finalizacao {
+button.calcular-frete-carrinho {
+    background-color: #6A5495;
+    display: inline-block;
+    padding: 8px 30px;
+    color: #EFEFEF;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+button.finalizar {
     background-color: #6A5495;
     display: inline-block;
     padding: 8px 30px;
@@ -217,20 +451,20 @@ button:hover {
     background-color: #ED5EDD;
 }
 
-section.finalizacao-container-finalizacao {
+section.finalizacao-container {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
 
 }
 
-section.escolher-finalizacao{
+section.escolher-carrinho{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
-
 }
 
+/*ver onde puxa estes 'difencial-single' */
 .diferencial-single {
     border-radius: 10px;
     background-color: #EFEFEF;
@@ -252,7 +486,7 @@ section.escolher-finalizacao{
     font-size: 15px;
 }
 
-article h2 {
+.main__cta-obrigado h2 p {
     color: #6A5495;
 }
 
@@ -262,207 +496,17 @@ article p {
 
 h5, h2, p {
     color: #6A5495;
-}
+}*/
 
 input {
     height: 30px;
 }
 
-/*CRIARCONTA*/
 
+/*Css da PRODUTOINTERNO*/
 
-main {
-    background-color: #6A5495;
-    text-align: center;
-    padding: 25px;
-    display: block;
-    font-size: 20px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 1000px;
-    margin: 5px auto;
-}
+/* ---------as section não estão no PRODUTOINTERNO.EJS, eram referente ao HEADER??------*/
 
-
-main form.criar-conta {
-    align-content: space-between;
-    
-    background-color: #6A5495;
-    color: #EFEFEF;
-    margin: 5px auto;
-    text-align: center;
-    padding: 90px;
-    display: block;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-main form h2 {
-    padding: 0px 0px 15px;
-    margin-top: 0px;
-
-}
-
-main form div.dados-cadastrais-conta {
-    flex-wrap: wrap;
-    padding-bottom: 0.2px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-evenly
-}
-
-main form input {
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #EFEFEF;
-    margin: 10px 50px;
-    text-align: center;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-    display: block;
-}
-
-
-main a {
-    font-size: 15px;
-    color: #EFEFEF;
-    text-decoration: underline 2px #ED5EDD;
-}
-main a:hover {
-    text-decoration: underline 2px #ED5EDD;
-    background-color: #ED5EDD
-}
-
-main p {
-    font-size: 15px;
-    color: #EFEFEF;
-    margin-top: 20px;
-}
-
-form button {
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    padding: 7px 75px;
-    border-radius: 5px;
-    margin-top: 30px;
-    color: #6A5495;
-    background-color: #EFEFEF;
-    border: none;
-    opacity: 0.8;
-}
-
-form button:hover {
-    opacity: 0.5;
-    padding: 9px 77px;
-    margin: 28px auto;
-}
-main {
-    background-color: #6A5495;
-    text-align: center;
-    padding: 25px;
-    display: block;
-    font-size: 20px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 1000px;
-    margin: 5px auto;
-}
-
-
-main form.criar-conta {
-    align-content: space-between;
-    
-    background-color: #6A5495;
-    color: #EFEFEF;
-    margin: 5px auto;
-    text-align: center;
-    padding: 90px;
-    display: block;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-main form h2 {
-    padding: 0px 0px 15px;
-    margin-top: 0px;
-
-}
-
-main form div.dados-cadastrais-conta {
-    flex-wrap: wrap;
-    padding-bottom: 0.2px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-evenly
-}
-
-main form input {
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #EFEFEF;
-    margin: 10px 50px;
-    text-align: center;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-    display: block;
-}
-
-
-main a {
-    font-size: 15px;
-    color: #EFEFEF;
-    text-decoration: underline 2px #ED5EDD;
-}
-main a:hover {
-    text-decoration: underline 2px #ED5EDD;
-    background-color: #ED5EDD
-}
-
-main p {
-    font-size: 15px;
-    color: #EFEFEF;
-    margin-top: 20px;
-}
-
-form button {
-    cursor: pointer;
-    display: block;
-    margin: 30px auto;
-    padding: 7px 75px;
-    border-radius: 5px;
-    margin-top: 30px;
-    color: #6A5495;
-    background-color: #EFEFEF;
-    border: none;
-    opacity: 0.8;
-}
-
-form button:hover {
-    opacity: 0.5;
-    padding: 9px 77px;
-    margin: 28px auto;
-}
-
-/*PRODUTOINTERNO*/
 section.produtos .container{
     display: flex;
     justify-content: space-between;
@@ -496,18 +540,22 @@ section.produtos article .price{
     margin: 5px 0;
 }
 
-h2, h3, h4, li {
+/*h2, h3, h4, li {
     color: #6A5495;
-}
+} constava na pasta mas não estava aqui, testar Bia*/ 
 
-.flex-container-produtointerno {
+.flex-container-produto-interno {
     display: flex;
     align-items: center;
     justify-content:space-around;
     height: 80vh;
 }
 
-.botao {
+h2, h3, h4, ul.produto-interno{
+    color: #6A5495; /*não achei na pasta anterior bia) */
+}
+
+.botao-produto-interno {
     color:#EFEFEF;
     background-color: #6A5482;
     
@@ -515,8 +563,175 @@ h2, h3, h4, li {
     padding: 10px;
 }
 
-.botao:hover {
+.botao-produto-interno:hover {
     background-color: #ED5EDD;
     border-color: #ED5EDD;
 }
   
+/*CSS da página PAINEL DO USUÁRIO */
+/*.dados-container{ VERIFICAR USO
+
+    width: 100%;
+    margin: center;
+    padding-right: 200px;
+    padding-left: 400px;
+    background-color: #EFEFEF;
+    border: 5px solid #6A5495;
+}*/
+/* -------css do botao de salvar dos meus dados */
+#submit-button{
+    padding: 10px 80px;
+    border-radius: 4px;
+    background-color: #6A5495;
+    border: none;
+}
+#submit-button:hover{
+    background-color: #4d3a74;
+}
+/* ---------css do botao de salvar dos meus dados */
+/* ---------css do botao de resumoo do pedido */
+button#pedido{
+    background: #6A5495;
+    border: none;
+}
+/* css do botao de resumoo do pedido */
+.dados-container div{
+ font-size: 100%;
+ margin: auto;
+}
+
+.paine-usuario-conteudo h2, label, select.form-control, input.form-control {
+    color: #6A5495;
+}
+
+th, td {
+    color: #6A5495;
+}
+
+#button-detalhes {
+    background-color: #ED5EDD;
+}
+
+
+
+
+/*-------------- MEDIA painelUsuario ------------------*/
+@media (max-width: 800px){
+    .container.pedidos{
+        width: 100%;
+        margin: auto;
+        padding-right: 10%;
+        padding-left: 10%;
+        background-color: #EFEFEF;
+    }  
+    }
+    .container.pedidos{ 
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 20px;
+        text-align: left;
+        margin-left: 30px;
+        font-size: 25px; 
+    }
+    .container-resumo{
+        font-size: bold;
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 30px;
+        text-align: left;
+        margin-left: 30px;
+        display: flex;
+    }
+    .click-pedido{
+        display: inline;
+        border:10px;
+        width: 100%;
+        margin-top: 10px; 
+        margin-block-end: 30px;
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+/*MEDIA produtoInterno*/
+@media (max-width: 800px){
+    section.lofts article{
+        margin: 10px;
+    }
+
+    .container{
+        padding: 0 15px;
+    }
+
+}
+
+@media (max-width: 600px){
+    section.lofts .container{
+        flex-wrap: wrap;
+    }
+
+    section.lofts article{
+        width: 100%;
+    }
+}
+
+/*MEDIA criarConta*/
+@media (max-width: 500px) {
+    main form.acessar-conta {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body {
+        height: 90vh;
+    }
+
+    main form h2 {
+        font-size: 27px;
+   
+    }
+}
+
+/*MEDIA pagina HOME*/
+@media (max-width: 800px) {
+    section.lofts article {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    section.lofts .container {
+        flex-wrap: wrap;
+    }
+
+    section.lofts article {
+        width: 100%;
+    }
+}
+
+/*media pagina LOGIN */
+/* responsivo ------------------------ */
+@media (max-width: 500px) {
+    main form.acessar-conta {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    body {
+        height: 90vh;
+    }
+}
+
+/* Página de cadastro--------EM LOGIN---------- */
+mains form.criar-conta {
+    display: inline;
+}

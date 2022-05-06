@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<%- include('./partials/header') %>
 
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/finalizacao.css">
 </head>
-
 
 <body>
 
@@ -20,7 +18,7 @@
 
             <div class="menu-finalizacao">
                 <i class="fa-solid fa-bag-shopping"></i>
-                <a href="#">Sacola</a>
+                <a class="finalizacao" href="#">Sacola</a>
 
                 <i class="fa-solid fa-cat"></i>
                 <i class="fa-solid fa-dog"></i>
@@ -36,29 +34,29 @@
                 <i class="fa-solid fa-id-card"></i>
                 <a href="#">Minha conta</a>
 
-                <a class="btn-menu" href="#">Sair</a>
+                <a class="btn-menu-finalizacao" href="#">Sair</a>
             </div>
             <!--menu-->
         </div>
         <!--center-->
 
-    </header>
+    </section>
 
     <section class="main-finalizacao">
         <div class="finalizacao-center">
 
-            <div class="main__cta">
+            <div class="main-finalizacao__cta">
                 <h2>Happy Pet</h2>
 
                 <p>Calcule o frete e prazo</p>
                 <label for="text"></label>
-                <input type="text" id="frete" name="frete" placeholder="">
+                <input type="text" id="frete" name="frete" placeholder="CEP">
 
                 <button class="calcular-frete-finalizacao">Calcular</button>
 
                 <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
 
-                <button>Finalizar Compra</button>
+                <button class="calcular-frete-carrinho">Finalizar Compra</button>
             </div>
 
             <!--main-cta-->
@@ -83,7 +81,7 @@
                     <p>Desconto</p>
                     <p>Total</p>
                 </article>
-            </section>
+            </section> 
 
             <div class="main__cta">
                 <section class="escolher-finalizacao" style="margin-top: 50px;">
@@ -92,6 +90,8 @@
 
     </section>
     <!--main-->
+
+
 
     
 
@@ -102,3 +102,5 @@
 </body>
 
 </html>
+
+<!--carrinho mantive sem footer/INCLUDE (BIA)-->

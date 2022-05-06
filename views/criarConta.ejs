@@ -1,87 +1,76 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<%- include('./partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/criar-conta.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2? family= Comfortaa:wght@300;400;700 & display=swap" rel="stylesheet">
-    <title>Página de cadastro</title>
-</head>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
 
-<body>
-    <header>
-        <div class="logo-site">
-            <!--redirecionar para página inicial-->
-            <a rel="stylesheet" href="/"><img class="logo-loja" src="/images/logos/logo-loja.jpg" alt="logo da loja"></a>
-        </div>
-    </header>
+    <body class="body-login">
 
-    <main>
+        <main class="formulario-login">
 
-        <form class="criar-conta">
-            <h2>Cadastre-se:</h2>
+            <form class="criar-conta">
+                <h2 class="login">Cadastre-se:</h2>
 
-            <div class="dados-cadastrais-conta">
-                <div class="campo">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="email@email.com.br" required>
-                </div>
-                <div class="campo">
-                <label for="telefone">Telefone:</label>
-                <input class="inserir-dados-cadastro" type="tel" id="telefone" name="telefone"
-                    placeholder="(xx)xxxxx-xxxx" required>
-                </div>
-                <div class="campo">
-                <label for="nome">Nome:</label>
-                <input class="inserir-dados-cadastro" type="text" id="nome" name="nome" placeholder="Primeiro nome"
-                    required>
-                </div>
-                <div class="campo">
-                <label for="nome">Sobrenome:</label>
-                <input class="inserir-dados-cadastro" type="text" id="sobrenome" name="sobrenome"
-                    placeholder="Sobrenome" required>
-                </div>
-                <div class="campo">
-                <label for="endereco">Endereço:</label>
-                <input class="inserir-dados-cadastro" type="text" id="endereco" name="endereco" required>
-                </div>
-                <div class="campo">
-                    <label for="numero">Número:</label>
-                    <input class="inserir-dados-cadastro" type="number" id="numero" name="numero" required>
-                </div>
-                <div class="campo">
-                    <label for="complemento">Complemento:</label>
-                    <input class="inserir-dados-cadastro" type="text" id="complemento" name="complemento">
-                </div>
-                <div class="campo">
-                    <label for="cep">CEP:</label>
-                    <input class="inserir-dados-cadastro" type="number" id="cep" name="cep" required>
+                <div class="dados-cadastrais-conta">
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="email">E-mail:</label>
+                        <input class="inserir-dados-cadastro" type="email" id="email" name="email" placeholder="email@email.com.br" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="telefone">Telefone:</label>
+                        <input class="inserir-dados-cadastro" type="tel" id="telefone" name="telefone"
+                            placeholder="(xx)xxxxx-xxxx" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="nome">Nome:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="nome" name="nome"
+                            placeholder="Primeiro nome" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="nome">Sobrenome:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="sobrenome" name="sobrenome"
+                            placeholder="Sobrenome" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="endereco">Endereço:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="endereco" name="endereco" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="numero">Número:</label>
+                        <input class="inserir-dados-cadastro" type="number" id="numero" name="numero" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="complemento">Complemento:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="complemento" name="complemento">
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="cep">CEP:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="cep" name="cep" required>
+                    </div>
+
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="senha">Cadastrar senha:</label>
+                        <input class="inserir-dados-cadastro" type="password" id="senha" name="senha"
+                            placeholder="Digite sua senha" required>
+                    </div>
+
                 </div>
 
-                <div class="campo">
-                    <label for="senha">Cadastrar senha:</label>
-                    <input class="inserir-dados-cadastro" type="password" id="senha" name="senha"
-                        placeholder="Digite sua senha" required>
-                </div>
+                <p class="termo">Ao criar uma conta, você concorda com os <a class="termosCondicoes" href="#">Termos e
+                        Condições</a> de Uso da Happy Pet. Para saber como tratamos os seus dados pessoais, acesse o
+                    nosso
+                    <a class="termosCondicoes" href="#">Aviso de Privacidade</a>.
+                </p>
 
-            </div>
+                <!--direcionar para a página de cadastro-->
+                <button class="login-cadastro" type="submit">Cadastrar</button>
 
-            <p class="termos">Ao criar uma conta, você concorda com os <a class="termosCondicoes" href="#">Termos e
-                    Condições</a> de Uso da Happy Pet. Para saber como tratamos os seus dados pessoais, acesse o nosso
-                <a class="termosCondicoes" href="#">Aviso de Privacidade</a>.
-            </p>
+            </form>
 
-            <!--direcionar para a página de cadastro-->
-            <button type="submit">Cadastrar</button>
+        </main>
 
-        </form>
+    </body>
 
-    </main>
+    </html>
 
-</body>
-
-</html>
+    <!--CRIAR CONTA mantive sem footer/include (Bia)-->

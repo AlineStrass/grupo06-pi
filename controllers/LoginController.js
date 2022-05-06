@@ -1,3 +1,4 @@
+
 const LoginController = {
     index: (req, res) => {
         return res.render('login')
@@ -5,3 +6,4 @@ const LoginController = {
 }
 
 module.exports = LoginController;
+

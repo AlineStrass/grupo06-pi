@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const { body } = require('express-validator');
 
 var HomeController = require("../controllers/HomeController");
 var LoginController = require("../controllers/LoginController");
@@ -10,6 +11,8 @@ var ProdutoInternoController = require("../controllers/ProdutoInternoController"
 var ObrigadoController = require("../controllers/ObrigadoController");
 var FinalizarController = require("../controllers/FinalizarController");
 var CarrinhoController = require("../controllers/CarrinhoController");
+
+
 
 router.get('/', HomeController.index);
 router.get('/login', LoginController.index);
