@@ -167,13 +167,13 @@ input.inserir-dados-cadastro {
     flex-wrap: wrap;
     flex-direction: row;
     background-color: #EFEFEF;
-    margin: 8px 50px;
+    margin: 5px 50px;
     text-align: center;
     font-size: 15px;
     border-radius: 5px;
     border: none;
     display: block;
-    padding: 15px 70px;
+    padding: 10px 70px;
 }
 
 main a.termosCondicoes {
