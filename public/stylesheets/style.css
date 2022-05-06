@@ -204,12 +204,16 @@ button.login-cadastro {
     background-color: #EFEFEF;
     border: none;
     opacity: 0.8;
+    border: solid #EFEFEF;;
 }
 
 form button.login-cadastro:hover {
     opacity: 0.5;
     padding: 2px 122px;
     margin: 29px auto;
+    background-color: #6A5495;
+    color: #EFEFEF;
+    border: solid #EFEFEF;
 }
 
 @media (max-width: 500px) {
