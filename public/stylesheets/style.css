@@ -202,9 +202,8 @@ button.login-cadastro {
     margin-top: 30px;
     color: #6A5495;
     background-color: #EFEFEF;
-    border: none;
     opacity: 0.8;
-    border: solid #EFEFEF;;
+    border: solid #EFEFEF;
 }
 
 form button.login-cadastro:hover {
@@ -229,7 +228,7 @@ form button.login-cadastro:hover {
 }
 /*--------- FINAL DO LOGIN E CRIAR CONTA --------------*/
 
-/*--------------- estilo Página PRODUTOS ----------------*/
+/*--------------- Página PRODUTOS ----------------*/
 
 .produtos-container{
     background-color: #EFEFEF;
@@ -496,7 +495,7 @@ article p {
 
 h5, h2, p {
     color: #6A5495;
-}*/
+}
 
 input {
     height: 30px;
@@ -540,9 +539,12 @@ section.produtos article .price{
     margin: 5px 0;
 }
 
-/*h2, h3, h4, li {
+h2.produto-interno,
+h3.produto-interno, 
+h4.produto-interno, 
+li.produto-interno {
     color: #6A5495;
-} constava na pasta mas não estava aqui, testar Bia*/ 
+} 
 
 .flex-container-produto-interno {
     display: flex;
@@ -551,21 +553,18 @@ section.produtos article .price{
     height: 80vh;
 }
 
-h2, h3, h4, ul.produto-interno{
-    color: #6A5495; /*não achei na pasta anterior bia) */
-}
-
-.botao-produto-interno {
+button.botao-produto-interno {
     color:#EFEFEF;
     background-color: #6A5482;
-    
+    border: solid #6A5482;
     border-radius: 5px;
     padding: 10px;
 }
 
-.botao-produto-interno:hover {
-    background-color: #ED5EDD;
-    border-color: #ED5EDD;
+button.botao-produto-interno:hover {
+    background-color: #EFEFEF;
+    color: #6A5482;
+    border: solid #6A5482;
 }
   
 /*CSS da página PAINEL DO USUÁRIO */
