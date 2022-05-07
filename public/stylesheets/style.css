@@ -321,7 +321,6 @@ form button.login-cadastro:hover {
 }
 
 /*CSS de FINALIZAR,OBRIGADO e CARRINHO*/
-
 section.finalizacao { 
     background-color: #6A5495;
     padding: 30px 0;
@@ -347,7 +346,7 @@ section.finalizacao {
     height: 50px;
 }
 
-.div .menu-finalizacao {
+div .menu-finalizacao {
     width: 90%;
     text-align: right;
     color: #EFEFEF;
@@ -395,10 +394,12 @@ section.finalizacao {
     height: 100px;
 }
 
+
+
 /* -------------Section main-finalizar */
 
 section.main-finalizacao {
-    padding: 5px 0px;
+    padding: 5px 30px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -406,20 +407,34 @@ section.main-finalizacao {
 
 .main-finalizacao__cta {
     width: 100%;
-    margin: 60px 0;
-    text-align: center;
+    margin: 40px 0;
+    text-align: left;
 }
 
-.main-finalizacao__cta h2 {
+a.menu-finalizacao {
+    padding: 0 15px;
+    border-radius: 4px;
+    background-color: #EFEFEF;
+    border: solid #EFEFEF;
     color: #6A5495;
-    font-size: 40px;
 }
 
-.main-finalizacao__cta p {
-    color: #6A5495;
-    font-size: 19px;
-    margin: 10px 0 50px 0;
+a.menu-finalizacao:hover {
+    background-color: #6A5495;
+    border: solid #EFEFEF;
+    color: #EFEFEF;
+}
 
+button.calcular-frete-finalizacao {
+    background-color: #6A5495;
+    border-radius: 4px;
+    border: solid #6A5495;
+}
+
+button.calcular-frete-finalizacao:hover {
+    background-color: #EFEFEF;
+    color: #6A5495;
+    border: solid #6A5495;
 }
 
 button.calcular-frete-carrinho {
@@ -429,25 +444,15 @@ button.calcular-frete-carrinho {
     color: #EFEFEF;
     border-radius: 6px;
     font-size: 16px;
-    border: 0;
+    border: solid;
     cursor: pointer;
     margin: 15px 0;
 }
 
-button.finalizar {
-    background-color: #6A5495;
-    display: inline-block;
-    padding: 8px 30px;
-    color: #EFEFEF;
-    border-radius: 6px;
-    font-size: 16px;
-    border: 0;
-    cursor: pointer;
-    margin: 15px 0;
-}
-
-button:hover {
-    background-color: #ED5EDD;
+button.calcular-frete-carrinho:hover {
+    background-color: #EFEFEF;
+    color: #6A5495;
+    border: solid #6A5495;
 }
 
 section.finalizacao-container {
@@ -500,7 +505,7 @@ h5, h2, p {
 input {
     height: 30px;
 }
-
+/*--- FINAL CARRINHO, FINALIZAR E OBRIGADO --*/
 
 /*Css da PRODUTOINTERNO*/
 

@@ -1,31 +1,27 @@
 <%- include('./partials/header') %>
 
 <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/finalizacao.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="finalizacao-center">
+    <header class="finalizacao">
+        <div class="center-finalizacao">
             <div class="logo-finalizacao" style="display:flex; align-items:center;">
-                <img src="/images/logos/logo-roxo-escrita-em-baixo.jpg" alt="foto logo" width="60" height="60">
-
+                
             </div>
             <!--logo-->
 
             <div class="menu-finalizacao">
                 <i class="fa-solid fa-bag-shopping"></i>
-                <a class="finalizacao" href="#">Sacola</a>
+                <a href="#">Sacola</a>
 
                 <i class="fa-solid fa-cat"></i>
                 <i class="fa-solid fa-dog"></i>
                 <a href="#">Identificação</a>
 
                 <i class="fa-solid fa-credit-card"></i>
-                <i class="fa-solid fa-money-bill-1"></i>
                 <a href="#">Pagamento</a>
 
                 <i class="fa-solid fa-circle-check"></i>
@@ -34,30 +30,16 @@
                 <i class="fa-solid fa-id-card"></i>
                 <a href="#">Minha conta</a>
 
-                <a class="btn-menu-finalizacao" href="#">Sair</a>
+                <a class="menu-finalizacao" href="#">Sair</a>
             </div>
             <!--menu-->
         </div>
         <!--center-->
 
-    </section>
+    </header>
 
     <section class="main-finalizacao">
         <div class="finalizacao-center">
-
-            <div class="main-finalizacao__cta">
-                <h2>Happy Pet</h2>
-
-                <p>Calcule o frete e prazo</p>
-                <label for="text"></label>
-                <input type="text" id="frete" name="frete" placeholder="CEP">
-
-                <button class="calcular-frete-finalizacao">Calcular</button>
-
-                <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
-
-                <button class="calcular-frete-carrinho">Finalizar Compra</button>
-            </div>
 
             <!--main-cta-->
 
@@ -81,11 +63,22 @@
                     <p>Desconto</p>
                     <p>Total</p>
                 </article>
-            </section> 
+            </section>
+            
+            <div class="main-finalizacao__cta">
+                <p>Calcule o frete e prazo</p>
+                <label for="text"></label>
+                <input type="text" id="frete" name="frete" placeholder="CEP">
+
+
+                <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
+            </div>
 
             <div class="main__cta">
-                <section class="escolher-finalizacao" style="margin-top: 50px;">
-                    <h2><button>Escolher mais produtos</button></h2>
+                <section class="escolher-finalizacao">
+                    <button class="calcular-frete-carrinho">Escolher mais produtos</button>
+
+                    <button class="calcular-frete-carrinho">Finalizar Compra</button>
                 </section>
 
     </section>
