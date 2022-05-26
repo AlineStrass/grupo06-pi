@@ -8,7 +8,7 @@ const loginMiddleware = [
 module.exports = loginMiddleware;
 */
 
-function loginMiddleware(req, res, next) {
+/*function loginMiddleware(req, res, next) {
     
         const usuarioEstaLogado = true;
 
@@ -22,3 +22,4 @@ function loginMiddleware(req, res, next) {
 }
 
 module.exports = loginMiddleware;
+*/

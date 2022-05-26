@@ -15,7 +15,7 @@ var FinalizarController = require("../controllers/FinalizarController");
 var CarrinhoController = require("../controllers/CarrinhoController");
 
 //MIDDLEWARES
-var loginMiddleware = require("../middlewares/loginMiddleware");
+//var loginMiddleware = require("../middlewares/loginMiddleware");
 
 
 //ROTAS
