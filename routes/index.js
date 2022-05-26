@@ -17,11 +17,17 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 //MIDDLEWARES
 var loginMiddleware = require("../middlewares/loginMiddleware");
 
+//validações de campos
+//var validacoes = require('../middlewares/validacoes');
+
 
 //ROTAS
 router.get('/', HomeController.index);
 router.get('/login', LoginController.index);
 router.get('/criarconta', CriarContaController.index);
+
+//router.post('/criarconta', validacoes, CriarContaController.index);
+
 router.get('/produtos', ProdutosController.index);
 router.get('/painelusuario', loginMiddleware, PainelUsuarioController.index);
 router.get('/produtointerno', ProdutoInternoController.index);
