@@ -1,16 +1,7 @@
-//const fs = require('fs');
-/*
-const loginMiddleware = [
-    body('email').notEmpty().isEmail(),
-];
-
-
-module.exports = loginMiddleware;
-*/
-
+//middleware de autenticação do usuario
 function loginMiddleware(req, res, next) {
     
-        const usuarioEstaLogado = true;
+        const usuarioEstaLogado = false;
 
         if(!usuarioEstaLogado)
             res.render('login');
