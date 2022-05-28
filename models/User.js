@@ -12,12 +12,13 @@ const User = {
         let allUsers = this.getUsers();
         let newUser = {
             id: this.generateID(),
+            //spred operator
             ...userData
         }
 
-        //captura o novo usuario e salva em newuser
+        //captura o novo usuario e salva em newUser
         allUsers.push(newUser);
-        //salvar o newUser no arquivo json
+        //salvar/escrever o newUser no arquivo json
         fs.writeFileSync(this.usuario, JSON.stringify(allUsers, null, ' '));
 
         return newUser;
@@ -34,23 +35,26 @@ const User = {
         return 1;
     },
 
+    //ler informações do arquivo do banco de dados
     getUsers: function() {
         return JSON.parse(fs.readFileSync(this.usuario, 'utf-8'))
     },
 
+    //buscar usuario por id
     findUserById: function(id) {
         let allUsers = this.getUsers();
         let userFound = allUsers.find(oneUser => oneUser.id === id);
         return userFound;
     },
 
+    //buscar usuario por uma informação específica, qualquer campo
     findUserByField: function(field, value) {
-        console.log('entrou')
+        //console.log('entrou')
         let allUsers = this.getUsers();
         let userFound = allUsers.find(oneUser => oneUser[field] === value);
         console.log(userFound)
         return userFound;
-
+        //console.log(User.findUserByField('email','meuemail@email.com'))
     }
 
 }

@@ -1,26 +1,51 @@
 [
  {
   "id": 1,
-  "usuario": "Fulano de Tal",
   "email": "meuemail@email.com",
+  "telefone": "156654824574",
+  "nome": "Fulano",
+  "sobrenome": "de Tal",
+  "endereco": "rua dos bobos",
+  "numero": "4455",
+  "complemento": "135153",
+  "cep": "022551541",
   "senha": "123456"
  },
  {
   "id": 2,
-  "nomeCompleto": "Beltrano de Alcantra",
   "email": "alcantra@email.com",
+  "telefone": "156654824574",
+  "nome": "Beltrano",
+  "sobrenome": "de Alcantra",
+  "endereco": "rua dos bobos",
+  "numero": "4455",
+  "complemento": "135153",
+  "cep": "022551541",
   "senha": "123456"
  },
  {
   "id": 3,
-  "nomeCompleto": "Pedro da Silva",
   "email": "silva@email.com",
+  "telefone": "549999999999",
+  "nome": "Pedro",
+  "sobrenome": "da Silva",
+  "endereco": "rua dos bobos",
+  "numero": "4455",
+  "complemento": "135153",
+  "cep": "1351541",
   "senha": "123456"
  },
  {
   "id": 4,
-  "usuario": "Ana Maria",
-  "email": "am@email.com"
+  "email": "am@email.com",
+  "telefone": "549999999999",
+  "nome": "Ana",
+  "sobrenome": "Maria",
+  "endereco": "rua dos bobos",
+  "numero": "4455",
+  "complemento": "135153",
+  "cep": "1351541",
+  "senha": "3135151"
  },
  {
   "id": 5,
@@ -33,5 +58,17 @@
   "complemento": "135153",
   "cep": "1351541",
   "senha": "3135151"
+ },
+ {
+  "id": 6,
+  "email": "pessoa@email.com",
+  "telefone": "51854621584",
+  "nome": "Joana",
+  "sobrenome": "Pessoa",
+  "endereco": "rua dos bobos",
+  "numero": "0000",
+  "complemento": "casa 25",
+  "cep": "321258884",
+  "senha": "54789"
  }
 ]

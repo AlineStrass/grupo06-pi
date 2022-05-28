@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const session = require('express-session');
 
 const LoginController = {
     index: (req, res) => {
@@ -6,18 +7,23 @@ const LoginController = {
     },
 
     acaoLogin: (req, res) => {
-        console.log('entrou no login')
+        //console.log('entrou no login')
         const emailLogin = req.body.email;
-        console.log(emailLogin)
+        //console.log(emailLogin)
 
         if(User.findUserByField('email', emailLogin)){
+            req.session.logado = true;
+            console.log("teste:")
+            console.log(req.session.logado)
+            
             res.redirect('/painelUsuario');
-        }else{
+        }
+        else{
             res.redirect('/criarConta');
         }
+    
     }
     
-
    /* 
    //parte aula ao vivo prof. rafael - não funcionou
 
@@ -29,7 +35,6 @@ const LoginController = {
         res.redirect('/painelUsuario');
     },
     
-
     areaCliente: (req, res) => {
         
         if(req.session.emailUsuario === undefined){
