@@ -19,8 +19,8 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 //var loginMiddleware = require("../middlewares/loginMiddleware");
 
 //validações de campos
-var validacoes = require('../middlewares/validacoes');
-const { route } = require('express/lib/application');
+//var validacoes = require('../middlewares/validacoes');
+
 
 
 //ROTAS
@@ -30,10 +30,10 @@ router.get('/login', LoginController.index);
 router.post('/acaoLogin', LoginController.acaoLogin);
 
 
-//router.get('/areaCliente', LoginController.areaCliente);
+//router.get('/areaCliente', LoginController.areaCliente); - acho que não será usado.
 
 router.get('/criarconta', CriarContaController.index);
-//router.post('/criarconta', validacoes, CriarContaController.index);
+//router.post('/criarconta', validacoes, CriarContaController.index); - estava interferindo no post da ação cadastrar.
 router.post('/acaoCadastrar', CriarContaController.acaoCadastrar);
 
 router.get('/produtos', ProdutosController.index);

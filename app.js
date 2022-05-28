@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(session({
-  secret:'projetoIntegrador-grupo05-HappyPet',
+  secret:'projetoIntegrador-grupo06-HappyPet',
   resave: true,
   saveUninitialized: true
 }));

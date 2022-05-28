@@ -1,7 +1,12 @@
 const PainelUsuarioController = {
     index: (req, res) => {
-        return res.render('painelUsuario')
+        if (req.session.logado === true) {
+            return res.render('painelUsuario')
+        } else {
+            res.render('login')
+        }
     }
+
 }
 
 module.exports = PainelUsuarioController;

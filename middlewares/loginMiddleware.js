@@ -1,4 +1,5 @@
 /*
+//professor mandou fazer de outro modo
 const User = require('../models/User');
 
 //middleware de autenticação do usuario
