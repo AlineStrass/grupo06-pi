@@ -1,7 +1,10 @@
+/*
+const User = require('../models/User');
+
 //middleware de autenticação do usuario
 function loginMiddleware(req, res, next) {
     
-        const usuarioEstaLogado = false;
+        const usuarioEstaLogado = User;
 
         if(!usuarioEstaLogado)
             res.render('login');
@@ -13,3 +16,4 @@ function loginMiddleware(req, res, next) {
 }
 
 module.exports = loginMiddleware;
+*/
