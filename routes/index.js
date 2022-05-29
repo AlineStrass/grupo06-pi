@@ -5,6 +5,7 @@ const { body } = require('express-validator');
 const session = require('express-session');
 
 //CONTROLLES
+var AdminController = require('../controllers/AdminController')
 var HomeController = require("../controllers/HomeController");
 var LoginController = require("../controllers/LoginController");
 var CriarContaController = require("../controllers/CriarContaController");
@@ -25,6 +26,8 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 
 //ROTAS
 router.get('/', HomeController.index);
+
+router.get('/admin', AdminController.index);
 
 router.get('/login', LoginController.index);
 router.post('/acaoLogin', LoginController.acaoLogin);
