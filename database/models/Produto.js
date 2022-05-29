@@ -11,7 +11,9 @@ descricao:DataType.TEXT,
 foto:DataType.STRING,
 categorias_id:DataType.INTEGER,
  })
-}
 
 tableName = 'produto',
-timestamp = false
+timestamps = false
+
+}
+

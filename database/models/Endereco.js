@@ -34,7 +34,10 @@ module.exports = (sequelize, DataType) =>{
    clientes_id:DataType.INTEGER,
     
      })
+
+     tableName = 'endereco',
+     timestamps = false
+
    }
    
-   tableName = 'endereco',
-   timestamp = false
+  
