@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 const session = require('express-session');
 
 //CONTROLLES
-var AdminController = require('../controllers/AdminController')
+var AdminController = require('../controllers/AdminController');
 var HomeController = require("../controllers/HomeController");
 var LoginController = require("../controllers/LoginController");
 var CriarContaController = require("../controllers/CriarContaController");
