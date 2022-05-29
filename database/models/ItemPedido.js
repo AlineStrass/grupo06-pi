@@ -10,7 +10,10 @@ module.exports = (sequelize, DataType) =>{
    produtos_id:DataType.INTEGER,
    pedidos_id:DataType.INTEGER,
     })
+
+    tableName = 'itemPedido',
+    timestamps = false
+
    }
    
-   tableName = 'itemPedido',
-   timestamp = false
+ 

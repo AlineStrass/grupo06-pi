@@ -33,7 +33,10 @@ module.exports = (sequelize, DataType) =>{
        type:DataType.STRING,
        allowNull: true,
     }})
+
+   tableName = 'cliente',
+   timestamps = false
+
    }
    
-   tableName = 'cliente',
-   timestamp = false
+   

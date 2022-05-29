@@ -8,7 +8,9 @@ module.exports = (sequelize, DataType) =>{
    categoria:DataType.STRING,
    
     })
+
+    tableName = 'categoria',
+    timestamps = false
    }
    
-   tableName = 'categoria',
-   timestamp = false
+  
