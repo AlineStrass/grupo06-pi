@@ -70,6 +70,18 @@
   "complemento": "casa 25",
   "cep": "321258884",
   "senha": "54789"
+ },
+ {
+  "id": 7,
+  "email": "beatricemathey@gmail.com",
+  "telefone": "(11) 97180-6096",
+  "nome": "Beatrice",
+  "sobrenome": "Gonçalves",
+  "endereco": "Rua Euclides Damiani",
+  "numero": "422",
+  "complemento": "",
+  "cep": "08610-030",
+  "senha": "1234"
  }
  
 ]
