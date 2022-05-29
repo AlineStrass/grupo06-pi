@@ -1,0 +1,49 @@
+<%- include('./partials/header') %>
+
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+
+    <body>
+        <main class="admin">
+            <div class="container-admin">
+                <h1 class="admin">Registros de Produtos</h1>
+
+                <form action="" method="POST" class="cadastroProdutos">
+                    <div class="formulario-produtos">
+                        <div>
+                            <label for="idProduto">Id:</label>
+                            <input type="number" name="idProduto" id="idProduto" required>
+                        </div>
+                        <div>
+                            <label for="nomeProduto">Nome:</label>
+                            <input type="text" name="nomeProduto" id="nomeProduto" required>
+                        </div>
+
+                        <div>
+                            <label for="precoProduto">Preco:</label>
+                            <input type="text" name="precoProduto" id="precoProduto" required>
+                        </div>
+
+                        <div>
+                            <label for="descricaoProduto">Descricao:</label>
+                            <textarea name="descricaoProduto" id="descricaoProduto" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div>
+                            <label>Imagem</label>
+                            <input type="file" name="imagemProduto" />
+                        </div>
+                    </div>
+
+                    <div class="botoes-adm">
+                        <button class="btn-adm btn-cadastroProduto">Cadastrar</button>
+                        <button class="btn-adm btn-editarProduto">Editar</button>
+                        <button class="btn-adm btn-excluirProduto">Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+
+    </html>

@@ -10,6 +10,37 @@ body {
     background: #EFEFEF;
 } 
 
+/* ------- PAGINA ADMIN -----------------------*/
+.container-admin {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+h1.admin {
+    color: #6A5495;
+
+}
+
+form.cadastroProdutos {
+    display: flex;
+    flex-direction: row;
+}
+
+.formulario-produtos {
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes-adm {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ------- FIM DA PÁGINA ADMIN -----------------*/
+
 /* ------- PAGINA HOME -----------------------*/
 .banner-home {
     overflow-x: hidden;
