@@ -13,40 +13,17 @@ const LoginController = {
 
         if(User.findUserByField('email', emailLogin)){
             req.session.logado = true;
-            console.log("teste:")
-            console.log(req.session.logado)
+            //console.log("teste:")
+            //console.log(req.session.logado)
             
             res.redirect('/painelUsuario');
         }
         else{
             res.redirect('/criarConta');
         }
-    
+
     }
     
-   /* 
-   //parte aula ao vivo prof. rafael - não funcionou
-
-    acaoLogin: (req, res) => {
-        //consulta infos no banco
-
-        req.session.emailUsuario = "";
-
-        res.redirect('/painelUsuario');
-    },
-    
-    areaCliente: (req, res) => {
-        
-        if(req.session.emailUsuario === undefined){
-            res.redirect('/login');
-        }else {
-            res.render('painelUsuario', {
-               emailUsuario: req.session.emailUsuario
-            });
-        }
-       
-    }
-    */
 }
 
 
