@@ -101,7 +101,7 @@ section.produtos-home .container-home {
 
 section.produtos-home article {
     width: 400px;
-    border: solid 1px #ED5EDD;
+    /*border: solid 1px #ED5EDD; */
     display: flex;
     justify-content: center;
     flex-direction: column;
