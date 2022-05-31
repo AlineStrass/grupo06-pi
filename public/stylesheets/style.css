@@ -210,12 +210,12 @@ input.inserir-dados-cadastro {
 main a.termosCondicoes {
     font-size: 15px;
     color: #EFEFEF;
-    text-decoration: underline 2px #ED5EDD;
+    text-decoration: underline 2px #FF8CB7;
 }
 
 main a.termosCondicoes:hover {
-    text-decoration: underline 2px #ED5EDD;
-    background-color: #ED5EDD
+    text-decoration: underline 2px #FF8CB7;
+    background-color: #FF8CB7;
 }
 
 main p.termo {
@@ -355,7 +355,7 @@ form button.login-cadastro:hover {
 section.finalizacao { 
     background-color: #6A5495;
     padding: 30px 0;
-    border-bottom: 2px solid #ED5EDD;
+    border-bottom: 2px solid #FF8CB7;
     margin: 20px;
 }
 
@@ -394,7 +394,7 @@ div .menu-finalizacao {
 }
 
 .menu-finalizacao .a:hover {
-    color: #ED5EDD;
+    color: #FF8CB7;
 }
 
 
@@ -408,7 +408,7 @@ div .menu-finalizacao {
 }
 
 .menu-finalizacao .btn-menu-finalizacao:hover {
-    background-color: #ED5EDD;
+    background-color: #FF8CB7;
     color: #EFEFEF;
 }
 
@@ -644,7 +644,7 @@ th, td {
 }
 
 #button-detalhes {
-    background-color: #ED5EDD;
+    background-color: #FF8CB7;
 }
 
 

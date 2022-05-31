@@ -10,7 +10,7 @@ header {
     background-color: #6A5495;
     justify-content: space-around;
     /*position: fixed;*/
-    border-bottom: 2px solid #ED5EDD;
+    border-bottom: 2px solid #FF8CB7;
 }
 
 header .container-header {
@@ -62,7 +62,7 @@ header .container-header .logo-header img {
 }
 
 .fa-solid:hover, .container-second .dropdown i:hover {
-    color: #ED5EDD;
+    color: #FF8CB7;
 }
 
 
@@ -222,7 +222,7 @@ footer {
 }
 
 .centro .content-footer .endereco span:hover {
-    text-decoration: underline 2px #ED5EDD;
+    text-decoration: underline 2px #FF8CB7;
 }
 
 .centro .content-footer img {
