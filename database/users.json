@@ -69,7 +69,7 @@
   "numero": "0000",
   "complemento": "casa 25",
   "cep": "321258884",
-  "senha": "54789"
+  "senha": "uykdtyj.tdy---hkdjhoajertkgmdpoh=sglknsçdjghsçkegjnẽf"
  },
  {
   "id": 7,
@@ -82,6 +82,17 @@
   "complemento": "",
   "cep": "08610-030",
   "senha": "1234"
+ },
+ {
+  "id": 8,
+  "email": "umemailqualquer@email.com",
+  "telefone": "549999999999",
+  "nome": "gshdghadghfgh",
+  "sobrenome": "Pessoa",
+  "endereco": "dsgaergaerhgdaf",
+  "numero": "452",
+  "complemento": "452452",
+  "cep": "582786786",
+  "senha": "78536786786"
  }
- 
 ]
