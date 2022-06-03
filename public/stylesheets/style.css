@@ -14,9 +14,13 @@ body {
 .container-admin {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: space-around;
     align-items: center;
+    padding: 10px;
+}
+
+.formulario-produtos {
+    margin:10px 10px 10px 10px;
 }
 
 h1.admin {
@@ -24,19 +28,33 @@ h1.admin {
 
 }
 
-form.cadastroProdutos {
-    display: flex;
-    flex-direction: row;
+
+.botoes-adm{
+    padding: 10px;
 }
 
-.formulario-produtos {
-    display: flex;
-    flex-direction: row;
+.btn-cadastroProduto{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #6A5A95;
+    color: white;
 }
 
-.botoes-adm {
-    display: flex;
-    flex-direction: row;
+.btn-editarProduto{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #6A5A95;
+    color: white;
+}
+
+.btn-excluirProduto{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #6A5A95;
+    color: white;
 }
 
 /* ------- FIM DA PÁGINA ADMIN -----------------*/
