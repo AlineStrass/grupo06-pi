@@ -82,6 +82,29 @@
   "complemento": "",
   "cep": "08610-030",
   "senha": "1234"
+ },
+ {
+  "id": 8,
+  "email": "regis@regis.com",
+  "telefone": "1199999999",
+  "nome": "regis",
+  "sobrenome": "regis",
+  "endereco": "regis",
+  "numero": "123",
+  "complemento": "123",
+  "cep": "123123123",
+  "senha": "123456"
+ },
+ {
+  "id": 9,
+  "email": "pet@pet.com",
+  "telefone": "1111111111",
+  "nome": "pet",
+  "sobrenome": "pet",
+  "endereco": "pet",
+  "numero": "111",
+  "complemento": "111",
+  "cep": "111111111",
+  "senha": "$2a$10$TVAHzEsRpftmD59sXYioiOcpl6CJpEreZs1L1aiLSdJTt3JuzAz36"
  }
- 
 ]
