@@ -4,6 +4,12 @@ var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
 
+const loginMiddleware = require('../middlewares/loginMiddleware');
+
+
+
+
+
 //CONTROLLES
 var AdminController = require('../controllers/AdminController');
 var HomeController = require("../controllers/HomeController");
@@ -33,6 +39,9 @@ router.get('/login', LoginController.index);
 router.post('/acaoLogin', LoginController.acaoLogin);
 
 
+router.get('/login/efetuar',loginMiddleware, LoginController.login);
+
+
 //router.get('/areaCliente', LoginController.areaCliente); - acho que não será usado.
 
 router.get('/criarconta', CriarContaController.index);
@@ -40,7 +49,10 @@ router.get('/criarconta', CriarContaController.index);
 router.post('/acaoCadastrar', CriarContaController.acaoCadastrar);
 
 router.get('/produtos', ProdutosController.index);
-router.get('/painelusuario', /*loginMiddleware,*/ PainelUsuarioController.index);
+
+
+router.get('/painelusuario', PainelUsuarioController.index);
+
 router.get('/produtointerno', ProdutoInternoController.index);
 router.get('/obrigado', ObrigadoController.index);
 router.get('/finalizar', FinalizarController.index);
