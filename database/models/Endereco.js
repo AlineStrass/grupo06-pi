@@ -33,10 +33,13 @@ module.exports = (sequelize, DataType) => {
         },
         clientes_id: DataType.INTEGER,
 
-    })
+        {   
+    
+        tableName : 'enderecos',
+        timestamps : false
+    
+}});
 
-    tableName = 'endereco',
-    timestamps = false
+return Endereco;
 
-}
-
+};
