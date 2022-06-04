@@ -8,10 +8,14 @@ module.exports = (sequelize, DataType) => {
         data: DataType.DATE,
         status: DataType.STRING,
         clientes_id: DataType.INTEGER,
-    })
+    {   
+    
+        tableName : 'pedidos',
+        timestamps : false
+    
+}});
 
-    tableName = 'pedido',
-    timestamps = false
+return Pedido;
 
-}
+};
 
