@@ -18,7 +18,8 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    // PARA RODAR NO TERMINAL: SEQUELIZE DB:MIGRATE:UNDO
+    // PARA RODAR NO TERMINAL: SEQUELIZE DB:MIGRATE:UNDO (ultima atualizaçao)
+    //PARA RODAR NO TERMINAL: SEQUELIZE DB:MIGRATE:UNDO:ALL (tudo)
     
     queryInterface.dropTable('produtos');
   }
