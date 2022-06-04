@@ -246,6 +246,42 @@ form button.login-cadastro:hover {
     border: solid #EFEFEF;
 }
 
+/* ------- PAGINA NOT FOUND -----------------------*/
+body {
+    background-color: #6A5495;
+    font-family: 'Confortaa', cursiva;
+}
+
+img.notFound {
+    width: 40%;
+    padding: 30px 0;
+}
+
+.container-notFound {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.notFound {
+    color: #EFEFEF;
+    font-size: 25px;
+}
+
+a.notFound {
+    padding: 30px;
+    color: #EFEFEF;
+    font-size: 15px;
+    text-decoration: underline 2px #FF8CB7;
+}
+
+a.notFound:hover {
+    color: #FF8CB7;
+}
+
+/* ------- ----- -----------------------*/
+
 @media (max-width: 500px) {
     main form.formulario-login {
         width: 100%;
