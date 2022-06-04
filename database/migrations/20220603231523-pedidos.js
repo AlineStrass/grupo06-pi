@@ -6,13 +6,13 @@ module.exports = {
 
     await queryInterface.createTable('pedidos', {
       id: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
-      data: Sequelize.DataType.DATE,
-      status: Sequelize.DataType.STRING,
-      clientes_id: Sequelize.DataType.INTEGER,
+      data: Sequelize.DataTypes.DATE,
+      status: Sequelize.DataTypes.STRING,
+      clientes_id: Sequelize.DataTypes.INTEGER,
     })
   },
 

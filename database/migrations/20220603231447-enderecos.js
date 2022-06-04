@@ -6,37 +6,37 @@ module.exports = {
      
     await queryInterface.createTable('enderecos', {
       id: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     rua: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
     numero: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
     bairro: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
-    complemento: Sequelize.DataType.STRING,
+    complemento: Sequelize.DataTypes.STRING,
 
     cidade: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
     estado: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
     cep: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
     },
-    clientes_id: Sequelize.DataType.INTEGER,
+    clientes_id: Sequelize.DataTypes.INTEGER,
     })
   },
 

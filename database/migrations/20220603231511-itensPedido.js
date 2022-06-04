@@ -6,14 +6,14 @@ module.exports = {
      
     await queryInterface.createTable('itensPedido', {
       id: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    quantidade: Sequelize.DataType.INTEGER,
-    valor: Sequelize.DataType.FLOAT,
-    produtos_id: Sequelize.DataType.INTEGER,
-    pedidos_id: Sequelize.DataType.INTEGER,
+    quantidade: Sequelize.DataTypes.INTEGER,
+    valor: Sequelize.DataTypes.FLOAT,
+    produtos_id: Sequelize.DataTypes.INTEGER,
+    pedidos_id: Sequelize.DataTypes.INTEGER,
     })
 
 
