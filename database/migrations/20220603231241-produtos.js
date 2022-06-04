@@ -5,12 +5,12 @@ module.exports = {
     // PARA RODAR NO TERMINAL: SEQUELIZE DB:MIGRATE
      
     await queryInterface.createTable('produtos', {
-      id: {type: Sequelize.DataType.INTEGER, primaryKey: true, autoIncrement: true},
-      nome: Sequelize.DataType.STRING,
-      preco: Sequelize.DataType.FLOAT,
-      descricao: Sequelize.DataType.TEXT,
-      foto: Sequelize.DataType.STRING,
-      categorias_id: Sequelize.DataType.INTEGER
+      id: {type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+      nome: Sequelize.DataTypes.STRING,
+      preco: Sequelize.DataTypes.FLOAT,
+      descricao: Sequelize.DataTypes.TEXT,
+      foto: Sequelize.DataTypes.STRING,
+      categorias_id: Sequelize.DataTypes.INTEGER
 
     })
 

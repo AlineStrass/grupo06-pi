@@ -6,11 +6,11 @@ module.exports = {
      
     await queryInterface.createTable('categorias', {
       id: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    categoria: Sequelize.DataType.STRING,
+    categoria: Sequelize.DataTypes.STRING,
 
     })
 
