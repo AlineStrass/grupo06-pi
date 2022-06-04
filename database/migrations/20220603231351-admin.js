@@ -5,16 +5,16 @@ module.exports = {
     // PARA RODAR NO TERMINAL: SEQUELIZE DB:MIGRATE
     await queryInterface.createTable('admin', {
       id: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
       username: {
-        type: Sequelize.DataType.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: true,
       },
       senha: {
-        type: Sequelize.DataType.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
       }
     })
