@@ -247,7 +247,7 @@ form button.login-cadastro:hover {
 }
 
 /* ------- PAGINA NOT FOUND -----------------------*/
-body {
+body.notFound {
     background-color: #6A5495;
     font-family: 'Confortaa', cursiva;
 }
