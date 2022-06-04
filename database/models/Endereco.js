@@ -32,13 +32,12 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
         clientes_id: DataType.INTEGER,
-
-        {   
+    },{  
     
         tableName : 'enderecos',
         timestamps : false
     
-}});
+});
 
 return Endereco;
 

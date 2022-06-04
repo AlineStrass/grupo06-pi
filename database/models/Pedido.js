@@ -8,12 +8,12 @@ module.exports = (sequelize, DataType) => {
         data: DataType.DATE,
         status: DataType.STRING,
         clientes_id: DataType.INTEGER,
-    {   
+    },{   
     
         tableName : 'pedidos',
         timestamps : false
     
-}});
+});
 
 return Pedido;
 

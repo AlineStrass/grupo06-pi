@@ -7,13 +7,15 @@ module.exports = (sequelize, DataType) => {
         },
         categoria: DataType.STRING,
 
-        {   
-    
+    },
+    {   
+
         tableName : 'categorias',
         timestamps : false
     
-}});
+});
 
 return Categoria;
 
 };
+

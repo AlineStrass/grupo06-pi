@@ -10,12 +10,12 @@ module.exports = (sequelize, DataType) => {
         descricao: DataType.TEXT,
         foto: DataType.STRING,
         categorias_id: DataType.INTEGER,
-    {   
+    },{   
     
         tableName : 'produtos',
         timestamps : false
     
-}});
+});
 
 return Produto;
 

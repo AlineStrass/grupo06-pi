@@ -9,12 +9,13 @@ module.exports = (sequelize, DataType) => {
         valor: DataType.FLOAT,
         produtos_id: DataType.INTEGER,
         pedidos_id: DataType.INTEGER,
+    },
     {   
     
         tableName : 'itensPedido',
         timestamps : false
     
-}});
+});
 
 return ItemPedido;
 

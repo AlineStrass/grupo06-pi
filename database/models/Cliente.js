@@ -32,15 +32,16 @@ module.exports = (sequelize, DataType) => {
         senha: {
             type: DataType.STRING,
             allowNull: true,
-        },{   
+        },
+    }, 
+         {   
     
-        tableName : 'clientes',
-        timestamps : false
-    
-}});
+            tableName : 'clientes',
+            timestamps : false
+        
+});
 
-return Cliente;
+    return Cliente;
 
 };
-
 
