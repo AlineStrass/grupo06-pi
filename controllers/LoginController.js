@@ -1,51 +1,56 @@
 const User = require('../database/models/User');
 const session = require('express-session');
-const bcrypt = require('bcrypt');
-const fs = require('fs');
-const path = require('path');
-
+const bcrypt = require('bcryptjs');
 
 
 const LoginController = {
     index: (req, res) => {
         return res.render('login')
     },
+
     acaoLogin: (req, res) => {
-      let {email, senha} = req.body
-      let usuarioSalvo = fs.readFileSync
+        //console.log('entrou no login')
+        const emailLogin = req.body.email;
+        //console.log(emailLogin)
 
-    }
+        if(User.findUserByField('email', emailLogin)){
+            req.session.logado = true;
 
-    /*acaoLogin: async (req, res) => {
-        const usuarioLogin = await User.findUserByField({where: {usuario: req.body.email}});
-        console.log('entrou no usuario login')
-        console.log(usuarioLogin)
-        if(usuarioLogin === undefined) {
-            res.redirect('login');
-        }else{
-            const senha = usuarioLogin.senha;
-            const validacaoSenha = (req.body.senha, senha);
-            if(!validacaoSenha){
-                res.render('login');
-            }else{
-                req.session.usuarioLogin = true;
-                console.log("teste: session")
-                console.log(req.session.usuarioLogin)
-                res.render('painelUsuario')
-            }
-    
+            
+            //console.log("teste:")
+            //console.log(req.session.logado)
+            
+            res.redirect('/painelUsuario');
+        }
+        else{
+            res.redirect('/criarConta');
         }
 
     },
-    */
-/*
-    logout: (req, res) => {
-        req.session.destroy();
-        res.redirect("/");
-    }
-    */
+    login: function(req, res){
+        //acao login verificar se a senha esta certa, criptografar a senha 
+
+
+        // quando cadastrar
+        let hash = bcrypt.hashSync(req.body.senha);
+
+        let hashBanco = bcrypt.hashSync(req.body.senha);
+        let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
+
+
+        //let hash = bcrypt.hashSync("teste123");
+        res.send(hash);
+
+
+        bcrypt.compareSync(req.body.senha,hashBanco);
+
+
+        //req.session.loginUsuario = "reginaldo";
+        //res.send("Login feito com sucesso");
+    },
+
+       
 }
 
 
 module.exports = LoginController;
-
