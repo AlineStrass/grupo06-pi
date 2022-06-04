@@ -3,9 +3,6 @@ const session = require('express-session');
 const bcrypt = require('bcryptjs');
 
 
-
-
-
 const LoginController = {
     index: (req, res) => {
         return res.render('login')
@@ -57,4 +54,3 @@ const LoginController = {
 
 
 module.exports = LoginController;
-

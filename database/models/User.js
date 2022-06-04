@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const User = {
     usuario: "./database/users.json",
-    
+        
     //salvar usuario na base de dados
     create: function (userData) {
         let allUsers = this.getUsers();
