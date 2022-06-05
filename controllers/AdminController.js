@@ -8,6 +8,7 @@ const AdminController = {
         let admins = await Admin.findAll()
 
         console.log(admins)
+        //deveria aparecer no terminal os dados cadastrados na tabela, mas dá erro
     }
 
 }
