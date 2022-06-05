@@ -3,14 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var session = require('express-session');
 
+//ROTAS
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-//var loginMiddleware = require('./middlewares/loginMiddleware');
+var adminRouter = require('./routes/admin');
+var produtosRouter = require('./routes/produtos');
+var apiRouter = require('./routes/api');
+
 
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,7 +25,6 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,7 +34,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
+app.use('/api', apiRouter);
+app.use('/produtos', produtosRouter);
+
+//app.listen(2000, ()=> console.log('Servidor rodando')); - testear se será necessário
 
 app.use((req, res)=>{
   return res.status(404).render('not-found')
