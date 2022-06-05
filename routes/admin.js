@@ -11,6 +11,7 @@ const AdminController = require('../controllers/AdminController');
 
 router.get('/', AdminController.index);
 router.get('/usuarios', AdminController.getAdmin);
+//rota usuarios não está funcionando
 
 
 
