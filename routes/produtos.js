@@ -8,7 +8,7 @@ const session = require('express-session');
 var ProdutosController = require("../controllers/ProdutosController");
 
 
-router.get('/produtos', ProdutosController.index);
+router.get('/', ProdutosController.index);
 
 
 
