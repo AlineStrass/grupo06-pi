@@ -1,6 +1,6 @@
 const db = require('../database/models/Api');
 
-//não está funcionando, erro não encontra os métodos fundAll, findByPk, create e delete
+//não está funcionando, erro não encontra os métodos fndAll, findByPk, create e delete
 
 let ApiController = {
     getProdutos: function(req, res) {
