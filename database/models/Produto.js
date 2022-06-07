@@ -10,13 +10,21 @@ module.exports = (sequelize, DataType) => {
         descricao: DataType.TEXT,
         foto: DataType.STRING,
         categorias_id: DataType.INTEGER,
-    },{   
-    
-        tableName : 'produtos',
-        timestamps : false
-    
-});
+    }, {
 
-return Produto;
+        tableName: 'produtos',
+        timestamps: false
+
+    });
+
+
+    Produto.associate = (listaModels) => {
+        Produto.belongsTo(listaModels, {
+            foreignKey: 'categorias_id',
+            as: "categoria"
+        })
+    }
+
+    return Produto;
 
 };
