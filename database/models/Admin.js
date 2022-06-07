@@ -12,11 +12,16 @@ module.exports = (sequelize, DataType) => {
         senha: {
             type: DataType.INTEGER,
             allowNull: true,
-        }
-    })
+        },
+    },
+        {   
+    
+            tableName : 'categorias',
+            timestamps : false
+        
+});
 
-    tableName = 'admin',
-    timestamps = false
+    return Admin;
 
-}
+};
 

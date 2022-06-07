@@ -1,9 +1,8 @@
+/*const db = require('./database/models/index.js'); */
+
 const User = require('../database/models/User');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
-
-
-
 
 
 const LoginController = {
@@ -57,4 +56,3 @@ const LoginController = {
 
 
 module.exports = LoginController;
-
