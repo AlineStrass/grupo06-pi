@@ -12,28 +12,16 @@ module.exports = (sequelize, DataType) => {
         senha: {
             type: DataType.INTEGER,
             allowNull: true,
-<<<<<<< HEAD
         },
     },
-=======
-        }
->>>>>>> master
         {   
     
             tableName : 'categorias',
             timestamps : false
         
-<<<<<<< HEAD
 });
 
     return Admin;
 
 };
-=======
-    }});
-    
-    return Categoria;
-    
-    };
->>>>>>> master
 
