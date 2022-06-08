@@ -26,7 +26,6 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 //ROTAS
 router.get('/', HomeController.index);
 router.get('/login', LoginController.index);
-router.post('/acaoLogin', LoginController.acaoLogin);
 router.get('/login/efetuar',loginMiddleware, LoginController.login);
 router.get('/criarconta', CriarContaController.index);
 router.post('/acaoCadastrar', CriarContaController.acaoCadastrar);
