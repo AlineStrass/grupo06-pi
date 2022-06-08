@@ -106,5 +106,17 @@
   "complemento": "111",
   "cep": "111111111",
   "senha": "$2a$10$TVAHzEsRpftmD59sXYioiOcpl6CJpEreZs1L1aiLSdJTt3JuzAz36"
+ },
+ {
+  "id": 10,
+  "email": "meuemail@email.com",
+  "telefone": "156654824574",
+  "nome": "Fulano",
+  "sobrenome": "de Tal",
+  "endereco": "rua dos bobos",
+  "numero": "4455",
+  "complemento": "135153",
+  "cep": "022551541",
+  "senha": "$2a$10$fksIm8mMmJv1VxVMWonJeuW4JSsjlMXOVRw.7SlAP4ip2SLJgOS8C"
  }
 ]
