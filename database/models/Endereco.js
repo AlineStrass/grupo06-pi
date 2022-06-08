@@ -32,11 +32,22 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
         clientes_id: DataType.INTEGER,
+        clientes_id:{ /* (manter _id?) */
+            type:DataType.INTEGER,}
 
-    })
+    },{  
+    
+        tableName : 'enderecos',
+        timestamps : false
+    
+    });
 
-    tableName = 'endereco',
-    timestamps = false
-
-}
-
+    Endereco.associate = (ListaDeModelos) => {
+        Endereco.belongsTo(listaDeModelos.Cliente, {
+            foreignKey : 'clientes_id', /* (manter _id?) */
+            as:'clientes'
+        })
+    }
+    return Endereco;
+    
+    };

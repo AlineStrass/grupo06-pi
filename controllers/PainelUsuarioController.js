@@ -1,3 +1,5 @@
+/*const db = require('./database/models/index.js'); */
+
 const PainelUsuarioController = {
     index: (req, res) => {
         if (req.session.logado === true) {
