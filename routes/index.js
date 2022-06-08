@@ -15,7 +15,7 @@ var AdminController = require('../controllers/AdminController');
 var HomeController = require("../controllers/HomeController");
 var LoginController = require("../controllers/LoginController");
 var CriarContaController = require("../controllers/CriarContaController");
-var ProdutosController = require("../controllers/ProdutosController");
+var ProdutoController = require("../controllers/ProdutoController");
 var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 var ProdutoInternoController = require("../controllers/ProdutoInternoController");
 var ObrigadoController = require("../controllers/ObrigadoController");
@@ -28,12 +28,12 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 //validações de campos
 //var validacoes = require('../middlewares/validacoes');
 
-
+var autenticacaoMiddleware =  require("../middlewares/autenticacaoMiddleware");
 
 //ROTAS
 router.get('/', HomeController.index);
 
-router.get('/admin', AdminController.index);
+router.get('/admin', autenticacaoMiddleware,AdminController.index);
 
 router.get('/login', LoginController.index);
 router.post('/acaoLogin', LoginController.acaoLogin);

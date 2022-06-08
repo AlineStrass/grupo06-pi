@@ -13,9 +13,33 @@ const LoginController = {
     acaoLogin: (req, res) => {
         //console.log('entrou no login')
         const emailLogin = req.body.email;
+        let usuarioSalvo = fs.readFileSync(users, {encoding:'utf-8'});
+        usuarioSalvo = JSON.parse(usuarioSalvo);
+
         //console.log(emailLogin)
 
-        if(User.findUserByField('email', emailLogin)){
+
+        if(email != usuarioSalvo.email){
+            return res.send('Usuario invalido!')
+        }
+if(!bcrypt.compareSync(senha, usuarioSalvo.senha)){
+    return res.send("Senha invalida!")
+}else{
+    res.redirect('/criarConta');
+}
+
+
+req.session.usuario = usuarioSalvo
+
+res.redirect('/produtos')
+
+    }
+}
+
+
+
+
+        /*if(User.findUserByField('email', emailLogin)){
             req.session.logado = true;
 
             
@@ -28,31 +52,10 @@ const LoginController = {
             res.redirect('/criarConta');
         }
 
-    },
-    login: function(req, res){
-        //acao login verificar se a senha esta certa, criptografar a senha 
+    }
 
-
-        // quando cadastrar
-        let hash = bcrypt.hashSync(req.body.senha);
-
-        let hashBanco = bcrypt.hashSync(req.body.senha);
-        let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
-
-
-        //let hash = bcrypt.hashSync("teste123");
-        res.send(hash);
-
-
-        bcrypt.compareSync(req.body.senha,hashBanco);
-
-
-        //req.session.loginUsuario = "reginaldo";
-        //res.send("Login feito com sucesso");
-    },
-
-       
-}
+    
+}*/
 
 
 module.exports = LoginController;
