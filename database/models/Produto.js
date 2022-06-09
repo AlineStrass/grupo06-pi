@@ -10,7 +10,7 @@ module.exports = (sequelize, DataType) => {
         descricao: DataType.TEXT,
         foto: DataType.STRING,
         categorias_id: DataType.INTEGER,
-        categorias_id:{ /* (manter _id?) */
+        categorias_id:{ 
             type:DataType.INTEGER,
 
         }
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataType) => {
 
 Produto.associate = (ListaDeModelos) => {
     Produto.belongsTo(listaDeModelos.Categoria, {
-        foreignKey : 'categorias_id', /* (manter _id?) */
+        foreignKey : 'categorias_id', 
         as:'categoria'
     })
 }
