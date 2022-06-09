@@ -3,15 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 var methodOverride = require('method-override');
 
-var session = require('express-session');
 const res = require('express/lib/response');
 
+//ROTAS
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var produtosRouter = require('./routes/rotasProduto');
-var logMiddleware = require('./middlewares/logSite');
+var adminRouter = require('./routes/admin');
+var produtosRouter = require('./routes/produtos');
+var apiRouter = require('./routes/api');
 
 
 var app = express();
@@ -34,15 +35,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-app.use(logMiddleware);
+//app.use(logMiddleware);
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
+app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
-
-
-//var loginMiddleware = require('./middlewares/loginMiddleware');
 
 
 app.use((req, res)=>{
