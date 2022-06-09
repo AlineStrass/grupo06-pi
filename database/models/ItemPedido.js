@@ -27,13 +27,13 @@ module.exports = (sequelize, DataType) => {
 
 Pedido.associate = (ListaDeModelos) => {
     Pedido.belongsTo(listaDeModelos.Pedido, {
-        foreignKey : 'pedidos_id', /* (manter _id?) */
+        foreignKey : 'pedidos_id', 
         as:'pedidos'
 })};
 
 Produto.associate = (ListaDeModelos) => {
         Produto.belongsTo(listaDeModelos.Produto, {
-            foreignKey : 'produtos_id', /* (manter _id?) */
+            foreignKey : 'produtos_id', 
             as:'produtos'
         });
     

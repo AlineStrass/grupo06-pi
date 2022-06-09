@@ -32,7 +32,7 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
         clientes_id: DataType.INTEGER,
-        clientes_id:{ /* (manter _id?) */
+        clientes_id:{ 
             type:DataType.INTEGER,}
 
     },{  
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataType) => {
 
     Endereco.associate = (ListaDeModelos) => {
         Endereco.belongsTo(listaDeModelos.Cliente, {
-            foreignKey : 'clientes_id', /* (manter _id?) */
+            foreignKey : 'clientes_id',
             as:'clientes'
         })
     }
