@@ -6,7 +6,7 @@ const LoginController = {
     index: (req, res) => {
         return res.render('login')
     },
-    /*
+    
     acaoLogin: (req, res) => {
         //console.log('entrou no login')
         const emailLogin = req.body.email;
@@ -32,7 +32,7 @@ const LoginController = {
         }else {
             res.redirect('/login');
         }
-    },*/
+    },
     login: function (req, res) {
         //acao login verificar se a senha esta certa, criptografar a senha 
 
