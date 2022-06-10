@@ -7,8 +7,8 @@ const CriarContaController = {
     index: (req, res) => {
         return res.render('criarConta')
     },
-    //acaoCadastrar: async (req, res)=> (substitui depois que concluir o sequelize)
-    acaoCadastrar: (req, res) => {
+    
+    acaoCadastrar: async (req, res)=> {
         //console.log('entrou açaõ acadastrar')
         const cadastrarUsuario = {
             nomeCompleto: req.body.nomeCompleto,
@@ -29,8 +29,8 @@ const CriarContaController = {
             
         }
         
-        //await db.Cliente.create(cadastrarUsuario);
-        //(substitui depois que concluir o sequelize) 
+        await db.Cliente.create(cadastrarUsuario);
+         
         
         res.redirect('/painelUsuario');
     }
