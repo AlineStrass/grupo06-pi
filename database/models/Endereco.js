@@ -31,7 +31,6 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: true,
         },
-        clientes_id: DataType.INTEGER,
         clientes_id:{ 
             type:DataType.INTEGER,}
 

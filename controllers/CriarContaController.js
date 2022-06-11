@@ -1,7 +1,7 @@
 
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
-//const db = require('../database/models/index')
+const db = require('../database/models/index')
 
 const CriarContaController = {
     index: (req, res) => {
@@ -9,7 +9,6 @@ const CriarContaController = {
     },
     
     acaoCadastrar: async (req, res)=> {
-        //console.log('entrou açaõ acadastrar')
         const cadastrarUsuario = {
             nomeCompleto: req.body.nomeCompleto,
             foto: req.body.foto,
@@ -26,11 +25,9 @@ const CriarContaController = {
             cidade: req.body.cidade,
             estado: req.body.estado,
             cep: req.body.cep
-            
         }
         
-        await db.Cliente.create(cadastrarUsuario);
-         
+        await db.Cliente.create(cadastrarUsuario)
         
         res.redirect('/painelUsuario');
     }
