@@ -19,7 +19,7 @@ module.exports = (sequelize, DataType) => {
     
 });
 
-    Pedido.associate = (ListaDeModelos) => {
+    Pedido.associate = (listaDeModelos) => {
         Pedido.belongsTo(listaDeModelos.Cliente, {
             foreignKey : 'clientes_id', 
             as:'clientes'
