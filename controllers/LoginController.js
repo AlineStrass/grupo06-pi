@@ -15,9 +15,9 @@ const LoginController = {
         return res.render('login')
     },
 
-    acaoLogin: (req, res) => {
+    acaoLogin: async (req, res) => {
 
-        const { email , senha } = req.body;
+        const { email , senha } = await req.body;
        
         const usuarioEncontrado = bancoUsuarios.find((obj)=>obj.email == email)
         if (usuarioEncontrado != undefined) {
@@ -38,9 +38,7 @@ const LoginController = {
         }
     },
     login: function (req, res) {
-        //acao login verificar se a senha esta certa, criptografar a senha 
-
-
+        //acao login verificar se a senha esta certa, criptografar a senha
         // quando cadastrar
         let hash = bcrypt.hashSync(req.body.senha);
         let hashBanco = bcrypt.hashSync(req.body.senha);
