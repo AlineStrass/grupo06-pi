@@ -22,29 +22,34 @@
                 <th>Cidade</th>
                 <th>Estado</th>
                 <th>Cep</th>
+                <th>Cliente-ID</th>
 
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-
-                <th>
-                    <a href="#">Ver dados</a>
-                    <a href="#">Editar dados</a>
-                    <form action="#" method="post">
-                        <button type="submit">Excluir</button>
-                    </form>
-                </th>
-            </tr>
+            <% enderecos.forEach(endereco => { %>
+                <tr>
+                    <th> <% endereco.id %> </th>
+                    <th> <% endereco.rua %> </th>
+                    <th> <% endereco.numero %> </th>
+                    <th> <% endereco.bairro %> </th>
+                    <th> <% endereco.complemento %> </th>
+                    <th> <% endereco.cidade %> </th>
+                    <th> <% endereco.estado %> </th>
+                    <th> <% endereco.cep %> </th>
+                    <th> <% endereco.cliente.id %> </th>
+    
+                    <th>
+                        <a href="#">Ver dados</a>
+                        <a href="#">Editar dados</a>
+                        <form action="#" method="post">
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </th>
+                </tr>
+            <%  }) %>
+            
         </tbody>
     </table>
 

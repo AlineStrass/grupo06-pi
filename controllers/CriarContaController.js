@@ -18,7 +18,7 @@ const CriarContaController = {
             dataDeNascimento: req.body.dataDeNascimento,
             cpf: req.body.cpf,
             senha: bcrypt.hashSync(req.body.senha),
-            endereco: {
+            enderecos: {
                 rua: req.body.rua,
                 numero: req.body.numero,
                 bairro: req.body.bairro,
@@ -29,7 +29,7 @@ const CriarContaController = {
             }
         }
 
-        await db.Cliente.create(cadastrarUsuario, {include:["endereco"]});
+        await db.Cliente.create(cadastrarUsuario, {include:["enderecos"]});
 
         res.redirect('/painelUsuario');
     }

@@ -14,7 +14,7 @@ var ProdutoInternoController = require("../controllers/ProdutoInternoController"
 var ObrigadoController = require("../controllers/ObrigadoController");
 var FinalizarController = require("../controllers/FinalizarController");
 var CarrinhoController = require("../controllers/CarrinhoController");
-var EnderecoController = require("../controllers/EnderecoController")
+var ClientesController = require('../controllers/ClientesController');
 
 
 //MIDDLEWARES
@@ -33,7 +33,7 @@ router.get('/produtointerno', ProdutoInternoController.index);
 router.get('/obrigado', ObrigadoController.index);
 router.get('/finalizar', FinalizarController.index);
 router.get('/carrinho', CarrinhoController.index);
-router.get('/enderecos', EnderecoController.index)
+router.get('/clientes', ClientesController.index);
 
 
 

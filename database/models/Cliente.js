@@ -21,7 +21,7 @@ module.exports = (sequelize, DataType) => {
         },
         sexo: DataType.STRING,
 
-        dataDeNascimento: {
+        datanascimento: {
             type: DataType.DATE,
             allowNull: true,
         },
@@ -41,7 +41,13 @@ module.exports = (sequelize, DataType) => {
 
         });
 
-    return Cliente;
+        Cliente.associate = (listaDeModelos) => {
+        Cliente.hasMany(listaDeModelos.Endereco, {
+            foreignKey: 'clientes_id',
+            as: "enderecos"
+        })
+    }
 
+    return Cliente;
 };
 

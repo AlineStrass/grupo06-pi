@@ -3,29 +3,21 @@ const bcrypt = require('bcryptjs');
 const req = require("express/lib/request");
 const db = require('../database/models');
 
-const bancoUsuarios = [
-    {
-        email: "meuemail@email.com",
-        senha: bcrypt.hashSync("123456")
-    }
-];
-
 const LoginController = {
     index: (req, res) => {
         return res.render('login')
     },
 
     acaoLogin: async (req, res) => {
-
         const { email , senha } = await req.body;
-       
-        const usuarioEncontrado = bancoUsuarios.find((obj)=>obj.email == email)
+        const usuarioEncontrado = db.cliente.findOne({
+            email: email
+        })
         if (usuarioEncontrado != undefined) {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
             if (sucessoSenha) {
                 req.session.logado = true;
                 res.redirect('/painelUsuario');
-                req.session.logado = true;
             
             } else {
                 res.redirect('/login');
@@ -48,7 +40,7 @@ const LoginController = {
         bcrypt.compareSync(req.body.senha, hashBanco);
         //req.session.loginUsuario = "reginaldo";
         //res.send("Login feito com sucesso");
-    },
+    }
 }
 
 
