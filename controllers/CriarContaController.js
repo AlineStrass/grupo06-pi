@@ -1,7 +1,7 @@
 
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
-const db = require('../database/models/index')
+const db = require('../database/models')
 
 const CriarContaController = {
     index: (req, res) => {

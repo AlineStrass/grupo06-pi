@@ -1,6 +1,7 @@
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const req = require("express/lib/request");
+const db = require('../database/models');
 
 const bancoUsuarios = [
     {

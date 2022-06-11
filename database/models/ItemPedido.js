@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataType) => {
     const ItemPedido = sequelize.define('ItemPedido', {
         id: {
@@ -15,16 +13,13 @@ module.exports = (sequelize, DataType) => {
         pedidos_id: { /* (manter _id?) */
             type: DataType.INTEGER
         },
-
         produtos_id: { /* (manter _id?) */
             type: DataType.INTEGER,
         }
     },
         {
-
             tableName: 'itensPedido',
             timestamps: false
-
         });
 
     ItemPedido.associate = (ListaDeModelos) => {
@@ -40,9 +35,7 @@ module.exports = (sequelize, DataType) => {
             as: 'produtos'
         });
 
-
-        return ItemPedido;
-
     };
 
+    return ItemPedido;
 }

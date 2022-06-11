@@ -33,13 +33,13 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: true,
         },
-    }, 
-         {   
-    
-            tableName : 'clientes',
-            timestamps : false
-        
-});
+    },
+        {
+
+            tableName: 'clientes',
+            timestamps: false
+
+        });
 
     return Cliente;
 
