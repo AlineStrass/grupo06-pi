@@ -2,48 +2,41 @@ const User = require('../database/models/User');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 
-    const LoginController = {
+const LoginController = {
     index: (req, res) => {
-
-
-
-        
         return res.render('login')
     },
 
-        acaoLogin: (req, res) => {
+    acaoLogin: (req, res) => {
         //console.log('entrou no login')
         const emailLogin = req.body.email;
         const senhaLogin = req.body.senha;
         const usuario = User.findUserByField('email', emailLogin);
         //console.log(emailLogin)
 
-        
+        if (usuario != undefined) {
+            let sucessoSenha = bcrypt.compareSync(senhaLogin, usuario.senha);
+            if (sucessoSenha) {
+                req.session.logado = true;
+                res.redirect('/painelUsuario');
 
-        if(usuario != undefined) {
-        let sucessoSenha = bcrypt.compareSync(senhaLogin, usuario.senha);
-        if(sucessoSenha){
-        req.session.logado = true;
-        res.redirect('/painelUsuario');
+                //if(User.findUserByField('email', emailLogin)){
+                req.session.logado = true;
+                //console.log("teste:")
+                //console.log(req.session.logado)
 
-
-        
-        //if(User.findUserByField('email', emailLogin)){
-        req.session.logado = true;
-        //console.log("teste:")
-        //console.log(req.session.logado)
-          
-        }else{
-            res.redirect('/login');
-            }    
-            
+            } else {
+                res.redirect('/login');
             }
-            else{res.redirect('/login');
-       
-     }
+
+        }
+        else {
+            res.redirect('/login');
+
+        }
     },
-            login: function(req, res){
-            //acao login verificar se a senha esta certa, criptografar a senha 
+    login: function (req, res) {
+        //acao login verificar se a senha esta certa, criptografar a senha 
 
 
         // quando cadastrar
@@ -52,10 +45,10 @@ const bcrypt = require('bcryptjs');
         let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
         //let hash = bcrypt.hashSync("teste123");
         res.send(hash);
-        bcrypt.compareSync(req.body.senha,hashBanco);
+        bcrypt.compareSync(req.body.senha, hashBanco);
         //req.session.loginUsuario = "reginaldo";
         //res.send("Login feito com sucesso");
-    },       
+    },
 }
 
 
