@@ -315,13 +315,14 @@ form button.login-cadastro:hover {
 }
 
 .gender-input input {
-    margin-right: 1rem;
+    margin-right: 0.2rem;
 }
 
 .gender-input label{
     font-size: 25px;
     color: #EFEFEF;
     font-size: 17px;
+    margin-right: 1rem;
 }
 
 @media (max-width: 500px) {
