@@ -9,7 +9,7 @@ const LoginController = {
     },
 
     acaoLogin: async (req, res) => {
-        const { email , senha } = await req.body;
+        const { email, senha } = await req.body;
         const usuarioEncontrado = db.cliente.findOne({
             email: email
         })
@@ -18,15 +18,13 @@ const LoginController = {
             if (sucessoSenha) {
                 req.session.logado = true;
                 res.redirect('/painelUsuario');
-            
+
             } else {
                 res.redirect('/login');
             }
 
-        }
-        else {
+        } else {
             res.redirect('/login');
-
         }
     },
     login: function (req, res) {

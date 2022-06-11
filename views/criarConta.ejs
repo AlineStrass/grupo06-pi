@@ -14,7 +14,8 @@
                 <div class="dados-cadastrais-conta">
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="email">E-mail:</label>
-                        <input class="inserir-dados-cadastro" type="email" id="email" name="email" placeholder="email@email.com.br" required>
+                        <input class="inserir-dados-cadastro" type="email" id="email" name="email"
+                            placeholder="email@email.com.br" required>
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="telefone">Telefone:</label>
@@ -22,22 +23,23 @@
                             placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="nome">Nome:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="nome" name="nome"
-                            placeholder="Nome" required>
+                        <label class="inserir-dados-cadastro" for="nome">Nome Completo:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="nome" name="nomeCompleto" placeholder="Nome completo"
+                            required>
                     </div>
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="nome">Sobrenome:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="sobrenome" name="sobrenome"
-                            placeholder="Sobrenome" required>
-                    </div class="campo-login">
-
-                    <div>
-
+                        <label class="inserir-dados-cadastro" for="nome">CPF:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="sobrenome" name="cpf"
+                            placeholder="" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="datanascimento">Data de nascimento:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="datanascimento" name="datanascimento"
+                            placeholder="00/00/0000">
                     </div>
 
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="rua">Endereço:</label>
+                        <label class="inserir-dados-cadastro" for="rua">Rua:</label>
                         <input class="inserir-dados-cadastro" type="text" id="rua" name="rua" required>
                     </div>
                     <div class="campo-login">
@@ -47,6 +49,18 @@
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="complemento">Complemento:</label>
                         <input class="inserir-dados-cadastro" type="text" id="complemento" name="complemento">
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="bairro">Bairro:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="bairro" name="bairro">
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="cidade">Cidade:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="estado">Estado:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="estado" name="estado">
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="cep">CEP:</label>
@@ -69,28 +83,28 @@
                         <label class="inserir-dados-cadastro" for="gen">Genêro</label>
                     </div>
 
-                    <div class = "gender-input">
-                            <div class="gender-group">
-                            <div class ="gender-input">
-                                <input type="radio" id = "female" name = "gender">
+                    <div class="gender-input">
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input type="radio" id="female" name="gender">
                                 <label for="female">Feminino</label>
                             </div>
 
-                            <div class ="gender-input">
-                                <input type="radio" id = "male" name = "gender">
+                            <div class="gender-input">
+                                <input type="radio" id="male" name="gender">
                                 <label for="male">Masculino</label>
                             </div>
 
-                            <div class ="gender-input">
-                                <input type="radio" id = "others" name = "gender">
+                            <div class="gender-input">
+                                <input type="radio" id="others" name="gender">
                                 <label for="others">Outros</label>
                             </div>
 
-                            <div class ="gender-input">
-                                <input type="radio" id = "none" name = "gender">
+                            <div class="gender-input">
+                                <input type="radio" id="none" name="gender">
                                 <label for="none">Prefiro não dizer</label>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -103,7 +117,7 @@
                 </p>
 
                 <!--direcionar para a página de cadastro-->
-                <button class="login-cadastro" type="submit"  action="acaoCadastrar">Cadastrar</button>
+                <button class="login-cadastro" type="submit" action="acaoCadastrar">Cadastrar</button>
 
             </form>
 

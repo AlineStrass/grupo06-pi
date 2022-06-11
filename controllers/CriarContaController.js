@@ -15,7 +15,7 @@ const CriarContaController = {
             email: req.body.email,
             telefone: req.body.telefone,
             sexo: req.body.sexo,
-            dataDeNascimento: req.body.dataDeNascimento,
+            datanascimento: req.body.datanascimento,
             cpf: req.body.cpf,
             senha: bcrypt.hashSync(req.body.senha),
             enderecos: {
