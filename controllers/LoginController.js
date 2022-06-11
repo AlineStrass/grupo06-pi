@@ -1,6 +1,14 @@
-const User = require('../database/models/User');
+//const User = require('../database/models/User');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
+const req = require("express/lib/request");
+
+const bancoUsuarios = [
+    {
+        email: "meuemail@email.com",
+        senha: bcrypt.hashSync("123456")
+    }
+];
 
 const LoginController = {
     index: (req, res) => {
@@ -8,23 +16,17 @@ const LoginController = {
     },
 
     acaoLogin: (req, res) => {
-        //console.log('entrou no login')
-        const emailLogin = req.body.email;
-        const senhaLogin = req.body.senha;
-        const usuario = User.findUserByField('email', emailLogin);
-        //console.log(emailLogin)
 
-        if (usuario != undefined) {
-            let sucessoSenha = bcrypt.compareSync(senhaLogin, usuario.senha);
+        const { email , senha } = req.body;
+       
+        const usuarioEncontrado = bancoUsuarios.find((obj)=>obj.email == email)
+        if (usuarioEncontrado != undefined) {
+            let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
             if (sucessoSenha) {
                 req.session.logado = true;
                 res.redirect('/painelUsuario');
-
-                //if(User.findUserByField('email', emailLogin)){
                 req.session.logado = true;
-                //console.log("teste:")
-                //console.log(req.session.logado)
-
+            
             } else {
                 res.redirect('/login');
             }
