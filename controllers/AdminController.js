@@ -1,4 +1,4 @@
-/*const db = require('../database/models/index.js'); ----- Error: Cannot find module '../config/database' */
+const db = require('../database/models'); 
 const { Admin } = require('../database/models/Admin');
 
 

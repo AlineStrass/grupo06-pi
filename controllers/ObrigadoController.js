@@ -1,4 +1,4 @@
-/*const db = require('./database/models/index.js'); */
+const db = require('../database/models');
 
 const ObrigadoController = {
     index: (req, res) => {

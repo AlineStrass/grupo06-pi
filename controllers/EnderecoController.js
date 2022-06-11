@@ -10,7 +10,7 @@ const EnderecoController = {
                 require: true
             }
         })
-       return res.render('')
+       return res('ok')
     }
 }
 

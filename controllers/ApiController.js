@@ -1,4 +1,4 @@
-//const db = require('../database/models');
+const db = require('../database/models');
 
 
 //não está funcionando, erro não encontra os métodos fndAll, findByPk, create e delete

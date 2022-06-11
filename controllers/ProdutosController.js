@@ -1,7 +1,9 @@
-/*const db = require('./database/models/index.js'); */
+const db = require('../database/models');
 
 const ProdutosController = {
-    index: (req, res) => {
+    index: async (req, res) => {
+        const produtos = await Produto.findAll
+
         return res.render('produtos')
     }
 }
