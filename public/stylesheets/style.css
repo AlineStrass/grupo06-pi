@@ -321,6 +321,7 @@ form button.login-cadastro:hover {
 .gender-input label{
     font-size: 25px;
     color: #EFEFEF;
+    font-size: 17px;
 }
 
 @media (max-width: 500px) {
@@ -846,4 +847,5 @@ th, td {
 /* Página de cadastro--------EM LOGIN---------- */
 mains form.criar-conta {
     display: inline;
+    
 }
