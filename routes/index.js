@@ -5,10 +5,9 @@ const { body } = require('express-validator');
 const session = require('express-session');
 
 
+
 //CONTROLLERS
 var HomeController = require("../controllers/HomeController");
-var LoginController = require("../controllers/LoginController");
-var CriarContaController = require("../controllers/CriarContaController");
 var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 var ProdutoInternoController = require("../controllers/ProdutoInternoController");
 var ObrigadoController = require("../controllers/ObrigadoController");
@@ -17,17 +16,11 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 var ClientesController = require('../controllers/ClientesController');
 
 
-//MIDDLEWARES
-const loginMiddleware = require('../middlewares/loginMiddleware');
-var autenticacaoMiddleware =  require("../middlewares/autenticacaoMiddleware");
 
 //ROTAS
 router.get('/', HomeController.index);
-router.get('/login', LoginController.index);
-router.get('/login/efetuar',loginMiddleware, LoginController.login);
-router.get('/criarconta', CriarContaController.index);
-router.post('/acaoCadastrar', CriarContaController.acaoCadastrar);
-router.post('/acaologin',LoginController.acaoLogin )
+
+
 router.get('/painelusuario', PainelUsuarioController.index);
 router.get('/produtointerno', ProdutoInternoController.index);
 router.get('/obrigado', ObrigadoController.index);

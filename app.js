@@ -12,6 +12,8 @@ const res = require('express/lib/response');
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var produtosRouter = require('./routes/produtos');
+var criarContaRouter = require('./routes/criarConta');
+var loginRouter = require('./routes/login');
 var apiRouter = require('./routes/api');
 
 
@@ -42,6 +44,8 @@ app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
+app.use('/criarconta', criarContaRouter);
+app.use('login', loginRouter);
 
 
 app.use((req, res)=>{

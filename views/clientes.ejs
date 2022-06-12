@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Endereços</title>
+    <title>Clientes</title>
 </head>
 
-<body class="endereços"></body>>
-<div class="enderecos">
-    <table class="table-adress">
+<body class="clientes"></body>>
+<div class="clientes">
+    <table class="tabela-clientes">
         <thead>
             <tr>
                 <th>ID</th>
@@ -23,30 +23,31 @@
                 <th>CPF</th>
                 <th>Senha</th>
 
+
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <% clientes.forEach(cliente => { %>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+            <% clientes.forEach(cliente=> { %>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+            <% }) %>
+                        <th>
+                            <a href="#">Ver dados</a>
+                            <a href="#">Editar dados</a>
+                            <form action="#" method="post">
+                                <button type="submit">Excluir</button>
+                            </form>
+                        </th>
+                </tr>
 
-                <th>
-                    <a href="#">Ver dados</a>
-                    <a href="#">Editar dados</a>
-                    <form action="#" method="post">
-                        <button type="submit">Excluir</button>
-                    </form>
-                </th>
-            </tr>
-        <% }) %>
         </tbody>
     </table>
 
