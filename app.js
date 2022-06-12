@@ -9,12 +9,13 @@ var methodOverride = require('method-override');
 const res = require('express/lib/response');
 
 //ROTAS
-var indexRouter = require('./routes/index');
-var adminRouter = require('./routes/admin');
-var produtosRouter = require('./routes/produtos');
+var indexRouter = require('./routes/indexRouter');
+var adminRouter = require('./routes/adminRouter');
+var produtosRouter = require('./routes/produtosRouter');
 var criarContaRouter = require('./routes/criarConta');
-var loginRouter = require('./routes/login');
-var apiRouter = require('./routes/api');
+var loginRouter = require('./routes/loginRouter');
+var painelUsuarioRouter = require('./routes/painelUsuarioRouter')
+var apiRouter = require('./routes/apiRouter');
 
 
 var app = express();
@@ -46,6 +47,7 @@ app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
 app.use('/criarconta', criarContaRouter);
 app.use('login', loginRouter);
+app.use('/painelusuario', painelUsuarioRouter);
 
 
 app.use((req, res)=>{
