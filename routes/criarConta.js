@@ -9,7 +9,7 @@ var CriarContaController = require("../controllers/CriarContaController");
 
 
 //ROTAS
-router.get('/criarconta', CriarContaController.index);
+router.get('/', CriarContaController.index);
 router.post('/acaoCadastrar', CriarContaController.acaoCadastrar);
 
 

@@ -12,8 +12,8 @@ const loginMiddleware = require('../middlewares/loginMiddleware');
 var autenticacaoMiddleware = require("../middlewares/autenticacaoMiddleware");
 
 //ROTAS
-router.get('/login', LoginController.index);
-router.get('/login/efetuar',loginMiddleware, LoginController.login);
+router.get('/', LoginController.index);
+router.get('/efetuar',loginMiddleware, LoginController.login);
 router.post('/acaologin',LoginController.acaoLogin);
 
 

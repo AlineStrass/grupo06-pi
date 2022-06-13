@@ -11,7 +11,7 @@ var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 
 
 //ROTAS
-router.get('/painelusuario', PainelUsuarioController.index);
+router.get('/', PainelUsuarioController.index);
 
 
 

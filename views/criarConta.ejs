@@ -8,20 +8,10 @@
 
         <main class="formulario-login">
 
-            <form class="criar-conta" action="acaoCadastrar" method="post">
+            <form class="criar-conta" action="/criarConta/index" method="post">
                 <h2 class="login">Cadastre-se:</h2>
 
                 <div class="dados-cadastrais-conta">
-                    <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="nomeCompleto">Nome Completo:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="nomeCompleto" name="nomeCompleto"
-                            placeholder="Nome completo" required>
-                    </div>
-                    <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="foto">Foto:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="foto" name="foto"
-                            placeholder="adicionar imagem">
-                    </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="email">E-mail:</label>
                         <input class="inserir-dados-cadastro" type="email" id="email" name="email"
@@ -33,13 +23,19 @@
                             placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="datanascimento">Data de nascimento:</label>
-                        <input class="inserir-dados-cadastro" type="date" id="datanascimento" name="datanascimento"
-                            placeholder="AAAA/MM/DD">
+                        <label class="inserir-dados-cadastro" for="nome">Nome Completo:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="nome" name="nomeCompleto" placeholder="Nome completo"
+                            required>
                     </div>
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="cpf">CPF:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="cpf" name="cpf" placeholder="" required>
+                        <label class="inserir-dados-cadastro" for="nome">CPF:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="sobrenome" name="cpf"
+                            placeholder="" required>
+                    </div>
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="datanascimento">Data de nascimento:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="datanascimento" name="datanascimento"
+                            placeholder="00/00/0000">
                     </div>
 
                     <div class="campo-login">
@@ -52,25 +48,37 @@
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="complemento">Complemento:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="complemento" name="complemento" required>
+                        <input class="inserir-dados-cadastro" type="text" id="complemento" name="complemento">
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="bairro">Bairro:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="bairro" name="bairro" required>
+                        <input class="inserir-dados-cadastro" type="text" id="bairro" name="bairro">
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="cidade">Cidade:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="cidade" name="cidade" required>
+                        <input class="inserir-dados-cadastro" type="text" id="cidade" name="cidade">
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="estado">Estado:</label>
-                        <input class="inserir-dados-cadastro" type="text" id="estado" name="estado" required>
+                        <input class="inserir-dados-cadastro" type="text" id="estado" name="estado">
                     </div>
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="cep">CEP:</label>
                         <input class="inserir-dados-cadastro" type="text" id="cep" name="cep" required>
                     </div>
 
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="senha">Cadastrar senha:</label>
+                        <input class="inserir-dados-cadastro" type="password" id="senha" name="senha"
+                            placeholder="Digite sua senha" required>
+                    </div>
+                    <!--
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="senha">Confirme sua senha:</label>
+                        <input class="inserir-dados-cadastro" type="password" id="confirmSenha" name="confirmSenha"
+                            placeholder="Digite sua senha novamente" required>
+                    </div>
+                    -->
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="gen">Genêro</label>
                     </div>
@@ -99,19 +107,6 @@
 
                         </div>
                     </div>
-                    
-                    <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="senha">Cadastrar senha:</label>
-                        <input class="inserir-dados-cadastro" type="password" id="senha" name="senha"
-                            placeholder="Digite sua senha" required>
-                    </div>
-                    <!-- 
-                    <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="senha">Confirme sua senha:</label>
-                        <input class="inserir-dados-cadastro" type="password" id="confirmSenha" name="confirmSenha"
-                            placeholder="Digite sua senha novamente" required>
-                    </div>
-                    -->
 
                 </div>
 
