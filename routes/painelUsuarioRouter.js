@@ -3,6 +3,22 @@ const fs = require('fs');
 var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
+var multer = require('multer');
+
+
+var multerDiskStorage = multer.diskStorage ({
+    destination: (req, file, callback)=>{
+        var folder = path.join(__dirname, "../public/profile");
+        callback(null, folder);
+    },
+    filename: (req, file, callback)=>{
+        var imageName = Date.now() + file.originalname;
+        callback(null,imageName);
+    }
+});
+
+var upload = multer({storage: multerDiskStorage});
+
 
 
 
@@ -11,8 +27,8 @@ var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 
 
 //ROTAS
-router.get('/', PainelUsuarioController.index);
 
+router.get('/', upload.single('foto'), PainelUsuarioController.index);
 
 
 
