@@ -9,9 +9,9 @@ const LoginController = {
     },
 
     acaoLogin: async (req, res) => {
-        const { email, senha } = await req.body;
-        const usuarioEncontrado = db.cliente.findOne({
-            email: email
+        const { email, senha } = req.body;
+        const usuarioEncontrado = await db.Cliente.findOne({
+            where: {email: email}
         })
         if (usuarioEncontrado != undefined) {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);

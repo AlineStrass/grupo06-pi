@@ -8,10 +8,10 @@ module.exports = {
       foto: Sequelize.DataTypes.STRING,
       email: { type: Sequelize.DataTypes.STRING, allowNull: true },
       telefone: { type: Sequelize.DataTypes.STRING, allowNull: true },
-      sexo: Sequelize.DataTypes.STRING,
+      sexo: {type: Sequelize.DataTypes.STRING, allowNull: true},
       dataDeNascimento: { type: Sequelize.DataTypes.DATE, allowNull: true },
       cpf: { type: Sequelize.DataTypes.STRING, allowNull: true },
-      senha: { type: Sequelize.DataTypes.STRING, allowNull: true}
+      senha: { type: Sequelize.DataTypes.STRING(100), allowNull: true}
     });
   },
 

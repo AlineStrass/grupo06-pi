@@ -46,7 +46,7 @@ app.use('/admin', adminRouter);
 app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
 app.use('/criarconta', criarContaRouter);
-app.use('login', loginRouter);
+app.use('/login', loginRouter);
 app.use('/painelusuario', painelUsuarioRouter);
 
 
