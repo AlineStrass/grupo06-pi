@@ -30,18 +30,16 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
         senha: {
-            type: DataType.STRING,
+            type: DataType.STRING(100),
             allowNull: true,
         },
     },
         {
-
             tableName: 'clientes',
             timestamps: false
-
         });
 
-        Cliente.associate = (listaDeModelos) => {
+    Cliente.associate = (listaDeModelos) => {
         Cliente.hasMany(listaDeModelos.Endereco, {
             foreignKey: 'clientes_id',
             as: "enderecos"

@@ -68,45 +68,27 @@ h1.home, li.home {
     color: #6A5495;
 }
 
-img.home-carousel {
+/* carrossel */
+
+    .carrossel-home{
+        margin-top: 15px;
+        margin: 0 auto;
+        box-shadow: 2px 2px 4px black;
+        overflow: hidden;
+        height: 300px;
+        width: 800px;
+        align-items: center;
+        border-radius: 15px;
+}
+
+    .carrossel-home img{
     width: 25%;
     height: 50vh;
+    
+
 }
 
-.carousel-home {
-    margin: auto auto;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    align-items: center;
-}
-
-section.banner-home .carousel-home .controls-home {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-section.banner-home .carousel-home .controls-home button {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    padding: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 20px;
-    cursor: pointer;
-}
-
-section.banner-home .carousel-home .controls-home button img {
-    width: 15px;
-}
+/* fim do carrossel */
 
 section.produtos-home .container-home {
     display: flex;

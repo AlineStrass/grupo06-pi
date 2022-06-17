@@ -9,6 +9,7 @@ const CriarContaController = {
     },
 
     acaoCadastrar: async (req, res) => {
+    
         const cadastrarUsuario = {
             nomeCompleto: req.body.nomeCompleto,
             foto: req.body.foto,
@@ -29,7 +30,7 @@ const CriarContaController = {
             }
         }
 
-        await db.Cliente.create(cadastrarUsuario, {include:["enderecos"]});
+        await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] }).catch((error)=>console.log(error))
 
         res.redirect('/painelUsuario');
     }
