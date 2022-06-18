@@ -26,7 +26,12 @@ Produto.associate = (listaDeModelos) => {
         foreignKey : 'categorias_id', 
         as:'categoria'
     })
+    Produto.hasMany(listaDeModelos.ItemPedido, {
+        foreignKey: 'produtos_id',
+        as: "ItemPedido"
+})
 }
+    
 return Produto;
 
-};
+}
