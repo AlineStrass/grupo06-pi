@@ -23,8 +23,14 @@ module.exports = (sequelize, DataType) => {
         Pedido.belongsTo(listaDeModelos.Cliente, {
             foreignKey : 'clientes_id', 
             as:'clientes'
-        })
+    })
+    
+        Pedido.hasMany(listaDeModelos.ItemPedido, {
+            foreignKey: 'pedidos_id',
+            as: "ItemPedido"
+    })
     }
+        
     return Pedido;
     
-    };
+    }
