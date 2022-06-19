@@ -10,7 +10,6 @@ const ClientesController = {
         })
        
        return res.render('clientes', {clientes})
-
     }
 }
 
