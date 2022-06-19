@@ -665,18 +665,14 @@ button.botao-produto-interno:hover {
 }
   
 /*CSS da página PAINEL DO USUÁRIO */
-/*.dados-container{ VERIFICAR USO
 
-    width: 100%;
-    margin: center;
-    padding-right: 200px;
-    padding-left: 400px;
-    background-color: #EFEFEF;
-    border: 5px solid #6A5495;
-}*/
 /* -------css do botao de salvar dos meus dados */
+.col-md-12 {
+    margin-bottom: 30px;
+}
+
 #submit-button{
-    padding: 10px 80px;
+    padding: 1px 20px;
     border-radius: 4px;
     background-color: #6A5495;
     border: none;
