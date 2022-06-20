@@ -28,7 +28,7 @@
                     <div class="col-md-4 col-xs-4">
                         <div class="form-group">
                             <label for="foto-perfil">Sua Foto:</label>
-                            <input type="file" class="form-control" name="foto-perfil" required>
+                            <input type="file" class="form-control" name="foto-perfil" value="<%= Cliente.foto %>" required>
                         </div>
                     </div>
                 </div>
@@ -38,13 +38,13 @@
                     <div class="col-md-8 col-xs-4">
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" class="form-control" required>
+                            <input type="email" name="email" class="form-control" value="<%= Cliente.email %>" required>
                         </div>
                     </div>
                     <div class="col-md-4 col-xs-4">
                         <div class="form-group">
                             <label for="telefone">Telefone:</label>
-                            <input type="text" name="telefone" class="form-control" required>
+                            <input type="text" name="telefone" class="form-control" value="<%= Cliente.telefone %>" required>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <label for="sexo">Sexo:</label>
                             <select class="form-control" data-size="5" data-live-search="true" data-width="100%"
-                                name="sexo" required>
+                                name="sexo" value="<%= Cliente.sexo %>" required>
                                 <option selected disabled>Escolha uma opção</option>
                                 <option>Masculino</option>
                                 <option>Feminino</option>
@@ -66,14 +66,14 @@
                     <div class="col-md-4 col-xs-2">
                         <div class="form-group">
                             <label for="data-nascimento">Data de nascimento:</label>
-                            <input type="date" name="data-nascimento" class="form-control">
+                            <input type="date" name="data-nascimento" class="form-control" value="<%= Cliente.datanascimento %>">
                         </div>
                     </div>
 
                     <div class="col-md-4 col-xs-2">
                         <div class="form-group">
                             <label for="cpf">CPF:</label>
-                            <input type="text" name="cpf" class="form-control">
+                            <input type="text" name="cpf" class="form-control" value="<%= Cliente.cpf %>">
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="col-md-4 col-xs-2">
                         <div class="form-group">
                             <label for="senha">Senha:</label>
-                            <input type="password" name="senha" class="form-control">
+                            <input type="password" name="senha" class="form-control" value="<%= Cliente.senha %>">
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@
                     <div class="col-md-4 col-xs-2">
                         <div class="form-group">
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" class="form-control">
+                            <input type="text" name="cep" class="form-control" value="<%= Cliente.cep %>">
                         </div>
                     </div>
                 </div>
