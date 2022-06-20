@@ -14,19 +14,16 @@
         <!-- div da parte meus dados, obs aqui utilizamos grid bootstrap onde tem col-md-8 por exemplo é quantas colunas esse item vai ocupar, lembrando q o grid tem 12 colunas, entao se quero 3 items em uma coluna, divido 12/3 e coloco col-md-resultado para ter a mesma divisao no grid de 12 -->
         <div class="meus-dados">
             <h2>MEUS DADOS</h2>
-
-
-
-
-
-            <form action="" class="meus-dados-form mt-4" enctype="multipart/form-data">
+            
+            <form action="/painelUsuario/dadosCliente" method="GET" class="meus-dados-form mt-4" enctype="multipart/form-data">
                 <!-- O QUE QUEREMOS QUE FIQUE NA MESMA LINHA DEIXAMOS DENTRO DA DIV ROW(LINHA) O QUE QUEREMOS QUE FIQUE ABAIXO CRIAMOS OUTRA DIV ROW -->
                 <div class="row">
                     <div class="col-md-8 col-xs-4">
                         <div class="form-group">
                             <label for="nome">Nome Completo</label>
-                            <input type="text" name="nome" class="form-control" required>
+                            <input type="text" name="nome" class="form-control" required >
                         </div>
+                        
                     </div>
                     <div class="col-md-4 col-xs-4">
                         <div class="form-group">
@@ -122,6 +119,7 @@
                     </div>
                 </div>
             </form>
+        
         </div>
 
         <div class="historico-compras">

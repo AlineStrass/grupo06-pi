@@ -27,6 +27,7 @@ const LoginController = {
             res.redirect('/login');
         }
     },
+    
     login: function (req, res) {
         //acao login verificar se a senha esta certa, criptografar a senha
         // quando cadastrar

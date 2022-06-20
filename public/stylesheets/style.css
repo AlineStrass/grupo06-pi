@@ -245,6 +245,10 @@ input.inserir-dados-cadastro {
     padding: 10px 70px;
 }
 
+#datanascimento {
+    padding: 5px 101px;
+}
+
 main a.termosCondicoes {
     font-size: 15px;
     color: #EFEFEF;
