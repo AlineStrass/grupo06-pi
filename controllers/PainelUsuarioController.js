@@ -8,14 +8,16 @@ const PainelUsuarioController = {
             res.render('login')
         }
     },
-    
+
     dadosCliente: async (req, res) => {
         const detalhesCliente = await db.Cliente.findByPk(
-            req.params.id,
-            {include:['enderecos']
-    });
-        res.render('painelUsuario',{Cliente: detalhesCliente})
-        console.log(detalhesCliente)
+            req.session.idUsuario,
+            {
+                include: ['enderecos']
+            });
+            console.log(detalhesCliente)
+        res.render('painelUsuario', { Cliente: detalhesCliente })
+        
     },
 
     /*

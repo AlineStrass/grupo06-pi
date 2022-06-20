@@ -17,7 +17,8 @@ const LoginController = {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
             if (sucessoSenha) {
                 req.session.logado = true;
-                res.redirect('/painelUsuario');
+                req.session.idUsuario = usuarioEncontrado.id;
+                res.redirect('/painelUsuario/dados');
 
             } else {
                 res.redirect('/login');
