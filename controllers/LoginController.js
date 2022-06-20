@@ -18,7 +18,7 @@ const LoginController = {
             if (sucessoSenha) {
                 req.session.logado = true;
                 req.session.idUsuario = usuarioEncontrado.id;
-                res.redirect('/painelUsuario/dados');
+                res.redirect('/painelUsuario/cadastro');
 
             } else {
                 res.redirect('/login');

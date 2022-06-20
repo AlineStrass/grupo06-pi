@@ -20,20 +20,6 @@ const PainelUsuarioController = {
         
     },
 
-    /*
-    dadosCliente: (req, res) => {
-        db.Cliente.findByPk(
-            req.params.id,
-            {include:[
-                {association: 'enderecos'}
-            ]}
-        )
-        .then(function(detalhesCliente){
-            res.render('painelUsuario',{Cliente: detalhesCliente})
-        })
-        .catch((error)=> console.log(error))
-    },
-    */
 }
 
 
