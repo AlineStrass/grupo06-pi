@@ -353,6 +353,9 @@ form button.login-cadastro:hover {
 
 }
 
+#produtos-img{
+    width: 100%;
+}
 #produtos-img-1{
     background-image: url('/images/produtos/racao1.jpg');
     width: 100%;

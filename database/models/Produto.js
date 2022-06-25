@@ -10,9 +10,6 @@ module.exports = (sequelize, DataType) => {
         descricao: DataType.TEXT,
         foto: DataType.STRING,
         categorias_id: DataType.INTEGER,
-        categorias_id: {
-            type: DataType.INTEGER,
-        }
     }, {
         tableName: 'produtos',
         timestamps: false
@@ -23,6 +20,7 @@ module.exports = (sequelize, DataType) => {
             foreignKey: 'categorias_id',
             as: 'categoria'
         })
+
         Produto.hasMany(listaDeModelos.ItemPedido, {
             foreignKey: 'produtos_id',
             as: "ItemPedido"
