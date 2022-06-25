@@ -10,28 +10,25 @@ module.exports = (sequelize, DataType) => {
         descricao: DataType.TEXT,
         foto: DataType.STRING,
         categorias_id: DataType.INTEGER,
-        categorias_id:{ 
-            type:DataType.INTEGER,
-
+        categorias_id: {
+            type: DataType.INTEGER,
         }
-    },{   
-    
-        tableName : 'produtos',
-        timestamps : false
-    
-});
+    }, {
+        tableName: 'produtos',
+        timestamps: false
+    });
 
-Produto.associate = (listaDeModelos) => {
-    Produto.belongsTo(listaDeModelos.Categoria, {
-        foreignKey : 'categorias_id', 
-        as:'categoria'
-    })
-    Produto.hasMany(listaDeModelos.ItemPedido, {
-        foreignKey: 'produtos_id',
-        as: "ItemPedido"
-})
-}
-    
-return Produto;
+    Produto.associate = (listaDeModelos) => {
+        Produto.belongsTo(listaDeModelos.Categoria, {
+            foreignKey: 'categorias_id',
+            as: 'categoria'
+        })
+        Produto.hasMany(listaDeModelos.ItemPedido, {
+            foreignKey: 'produtos_id',
+            as: "ItemPedido"
+        })
+    }
+
+    return Produto;
 
 }
