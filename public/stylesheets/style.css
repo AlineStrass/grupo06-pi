@@ -607,52 +607,8 @@ input {
 
 /* ---------as section não estão no PRODUTOINTERNO.EJS, eram referente ao HEADER??------*/
 
-section.produtos .container{
-    display: flex;
-    justify-content: space-between;
-    margin: auto auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+/* pagina produto interno */
 
-section.produtos article{
-    width: 350px;
-}
-
-section.produtos article img{
-    width: 125px;
-    height: 250px;
-}
-
-section.produtos article  .info{
-    padding: 15px;
-}
-
-section.produtos article  .info>div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-section.produtos article .price{
-    font-size: 25px;
-    font-weight: 400;
-    margin: 5px 0;
-}
-
-h2.produto-interno,
-h3.produto-interno, 
-h4.produto-interno, 
-li.produto-interno {
-    color: #6A5495;
-} 
-
-.flex-container-produto-interno {
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    height: 80vh;
-}
 
 button.botao-produto-interno {
     color:#EFEFEF;
