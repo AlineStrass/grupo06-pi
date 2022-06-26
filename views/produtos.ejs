@@ -2,26 +2,23 @@
 
     <head>
         <link rel="stylesheet" href="/stylesheets/style.css">
-
     </head>
 
     <!--Produtos-->
     <main class="produtos-container">
         <section class="produtos-container-section" action="/produtos" method="GET">
-            <div class="produtos-container-card">
+            <% for(produto of Produto) { %>
+                <div class="produtos-container-card">
 
-                <% for(produto of produtos)  { %>
                     <div class="produtos-container-image" value="<%= produto.foto %>" id="produtos-img"></div>
                     <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome"></h3>
-                    <p class="produtos-container-info" value="<%= produto.descricao %>"></p>
-                    <p class="produtos-container-info"><span value="<%= produto.preco %>" class='produtos-container-price'></span></p>
-                    <a href="a" class='produtos-container-btn'>Comprar</a>
-                <% } %>
+                    <p class="produtos-container-info"><span value="<%= produto.preco %>"
+                            class='produtos-container-price'></span></p>
+                    <a href="#" class='produtos-container-btn'>Comprar</a>
 
-            </div>
-
-
-            <!--
+                </div>
+            <% } %>
+<!--
             <div class="produtos-container-card">
                 <div class="produtos-container-image" id="produtos-img-1"></div>
                 <h3 class="produtos-container-title">Ração Golden </h3>

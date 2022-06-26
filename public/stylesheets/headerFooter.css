@@ -11,6 +11,7 @@ header {
     justify-content: space-around;
     /*position: fixed;*/
     border-bottom: 2px solid #FF8CB7;
+    overflow-x: hidden;
 }
 
 header .container-header {
@@ -33,7 +34,8 @@ header .container-header .logo-header img {
 
 .barra-de-pesquisa{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 .barra-de-pesquisa button {
@@ -53,9 +55,8 @@ header .container-header .logo-header img {
     width: 700px;
     border-radius: 4px 0px 0px 4px;
     outline: none;
+    
 }
-
-
 
 .fa-solid {
     color: #EFEFEF;
@@ -64,7 +65,6 @@ header .container-header .logo-header img {
 .fa-solid:hover, .container-second .dropdown i:hover {
     color: #FF8CB7;
 }
-
 
 .container-second {
     display: flex;
@@ -130,6 +130,7 @@ ul li:hover a{
 .container-second .dropdown .fa-bars:before{
     font-size:35px;
 }
+
 
 @media(max-width: 800px){
     .barra-de-pesquisa, .header-categorias{
