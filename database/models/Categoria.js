@@ -6,22 +6,18 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true
         },
         categoria: DataType.STRING,
-
     },
-    {   
+        {
+            tableName: 'categorias',
+            timestamps: false
+        });
 
-        tableName : 'categorias',
-        timestamps : false
-    
-});
+    Categoria.associate = (listaDeModelos) => {
+        Categoria.hasMany(listaDeModelos.Produto, {
+            foreignKey: 'categorias_id',
+            as: "produtos"
+        })
+    }
 
-
-Categoria.associate = (listaDeModelos) => {
-    Categoria.hasMany(listaDeModelos.Produto, {
-        foreignKey: 'categorias_id',
-        as: "produtos"
-    })
-}
-
-return Categoria;
+    return Categoria;
 };

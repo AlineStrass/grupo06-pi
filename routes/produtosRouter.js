@@ -4,10 +4,10 @@ var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
 
-
+//CONTROLLERS
 var ProdutosController = require("../controllers/ProdutosController");
 
-
+//ROTAS
 router.get('/', ProdutosController.index);
 
 
