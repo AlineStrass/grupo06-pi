@@ -6,10 +6,10 @@
 
     <!--Produtos-->
     <main class="produtos-container">
-        <section class="produtos-container-section" action="/produtos" method="GET">
+        <section class="produtos-container-section" action="/produtos/produtointerno" method="GET">
             
                 <div class="produtos-container-card">
-                   
+                   <%for(produto of Produto){%> 
                         <a href="/produtos/produtointerno/<%= produto.id %>" >
                             <%=console.log(produto.id)%>
                             <div class="produtos-container-image" src="/images/produtos/" id="produtos-img"> <%= produto.foto %> </div>
@@ -19,9 +19,9 @@
                         </a>
 
                         <a href="#" class='produtos-container-btn'>Comprar</a>
-
+                    <%}%>
                     </div>
-                <% } %>
+                
                     <!--
             <div class="produtos-container-card">
                 <div class="produtos-container-image" id="produtos-img-1"></div>
