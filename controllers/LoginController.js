@@ -13,8 +13,10 @@ const LoginController = {
         const usuarioEncontrado = await db.Cliente.findOne({
             where: {email: email}
         })
-        if (usuarioEncontrado != undefined) {
+        if (usuarioEncontrado != null) {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
+            console.log(senha, usuarioEncontrado.senha)
+            console.log(sucessoSenha)
             if (sucessoSenha) {
                 req.session.logado = true;
                 req.session.idUsuario = usuarioEncontrado.id;

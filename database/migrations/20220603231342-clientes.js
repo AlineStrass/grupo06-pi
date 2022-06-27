@@ -11,7 +11,7 @@ module.exports = {
       sexo: {type: Sequelize.DataTypes.STRING, allowNull: true},
       dataDeNascimento: { type: Sequelize.DataTypes.DATE, allowNull: true },
       cpf: { type: Sequelize.DataTypes.STRING, allowNull: true },
-      senha: { type: Sequelize.DataTypes.STRING(100), allowNull: true}
+      senha: { type: Sequelize.DataTypes.STRING, allowNull: true}
     });
   },
 
