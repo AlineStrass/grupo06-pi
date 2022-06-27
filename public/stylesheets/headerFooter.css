@@ -11,7 +11,7 @@ header {
     justify-content: space-around;
     /*position: fixed;*/
     border-bottom: 2px solid #FF8CB7;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 header .container-header {
@@ -132,7 +132,7 @@ ul li:hover a{
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 826px){
     .barra-de-pesquisa, .header-categorias{
         display: none;
     }

@@ -8,7 +8,7 @@ const ProdutosController = {
             include: ['categoria']
         })
         
-        console.log(produtos)
+        //console.log(produtos)
         res.render('produtos', {Produto: produtos})
     }
 }
