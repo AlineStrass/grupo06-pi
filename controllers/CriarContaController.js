@@ -30,7 +30,8 @@ const CriarContaController = {
             }
         }
 
-        await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] }).catch((error)=>console.log(error))
+        await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] })
+        .catch((error)=>console.log(error))
 
         res.redirect('/painelUsuario');
     }
