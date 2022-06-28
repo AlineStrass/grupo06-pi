@@ -6,11 +6,11 @@
 
     <!--Produtos-->
     <main class="produtos-container">
-        <section class="produtos-container-section" action="/produtos/produtointerno" method="GET">
+        <section class="produtos-container-section" action="/produtos" method="GET">
             
                 <div class="produtos-container-card">
                    <%for(produto of Produto){%> 
-                        <a href="/produtos/produtointerno/<%= produto.id %>" >
+                        <a href="/produtointerno/<%= produto.id %>" >
                             <%=console.log(produto.id)%>
                             <div class="produtos-container-image" src="/images/produtos/" id="produtos-img"> <%= produto.foto %> </div>
                          <h3 class="produtos-container-title" name="nome"> <%= produto.nome %> </h3>

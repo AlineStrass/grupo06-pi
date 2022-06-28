@@ -7,7 +7,7 @@ const ProdutoInternoController = {
     index: (req, res) => {
         return res.render('produtoInterno')
     },
-
+/*
     buscarProduto: async (req, res) => {
         req.body.id;
         console.log(req.body.id)
@@ -18,7 +18,7 @@ const ProdutoInternoController = {
         console.log(id)
         return res.render('produtoInterno', {detalhesProduto})
     }
-
+*/
     
         
 

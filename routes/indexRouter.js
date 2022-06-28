@@ -12,6 +12,7 @@ var ObrigadoController = require("../controllers/ObrigadoController");
 var FinalizarController = require("../controllers/FinalizarController");
 var CarrinhoController = require("../controllers/CarrinhoController");
 var ClientesController = require('../controllers/ClientesController');
+var ProdutoInternoController = require("../controllers/ProdutoInternoController");
 
 
 
@@ -21,6 +22,7 @@ router.get('/obrigado', ObrigadoController.index);
 router.get('/finalizar', FinalizarController.index);
 router.get('/carrinho', CarrinhoController.index);
 router.get('/clientes', ClientesController.index);
+router.get('/produtointerno', ProdutoInternoController.index);
 
 
 
