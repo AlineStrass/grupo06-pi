@@ -41,13 +41,6 @@ module.exports = (sequelize, DataType) => {
     
     });
 
-    Endereco.associate = (listaDeModelos) => {
-        Endereco.belongsTo(listaDeModelos.Cliente, {
-            foreignKey: 'clientes_id',
-            as:'cliente'
-        })
-    }
-
     return Endereco;
     
 };
