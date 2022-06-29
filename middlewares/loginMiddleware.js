@@ -1,6 +1,6 @@
 
 const loginMiddleware = (req, res, next) =>{
-    if ("loginUsuario" in req.session && req.session.loginUsuario != ""){
+    if ("logado" in req.session && req.session.logado != ""){
         next();
     }else{
         res.redirect("/login");

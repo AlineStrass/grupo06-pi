@@ -4,6 +4,7 @@ var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
 var multer = require('multer');
+const loginMiddleware = require("../middlewares/loginMiddleware");
 
 
 var multerDiskStorage = multer.diskStorage ({
@@ -28,7 +29,7 @@ var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 
 //ROTAS
 router.get('/', upload.single('foto'), PainelUsuarioController.index);
-router.get('/cadastro', PainelUsuarioController.dadosCliente);
+router.get('/cadastro', loginMiddleware, PainelUsuarioController.dadosCliente);
 
 
 

@@ -34,10 +34,10 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
     },
-        {
-            tableName: 'clientes',
-            timestamps: false
-        });
+    {
+        tableName: 'clientes',
+        timestamps: false
+    });
 
     Cliente.associate = (listaDeModelos) => {
         Cliente.hasMany(listaDeModelos.Endereco, {

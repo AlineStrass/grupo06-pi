@@ -9,7 +9,6 @@ var LoginController = require("../controllers/LoginController");
 
 //MIDDLEWARES
 const loginMiddleware = require('../middlewares/loginMiddleware');
-var autenticacaoMiddleware = require("../middlewares/autenticacaoMiddleware");
 
 //ROTAS
 router.get('/', LoginController.index);
