@@ -50,11 +50,9 @@ const ClientesController = {
         let hash = bcrypt.hashSync(req.body.senha);
         let hashBanco = bcrypt.hashSync(req.body.senha);
         let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
-        //let hash = bcrypt.hashSync("teste123");
+        
         res.send(hash);
         bcrypt.compareSync(req.body.senha, hashBanco);
-        //req.session.loginUsuario = "reginaldo";
-        //res.send("Login feito com sucesso");
     },
 
     criarConta: (req, res) => {
@@ -89,6 +87,5 @@ const ClientesController = {
     }
 
 }
-
 
 module.exports = ClientesController;
