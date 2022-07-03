@@ -12,11 +12,14 @@ const loginMiddleware = require('../middlewares/loginMiddleware');
 
 //ROTAS
 router.get('/', ClientesController.index);
-router.get('/criarconta', ClientesController.criarConta);
-router.post('/acaoCadastrar', ClientesController.acaoCadastrar);
 
 router.get('/login', ClientesController.paginaLogin);
 router.get('/efetuar',ClientesController.login);
 router.post('/acaologin',ClientesController.acaoLogin);
+
+router.get('/criarconta', ClientesController.criarConta);
+router.post('/acaoCadastrar', ClientesController.acaoCadastrar);
+
+
 
 module.exports = router;

@@ -14,9 +14,11 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 //ROTAS
 router.get('/', HomeController.index);
 
-router.get('/obrigado', CarrinhoController.obrigado);
-router.get('/finalizar', CarrinhoController.finalizar);
 router.get('/carrinho', CarrinhoController.index);
+router.get('/finalizar', CarrinhoController.finalizar);
+router.get('/obrigado', CarrinhoController.obrigado);
+
+
 
 
 
