@@ -22,7 +22,6 @@ var upload = multer({storage: multerDiskStorage});
 
 
 
-
 //CONTROLLERS
 var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 

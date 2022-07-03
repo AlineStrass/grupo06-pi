@@ -10,6 +10,9 @@ const ProdutosController = {
         
         console.log(produtos)
         res.render('produtos', {Produto: produtos})
+    },
+    produtoInterno: (req, res) => {
+        return res.render('produtoInterno')
     }
 }
 
