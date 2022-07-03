@@ -16,4 +16,5 @@ router.get('/efetuar',loginMiddleware, LoginController.login);
 router.post('/acaologin',LoginController.acaoLogin);
 
 
+
 module.exports = router;

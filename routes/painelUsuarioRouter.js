@@ -28,8 +28,8 @@ var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 
 
 //ROTAS
-router.get('/', upload.single('foto'), PainelUsuarioController.index);
-router.get('/cadastro', loginMiddleware, PainelUsuarioController.dadosCliente);
+router.get('/', upload.single('foto'),loginMiddleware, PainelUsuarioController.index);
+
 
 
 
