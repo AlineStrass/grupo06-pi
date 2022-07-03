@@ -5,17 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var methodOverride = require('method-override');
-
 const res = require('express/lib/response');
 
 //ROTAS
 var indexRouter = require('./routes/indexRouter');
 var adminRouter = require('./routes/adminRouter');
 var produtosRouter = require('./routes/produtosRouter');
-var criarContaRouter = require('./routes/criarConta');
+//var criarContaRouter = require('./routes/criarConta');
 var loginRouter = require('./routes/loginRouter');
 var painelUsuarioRouter = require('./routes/painelUsuarioRouter')
 var apiRouter = require('./routes/apiRouter');
+var clientesRouter = require('./routes/clientesRouter');
 
 
 var app = express();
@@ -24,7 +24,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 
 app.use(session({
   secret:'projetoIntegrador-grupo06-HappyPet',
@@ -38,16 +37,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-//app.use(logMiddleware);
 
+//app.use(logMiddleware);
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
-app.use('/criarconta', criarContaRouter);
 app.use('/login', loginRouter);
 app.use('/painelusuario', painelUsuarioRouter);
+app.use('/clientes', clientesRouter);
 
 
 app.use((req, res)=>{
