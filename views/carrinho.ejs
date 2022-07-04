@@ -1,99 +1,69 @@
 <%- include('./partials/header') %>
 
-<head>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
 
-<body>
+    <body>
 
-    <header class="finalizacao">
-        <div class="center-finalizacao">
-            <div class="logo-finalizacao" style="display:flex; align-items:center;">
-                
-            </div>
-            <!--logo-->
+        <section class="main-finalizacao">
+            <div class="finalizacao-center">
 
-            <div class="menu-finalizacao">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <a href="#">Sacola</a>
+                <!--main-cta-->
 
-                <i class="fa-solid fa-cat"></i>
-                <i class="fa-solid fa-dog"></i>
-                <a href="#">Identificação</a>
+                <section class="finalizacao-container-finalizacao"
+                    style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
+                    <article>
+                        <h2>Descrição</h2>
+                    </article>
 
-                <i class="fa-solid fa-credit-card"></i>
-                <a href="#">Pagamento</a>
+                    <article>
+                        <h2>Quantidade</h2>
+                    </article>
 
-                <i class="fa-solid fa-circle-check"></i>
-                <a href="#">Confirmação</a>
+                    <article>
+                        <h2>Preço</h2>
+                    </article>
 
-                <i class="fa-solid fa-id-card"></i>
-                <a href="#">Minha conta</a>
-
-                <a class="menu-finalizacao" href="#">Sair</a>
-            </div>
-            <!--menu-->
-        </div>
-        <!--center-->
-
-    </header>
-
-    <section class="main-finalizacao">
-        <div class="finalizacao-center">
-
-            <!--main-cta-->
-
-            <section class="finalizacao-container-finalizacao"
-                style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
-                <article>
-                    <h2>Descrição</h2>
-
-                </article>
-                <article>
-                    <h2>Quantidade</h2>
-                </article>
-
-                <article>
-                    <h2>Preço</h2>
-                </article>
-
-                <article>
-                    <h2>Subtotal</h2>
-                    <p>Frete</p>
-                    <p>Desconto</p>
-                    <p>Total</p>
-                </article>
-            </section>
-            
-            <div class="main-finalizacao__cta">
-                <p>Calcule o frete e prazo</p>
-                <label for="text"></label>
-                <input type="text" id="frete" name="frete" placeholder="CEP">
-
-
-                <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
-            </div>
-
-            <div class="main__cta">
-                <section class="escolher-finalizacao">
-                    <button class="calcular-frete-carrinho">Escolher mais produtos</button>
-
-                    <button class="calcular-frete-carrinho">Finalizar Compra</button>
+                    <article>
+                        <h2>Subtotal</h2>
+                        <p>Frete</p>
+                        <p>Desconto</p>
+                        <p>Total</p>
+                    </article>
                 </section>
 
-    </section>
-    <!--main-->
+                <div class="main-finalizacao__cta">
+                    <p>Calcule o frete e prazo</p>
+                    <label for="text"></label>
+                    <input type="text" id="frete" name="frete" placeholder="CEP">
+
+                    <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
+                </div>
+
+                <div class="main__cta">
+                    <section class="escolher-finalizacao">
+                       <a href="/produtos">
+                        <button class="calcular-frete-carrinho">Escolher mais produtos</button>
+                    </a>
+                    <a href="/finalizar">
+                        <button class="calcular-frete-carrinho">Finalizar Compra</button>
+                    </a>
+                    </section>
+
+        </section>
+        <!--main-->
 
 
 
-    
-
-    <script src="https://kit.fontawesome.com/0822f5875d.js" crossorigin="anonymous"></script>
 
 
+        <script src="https://kit.fontawesome.com/0822f5875d.js" crossorigin="anonymous"></script>
 
-</body>
 
-</html>
 
-<!--carrinho mantive sem footer/INCLUDE (BIA)-->
+    </body>
+
+    </html>
+
+    <!--carrinho mantive sem footer/INCLUDE (BIA)-->

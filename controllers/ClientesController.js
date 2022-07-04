@@ -79,10 +79,8 @@ const ClientesController = {
                 cep: req.body.cep
             }
         }
-
         await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] })
         .catch((error)=>console.log(error))
-
         res.redirect('/painelUsuario');
     }
 
