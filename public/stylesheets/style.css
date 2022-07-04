@@ -353,6 +353,10 @@ form button.login-cadastro:hover {
     align-items: center;
 }
 
+.box-produtos {
+    text-decoration: none;
+}
+
 .produtos-container-image{
     height: 350px;
     width: 390px;
