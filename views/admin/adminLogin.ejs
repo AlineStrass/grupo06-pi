@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+    <head>
+        <link rel="stylesheet" href="../stylesheets/style.css">
+    </head>
+
+    <body class="body-login">
+
+        <main class="formulario-login">
+
+            <form class="criar-conta" action="/clientes/acaoLogin" method="post">
+                <h2 class="login">Acesse sua conta</h2>
+
+                <div class="dados-cadastrais-conta">
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="email">E-mail:</label>
+                        <input class="inserir-dados-cadastro" type="email" id="email" name="email"
+                            placeholder="email@email.com.br">
+                    </div>
+
+                    <div class="campo-login">
+                        <label class="inserir-dados-cadastro" for="senha">Senha:</label>
+                        <input class="inserir-dados-cadastro" type="password" id="senha" name="senha"
+                            placeholder="Digite sua senha">
+                    </div>
+                </div>
+                <a class="termosCondicoes" href="#">Esqueci minha senha</a>
+
+                <button class="login-cadastro" type="submit" action="acaoLogin">Entrar</button>
+            </form>
+
+            <a class="termosCondicoes" href="/clientes/criarconta">Não tem cadastro? Crie aqui!</a>
+
+        </main>
+
+    </body>
+
+    </html>
