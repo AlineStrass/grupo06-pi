@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="br">
-<%- include('../partials/head') %>
+<%- include('../partials/header') %>
 
     <body>
-        <%- include('../partials/header') %>
             <main class="admin">
                 <div class="container">
                     <h1>Painel Administrativo</h1>
 
-                    <form action="/admin/usuarios/cadastrar" method="GET" class="cadastroServico">
+                    <form action="" method="" class="cadastroUsuario">
                         <fieldset>
                             <legend>Novo Usuário</legend>
                             <div>
@@ -23,12 +22,11 @@
                                 <label for="senha">Senha:</label>
                                 <input type="password" name="senha" id="senha" required>
                             </div>
-                            <button class="btn-cadastroServico">Cadastrar</button>
+                            <button class="btn-cadastroUsuario">Cadastrar</button>
                         </fieldset>
                     </form>
                 </div>
             </main>
-            <%- include('../partials/footer') %>
     </body>
 
 </html>

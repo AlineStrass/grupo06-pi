@@ -10,9 +10,9 @@ const AdminController = require('../controllers/AdminController');
 
 
 router.get('/', AdminController.index);
-router.get('/admin/login', AdminController.adminLogin);
-router.get('/admin/produtos', AdminController.adminProdutos);
-router.get('/admin/usuarios', AdminController.adminUsuarios);
+router.get('/login', AdminController.adminLogin);
+router.get('/produtos', AdminController.adminProdutos);
+router.get('/usuarios', AdminController.adminUsuarios);
 
 
 
