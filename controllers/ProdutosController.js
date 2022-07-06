@@ -13,6 +13,14 @@ const ProdutosController = {
     
     produtoInterno: (req, res) => {
         return res.render('produtoInterno')
+    },
+
+    categorias: async (req, res) => {
+        const categoria = await db.Categoria.findByPk({
+            where: {id: id}
+        })
+        console.log(categoria)
+        return res.render('produtos',{Produto: categoria})
     }
 }
 
