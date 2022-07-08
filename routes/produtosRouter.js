@@ -10,7 +10,7 @@ var ProdutosController = require("../controllers/ProdutosController");
 //ROTAS
 router.get('/', ProdutosController.index);
 router.get('/produtointerno', ProdutosController.produtoInterno);
-router.get('/:id', ProdutosController.categorias);
+//router.get('/:id', ProdutosController.categorias);
 
 
 
