@@ -17,9 +17,7 @@ var multerDiskStorage = multer.diskStorage ({
         callback(null,imageName);
     }
 });
-
 var upload = multer({storage: multerDiskStorage});
-
 
 
 //CONTROLLERS

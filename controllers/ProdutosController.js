@@ -10,6 +10,10 @@ const ProdutosController = {
         console.log(produtos)
         res.render('produtos', {Produto: produtos})
     },
+
+    cadastroProdutos: (req, res) => {
+        res.send("enviado")
+    },
     
     produtoInterno: (req, res) => {
         return res.render('produtoInterno')
