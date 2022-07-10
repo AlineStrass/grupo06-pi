@@ -1,4 +1,4 @@
- var campoCep = document.getElementById("cep");
+var campoCep = document.getElementById("cep");
 
 campoCep.onblur = function (){
     var valorCep = this.value;
