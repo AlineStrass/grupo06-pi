@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const config = require('../database/config/config');
-const {Endereco, Cliente} = require('../database/models');
+const { Endereco, Cliente } = require('../database/models');
 const req = require("express/lib/request");
 const session = require('express-session');
 const { validationResult } = require('express-validator');
@@ -13,10 +13,10 @@ const ClientesController = {
         const clientes = await Cliente.findAll({
             include: ['enderecos']
         })
-       
-       return res.render('clientes', {clientes})
+
+        return res.render('clientes', { clientes })
     },
-    
+
     paginaLogin: (req, res) => {
         return res.render('login')
     },
@@ -24,7 +24,7 @@ const ClientesController = {
     acaoLogin: async (req, res) => {
         const { email, senha } = req.body;
         const usuarioEncontrado = await db.Cliente.findOne({
-            where: {email: email}
+            where: { email: email }
         })
         if (usuarioEncontrado != null) {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
@@ -43,14 +43,14 @@ const ClientesController = {
             res.redirect('/clientes/login');
         }
     },
-    
+
     login: function (req, res) {
         //acao login verificar se a senha esta certa, criptografar a senha
         // quando cadastrar
         let hash = bcrypt.hashSync(req.body.senha);
         let hashBanco = bcrypt.hashSync(req.body.senha);
         let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
-        
+
         res.send(hash);
         bcrypt.compareSync(req.body.senha, hashBanco);
     },
@@ -80,7 +80,7 @@ const ClientesController = {
             }
         }
         await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] })
-        .catch((error)=>console.log(error))
+            .catch((error) => console.log(error))
         res.redirect('/painelUsuario');
     }
 
