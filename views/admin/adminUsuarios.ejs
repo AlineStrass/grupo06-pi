@@ -1,32 +1,102 @@
-<!DOCTYPE html>
-<html lang="br">
 <%- include('../partials/header') %>
 
-    <body>
-            <main class="admin">
-                <div class="container">
-                    <h1>Painel Administrativo</h1>
 
-                    <form action="" method="" class="cadastroUsuario">
-                        <fieldset>
-                            <legend>Novo Usuário</legend>
-                            <div>
-                                <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome" required>
-                            </div>
-                            <div>
-                                <label for="login">Login:</label>
-                                <input type="text" name="login" id="login" required>
-                            </div>
-                            <div>
-                                <label for="senha">Senha:</label>
-                                <input type="password" name="senha" id="senha" required>
-                            </div>
-                            <button class="btn-cadastroUsuario">Cadastrar</button>
-                        </fieldset>
-                    </form>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+        <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form>
+    </head>
+
+
+    <body>
+        <main class="admin">
+                <div class="container">
+                    <h1>Painel administrativo</h1>
+                    <section>
+                        <h2>Usuários</h2>
+                        <a href="/admin/adminUsuarios" class="adicionar">Adicionar novo</a>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Login</th>
+                                    <th>Nome</th>
+                                    <th>Senha</th>
+                                </tr>
+                            </thead>
+                        </table>
+                      <style>
+
+main.admin .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main.admin h1 {
+    font-weight: 500;
+    text-align: center;
+    color: #6A5495;
+}
+
+.main.admin h2 {
+    display: inline-block;
+    margin-right: 50px 50px;
+    
+}
+
+main.admin section {
+    width: 100%;
+    padding: 50px 50px;
+
+}
+
+main.admin section .adicionar{
+    text-decoration: none;
+    background-color: #6A5495;
+    color: white;
+    padding: 10px 30px;
+   
+}
+
+.acoes-btn{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.acoes-btn a{
+    text-decoration: none;
+    color: #ccc;
+    padding: 5px 15px;
+}
+
+.acoes-btn-editar{
+    background-color: gray;
+}
+
+.acoes-btn-excluir{
+    background-color: gray;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 50;
+
+}
+
+</style>
+    
+                    </section>
                 </div>
             </main>
     </body>
-
 </html>
