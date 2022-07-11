@@ -65,19 +65,20 @@ const ClientesController = {
             foto: req.body.foto,
             email: req.body.email,
             telefone: req.body.telefone,
-            sexo: req.body.sexo,
             datanascimento: req.body.datanascimento,
             cpf: req.body.cpf,
+            enderecos:{
+            cep: req.body.cep,
+            rua: req.body.endereco,
+            numero: req.body.numero,
+            complemento: req.body.complemento,
+            bairro: req.body.bairro,
+            cidade: req.body.cidade,
+            estado: req.body.estado,
+            },
             senha: bcrypt.hashSync(req.body.senha),
-            enderecos: {
-                rua: req.body.rua,
-                numero: req.body.numero,
-                bairro: req.body.bairro,
-                complemento: req.body.complemento,
-                cidade: req.body.cidade,
-                estado: req.body.estado,
-                cep: req.body.cep
-            }
+            sexo: req.body.sexo
+            
         }
         await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] })
             .catch((error) => console.log(error))
