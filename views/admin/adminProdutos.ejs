@@ -1,17 +1,13 @@
 <%- include('../partials/header') %>
 
+   
 <body>
     <main class="admin">
         <div class="container-admin">
             <h1 class="admin">Registros de Produtos</h1>
 
-            <form action="" method="POST" class="cadastroProdutos">
+            <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
                 <div class="formulario-produtos">
-
-                    <div class="admin-idProduto input-group">
-                        <label for="idProduto">Id:</label>
-                        <input type="number" name="idProduto" id="idProduto" required>
-                    </div>
 
                     <div class="admin-nomeProduto input-group">
                         <label for="nomeProduto">Nome:</label>
@@ -30,18 +26,18 @@
 
                     <div class="input-group">
                         <label>Imagem</label>
-                        <input type="file" name="imagemProduto" />
+                        <input type="file" name="imagemProduto"/>
                     </div>
                 </div>
 
                 <div class="botoes-adm buttons-group">
-                    <button class="btn btn-cadastroProduto">Cadastrar</button>
-                    <button class="btn btn-editarProduto">Editar</button>
-                    <button class="btn btn-excluirProduto">Excluir</button>
+                    <button type="submit" class="btn btn-cadastroProduto">Cadastrar</button>
+                    <button type="submit" class="btn btn-editarProduto">Editar</button>
+                    <button type="submit" class="btn btn-excluirProduto">Excluir</button>
                 </div>
             </form>
         </div>
     </main>
 </body>
 
-</html>
+</html> 

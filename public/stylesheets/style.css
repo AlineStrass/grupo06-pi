@@ -597,12 +597,7 @@ input {
 }
 /*--- FINAL CARRINHO, FINALIZAR E OBRIGADO --*/
 
-/*Css da PRODUTOINTERNO*/
-
-/* ---------as section não estão no PRODUTOINTERNO.EJS, eram referente ao HEADER??------*/
-
-/* pagina produto interno */
-
+/*-------  PRODUTOINTERNO  ----------------*/
 
 button.botao-produto-interno {
     color:#EFEFEF;
@@ -616,6 +611,10 @@ button.botao-produto-interno:hover {
     background-color: #EFEFEF;
     color: #6A5482;
     border: solid #6A5482;
+}
+
+.produto-interno {
+    text-decoration: none;
 }
   
 /*CSS da página PAINEL DO USUÁRIO */
