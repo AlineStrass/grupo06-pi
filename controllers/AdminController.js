@@ -19,6 +19,14 @@ const AdminController = {
         return res.render('admin/adminUsuarios')
     },
 
+    adminUsuariosCadastrar: (req, res) => { 
+        return res.render('admin/adminUsuariosCadastrar')
+    },
+
+    adminProdutosCadastrar: (req, res) => { 
+        return res.render('admin/adminProdutosCadastrar')
+    },
+
 
    
     cadastroProdutos: (req, res) => {

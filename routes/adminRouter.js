@@ -26,6 +26,8 @@ router.get('/', AdminController.index);
 router.get('/login', AdminController.adminLogin);
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/usuarios', AdminController.adminUsuarios);
+router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
+router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
 
 router.post('/', upload.any('imagemProduto'), AdminController.cadastroProdutos);
 
