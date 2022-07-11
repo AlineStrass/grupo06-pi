@@ -11,7 +11,6 @@ module.exports = {
       descricao: Sequelize.DataTypes.TEXT,
       foto: Sequelize.DataTypes.STRING,
       categorias_id: Sequelize.DataTypes.INTEGER
-
     })
 
 

@@ -20,12 +20,11 @@ const AdminController = {
     },
 
 
-    /*getAdmin: async req, res => 
-        let admins = await Admin.findAll
+   
+    cadastroProdutos: (req, res) => {
+        res.send("enviado")
+    },
 
-        console.logadmins
-        //deveria aparecer no terminal os dados cadastrados na tabela, mas dá erro
-    */
 
 }
 
