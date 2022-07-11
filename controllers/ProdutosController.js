@@ -5,16 +5,12 @@ const db = require('../database/models');
 const ProdutosController = {
     index: async (req, res) => {
         const produtos = await db.Produto.findAll({
-            include: ['categoria']
+            include: ['categoria', 'imagem'],
         })
         console.log(produtos)
-        res.render('produtos', {Produto: produtos})
+        return res.render('produtos', {Produto: produtos})
     },
 
-    cadastroProdutos: (req, res) => {
-        res.send("enviado")
-    },
-    
     produtoInterno: (req, res) => {
         return res.render('produtoInterno')
     },

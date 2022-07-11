@@ -9,8 +9,8 @@
             <% for(produto of Produto) { %>
                 <div class="produtos-container-card">
                     <a class="box-produtos" href="/produtos/produtointerno">
-                        <div class="produtos-container-image" value="<%= produto.foto %>" id="produtos-img">
-                            <%= produto.foto %>
+                        <div class="produtos-container-image" value="<%= produto.imagem[0].imagem %>" id="produtos-img">
+                            <%= produto.imagem[0].imagem %>
                         </div>
 
                         <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">
