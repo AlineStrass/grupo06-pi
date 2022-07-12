@@ -1,105 +1,51 @@
 <%- include('../partials/header') %>
+  
+       <%- include('../partials/head') %>
 
-
-    <head>
-        <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <link rel="stylesheet" href="/stylesheets/style.css">
-
-        <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form>
-    </head>
-
-
-    <body>
-        <main class="admin">
-                <div class="container">
-                    <h1>Painel administrativo</h1>
-                    <section>
-                        <h2>Produtos</h2>
-                      
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Imagem</th>
-                                    <th>Nome</th>
-                                    <th>Preço</th>
-                                    <th>Descricao</th>
-                                    <th>Imagem</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    <a href="/admin/adminProdutos" class="adicionar mt-2">Adicionar novo</a>
-                      <style>
-
-main.admin .container {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-main.admin h1 {
-    font-weight: 500;
-    text-align: center;
-    color: #6A5495;
-}
-
-.main.admin h2 {
-    display: inline-block;
-    margin-right: 50px 50px;
-    
-}
-
-main.admin section {
-    width: 100%;
-    padding: 50px 50px;
-
-}
-
-main.admin section .adicionar{
-    text-decoration: none;
-    background-color: #6A5495;
-    color: white;
-    padding: 10px 30px;
-   
-}
-
-.acoes-btn{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.acoes-btn a{
-    text-decoration: none;
-    color: #ccc;
-    padding: 5px 15px;
-}
-
-.acoes-btn-editar{
-    background-color: gray;
-}
-
-.acoes-btn-excluir{
-    background-color: gray;
-}
-
-table {
-    width: 100%;
-}
-
-table th,
-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 50;
-
-}
-
-</style>
-    
-                    </section>
+    <body style="display: flex; height: 100vh; justify-content: center; flex-direction: column;">
+      <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form> 
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="title-admin">Painel administrativo</h1>
                 </div>
-            </main>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="row" >
+                <div class="col-12">
+                    <h2>Produtos</h2>
+                </div>
+    
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Imagem</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Imagem</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>valor ex</td>
+                        <td>valor ex</td>
+                        <td>valor ex</td>
+                        <td>valor ex</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    
+                <a href="/admin/adminProdutos"  class="btn btn-primary">Adicionar novo</a>    
+            </div>
+       
+        </div>
+    
+    
+    
     </body>
-</html>
+
+  
