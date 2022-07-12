@@ -11,6 +11,7 @@ body {
 } 
 
 /* ------- PAGINA ADMIN -----------------------*/
+
 .container-admin {
     display: flex;
     flex-direction: column;
@@ -27,7 +28,6 @@ h1.admin {
     color: #6A5495;
 
 }
-
 
 .botoes-adm{
     padding: 10px;
@@ -62,7 +62,6 @@ h1.admin {
     align-items: center;
     flex-direction: column;
 }
-
 
 
 /* ------- FIM DA PÁGINA ADMIN -----------------*/
