@@ -15,6 +15,15 @@ const ProdutosController = {
         return res.render('produtoInterno')
     },
 
+    //função para a barra de pesquisa do header - não está pronta
+    search: async (req, res) => {
+        let {key} = req.query
+
+        let produtos = await db.Produto.findAll();
+
+        return res.render('')
+    }
+
     /*categorias: async (req, res) => {
         const categoria = await db.Categoria.findByPk({
             where: {id: id}

@@ -5,12 +5,12 @@
     </head>
 
     <main class="produtos-container">
-        <section class="produtos-container-section" action="/produtos" method="GET">
+        <section class="produtos-container-section" action="/produtos" method="GET" enctype="multipart/form-data">
             <% for(produto of Produto) { %>
                 <div class="produtos-container-card">
                     <a class="box-produtos" href="/produtos/produtointerno">
-                        <div class="produtos-container-image" value="<%= produto.imagem[0].imagem %>" id="produtos-img">
-                            <%= produto.imagem[0].imagem %>
+                        <div class="produtos-container-image" value="<%= produto.imagem %>" id="produtos-img">
+                            <%= produto.imagem %>
                         </div>
 
                         <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">

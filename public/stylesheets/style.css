@@ -288,6 +288,8 @@ form button.login-cadastro:hover {
     border: solid #EFEFEF;
 }
 
+
+
 .gender-group {
     display: flex;
     justify-content: space-between;
@@ -310,6 +312,7 @@ form button.login-cadastro:hover {
     font-size: 17px;
     margin-right: 1rem;
 }
+
 
 @media (max-width: 500px) {
     main form.formulario-login {

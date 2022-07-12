@@ -20,3 +20,5 @@ let botaoComprar = document.querySelector('.botao-produto-interno').addEventList
     //depois fazer um for dentro da pg carrinho, percorrendo as chaves e buscando os valores
 });
 
+
+
