@@ -1,43 +1,105 @@
 <%- include('../partials/header') %>
 
+
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+        <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form>
+    </head>
+
+
+    <body>
+        <main class="admin">
+                <div class="container">
+                    <h1>Painel administrativo</h1>
+                    <section>
+                        <h2>Produtos</h2>
+                      
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Preço</th>
+                                    <th>Descricao</th>
+                                    <th>Imagem</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    <a href="/admin/adminProdutos" class="adicionar mt-2">Adicionar novo</a>
+                      <style>
+
+main.admin .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main.admin h1 {
+    font-weight: 500;
+    text-align: center;
+    color: #6A5495;
+}
+
+.main.admin h2 {
+    display: inline-block;
+    margin-right: 50px 50px;
+    
+}
+
+main.admin section {
+    width: 100%;
+    padding: 50px 50px;
+
+}
+
+main.admin section .adicionar{
+    text-decoration: none;
+    background-color: #6A5495;
+    color: white;
+    padding: 10px 30px;
    
-<body>
-    <main class="admin">
-        <div class="container-admin">
-            <h1 class="admin">Registros de Produtos</h1>
+}
 
-            <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
-                <div class="formulario-produtos">
+.acoes-btn{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
-                    <div class="admin-nomeProduto input-group">
-                        <label for="nomeProduto">Nome:</label>
-                        <input type="text" name="nomeProduto" id="nomeProduto" required>
-                    </div>
+.acoes-btn a{
+    text-decoration: none;
+    color: #ccc;
+    padding: 5px 15px;
+}
 
-                    <div class="input-group">
-                        <label for="precoProduto">Preco:</label>
-                        <input type="text" name="precoProduto" id="precoProduto" required>
-                    </div>
+.acoes-btn-editar{
+    background-color: gray;
+}
 
-                    <div class="input-group">
-                        <label for="descricaoProduto">Descricao:</label>
-                        <textarea name="descricaoProduto" id="descricaoProduto" cols="30" rows="10"></textarea>
-                    </div>
+.acoes-btn-excluir{
+    background-color: gray;
+}
 
-                    <div class="input-group">
-                        <label>Imagem</label>
-                        <input type="file" name="imagemProduto"/>
-                    </div>
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 50;
+
+}
+
+</style>
+    
+                    </section>
                 </div>
-
-                <div class="botoes-adm buttons-group">
-                    <button type="submit" class="btn btn-cadastroProduto">Cadastrar</button>
-                    <button type="submit" class="btn btn-editarProduto">Editar</button>
-                    <button type="submit" class="btn btn-excluirProduto">Excluir</button>
-                </div>
-            </form>
-        </div>
-    </main>
-</body>
-
-</html> 
+            </main>
+    </body>
+</html>
