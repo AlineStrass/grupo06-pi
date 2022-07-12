@@ -1,51 +1,76 @@
 <%- include('../partials/headerAdmin') %>
-  
-       <%- include('../partials/head') %>
+
+  <%- include('../partials/head') %>
 
     <body style="display: flex; height: 100vh; justify-content: center; flex-direction: column;">
-      <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form> 
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="title-admin">Painel administrativo</h1>
-                </div>
-            </div>
+      <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data"></form>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="title-admin">Painel administrativo</h1>
+          </div>
         </div>
-    
-        <div class="container">
-            <div class="row" >
-                <div class="col-12">
-                    <h2>Produtos</h2>
-                </div>
-    
-                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Imagem</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Imagem</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                      </tr>
-                    </tbody>
-                  </table>
-    
-                <a href="/admin/adminProdutos"  class="btn btn-primary">Adicionar novo</a>    
-            </div>
-       
-        </div>
-    
-    
-    
-    </body>
+      </div>
 
-  
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Produtos</h2>
+          </div>
+
+          <table class="table table-bordered" action="/admin/adminProdutos" method="GET">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Imagem</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% for(produto of Produto) { %>
+                <tr>
+                  <th scope="row">
+                    <%= produto.id %>
+                  </th>
+                  <td>
+                    <%= produto.nome %>
+                  </td>
+                  <td>
+                    <%= produto.preco %>
+                  </td>
+                  <td>
+                    <%= produto.descricao %>
+                  </td>
+                  <td>
+                    <%= produto.categoria.categoria %>
+                  </td>
+                  <td>
+                    <img src="/images/produtos/<%= produto.imagem %>" />
+                  </td>
+
+                  <td class="acoes-btn">
+                    <a class="btn btn-primary btn-adin" href="/admin/adminProduto/editar/<%= admin.id %>"
+                      class="acoes-btn-editar">Editar</a>
+                    <a class="btn btn-primary btn-adin" href="/admin/adminProduto/excluir/<%= admin.id %>"
+                      class="acoes-btn-excluir">Excluir</a>
+                  </td>
+
+                </tr>
+                <% } %>
+            </tbody>
+
+          </table>
+
+          <a href="/admin/produtosCadastrar" class="btn btn-primary">Adicionar novo</a>
+        </div>
+
+      </div>
+
+
+
+    </body>

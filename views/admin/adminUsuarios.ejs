@@ -1,50 +1,55 @@
 <%- include('../partials/headerAdmin') %>
-  
-       <%- include('../partials/head') %>
+
+  <%- include('../partials/head') %>
 
     <body style="display: flex; height: 50vh; justify-content: center; flex-direction: column;">
-      <form action="/admin/adminUsuarios" method="POST" class="cadastroUsuarios" enctype="multipart/form-data"></form> 
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="title-admin">Painel administrativo</h1>
-                </div>
-            </div>
+      <form action="/admin/adminUsuarios" method="POST" class="cadastroUsuarios" enctype="multipart/form-data"></form>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="title-admin">Painel administrativo</h1>
+          </div>
         </div>
-    
-        <div class="container">
-            <div class="row" >
-                <div class="col-12">
-                    <h2>Usuarios</h2>
-                </div>
-    
-                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Foto</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Telefone</th>
-                        <th scope="col">CPF</th>
-                      </tr>
-                    </thead>
-                    <!--<tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                        <td>valor ex</td>
-                      </tr>
-                    </tbody> /-->
-                  </table>
-    
-                <a href="/admin/adminUsuarios"  class="btn btn-primary">Adicionar novo</a>    
-            </div>
-       
-        </div>
-    
-   
-    </body>
+      </div>
 
-  
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="admin">Usuarios</h2>
+          </div>
+
+          <table class="table table-bordered admin" action="/admin/adminUsuarios" method="GET">
+            <thead>
+              <tr >
+                <th class="admin" scope="col">ID</th>
+                <th class="admin" scope="col">Username</th>
+                <th class="admin" scope="col">Senha</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+
+            <tbody >
+              <% for(admin of Admin) { %>
+                <tr>
+                  <td class="admin" scope="row"><%= admin.id %></td>
+                  <td class="admin"><%= admin.username %></td>
+                  <td class="admin"><%= admin.senha %></td>
+
+                  <td class="acoes-btn">
+                    <a class="btn btn-primary btn-adin" href="/admin/adminUsuarios/editar/<%= admin.id %>"
+                        class="acoes-btn-editar">Editar</a>
+                    <a class="btn btn-primary btn-adin" href="/admin/adminUsuarios/excluir/<%= admin.id %>"
+                        class="acoes-btn-excluir">Excluir</a>
+                </td>
+                <% } %>
+            </tbody>
+
+          </table>
+
+          <a href="/admin/usuariosCadastrar" class="btn btn-primary">Adicionar novo</a>
+        </div>
+
+      </div>
+
+
+    </body>

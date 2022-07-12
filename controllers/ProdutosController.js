@@ -23,7 +23,7 @@ const ProdutosController = {
 
         return res.render('')
     }
-
+ 
     /*categorias: async (req, res) => {
         const categoria = await db.Categoria.findByPk({
             where: {id: id}

@@ -11,12 +11,18 @@ const AdminController = {
         return res.render('admin/adminLogin')
     },
 
-    adminProdutos: (req, res) => {
-        return res.render('admin/adminProdutos')
+    adminProdutos: async (req, res) => {
+        const adminProdutos = await db.Produto.findAll({
+            include: ['categoria']
+        })
+
+        return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
-    adminUsuarios: (req, res) => { 
-        return res.render('admin/adminUsuarios')
+    adminUsuarios: async (req, res) => { 
+        const adminUsers = await db.Admin.findAll();
+
+        return res.render('admin/adminUsuarios', {Admin: adminUsers})
     },
 
     adminUsuariosCadastrar: (req, res) => { 
@@ -30,9 +36,24 @@ const AdminController = {
 
    
     cadastroProdutos: (req, res) => {
+        
         res.send("enviado")
     },
 
+    /* petsho express
+    acaoCadastrar: (req, res) => {
+        const { nome, login, senha } = req.body;
+
+        const objUsuario = {
+            nome: nome,
+            login: login,
+            senha: bcrypt.hashSync(senha)
+        };
+
+        bancoUsuarios.push(objUsuario);
+
+        res.redirect("/admin/usuarios/cadastrar");
+    }, */
 
 }
 
