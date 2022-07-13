@@ -5,19 +5,14 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nome: DataType.STRING,
+        imagem: DataType.STRING,
         produtos_id: DataType.INTEGER,
     }, {
         tableName: 'imagensProdutos',
         timestamps: false
     });
 
-    ImagemProduto.associate = (listaDeModelos) => {
-        ImagemProduto.belongsTo(listaDeModelos.Produto, {
-            foreignKey: 'produtos_id',
-            as: 'imagem'
-        })
-    }
+    
 
     return ImagemProduto;
 
