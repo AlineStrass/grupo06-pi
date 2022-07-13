@@ -12,8 +12,5 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     });
 
-    
-
     return ImagemProduto;
-
 }
