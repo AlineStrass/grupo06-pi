@@ -24,8 +24,8 @@ const upload = multer({storage: multerDiskStorage});
 
 router.get('/', AdminController.index);
 router.get('/login', AdminController.adminLogin);
-//router.get('/efetuar',ClientesController.efetuarLogin);
-//router.post('/acaologin',ClientesController.acaoLoginAdmin);
+router.get('/efetuar',AdminController.efetuarLogin);
+router.post('/acaologin',AdminController.acaoLoginAdmin);
 
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
