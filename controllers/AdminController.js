@@ -6,8 +6,13 @@ const bcrypt = require('bcryptjs');
 
 const AdminController = {
     //ADMIN - Rota principal
-    index: (req, res) => {
-        return res.render('admin/admin')
+    index: async (req, res) => {
+        if (req.session.logado === true) {
+            const detalhesAdmin = await db.Admin.findByPk(req.session.idUsuario)
+            return res.render('admin/admin', {Admin: detalhesAdmin})
+        } else {
+            res.render('admin/adminLogin')
+        }
     },
     
     adminLogin: (req, res) => {
@@ -18,7 +23,7 @@ const AdminController = {
     //renderiza a pg principal dos usuarios
     adminUsuarios: async (req, res) => { 
         const adminUsers = await db.Admin.findAll();
-
+ 
         return res.render('admin/adminUsuarios', {Admin: adminUsers})
     },
     //renderiza a página do formulario para adicionar usuarios
@@ -49,13 +54,13 @@ const AdminController = {
             if (sucessoSenha) {
                 req.session.logado = true;
                 req.session.idUsuario = adminEncontrado.id;
-                res.redirect('/');
+                res.redirect('/admin');
 
             } else {
-                res.redirect('/admin/login');
+                res.redirect('/login');
             }
         }else{
-            res.redirect('/admin/adminLogin');
+            res.redirect('/login');
         }
     },
 
