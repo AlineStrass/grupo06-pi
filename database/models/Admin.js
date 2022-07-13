@@ -14,14 +14,10 @@ module.exports = (sequelize, DataType) => {
             allowNull: true,
         },
     },
-        {   
-    
+        {
             tableName : 'admin',
             timestamps : false
-        
 });
-
     return Admin;
-
 };
 

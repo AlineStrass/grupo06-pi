@@ -1,8 +1,11 @@
+const Sequelize = require('sequelize');
+const config = require('../database/config/config');
 const db = require('../database/models'); 
-const { Admin } = require('../database/models/Admin');
+const bcrypt = require('bcryptjs');
 
 
 const AdminController = {
+    //ADMIN - Rota principal
     index: (req, res) => {
         return res.render('admin/admin')
     },
@@ -11,6 +14,9 @@ const AdminController = {
         return res.render('admin/adminLogin')
     },
 
+    //acaoLoginAdmin: 
+
+    //Produtos
     adminProdutos: async (req, res) => {
         const adminProdutos = await db.Produto.findAll({
             include: ['categoria']
@@ -19,42 +25,36 @@ const AdminController = {
         return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
+    adminProdutosCadastrar: (req, res) => { 
+        return res.render('admin/adminProdutosCadastrar')
+    },
+   
+    cadastroProdutos: (req, res) => {
+        res.send("enviado")
+    },
+
+    //Usuarios
+    //renderiza a pg principal dos usuarios
     adminUsuarios: async (req, res) => { 
         const adminUsers = await db.Admin.findAll();
 
         return res.render('admin/adminUsuarios', {Admin: adminUsers})
     },
-
+    //renderiza a página do formulario para adicionar usuarios
     adminUsuariosCadastrar: (req, res) => { 
         return res.render('admin/adminUsuariosCadastrar')
     },
-
-    adminProdutosCadastrar: (req, res) => { 
-        return res.render('admin/adminProdutosCadastrar')
-    },
-
-
-   
-    cadastroProdutos: (req, res) => {
-        
-        res.send("enviado")
-    },
-
-    /* petsho express
-    acaoCadastrar: (req, res) => {
-        const { nome, login, senha } = req.body;
-
-        const objUsuario = {
-            nome: nome,
-            login: login,
-            senha: bcrypt.hashSync(senha)
-        };
-
-        bancoUsuarios.push(objUsuario);
-
-        res.redirect("/admin/usuarios/cadastrar");
-    }, */
-
+    //cadastra novos usuarios Administrativos
+    acaoCadastrarAdmin: async (req, res) => {
+        const cadastrarAdmin = {
+            username: req.body.username,
+            senha: req.body.senha
+            //bcrypt.hashSync(req.body.senha),
+        }
+        await db.Admin.create(cadastrarAdmin)
+        res.redirect('admin/adminUsuarios')
+    }
+    
 }
 
 module.exports = AdminController;
