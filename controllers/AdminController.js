@@ -52,10 +52,10 @@ const AdminController = {
                 res.redirect('/');
 
             } else {
-                res.redirect('/login');
+                res.redirect('/admin/login');
             }
         }else{
-            res.redirect('/login');
+            res.redirect('/admin/adminLogin');
         }
     },
 

@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     // PARA RODAR NO TERMINAL: SEQUELIZE DB:SEED:ALL
-    await queryInterface.bulkInsert('produtos', [
+    await queryInterface.bulkInsert('cliente', [
       {
         id: 1,
         email: "meuemail@email.com",
@@ -14,27 +14,16 @@ module.exports = {
         numero: "4455",
         complemento: "135153",
         cep: "022551541",
-        senha: "123456"
+        senha: "$2a$10$1A6DngQgxqlcY8ApP/H9oeohMGsggzyxvlpO2e6EH74TesalXjQke"
       },
-      {
-        id: 2,
-        email: "alcantra@email.com",
-        telefone: "156654824574",
-        nome: "Beltrano",
-        sobrenome: "de Alcantra",
-        endereco: "rua dos bobos",
-        numero: "4455",
-        complemento: "135153",
-        cep: "022551541",
-        senha: "123456"
-       },
+      
 
     ])
 
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('produtos', null, {});
+    await queryInterface.bulkDelete('cliente', null, {});
 
   }
 };
