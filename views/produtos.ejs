@@ -5,7 +5,9 @@
     </head>
 
     <main class="produtos-container">
-        <section class="produtos-container-section" action="/produtos" method="GET" enctype="multipart/form-data">
+        <section class="produtos-container-section" action="/produtos" method="GET" enctype="multipart/form-data" 
+                 placeholder="Pesquise um produto" name="key">
+            
             <% for(produto of Produto) { %>
                 <div class="produtos-container-card">
                     <a class="box-produtos" href="/produtos/produtointerno">

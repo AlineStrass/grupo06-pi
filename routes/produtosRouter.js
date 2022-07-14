@@ -14,6 +14,7 @@ var ProdutosController = require("../controllers/ProdutosController");
 router.get('/', ProdutosController.index);
 router.get('/search', ProdutosController.search);
 
+
 router.get('/produtointerno', ProdutosController.produtoInterno);
 //router.get('/:id', ProdutosController.categorias);
 

@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     // PARA RODAR NO TERMINAL: SEQUELIZE DB:SEED:ALL
@@ -67,13 +66,29 @@ module.exports = {
         foto: "",
         categorias_id: 4
       },
-
     ])
-
+    
   },
-
   async down(queryInterface, Sequelize) {
      await queryInterface.bulkDelete('produtos', null, {});
-     
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
