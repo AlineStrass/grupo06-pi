@@ -20,7 +20,7 @@
 
           <table class="table table-bordered admin" action="/admin/adminUsuarios" method="GET">
             <thead>
-              <tr >
+              <tr>
                 <th class="admin" scope="col">ID</th>
                 <th class="admin" scope="col">Username</th>
                 <th class="admin" scope="col">Senha</th>
@@ -28,24 +28,29 @@
               </tr>
             </thead>
 
-            <tbody >
+            <tbody>
               <% for(admin of Admin) { %>
                 <tr>
-                  <td class="admin" scope="row"><%= admin.id %></td>
-                  <td class="admin"><%= admin.username %></td>
-                  <td class="admin"><%= admin.senha %></td>
+                  <td class="admin" scope="row">
+                    <%= admin.id %>
+                  </td>
+                  <td class="admin">
+                    <%= admin.username %>
+                  </td>
+                  <td class="admin">
+                    <%= admin.senha %>
+                  </td>
 
                   <td class="acoes-btn">
-                    <a class="btn btn-primary btn-adin" href="/admin/editar/<%= admin.id %>"
-                        class="acoes-btn-editar" style="width: 135px;">Editar</a>
-                   
-                        <form action="/admin/deletar/<%= admin.id %>?_method=DELETE" method="POST" >
-                          <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar" style="width: 135px;">Excluir</button>
-                        </form>
-                   
-                        
-                </td>
-                <% } %>
+                    <a class="btn btn-primary btn-adin" href="/admin/editar/<%= admin.id %>" class="acoes-btn-editar"
+                      style="width: 135px;">Editar</a>
+
+                    <form action="/admin/deletar/<%= admin.id %>?_method=DELETE" method="POST">
+                      <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar"
+                        style="width: 135px;">Excluir</button>
+                    </form>
+                  </td>
+                  <% } %>
             </tbody>
 
           </table>
