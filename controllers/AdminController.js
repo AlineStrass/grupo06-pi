@@ -19,6 +19,46 @@ const AdminController = {
         return res.render('admin/adminLogin')
     },
 
+    //login
+    acaoLoginAdmin: async (req, res) => {
+        const {username, senha} = req.body;
+        const adminEncontrado = await db.Admin.findOne({
+            where: {username: username}
+        })
+        if (adminEncontrado != null) {
+            let sucessoSenha = bcrypt.compareSync(senha, adminEncontrado.senha);
+            
+            if (sucessoSenha) {
+                req.session.logado = true;
+                req.session.idUsuario = adminEncontrado.id;
+                res.redirect('/admin');
+
+            } else {
+                res.redirect('/login', {
+
+                });
+            }
+        }else{
+            res.redirect('/login');
+        }
+    },
+
+    efetuarLogin: function (req, res) {
+        //acao login verificar se a senha esta certa, criptografar a senha
+        // quando cadastrar
+        let hash = bcrypt.hashSync(req.body.senha);
+        let hashBanco = bcrypt.hashSync(req.body.senha);
+        let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
+
+        res.send(hash);
+        bcrypt.compareSync(req.body.senha, hashBanco);
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/admin')
+    },
+
     //------ USUARIOS ------
     //renderiza a pg principal dos usuarios
     adminUsuarios: async (req, res) => { 
@@ -41,40 +81,37 @@ const AdminController = {
         res.redirect('/admin/usuarios')
     },
 
-    //login
-    acaoLoginAdmin: async (req, res) => {
-        const {username, senha} = req.body;
-        const adminEncontrado = await db.Admin.findOne({
-            where: {username: username}
+    editarAdmin: async (req, res) =>{
+        const {id} = req.params;
+        const usuario = await db.Admin.findByPk(id);
+        res.render('admin/editarAdmin', {usuario})
+    },
+
+    //tras sempre o ultimo usuario cadastrado????
+    acaoEditarAdmin: async (req, res) => {
+        const {id} = req.params;
+        const {username, senha} = bcrypt.hashSync(req.body.senha);
+        const resultado = await db.Admin.update({
+            username,
+            senha
+        },
+        {
+            where:{id: id}
         })
-        if (adminEncontrado != null) {
-            let sucessoSenha = bcrypt.compareSync(senha, adminEncontrado.senha);
-            console.log(senha, adminEncontrado.senha)
-            console.log(sucessoSenha)
-            if (sucessoSenha) {
-                req.session.logado = true;
-                req.session.idUsuario = adminEncontrado.id;
-                res.redirect('/admin');
-
-            } else {
-                res.redirect('/login');
-            }
-        }else{
-            res.redirect('/login');
-        }
+        console.log(resultado)
+        // mostra [1] para ok e [0] para erro
+        res.redirect('/admin/usuarios')
     },
 
-    efetuarLogin: function (req, res) {
-        //acao login verificar se a senha esta certa, criptografar a senha
-        // quando cadastrar
-        let hash = bcrypt.hashSync(req.body.senha);
-        let hashBanco = bcrypt.hashSync(req.body.senha);
-        let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
-
-        res.send(hash);
-        bcrypt.compareSync(req.body.senha, hashBanco);
+    deletarAdmin: async (req, res) => {
+        const {id} = req.params;
+        const resultado = await db.Admin.destroy({
+            where:{id: id}
+        })
+        console.log(resultado)
+        res.redirect('/admin/usuarios')
     },
-
+ 
 
     //  --------- PRODUTOS -----------
     adminProdutos: async (req, res) => {

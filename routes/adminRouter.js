@@ -26,14 +26,21 @@ router.get('/', AdminController.index);
 router.get('/login', AdminController.adminLogin);
 router.get('/efetuar',AdminController.efetuarLogin);
 router.post('/acaologin',AdminController.acaoLoginAdmin);
+router.get('/logout', AdminController.logout);
+
+router.get('/usuarios', AdminController.adminUsuarios);
+router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
+router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarAdmin);
+router.get('/editar/:id', AdminController.editarAdmin);
+router.put('/editar/:id', AdminController.acaoEditarAdmin);
+router.delete('/deletar/:id', AdminController.deletarAdmin);
+
 
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
 router.post('/', upload.any('imagemProduto'), AdminController.cadastroProdutos);
 
-router.get('/usuarios', AdminController.adminUsuarios);
-router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
-router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarAdmin)
+
 
 
 

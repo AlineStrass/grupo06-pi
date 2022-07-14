@@ -36,11 +36,14 @@
                   <td class="admin"><%= admin.senha %></td>
 
                   <td class="acoes-btn">
-                    <a class="btn btn-primary btn-adin" href="/admin/adminUsuarios/editar/<%= admin.id %>"
+                    <a class="btn btn-primary btn-adin" href="/admin/editar/<%= admin.id %>"
                         class="acoes-btn-editar" style="width: 135px;">Editar</a>
                    
-                    <a class="btn btn-primary btn-adin" href="/admin/adminUsuarios/excluir/<%= admin.id %>"
-                        class="acoes-btn-excluir" style="width: 135px;">Excluir</a>
+                        <form action="/admin/deletar/<%= admin.id %>?_method=DELETE" method="POST" >
+                          <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar" style="width: 135px;">Excluir</button>
+                        </form>
+                   
+                        
                 </td>
                 <% } %>
             </tbody>
@@ -48,6 +51,7 @@
           </table>
 
           <a href="/admin/usuariosCadastrar" class="btn btn-primary">Adicionar novo</a>
+          <a href="/admin" class="btn btn-primary">Voltar</a>
         </div>
 
       </div>
