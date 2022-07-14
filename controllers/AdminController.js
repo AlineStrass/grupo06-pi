@@ -6,17 +6,77 @@ const bcrypt = require('bcryptjs');
 
 const AdminController = {
     //ADMIN - Rota principal
-    index: (req, res) => {
-        return res.render('admin/admin')
+    index: async (req, res) => {
+        if (req.session.logado === true) {
+            const detalhesAdmin = await db.Admin.findByPk(req.session.idUsuario)
+            return res.render('admin/admin', {Admin: detalhesAdmin})
+        } else {
+            res.render('admin/adminLogin')
+        }
     },
     
     adminLogin: (req, res) => {
         return res.render('admin/adminLogin')
     },
 
-    //acaoLoginAdmin: 
+    //------ USUARIOS ------
+    //renderiza a pg principal dos usuarios
+    adminUsuarios: async (req, res) => { 
+        const adminUsers = await db.Admin.findAll();
+ 
+        return res.render('admin/adminUsuarios', {Admin: adminUsers})
+    },
+    //renderiza a página do formulario para adicionar usuarios
+    adminUsuariosCadastrar: (req, res) => { 
+        return res.render('admin/adminUsuariosCadastrar')
+    },
+        
+    //cadastra novos usuarios Administrativos - ok
+    acaoCadastrarAdmin: async (req, res) => {
+        const cadastrarAdmin = {
+            username: req.body.username,
+            senha: bcrypt.hashSync(req.body.senha),  
+        }
+        await db.Admin.create(cadastrarAdmin)
+        res.redirect('/admin/usuarios')
+    },
 
-    //Produtos
+    //login
+    acaoLoginAdmin: async (req, res) => {
+        const {username, senha} = req.body;
+        const adminEncontrado = await db.Admin.findOne({
+            where: {username: username}
+        })
+        if (adminEncontrado != null) {
+            let sucessoSenha = bcrypt.compareSync(senha, adminEncontrado.senha);
+            console.log(senha, adminEncontrado.senha)
+            console.log(sucessoSenha)
+            if (sucessoSenha) {
+                req.session.logado = true;
+                req.session.idUsuario = adminEncontrado.id;
+                res.redirect('/admin');
+
+            } else {
+                res.redirect('/login');
+            }
+        }else{
+            res.redirect('/login');
+        }
+    },
+
+    efetuarLogin: function (req, res) {
+        //acao login verificar se a senha esta certa, criptografar a senha
+        // quando cadastrar
+        let hash = bcrypt.hashSync(req.body.senha);
+        let hashBanco = bcrypt.hashSync(req.body.senha);
+        let sucessoSenha = bcrypt.compareSync(body.senha, hashBanco);
+
+        res.send(hash);
+        bcrypt.compareSync(req.body.senha, hashBanco);
+    },
+
+
+    //  --------- PRODUTOS -----------
     adminProdutos: async (req, res) => {
         const adminProdutos = await db.Produto.findAll({
             include: ['categoria']
@@ -33,27 +93,6 @@ const AdminController = {
         res.send("enviado")
     },
 
-    //Usuarios
-    //renderiza a pg principal dos usuarios
-    adminUsuarios: async (req, res) => { 
-        const adminUsers = await db.Admin.findAll();
-
-        return res.render('admin/adminUsuarios', {Admin: adminUsers})
-    },
-    //renderiza a página do formulario para adicionar usuarios
-    adminUsuariosCadastrar: (req, res) => { 
-        return res.render('admin/adminUsuariosCadastrar')
-    },
-    //cadastra novos usuarios Administrativos
-    acaoCadastrarAdmin: async (req, res) => {
-        const cadastrarAdmin = {
-            username: req.body.username,
-            senha: req.body.senha
-            //bcrypt.hashSync(req.body.senha),
-        }
-        await db.Admin.create(cadastrarAdmin)
-        res.redirect('admin/adminUsuarios')
-    }
     
 }
 

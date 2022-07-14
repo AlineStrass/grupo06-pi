@@ -67,6 +67,7 @@ module.exports = {
         categorias_id: 4
       },
     ])
+    
   },
   async down(queryInterface, Sequelize) {
      await queryInterface.bulkDelete('produtos', null, {});
