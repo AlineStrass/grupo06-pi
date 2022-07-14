@@ -38,6 +38,9 @@ router.delete('/deletar/:id', AdminController.deletarAdmin);
 
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
+router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarProdutos);
+
+
 router.post('/', upload.any('imagemProduto'), AdminController.cadastroProdutos);
 
 

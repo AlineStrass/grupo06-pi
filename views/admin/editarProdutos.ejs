@@ -1,0 +1,44 @@
+<%- include('../partials/headerAdmin') %>
+   <%- include('../partials/head') %>
+    
+     <body>
+            <main class="admin">
+                <div class="container">
+                    <h1 class="title-admin">Painel administrativo</h1>
+
+                    <form action="/admin/editarProduto/<%=produto.id%>?_method=PUT" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend class="title-admin">Novo Produto</legend>
+
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" value="<%= produto.nome %>" required>
+                            </div>
+
+                            <div>
+                                <label for="preco">Preço:</label>
+                                <input type="text" name="preco" id="preco" value="<%= produto.preco %>" required>
+                            </div>
+
+                            <div>
+                                <label for="descricao">Descrição:</label>
+                                <textarea name="descricao" id="descricao" cols="30" rows="5" value="<%= produto.descricao %>"></textarea>
+                            </div>
+
+                            <div>
+                                <label for="descricao">Categoria:</label>
+                                <input type="text" name="descricao" id="descricao" value="<%= produto.categoria.nome %>" required>
+                            </div>
+
+                            <div>
+                                <label>Imagem:</label>
+                                <input type="file" name="imagemProduto"/>
+                            </div>
+
+                            <button class="btn-cadastroProdutos">Cadastrar</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
+    </body>
+</html>

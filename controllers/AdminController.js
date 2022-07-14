@@ -118,14 +118,33 @@ const AdminController = {
         const adminProdutos = await db.Produto.findAll({
             include: ['categoria']
         })
-
         return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
     adminProdutosCadastrar: (req, res) => { 
         return res.render('admin/adminProdutosCadastrar')
     },
-   
+    
+    acaoCadastrarProdutos: async (req, res) => {
+        const cadastrarProdutos = {
+            nome: req.body.nome,
+            preco: req.body.preco,
+            descricao: req.body.descricao,
+            categoria: {
+                id: req.body.id,
+                nome: req.body.nome,
+            },
+            imagem: {
+                id: req.body.id,
+                imagem: req.body.imagem,
+            },
+        }
+        await db.Produto.create(cadastrarProdutos)
+        res.redirect('/admin/produtos')
+
+    },
+
+
     cadastroProdutos: (req, res) => {
         res.send("enviado")
     },
