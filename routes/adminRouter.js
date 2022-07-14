@@ -4,6 +4,7 @@ var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
 var multer = require('multer');
+const path = require('path')
 
 
 const AdminController = require('../controllers/AdminController');
@@ -11,7 +12,7 @@ const AdminController = require('../controllers/AdminController');
 
 var multerDiskStorage = multer.diskStorage({
     destination: (req, file, callback)=>{
-        const folder = path.join(__dirname, '../public/imgages/produtos');
+        const folder = path.join(__dirname, '../public/images/produtos');
         callback(null, folder);
     },
     filename: (req, file, callback)=>{
@@ -38,10 +39,10 @@ router.delete('/deletar/:id', AdminController.deletarAdmin);
 
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
-router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarProdutos);
+router.post('/acaoCadastrarProdutos', upload.array('imagemProduto'), AdminController.acaoCadastrarProdutos);
 
 
-router.post('/', upload.any('imagemProduto'), AdminController.cadastroProdutos);
+
 
 
 

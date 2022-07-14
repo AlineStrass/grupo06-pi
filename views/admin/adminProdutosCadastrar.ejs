@@ -6,7 +6,7 @@
                 <div class="container">
                     <h1 class="title-admin">Painel administrativo</h1>
 
-                    <form action="/admin/adminProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
+                    <form action="/admin/acaoCadastrarProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
                         <fieldset>
                             <legend class="title-admin">Novo Produto</legend>
 
@@ -35,9 +35,11 @@
                                 <input type="file" name="imagemProduto" />
                             </div>
 
-                            <button class="btn-cadastroProdutos">Cadastrar</button>
+                            <button class="btn-cadastroUsuarios" type="submit" action="acaoCadastrarProdutos">Cadastrar</button>
                         </fieldset>
                     </form>
+
+                    <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
                 </div>
             </main>
     </body>

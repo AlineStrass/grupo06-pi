@@ -59,7 +59,7 @@ const AdminController = {
         res.redirect('/admin')
     },
 
-    //------ USUARIOS ------
+    //      ------ USUARIOS ------
     //renderiza a pg principal dos usuarios
     adminUsuarios: async (req, res) => { 
         const adminUsers = await db.Admin.findAll();
@@ -81,6 +81,7 @@ const AdminController = {
         res.redirect('/admin/usuarios')
     },
 
+    //editar usuarios
     editarAdmin: async (req, res) =>{
         const {id} = req.params;
         const usuario = await db.Admin.findByPk(id);
@@ -114,6 +115,7 @@ const AdminController = {
  
 
     //  --------- PRODUTOS -----------
+    //renderiza a pg principal da lista de produtos
     adminProdutos: async (req, res) => {
         const adminProdutos = await db.Produto.findAll({
             include: ['categoria']
@@ -121,10 +123,13 @@ const AdminController = {
         return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
+    //renderiza a página do formulario para adicionar produtos
     adminProdutosCadastrar: (req, res) => { 
         return res.render('admin/adminProdutosCadastrar')
     },
     
+    //cadastra novos produtos - está com ERRO
+    //ver pq não esta funcionando
     acaoCadastrarProdutos: async (req, res) => {
         const cadastrarProdutos = {
             nome: req.body.nome,
@@ -139,15 +144,15 @@ const AdminController = {
                 imagem: req.body.imagem,
             },
         }
-        await db.Produto.create(cadastrarProdutos)
+        await db.Produto.create(cadastrarProdutos, 
+            { include: ["categoria", "imagem"] })
+        console.log(cadastrarProdutos)
         res.redirect('/admin/produtos')
 
     },
 
 
-    cadastroProdutos: (req, res) => {
-        res.send("enviado")
-    },
+    
 
     
 }
