@@ -1,11 +1,7 @@
-require('dotenv').config() 
-const USERNAME = process.env.USERNAME
-const PASSWORD = process.env.PASSWORD || null
-
 module.exports = {
   "development": {
-    "username": USERNAME,
-    "password": PASSWORD,
+    "username": "asflores",
+    "password": "pitty1508",
     "database": "happyPet", /*happyPet é o nome da nossa DATABASE----- (database_development)ESCRITO antes sequelize*/
     "host": "127.0.0.1",
     "dialect": "mysql"
