@@ -8,14 +8,13 @@
 
         <main class="formulario-login">
 
-            <form class="criar-conta" action="" method="post">
+            <form class="criar-conta" action="/admin/acaologin" method="post">
                 <h2 class="login">Acesso Painel Administrativo</h2>
 
                 <div class="dados-cadastrais-conta">
                     <div class="campo-login">
-                        <label class="inserir-dados-cadastro" for="email">E-mail:</label>
-                        <input class="inserir-dados-cadastro" type="email" id="email" name="email"
-                            placeholder="email@email.com.br">
+                        <label class="inserir-dados-cadastro" for="username">Username:</label>
+                        <input class="inserir-dados-cadastro" type="text" id="username" name="username" placeholder="Nome de usuário">
                     </div>
 
                     <div class="campo-login">
@@ -26,7 +25,7 @@
                 </div>
                 <a class="termosCondicoes" href="#">Esqueci minha senha</a>
 
-                <button class="login-cadastro" type="submit" action="">Entrar</button>
+                <button class="login-cadastro" type="submit" action="acaoLoginAdmin">Entrar</button>
             </form>
 
 

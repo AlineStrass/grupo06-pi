@@ -6,21 +6,21 @@
                 <div class="container">
                     <h1 class="title-admin">Painel administrativo</h1>
 
-                    <form action="/admin/acaoCadastrarAdmin" method="POST" class="cadastroUsuarios">
+                    <form action="/admin/editar/<%=admin.id%>?_method=PUT" method="post" class="cadastroUsuarios">
                         <fieldset>
                             <legend class="title-admin">Novo Usuário</legend>
 
                             <div>
                                 <label for="username">Username:</label>
-                                <input type="text" name="username" id="username" required>
+                                <input type="text" name="username" id="username" value="<%= admin.username %>" required>
                             </div>
 
                             <div>
                                 <label for="preco">Senha:</label>
-                                <input type="password" name="senha" id="senha" required>
+                                <input type="password" name="senha" id="senha" value="<%= admin.username %>" required>
                             </div>
 
-                            <button class="btn-cadastroUsuarios" type="submit" action="acaoCadastrarAdmin" >Cadastrar</button>
+                            <button class="btn-cadastroUsuarios" type="submit" action="" >Salvar</button>
                             
                         </fieldset>
 

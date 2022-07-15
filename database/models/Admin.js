@@ -6,22 +6,18 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true
         },
         username: {
-            type: DataType.STRING,
+            type: DataType.STRING(100),
             allowNull: true,
         },
         senha: {
-            type: DataType.INTEGER,
+            type: DataType.INTEGER(300),
             allowNull: true,
         },
     },
-        {   
-    
+        {
             tableName : 'admin',
             timestamps : false
-        
 });
-
     return Admin;
-
 };
 
