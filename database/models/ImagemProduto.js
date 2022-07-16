@@ -12,5 +12,12 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     });
 
+   /* ImagemProduto.associate = (listaDeModelos) => {
+        ImagemProduto.belongsTo(listaDeModelos.Produto, {
+            foreignKey: 'produtos_id',
+            as: 'imagem'
+        })
+    }*/
+
     return ImagemProduto;
 }

@@ -142,6 +142,7 @@ const AdminController = {
             imagem: {
                 id: req.body.id,
                 imagem: req.body.imagem,
+                //imagem:req.file.imagem,
             },
         }
         await db.Produto.create(cadastrarProdutos, 

@@ -4,7 +4,7 @@ var router = express.Router();
 const { body } = require('express-validator');
 const session = require('express-session');
 var multer = require('multer');
-const path = require('path')
+const path = require('path');
 
 
 const AdminController = require('../controllers/AdminController');

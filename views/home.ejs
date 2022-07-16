@@ -44,8 +44,8 @@
                 <% for(produto of Produto) { %>
                     <div class="produtos-container-card">
                         <a class="box-produtos" href="/produtos/produtointerno">
-                            <div class="produtos-container-image" value="<%= produto.imagem %>" id="produtos-img">
-                                <img src="/images/produtos/<%= produto.imagem %>"/>
+                            <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
+                                <img src="/images/produtos/<%= produto.imagem.imagem %>"/>
                             </div>
     
                             <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">
