@@ -22,7 +22,7 @@ const ClientesController = {
     },
 
     //antigo do projeto -funcionando
-  /*  acaoLogin: async (req, res) => {
+ /*   acaoLogin: async (req, res) => {
         const { email, senha } = req.body;
         const usuarioEncontrado = await db.Cliente.findOne({
             where: { email: email }
