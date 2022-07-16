@@ -5,19 +5,19 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-        categoria: DataType.STRING,
+        categoria: DataType.STRING(100),
     },
         {
             tableName: 'categorias',
             timestamps: false
         });
 
-    Categoria.associate = (listaDeModelos) => {
+   /* Categoria.associate = (listaDeModelos) => {
         Categoria.hasMany(listaDeModelos.Produto, {
             foreignKey: 'categorias_id',
             as: "produtos"
         })
-    }
+    }*/
 
     return Categoria;
 };

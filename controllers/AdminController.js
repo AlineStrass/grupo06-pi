@@ -129,7 +129,7 @@ const AdminController = {
     },
     
     //cadastra novos produtos - está com ERRO
-    //ver pq não esta funcionando
+    //ver pq não esta funcionando + campo de selec
     acaoCadastrarProdutos: async (req, res) => {
         const cadastrarProdutos = {
             nome: req.body.nome,
@@ -151,9 +151,35 @@ const AdminController = {
 
     },
 
-
+ /*   acaoEditarProdutos: async (req, res) => {
+        const {id} = req.params;
+        const {nome, preco, descricao, imagem} = req.body;
+        const resultado = await db.Produto.update({
+            nome,
+            preco,
+            descricao,
+            imagem
+        },
+        {
+            where:{id: id}
+        })
+        console.log(resultado)
+        // mostra [1] para ok e [0] para erro
+        res.redirect('/admin/produtos')
+    },
+*/
     
+    deletarProduto: async (req, res) => {
+        const {id} = req.params;
+        const resultado = await db.Admin.destroy({
+            where:{id: id}
+        })
+        console.log(resultado)
+        res.redirect('/admin/produtos')
+    },
 
+       
+    
     
 }
 
