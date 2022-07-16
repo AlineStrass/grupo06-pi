@@ -5,10 +5,8 @@ module.exports = {
     await queryInterface.createTable('clientes', {
       id: { type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
       nomeCompleto: { type: Sequelize.DataTypes.STRING, allowNull: true },
-      foto: Sequelize.DataTypes.STRING,
       email: { type: Sequelize.DataTypes.STRING, allowNull: true },
       telefone: { type: Sequelize.DataTypes.STRING, allowNull: true },
-      sexo: {type: Sequelize.DataTypes.STRING, allowNull: true},
       dataDeNascimento: { type: Sequelize.DataTypes.DATE, allowNull: true },
       cpf: { type: Sequelize.DataTypes.STRING, allowNull: true },
       senha: { type: Sequelize.DataTypes.STRING, allowNull: true}

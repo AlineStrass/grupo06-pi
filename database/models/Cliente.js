@@ -9,8 +9,6 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: true,
         },
-        foto: DataType.STRING,
-
         email: {
             type: DataType.STRING,
             allowNull: true,
@@ -19,8 +17,6 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: true,
         },
-        sexo: DataType.STRING,
-
         datanascimento: {
             type: DataType.DATE,
             allowNull: true,

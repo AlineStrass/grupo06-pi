@@ -15,6 +15,7 @@ router.get('/', ClientesController.index);
 router.get('/login', ClientesController.paginaLogin);
 router.get('/efetuar',ClientesController.login);
 router.post('/acaologin',ClientesController.acaoLogin);
+router.get('/logout', ClientesController.logout);
 
 router.get('/criarconta', ClientesController.criarConta);
 router.post('/acaoCadastrar', ClientesController.acaoCadastrar);

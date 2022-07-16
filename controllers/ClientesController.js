@@ -21,19 +21,46 @@ const ClientesController = {
         return res.render('login')
     },
 
+    //antigo do projeto -funcionando
+  /*  acaoLogin: async (req, res) => {
+        const { email, senha } = req.body;
+        const usuarioEncontrado = await db.Cliente.findOne({
+            where: { email: email }
+        })
+        if (usuarioEncontrado != null) {
+            let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
+            console.log(senha, usuarioEncontrado.senha)
+            console.log(sucessoSenha)
+            if (sucessoSenha) {
+                req.session.logado = true;
+                req.session.idUsuario = usuarioEncontrado.id;
+                res.redirect('/painelUsuario');
+
+            } else {
+                res.redirect('/clientes/login');
+            }
+
+        } else {
+            res.redirect('/clientes/login');
+        }
+    },*/
+
+    // ------ Pablo
     acaoLogin: async (req, res) => {
         const { email, senha } = req.body;
         const usuarioEncontrado = await db.Cliente.findOne({
             where: { email: email }
         });
-        
-        if(usuarioEncontrado === null){res.render("login", {
+
+        if (usuarioEncontrado === null) {
+            res.render("login", {
                 error: "Usuário ou senha incorretos, por favor tente novamente."
             });
             return;
         }
 
-        if(!bcrypt.compareSync(senha, usuarioEncontrado.senha)){ res.render("login",{
+        if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
+            res.render("login", {
                 error: "Usuário ou senha incorretos, por favor tente novamente."
             });
             return;
@@ -54,6 +81,11 @@ const ClientesController = {
         bcrypt.compareSync(req.body.senha, hashBanco);
     },
 
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/')
+    },
+
     criarConta: (req, res) => {
         return res.render('criarConta')
     },
@@ -66,18 +98,18 @@ const ClientesController = {
             telefone: req.body.telefone,
             datanascimento: req.body.datanascimento,
             cpf: req.body.cpf,
-            enderecos:{
-            cep: req.body.cep,
-            rua: req.body.endereco,
-            numero: req.body.numero,
-            complemento: req.body.complemento,
-            bairro: req.body.bairro,
-            cidade: req.body.cidade,
-            estado: req.body.estado,
+            enderecos: {
+                cep: req.body.cep,
+                rua: req.body.endereco,
+                numero: req.body.numero,
+                complemento: req.body.complemento,
+                bairro: req.body.bairro,
+                cidade: req.body.cidade,
+                estado: req.body.estado,
             },
             senha: bcrypt.hashSync(req.body.senha),
             sexo: req.body.sexo
-            
+
         }
         await db.Cliente.create(cadastrarUsuario, { include: ["enderecos"] })
             .catch((error) => console.log(error))
