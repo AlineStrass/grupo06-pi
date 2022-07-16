@@ -788,13 +788,17 @@ main.admin .cadastroProdutos{
    }
    
    .admin {
-    color:#6A5495
+    color:#6A5495;
    }
 
    .acoes-btn {
     width: 300px;
    }
 
+   select {
+    width: 200px;
+    color:#6A5495;
+   }
 
 /*-------------- MEDIA painelUsuario ------------------*/
 @media (max-width: 800px){

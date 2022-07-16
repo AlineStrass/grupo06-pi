@@ -40,7 +40,8 @@ router.delete('/deletar/:id', AdminController.deletarAdmin);
 router.get('/produtos', AdminController.adminProdutos);
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
 router.post('/acaoCadastrarProdutos', upload.array('imagemProduto'), AdminController.acaoCadastrarProdutos);
-
+//router.put('/editarProduto/:id', AdminController.acaoEditarProduto);
+router.delete('/deletarProduto/:id', AdminController.deletarProduto);
 
 
 

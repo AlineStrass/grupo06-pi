@@ -1,12 +1,13 @@
 <%- include('../partials/headerAdmin') %>
-   <%- include('../partials/head') %>
-    
-     <body>
+    <%- include('../partials/head') %>
+
+        <body>
             <main class="admin">
                 <div class="container">
                     <h1 class="title-admin">Painel administrativo</h1>
 
-                    <form action="/admin/acaoCadastrarProdutos" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
+                    <form action="/admin/acaoCadastrarProdutos" method="POST" class="cadastroProdutos"
+                        enctype="multipart/form-data">
                         <fieldset>
                             <legend class="title-admin">Novo Produto</legend>
 
@@ -26,8 +27,15 @@
                             </div>
 
                             <div>
-                                <label for="descricao">Categoria:</label>
-                                <input type="text" name="descricao" id="descricao" required>
+                                <label for="categoria">Categoria:</label>
+                                <select name="categoria">
+                                    <% for(let i = 0; i < Categoria.length; i++) { %>
+                                        <option value="<%= Categoria[i].id %>" required>
+                                            <%= Categoria[i].categoria %>
+                                        <% } %>
+                                    </option>
+                                </select>
+                                <!-- <input type="text" name="descricao" id="descricao" required>-->
                             </div>
 
                             <div>
@@ -35,12 +43,14 @@
                                 <input type="file" name="imagemProduto" />
                             </div>
 
-                            <button class="btn-cadastroUsuarios" type="submit" action="acaoCadastrarProdutos">Cadastrar</button>
+                            <button class="btn-cadastroUsuarios" type="submit"
+                                action="acaoCadastrarProdutos">Cadastrar</button>
                         </fieldset>
                     </form>
 
                     <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
                 </div>
             </main>
-    </body>
-</html>
+        </body>
+
+        </html>

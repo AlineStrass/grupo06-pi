@@ -54,9 +54,13 @@
                   </td>
 
                   <td class="acoes-btn">
-                    <a class="btn btn-primary btn-editar" href="" style="width: 135px;margin-top: 10px;">Editar</a>
+                    <a class="btn btn-primary btn-editar" href="/admini/deletarProduto"
+                      style="width: 135px;margin-top: 10px;">Editar</a>
 
-                    <a class="btn btn-primary btn-excluir" href="" style="width: 135px;margin-top: 10px;">Excluir</a>
+                    <form action="/admin/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+                      <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar"
+                        style="width: 135px;">Excluir</button>
+                    </form>
                   </td>
 
                 </tr>
