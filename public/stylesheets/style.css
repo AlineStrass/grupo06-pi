@@ -80,20 +80,21 @@ h1.home, li.home {
     .carrossel-home{
         margin-top: 15px;
         margin: 0 auto;
-        box-shadow: 2px 2px 4px black;
+        box-shadow: 2px 2px 4px black; 
         overflow: hidden;
         height: 300px;
-        width: 800px;
+        width: 100%;
         align-items: center;
-        border-radius: 15px;
+        border-radius: 10px;
 }
 
     .carrossel-home img{
-    width: 25%;
+    width: 33%;
     height: 50vh;
     
-
+    
 }
+
 
 /* fim do carrossel */
 
