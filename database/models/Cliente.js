@@ -5,6 +5,7 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
+        onDelete: 'CASCADE',
         nomeCompleto: {
             type: DataType.STRING,
             allowNull: true,
@@ -32,11 +33,13 @@ module.exports = (sequelize, DataType) => {
     },
     {
         tableName: 'clientes',
-        timestamps: false
+        timestamps: false,
+        onDelete: 'CASCADE',
     });
 
     Cliente.associate = (listaDeModelos) => {
         Cliente.hasMany(listaDeModelos.Endereco, {
+            onDelete: 'CASCADE',
             foreignKey: 'clientes_id',
             as: "enderecos"
         })

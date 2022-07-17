@@ -91,7 +91,8 @@ const AdminController = {
     //tras sempre o ultimo usuario cadastrado????
     acaoEditarAdmin: async (req, res) => {
         const {id} = req.params;
-        const {username, senha} = bcrypt.hashSync(req.body.senha);
+        const {username} = req.body;
+        const {senha} = bcrypt.hashSync(req.body.senha);
         const resultado = await db.Admin.update({
             username,
             senha

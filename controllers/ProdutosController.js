@@ -31,28 +31,13 @@ const ProdutosController = {
         return res.render('produtos',{produtos} )
     },
  
- /*   listarCategorias: async (req, res) => {
-    const {id} = req.params;
-        const categoria = await db.Categoria.findByPk({
-            where: {id: id}
-        })
-        
-        return res.render('produtos',{Produto: categoria})
-    }
-  */  
     listarCategorias: async  (req, res) => {
-        console.log("ooooiiii 01")
         const {id} = req.params;
         const produtos = await db.Produto.findAll({
             include: ['categoria', 'imagem'],
         })
-        // console.log("aqui produto", produtos)
-        //console.log("id:::", id)
-       
-        // console.log("categ", Produto.categoria)
         const categoria = produtos.filter(({categorias_id}) => categorias_id == id)
-        //console.log("aqui categoria!!!!!!!!!!!!!!!!!!!!!!!!!")
-       // console.log("aqui categoria", categoria)
+       
         res.render("produtos", {Produto: categoria})
     },
 

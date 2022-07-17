@@ -10,6 +10,7 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true
     },
+    onDelete: 'CASCADE',
     rua: {
         type: Sequelize.DataTypes.STRING,
         allowNull: true,

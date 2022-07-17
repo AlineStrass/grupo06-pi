@@ -22,7 +22,7 @@ const ClientesController = {
     },
 
     //antigo do projeto -funcionando
- /*   acaoLogin: async (req, res) => {
+    acaoLogin: async (req, res) => {
         const { email, senha } = req.body;
         const usuarioEncontrado = await db.Cliente.findOne({
             where: { email: email }
@@ -43,32 +43,32 @@ const ClientesController = {
         } else {
             res.redirect('/clientes/login');
         }
-    },*/
+    },
 
     // ------ Pablo
-    acaoLogin: async (req, res) => {
-        const { email, senha } = req.body;
-        const usuarioEncontrado = await db.Cliente.findOne({
-            where: { email: email }
-        });
+    // acaoLogin: async (req, res) => {
+    //     const { email, senha } = req.body;
+    //     const usuarioEncontrado = await db.Cliente.findOne({
+    //         where: { email: email }
+    //     });
 
-        if (usuarioEncontrado === null) {
-            res.render("login", {
-                error: "Usuário ou senha incorretos, por favor tente novamente."
-            });
-            return;
-        }
+    //     if (usuarioEncontrado === null) {
+    //         res.render("login", {
+    //             error: "Usuário ou senha incorretos, por favor tente novamente."
+    //         });
+    //         return;
+    //     }
 
-        if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
-            res.render("login", {
-                error: "Usuário ou senha incorretos, por favor tente novamente."
-            });
-            return;
-        }
+    //     if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
+    //         res.render("login", {
+    //             error: "Usuário ou senha incorretos, por favor tente novamente."
+    //         });
+    //         return;
+    //     }
 
-        req.session.emailUsuario = usuarioEncontrado.email;
-        res.redirect("/painelUsuario");
-    },
+    //     req.session.emailUsuario = usuarioEncontrado.email;
+    //     res.redirect("/painelUsuario");
+    // },
 
     login: function (req, res) {
         //acao login verificar se a senha esta certa, criptografar a senha
