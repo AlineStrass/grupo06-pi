@@ -12,7 +12,6 @@ var indexRouter = require('./routes/indexRouter');
 var adminRouter = require('./routes/adminRouter');
 var produtosRouter = require('./routes/produtosRouter');
 var painelUsuarioRouter = require('./routes/painelUsuarioRouter')
-var apiRouter = require('./routes/apiRouter');
 var clientesRouter = require('./routes/clientesRouter');
 
 
@@ -40,7 +39,6 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
-app.use('/api', apiRouter);
 app.use('/produtos', produtosRouter);
 app.use('/painelusuario', painelUsuarioRouter);
 app.use('/clientes', clientesRouter);
