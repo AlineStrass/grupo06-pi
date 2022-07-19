@@ -18,6 +18,28 @@ const ProdutosController = {
         return res.render('produtoInterno')
     },
 
+    //mostra as informações da pg de produto interno
+    infoProduto: async (req, res) => {
+        db.Produto.findByPk(
+            req.params.id,
+            {
+                include: ['categoria', 'imagem'],
+            }
+        )
+        .then(function(informacoes){
+            res.render('produtoInterno', {Produto: informacoes})
+        })
+        .catch((error)=> console.log(error))
+
+        // const {id} = req.params;
+        // const informacoes = await db.Produto.findByPk(id,
+        //     {
+        //         include: ['categoria', 'imagem'],
+        //     }
+        // )
+        // res.render('produtoInterno', {Produto: informacoes})
+    },
+
     //função para a barra de pesquisa do header - não está pronta
     search: async (req, res) => {
         let {key} = req.query

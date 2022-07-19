@@ -10,14 +10,13 @@
             
             <% for(produto of Produto) { %>
                 <div class="produtos-container-card">
-                    <a class="box-produtos" href="/produtos/produtointerno">
+                    <a class="box-produtos" href="/produtos/produtointerno/<%= produto.id %>">
+                        
                         <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
                             <img src="/images/produtos/<%= produto.imagem.imagem %>"/>
                         </div>
 
-                        <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">
-                            <%= produto.nome %>
-                        </h3>
+                        <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome"><%= produto.nome %></h3>
 
                         <p class="produtos-container-info">
                             <span value="<%= produto.preco %>" class='produtos-container-price'>
