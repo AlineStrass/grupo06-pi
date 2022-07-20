@@ -30,12 +30,13 @@
                                 <label for="categoria">Categoria:</label>
                                 <select name="categoria">
                                     <% for(let i = 0; i < Categoria.length; i++) { %>
-                                        <option value="<%= Categoria[i].id %>" required>
+                                        <option name="descricao" id="descricao" value="<%= Categoria[i].id %>" required>
                                             <%= Categoria[i].categoria %>
                                         <% } %>
                                     </option>
+                                    <!-- <input type="text" name="descricao" id="descricao" required> -->
                                 </select>
-                                <!-- <input type="text" name="descricao" id="descricao" required>-->
+                                
                             </div>
 
                             <div>

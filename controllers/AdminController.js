@@ -34,9 +34,7 @@ const AdminController = {
                 res.redirect('/admin');
 
             } else {
-                res.redirect('/login', {
-
-                });
+                res.redirect('/login');
             }
         }else{
             res.redirect('/login');
@@ -180,9 +178,7 @@ const AdminController = {
         res.redirect('/admin/produtos')
     },
 
-       
-    
-    
+  
 }
 
 module.exports = AdminController;
