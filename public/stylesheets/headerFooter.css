@@ -171,8 +171,8 @@ footer {
 }
 
 .caixa h2.footer {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 10px;
     color: #EFEFEF;
 }
 
@@ -183,21 +183,21 @@ footer {
 }
 
 .caixa .content-footer {
-    margin: 15px 0 0 0;
+    margin: 50px;
 }
 
 .esquerda {
-    width: 65%;
+    width: 35%;
    
 }
 
 .esquerda .content-footer {
-    margin-left: 5%;
+    margin-left: 10%;
     width: 100%;
 }
 
 .esquerda .content .social-medias {
-    margin: 20px 0 0 0;
+    margin: 60px 0 0 0;
 }
 
 .esquerda .content-footer .social-medias img {
@@ -223,29 +223,32 @@ footer {
 }
 
 .centro .content-footer .endereco span:hover {
-    text-decoration: underline 2px #FF8CB7;
+    text-decoration: underline 1px #FF8CB7;
 }
 
 .centro .content-footer img {
-    width: 15px;
-    margin-top: 10px;
+    
+    width: 17px;
+    margin-top: 0px;
+    margin-right: 10px;
+   
 }
 
 .direita .content-footer form {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .direita {
-    width: 30%;
+    width: 33%;
 }
 
 .direita .content-footer {
-    width: 100%;
+    width: 90%;
 }
 
 .direita form input, .direita form textarea {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 textarea.footer, input {
