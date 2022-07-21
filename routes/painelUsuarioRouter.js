@@ -15,8 +15,8 @@ router.get('/',loginMiddleware, PainelUsuarioController.index);
 
 
 router.get('/editarCadastro/:id',loginMiddleware, PainelUsuarioController.editarCadastro);
-//router.put('/editarCadastro/:id',loginMiddleware, PainelUsuarioController.acaoEditarCadastro);
-router.delete('/deletar/:id',loginMiddleware, PainelUsuarioController.deletarCadastro);
+//router.post('/editarCadastro/:id',loginMiddleware, PainelUsuarioController.acaoEditarCadastro);
+router.get('/deletar/:id',loginMiddleware, PainelUsuarioController.deletarCadastro);
 
 
 

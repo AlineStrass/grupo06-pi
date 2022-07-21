@@ -12,7 +12,7 @@
             <div class="meus-dados">
                 <h2>MEUS DADOS</h2>
 
-                <form action="/painelUsuario/editarCadastro/<%=Cliente.id%>?_method=PUT" method="post" class="meus-dados-form mt-4">
+                <form action="/painelUsuario/editarCadastro/<%=Cliente.id%>" method="GET" class="meus-dados-form mt-4">
                                     
                     <div class="row" style="
                     height: 58px;">
@@ -45,16 +45,15 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-2">
                             <div class="form-group">
-                                <label for="senha">Senha:</label>
-                                <input type="password" name="senha" class="form-control" value="<%= Cliente.senha %>">
+                                <label for="senha">Nova senha:</label>
+                                <input type="password" name="senha" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-4 col-xs-2">
                             <div class="form-group">
                                 <label for="confirma-senha">Confirmar Senha:</label>
-                                <input type="password" name="confirma-senha" class="form-control"
-                                    value="<%= Cliente.senha %>">
+                                <input type="password" name="confirma-senha" class="form-control">
                             </div>
                         </div>
 

@@ -7,15 +7,14 @@
     </head>
 
     <body>
-        <!-- CRIAÇÃO DO CONTAINER PARA ENGLOBAR O CONTEUDO E AFASTA-LO DAS BORDAS, OBS CONTAINER CLASSE DO BOOTSTRAP, NAO ESTILIZAMOS. -->
+        
         <section class="container paine-usuario-conteudo">
-            <!-- div da parte meus dados, obs aqui utilizamos grid bootstrap onde tem col-md-8 por exemplo é quantas colunas esse item vai ocupar, lembrando q o grid tem 12 colunas, entao se quero 3 items em uma coluna, divido 12/3 e coloco col-md-resultado para ter a mesma divisao no grid de 12 -->
+
             <div class="meus-dados">
                 <h2>MEUS DADOS</h2>
 
                 <form action="/painelUsuario/dadosCliente" method="GET" class="meus-dados-form mt-4">
-                    <!-- O QUE QUEREMOS QUE FIQUE NA MESMA LINHA DEIXAMOS DENTRO DA DIV ROW(LINHA) O QUE QUEREMOS QUE FIQUE ABAIXO CRIAMOS OUTRA DIV ROW -->
-                
+                                   
                     <div class="row" style="
                     height: 58px;">
                         <div class="col-md-12 col-xs-2">
@@ -127,9 +126,9 @@
                         <div class="col-md-12 text-end mt-4">
                             <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href="/painelUsuario/editarCadastro/<%=Cliente.id%>">Editar</a> </button>
 
-                            <!-- o link "a" eu adicionie, não é colocado no exemplodo pg -->
-                            <form action="/painelUsuario/deletar/<%=Cliente.id%>?_method=DELETE" method="POST">
-                                <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href="/painelUsuario/deletar"> Excluir</a></button>
+                            
+                            <form action="/painelUsuario/deletar/<%=Cliente.id%>" method="GET">
+                                <button type="submit" class="btn btn-primary btn-lg" id="submit-button">Excluir</button>
                             </form>
 
 

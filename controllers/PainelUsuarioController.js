@@ -23,7 +23,7 @@ const PainelUsuarioController = {
         }
     },
     
-    // não testei pq a edtar cadastr não stá funcionando
+    // não testei pq a editar cadastro não stá funcionando
     // acaoEditarCadastro: async (req, res) => {
     //     const { id } = req.params;
     //     const { nomeCompleto, email, telefone, cep, rua, numero, complemento, bairro, cidade, estado } = req.body;
@@ -52,14 +52,15 @@ const PainelUsuarioController = {
     //não esta deletando por causa do vinculo com a tabela de endereços
     deletarCadastro: async (req, res) => {
         const {id} = req.params;
-        const resultado = await db.Cliente.destroy(
-            { where:{id: id}        },
-            {onDelete: 'CASCADE'},
-            { include: ["enderecos"] },
-        )
-        console.log(resultado)
+
+        // const cadastroCliente = await db.Cliente.findAll({
+        //     where: {id: cadastroCliente.id}
+        // })
+        // await db.Endereco.destroy({where: {id: id}})
+
+        await db.Cliente.destroy( {where: {id: id} } )
+
         res.redirect('/')
-    
     },
 }
 
