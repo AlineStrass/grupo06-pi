@@ -3,7 +3,7 @@
   <%- include('../partials/head') %>
 
     <body style="display: flex; height: 50vh; justify-content: center; flex-direction: column;">
-      <form action="/admin/adminUsuarios" method="POST" class="cadastroUsuarios" enctype="multipart/form-data">
+      <form action="/admin/adminUsuarios" method="GET" class="cadastroUsuarios">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
@@ -18,7 +18,7 @@
               <h2 class="admin">Usuarios</h2>
             </div>
 
-            <table class="table table-bordered admin" action="/admin/adminUsuarios" method="GET">
+            <table class="table table-bordered admin" >
               <thead>
                 <tr>
                   <th class="admin" scope="col">ID</th>
@@ -42,10 +42,10 @@
                     </td>
 
                     <td class="acoes-btn">
-                      <a class="btn btn-primary btn-admin" href="/admin/editar/<%= admin.id %>" class="acoes-btn-editar"
+                      <a class="btn btn-primary btn-admin" href="/admin/editar/<%=admin.id%>" class="acoes-btn-editar"
                         style="width: 135px;">Editar</a>
 
-                      <form action="/admin/deletar/<%= admin.id %>?_method=DELETE" method="POST">
+                      <form action="/admin/deletar/<%=admin.id%>" method="GET">
                         <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar"
                           style="width: 135px;">Excluir</button>
                       </form>

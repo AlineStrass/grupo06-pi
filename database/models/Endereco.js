@@ -5,7 +5,6 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-        onDelete: 'CASCADE',
         rua: {
             type: DataType.STRING,
             allowNull: true,
@@ -39,8 +38,6 @@ module.exports = (sequelize, DataType) => {
     
         tableName : 'enderecos',
         timestamps : false,
-        onDelete: 'CASCADE',
-    
     });
 
     return Endereco;

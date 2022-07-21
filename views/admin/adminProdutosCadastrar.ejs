@@ -14,8 +14,7 @@
                             <div>
                                 <label for="nome">Nome:</label>
                                 <input type="text" name="nome" id="nome" required>
-                            </div>
-
+                                                 
                             <div>
                                 <label for="preco">Preço:</label>
                                 <input type="text" name="preco" id="preco" required>
@@ -26,17 +25,26 @@
                                 <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
                             </div>
 
+                            <!-- erro por causa da option -->
                             <div>
                                 <label for="categoria">Categoria:</label>
-                                <select name="categoria">
-                                    <% for(let i = 0; i < Categoria.length; i++) { %>
-                                        <option name="descricao" id="descricao" value="<%= Categoria[i].id %>" required>
-                                            <%= Categoria[i].categoria %>
-                                        <% } %>
-                                    </option>
-                                    <!-- <input type="text" name="descricao" id="descricao" required> -->
+                                <select name="categoria" class="form-select" aria-label="Default select example">
+                                    <!-- <option value="Ração">Ração</option>
+                                    <option value="Petiscos">Petiscos</option>
+                                    <option value="Brinquedos">Brinquedos</option>
+                                    <option value="Higiene">Higiene</option>
+                                    <option value="Camas">Camas</option>>
+                                    <option value="Outros Acessórios">Outros Acessórios</option> -->
+                                    <%for(var i=0; categoria.length; i++) {%>
+                                        <option value="<%=categoria[i].id%>">
+                                            <%=categoria[i].categoria%>
+                                        </option>
+                                    <% } %>
                                 </select>
-                                
+
+
+                                </select>
+
                             </div>
 
                             <div>
