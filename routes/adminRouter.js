@@ -9,7 +9,7 @@ const AdminAutenticacao = require('../middlewares/adminAutenticacao')
 
 const AdminController = require('../controllers/AdminController');
 
-
+// MULTER PARA PRODUTOS
 var multerDiskStorage = multer.diskStorage({
     destination: (req, file, callback)=>{
         const folder = path.join(__dirname, '../public/images/produtos');
@@ -22,26 +22,37 @@ var multerDiskStorage = multer.diskStorage({
 });
 const upload = multer({storage: multerDiskStorage});
 
-
+// LOGIN E ROTA PRINCIPAL
 router.get('/', AdminController.index);
 router.get('/login', AdminController.adminLogin);
 router.get('/efetuar',AdminController.efetuarLogin);
 router.post('/acaologin',AdminController.acaoLoginAdmin);
 router.get('/logout', AdminController.logout);
 
-router.get('/usuarios',AdminAutenticacao, AdminController.adminUsuarios);
-router.get('/usuariosCadastrar',AdminAutenticacao, AdminController.adminUsuariosCadastrar);
-router.post('/acaoCadastrarAdmin',AdminAutenticacao, AdminController.acaoCadastrarAdmin);
-router.get('/editar/:id',AdminAutenticacao, AdminController.editarAdmin);
-router.put('/editar/:id',AdminAutenticacao, AdminController.acaoEditarAdmin);
-router.delete('/deletar/:id',AdminAutenticacao, AdminController.deletarAdmin);
+// ADMIN
+//renderiza a pg principal dos usuarios
+router.get('/usuarios', AdminController.adminUsuarios);
+//renderiza a página do formulario para adicionar usuarios
+router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
+//cadastra novos usuarios Administrativos
+router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarAdmin);
+//editar usuarios
+router.get('/editar/:id', AdminController.editarAdmin);
+router.post('/editar/:id', AdminController.acaoEditarAdmin);
+// Deletar usuarios
+router.get('/deletar/:id', AdminController.deletarAdmin);
+//AdminAutenticacao,
 
+// PRODUTOS
+router.get('/produtos',  AdminController.adminProdutos);
 
-router.get('/produtos', AdminAutenticacao, AdminController.adminProdutos);
-router.get('/produtosCadastrar',AdminAutenticacao, AdminController.adminProdutosCadastrar);
-router.post('/acaoCadastrarProdutos',AdminAutenticacao, upload.array('imagemProduto'), AdminController.acaoCadastrarProdutos);
-//router.put('/editarProduto/:id',AdminAutenticacao, AdminController.acaoEditarProduto);
-router.delete('/deletarProduto/:id',AdminAutenticacao, AdminController.deletarProduto);
+router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
+router.post('/acaoCadastrarProdutos', upload.array('imagemProduto'), AdminController.acaoCadastrarProdutos);
+
+router.get('/editarProduto/:id', AdminController.editarProduto);
+router.post('/editarProduto/:id',upload.array('imagemProduto'), AdminController.acaoEditarProduto);
+
+router.get('/deletarProduto/:id', AdminController.deletarProduto);
 
 
 

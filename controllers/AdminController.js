@@ -79,26 +79,27 @@ const AdminController = {
         res.redirect('/admin/usuarios')
     },
 
-    //editar usuarios
+    //editar usuarios - ok
     editarAdmin: async (req, res) =>{
         const {id} = req.params;
         const usuario = await db.Admin.findByPk(id);
-        res.render('admin/editarAdmin', {usuario})
+        res.render('admin/editarAdmin', {Admin: usuario})
     },
 
-    //tras sempre o ultimo usuario cadastrado????
     acaoEditarAdmin: async (req, res) => {
         const {id} = req.params;
-        const {username} = req.body;
-        const {senha} = bcrypt.hashSync(req.body.senha);
+        // console.log("aqui o id de açãoEditarAdmin",id)
+        const {username, senha} = req.body;
+        // console.log("aqui o username de acaoEditarAdmin",username)
+        // console.log("aqui req.body:", req.body)
         const resultado = await db.Admin.update({
             username,
-            senha
+            senha: bcrypt.hashSync(req.body.senha)
         },
         {
             where:{id: id}
         })
-        console.log(resultado)
+        // console.log(resultado)
         // mostra [1] para ok e [0] para erro
         res.redirect('/admin/usuarios')
     },
@@ -123,13 +124,26 @@ const AdminController = {
     },
 
     //renderiza a página do formulario para adicionar produtos
-    adminProdutosCadastrar: (req, res) => { 
-        return res.render('admin/adminProdutosCadastrar')
+    adminProdutosCadastrar: async (req, res) => {
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll(); 
+        console.log(categoria)
+        return res.render('admin/adminProdutosCadastrar', {
+            categoria,
+            imagens
+        })
     },
     
     //cadastra novos produtos - está com ERRO
     //ver pq não esta funcionando + campo de selec
     acaoCadastrarProdutos: async (req, res) => {
+        // const {nome, preco, descricao, categoria, imagem} = req.body;
+        // console.log("00:", categoria)
+        // await db.Produto.create({
+        //     nome, preco, descricao, categoria: categoria, imagem
+        // },{ include: ["categoria", "imagem"] })
+        // res.redirect('/admin/produtos')
+        
         const cadastrarProdutos = {
             nome: req.body.nome,
             preco: req.body.preco,
@@ -140,18 +154,24 @@ const AdminController = {
             },
             imagem: {
                 id: req.body.id,
-                imagem: req.body.imagem,
-                //imagem:req.file.imagem,
+                // imagem: req.body.imagem,
+                imagem:req.file.imagem,
             },
         }
         await db.Produto.create(cadastrarProdutos, 
             { include: ["categoria", "imagem"] })
         console.log(cadastrarProdutos)
-        res.redirect('/admin/produtos')
+        res.redirect('/admin/produtos', {Produto:cadastrarProdutos} )
 
     },
 
- /*   acaoEditarProdutos: async (req, res) => {
+    editarProduto: async (req, res) => {
+        const {id} = req.params;
+        const resultado = await db.Produto.findByPk(id);
+        res.redirect('/admin/editarProduto', {Produto: resultado})
+    },
+
+    acaoEditarProduto: async (req, res) => {
         const {id} = req.params;
         const {nome, preco, descricao, imagem} = req.body;
         const resultado = await db.Produto.update({
@@ -167,7 +187,7 @@ const AdminController = {
         // mostra [1] para ok e [0] para erro
         res.redirect('/admin/produtos')
     },
-*/
+
     
     deletarProduto: async (req, res) => {
         const {id} = req.params;
