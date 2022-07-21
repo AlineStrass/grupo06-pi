@@ -10,17 +10,20 @@ const AdminAutenticacao = require('../middlewares/adminAutenticacao')
 const AdminController = require('../controllers/AdminController');
 
 // MULTER PARA PRODUTOS
-var multerDiskStorage = multer.diskStorage({
-    destination: (req, file, callback)=>{
-        const folder = path.join(__dirname, '../public/images/produtos');
-        callback(null, folder);
-    },
-    filename: (req, file, callback)=>{
-        const imagemProduto = Date.now() + path.extname(file.originalname);
-        callback(null, imagemProduto);
-    }
+var upload = multer({
+    dest: "public/images/produtos/"
 });
-const upload = multer({storage: multerDiskStorage});
+// var multerDiskStorage = multer.diskStorage({
+//     destination: (req, file, callback)=>{
+//         const folder = path.join(__dirname, '../public/images/produtos');
+//         callback(null, folder);
+//     },
+//     filename: (req, file, callback)=>{
+//         const imagemProduto = Date.now() + path.extname(file.originalname);
+//         callback(null, imagemProduto);
+//     }
+// });
+// const upload = multer({storage: multerDiskStorage});
 
 // LOGIN E ROTA PRINCIPAL
 router.get('/', AdminController.index);
@@ -30,16 +33,11 @@ router.post('/acaologin',AdminController.acaoLoginAdmin);
 router.get('/logout', AdminController.logout);
 
 // ADMIN
-//renderiza a pg principal dos usuarios
 router.get('/usuarios', AdminController.adminUsuarios);
-//renderiza a página do formulario para adicionar usuarios
 router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
-//cadastra novos usuarios Administrativos
 router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarAdmin);
-//editar usuarios
 router.get('/editar/:id', AdminController.editarAdmin);
 router.post('/editar/:id', AdminController.acaoEditarAdmin);
-// Deletar usuarios
 router.get('/deletar/:id', AdminController.deletarAdmin);
 //AdminAutenticacao,
 

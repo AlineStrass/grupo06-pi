@@ -118,27 +118,21 @@ const AdminController = {
     //renderiza a pg principal da lista de produtos
     adminProdutos: async (req, res) => {
         const adminProdutos = await db.Produto.findAll({
-            include: ['categoria']
+            include: ['categoria', 'imagem']
         })
         return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
     //renderiza a página do formulario para adicionar produtos
-    adminProdutosCadastrar: async (req, res) => {
-        const categoria = await db.Categoria.findAll();
-        const imagens = await db.ImagemProduto.findAll(); 
-        console.log(categoria)
-        return res.render('admin/adminProdutosCadastrar', {
-            categoria,
-            imagens
-        })
+    //funciona mas sem o option
+    adminProdutosCadastrar: (req, res) => {
+        return res.render('admin/adminProdutosCadastrar')
     },
     
-    //cadastra novos produtos - está com ERRO
-    //ver pq não esta funcionando + campo de selec
+    //cadastra novos produtos
     acaoCadastrarProdutos: async (req, res) => {
         // const {nome, preco, descricao, categoria, imagem} = req.body;
-        // console.log("00:", categoria)
+        // console.log("aqui o req.body:", req.body)
         // await db.Produto.create({
         //     nome, preco, descricao, categoria: categoria, imagem
         // },{ include: ["categoria", "imagem"] })
@@ -150,18 +144,17 @@ const AdminController = {
             descricao: req.body.descricao,
             categoria: {
                 id: req.body.id,
-                nome: req.body.nome,
+                categoria: req.body.categoria,
             },
             imagem: {
                 id: req.body.id,
-                // imagem: req.body.imagem,
                 imagem:req.file.imagem,
             },
         }
         await db.Produto.create(cadastrarProdutos, 
             { include: ["categoria", "imagem"] })
         console.log(cadastrarProdutos)
-        res.redirect('/admin/produtos', {Produto:cadastrarProdutos} )
+        res.redirect('/admin/produtos')
 
     },
 
@@ -173,11 +166,14 @@ const AdminController = {
 
     acaoEditarProduto: async (req, res) => {
         const {id} = req.params;
-        const {nome, preco, descricao, imagem} = req.body;
+        console.log("aqui o id de açãoEditarProduto",id)
+        const {nome, preco, descricao,categoria, imagem} = req.body;
+        console.log("aqui o req.body",req.body)
         const resultado = await db.Produto.update({
             nome,
             preco,
             descricao,
+            categoria,
             imagem
         },
         {
@@ -188,10 +184,10 @@ const AdminController = {
         res.redirect('/admin/produtos')
     },
 
-    
+    // excluir produto - ok
     deletarProduto: async (req, res) => {
         const {id} = req.params;
-        const resultado = await db.Admin.destroy({
+        const resultado = await db.Produto.destroy({
             where:{id: id}
         })
         console.log(resultado)

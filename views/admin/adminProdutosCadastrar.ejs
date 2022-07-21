@@ -14,46 +14,39 @@
                             <div>
                                 <label for="nome">Nome:</label>
                                 <input type="text" name="nome" id="nome" required>
-                                                 
-                            <div>
-                                <label for="preco">Preço:</label>
-                                <input type="text" name="preco" id="preco" required>
-                            </div>
 
-                            <div>
-                                <label for="descricao">Descrição:</label>
-                                <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
-                            </div>
+                                <div>
+                                    <label for="preco">Preço:</label>
+                                    <input type="text" name="preco" id="preco" required>
+                                </div>
 
-                            <!-- erro por causa da option -->
-                            <div>
-                                <label for="categoria">Categoria:</label>
-                                <select name="categoria" class="form-select" aria-label="Default select example">
-                                    <!-- <option value="Ração">Ração</option>
-                                    <option value="Petiscos">Petiscos</option>
-                                    <option value="Brinquedos">Brinquedos</option>
-                                    <option value="Higiene">Higiene</option>
-                                    <option value="Camas">Camas</option>>
-                                    <option value="Outros Acessórios">Outros Acessórios</option> -->
-                                    <%for(var i=0; categoria.length; i++) {%>
-                                        <option value="<%=categoria[i].id%>">
-                                            <%=categoria[i].categoria%>
-                                        </option>
-                                    <% } %>
-                                </select>
+                                <div>
+                                    <label for="descricao">Descrição:</label>
+                                    <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
+                                </div>
 
+                                <!-- erro por causa da option -->
+                                <div>
+                                    <label for="categoria">Categoria:</label>
+                                    <select name="categoria" class="form-select" aria-label="Default select example">
+                                        <option value="">Ração</option>
+                                        <option value="Petiscos">Petiscos</option>
+                                        <option value="Brinquedos">Brinquedos</option>
+                                        <option value="Higiene">Higiene</option>
+                                        <option value="Camas">Camas</option>>
+                                        <option value="Outros Acessórios">Outros Acessórios</option>
 
-                                </select>
+                                    </select>
 
-                            </div>
+                                </div>
 
-                            <div>
-                                <label>Imagem:</label>
-                                <input type="file" name="imagemProduto" />
-                            </div>
+                                <div>
+                                    <label>Imagem:</label>
+                                    <input type="file" name="imagemProduto"/>
+                                </div>
 
-                            <button class="btn-cadastroUsuarios" type="submit"
-                                action="acaoCadastrarProdutos">Cadastrar</button>
+                                <button class="btn-cadastroUsuarios" type="submit"
+                                    action="acaoCadastrarProdutos">Cadastrar</button>
                         </fieldset>
                     </form>
 
