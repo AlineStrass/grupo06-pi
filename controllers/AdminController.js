@@ -117,10 +117,16 @@ const AdminController = {
     //  --------- PRODUTOS -----------
     //renderiza a pg principal da lista de produtos
     adminProdutos: async (req, res) => {
-        const adminProdutos = await db.Produto.findAll({
-            include: ['categoria', 'imagem']
+        const adminProdutos = await db.Produto.findAll({include: ['categoria', 'imagem']});
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll();
+        console.log("imagens:", imagens)
+        console.log("req.file:",req.file)
+        return res.render('admin/adminProdutos', {
+            Produto: adminProdutos,
+            Categoria: categoria,
+            ImagemProduto: imagens
         })
-        return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
     //renderiza a página do formulario para adicionar produtos
@@ -132,12 +138,14 @@ const AdminController = {
         const produto = await db.Produto.findAll();
         
         console.log("imagens:", imagens)
+        console.log(req.file)
     
         return res.render('admin/adminProdutosCadastrar',{
             Categoria:categoria,
             ImagemProduto: imagens,
             Produto: produto
         })
+        
     },
     
     //cadastra novos produtos

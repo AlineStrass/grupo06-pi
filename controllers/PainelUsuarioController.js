@@ -13,14 +13,19 @@ const PainelUsuarioController = {
     //página com erro - não está funcionando
     editarCadastro: async (req, res) =>{
         const { id } = req.params;
-        if (req.session.logado === true) {
-        // const cliente = await db.Cliente.findByPk(id)
-        const cliente = await db.Cliente.findByPk(req.session.idUsuario, { include: ["enderecos"] });
-        console.log(cliente)
-        res.render('editarPainelUsuario', { cliente })
-        }else{
-            console.log("erro")
-        }
+        // if (req.session.logado === true) {
+        const cliente = await db.Cliente.findByPk(id, { include: ["enderecos"] });
+        // const endereco = await db.Endereco.findAll();
+        
+        // const cliente = await db.Cliente.findByPk(req.session.idUsuario, { include: ["enderecos"] });
+        // console.log(cliente)
+        res.render('editarPainelUsuario', { 
+            Cliente: cliente,
+            
+        })
+        // }else{
+        //     console.log("erro")
+        // }
     },
     
     // não testei pq a editar cadastro não stá funcionando

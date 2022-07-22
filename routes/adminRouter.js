@@ -56,11 +56,4 @@ router.get('/deletarProduto/:id', AdminController.deletarProduto);
 
 
 
-
-
-
-
-
-
-
 module.exports = router;

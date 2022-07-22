@@ -1,6 +1,6 @@
+<%- include('../partials/head') %>
 <%- include('../partials/headerAdmin') %>
 
-  <%- include('../partials/head') %>
 
     <body style="display: flex; height: 100vh; justify-content: center; flex-direction: column;">
       <form action="/admin/adminProdutos" method="GET" class="cadastroProdutos" enctype="multipart/form-data">
@@ -49,9 +49,12 @@
                     <td>
                       <%= produto.categoria.categoria %>
                     </td>
+
                     <td>
-                      <img src="/images/produtos/" width="90px"/>
+                      <% for(imagem of ImagemProduto){ %>
+                      <img src="/images/produtos/<%=ImagemProduto.imagem%> " width="90px"/>
                       <!-- <img src="/images/produtos/ produto[i].imagem[0]" /> -->
+                      <% } %>
                     </td>
 
                     <td class="acoes-btn">
