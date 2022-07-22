@@ -1,58 +1,55 @@
+const Sequelize = require('sequelize');
+const config = require('../database/config/config');
 const db = require('../database/models');
+const bcrypt = require('bcryptjs');
 
 const PainelUsuarioController = {
     index: async (req, res) => {
         if (req.session.logado === true) {
-            const detalhesCliente = await db.Cliente.findByPk(req.session.idUsuario, { include: ["enderecos"] });
+            const detalhesCliente = await db.Cliente.findByPk(req.session.idUsuario, { include: ["enderecos"]});
             res.render('painelUsuario', { Cliente: detalhesCliente })
         } else {
             res.render('login')
         }
     },
 
-    //página com erro - não está funcionando
+    //formulário de edição de cadastro
     editarCadastro: async (req, res) =>{
         const { id } = req.params;
-        // if (req.session.logado === true) {
         const cliente = await db.Cliente.findByPk(id, { include: ["enderecos"] });
-        // const endereco = await db.Endereco.findAll();
-        
-        // const cliente = await db.Cliente.findByPk(req.session.idUsuario, { include: ["enderecos"] });
-        // console.log(cliente)
+       
         res.render('editarPainelUsuario', { 
-            Cliente: cliente,
-            
+            Cliente: cliente, 
         })
-        // }else{
-        //     console.log("erro")
-        // }
     },
     
-    // não testei pq a editar cadastro não stá funcionando
-    // acaoEditarCadastro: async (req, res) => {
-    //     const { id } = req.params;
-    //     const { nomeCompleto, email, telefone, cep, rua, numero, complemento, bairro, cidade, estado } = req.body;
-    //     const { senha } = bcrypt.hashSync(req.body.senha);
-    //     const resultado = await db.Cliente.update({
-    //         nomeCompleto,
-    //         email,
-    //         telefone,
-    //         senha,
-    //         cep,
-    //         rua,
-    //         numero,
-    //         complemento,
-    //         bairro,
-    //         cidade,
-    //         estado
-    //     },
-    //         {
-    //             where: { id: id }
-    //         })
-    //     console.log(resultado)
-    //     // mostra [1] para ok e [0] para erro
-    //     res.redirect('/painelUsuario')
-    // },
+    // função que salva as infos - não está salvando no db
+    acaoEditarCadastro: async (req, res) => {
+        const { id } = req.params;
+        const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body; 
+        console.log("aqui o ID:" , id)
+        console.log("req.body:" , req.body)
+        console.log("senha:",senha)
+        const resultado = await db.Cliente.update({
+            nomeCompleto: nomeCompleto,
+            email: email,
+            telefone: telefone,
+            senha: bcrypt.hashSync(req.body.senha),
+            cep: cep,
+            rua: rua,
+            numero: numero,
+            complemento: complemento,
+            bairro: bairro,
+            cidade: cidade,
+            estado: estado,
+        },
+            {
+                where: { id: id }
+            })
+        console.log(resultado)
+        // mostra [1] para ok e [0] para erro
+        res.redirect('/painelUsuario')
+    },
 
     //não esta deletando por causa do vinculo com a tabela de endereços
     deletarCadastro: async (req, res) => {

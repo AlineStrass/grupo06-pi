@@ -89,7 +89,7 @@
                             <div class="form-group">
                                 <label for="complemento">Complemento:</label>
                                 <input type="text" name="complemento" class="form-control"
-                                    value="<%= Cliente.enderecos[0].complemento %>" required>
+                                    value="<%= Cliente.enderecos[0].complemento %>">
                             </div>
                         </div>
                     </div>
@@ -122,9 +122,10 @@
 
                     <div class="row">
                         <div class="col-md-12 text-end mt-4">
-                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href="">Salvar</a></button>
 
-                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href=""> Voltar</a></button>
+                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit" action="painelUsuario/acaoEditarCadastro/<%=Cliente.id%>">Salvar</button>
+
+                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href="/painelUsuario"> Voltar</a></button>
                         </div>
                     </div>
                 </form>
