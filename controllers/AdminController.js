@@ -125,8 +125,19 @@ const AdminController = {
 
     //renderiza a página do formulario para adicionar produtos
     //funciona mas sem o option
-    adminProdutosCadastrar: (req, res) => {
-        return res.render('admin/adminProdutosCadastrar')
+    //está adicinando mais categorias, está errado, tem que adicionar produtos com o id da catgoria
+    adminProdutosCadastrar: async (req, res) => {
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll();
+        const produto = await db.Produto.findAll();
+        
+        console.log("imagens:", imagens)
+    
+        return res.render('admin/adminProdutosCadastrar',{
+            Categoria:categoria,
+            ImagemProduto: imagens,
+            Produto: produto
+        })
     },
     
     //cadastra novos produtos
@@ -146,9 +157,9 @@ const AdminController = {
                 id: req.body.id,
                 categoria: req.body.categoria,
             },
-            imagem: {
+            imagemProduto: {
                 id: req.body.id,
-                imagem:req.file.imagem,
+                imagem:req.file.imagemProduto,
             },
         }
         await db.Produto.create(cadastrarProdutos, 
@@ -161,7 +172,7 @@ const AdminController = {
     editarProduto: async (req, res) => {
         const {id} = req.params;
         const resultado = await db.Produto.findByPk(id);
-        res.redirect('/admin/editarProduto', {Produto: resultado})
+        res.render('admin/editarProdutos', {Produto: resultado})
     },
 
     acaoEditarProduto: async (req, res) => {

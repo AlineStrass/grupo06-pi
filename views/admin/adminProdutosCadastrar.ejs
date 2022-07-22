@@ -29,20 +29,20 @@
                                 <div>
                                     <label for="categoria">Categoria:</label>
                                     <select name="categoria" class="form-select" aria-label="Default select example">
-                                        <option value="">Ração</option>
-                                        <option value="Petiscos">Petiscos</option>
-                                        <option value="Brinquedos">Brinquedos</option>
-                                        <option value="Higiene">Higiene</option>
-                                        <option value="Camas">Camas</option>>
-                                        <option value="Outros Acessórios">Outros Acessórios</option>
-
+                                        
+                                        <%for(categoria of Categoria) {%>
+                                            <option value="<%=categoria.id%>">
+                                                <%=categoria.categoria%>
+                                            </option>
+                                        <% } %>
+                                        
                                     </select>
 
                                 </div>
 
                                 <div>
                                     <label>Imagem:</label>
-                                    <input type="file" name="imagemProduto"/>
+                                    <input type="file" name="imagemProduto" />
                                 </div>
 
                                 <button class="btn-cadastroUsuarios" type="submit"
