@@ -1,0 +1,533 @@
+[33mcommit c35333c3591de67977d0ca89a65ea9734dd73146[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mPI[m[33m)[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 23 12:51:36 2022 -0300
+
+    teste - ajuste editar produtos
+
+[33mcommit 3a57c7cfff4c9359bc5c11ba625661162bc7f44f[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 23 12:27:33 2022 -0300
+
+    categorias em editar produto - ok
+
+[33mcommit fc691f4d498155a817ebbca1b9db093e4dfe2dd8[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 23 11:42:05 2022 -0300
+
+    excluir cliente - ok
+
+[33mcommit fe0d0269e94853b7dbd7585ed32244deb52e237d[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 23 10:44:57 2022 -0300
+
+    editar cliente - ok
+
+[33mcommit ec7dc49589aa6872de107fd89490627c35c81698[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Fri Jul 22 15:27:51 2022 -0300
+
+    teste função editar cliente- com erro
+
+[33mcommit 4dd2b914c84613b6b26f5c3cc32f392ba2621350[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Fri Jul 22 14:46:57 2022 -0300
+
+    formulário editar cliente funcionando
+
+[33mcommit 176d0b60390ec19c9ce19a6c15a91439c9b14c35[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 21:39:32 2022 -0300
+
+    option de categorias - ok
+
+[33mcommit f1c9b8ee962c8261744bc453e46cfbf1b1ee1f92[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 18:58:28 2022 -0300
+
+    css botoes admin
+
+[33mcommit 23a2a31f126712f08bb54a9e4643e2ec7c99dbfb[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 18:42:27 2022 -0300
+
+    editar e excluir clientes-nao funciona
+
+[33mcommit f1223e0a4275e25888c4be0491889a5c1f766398[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 16:17:48 2022 -0300
+
+    testando carregar imagens na pg. - nao funciona
+
+[33mcommit f360fb69374208a8dc3c1e4934acdb84e262f048[m
+Merge: fdc708e b6b78c5
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 12:09:07 2022 -0300
+
+    cadastrar e editar admin funcionando
+
+[33mcommit b6b78c5795cb7a7dd9b187bab1583ec113e99349[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 21 12:04:15 2022 -0300
+
+    cadastrar e editar admin funcionando
+
+[33mcommit fdc708e4237ed638cba65b703f7484e691cf2800[m
+Merge: 7b7af50 4a421a6
+Author: Reginaldo Santos <reginaldo.santosrp@icloud.com>
+Date:   Wed Jul 20 18:22:56 2022 -0300
+
+    Merge branch 'master' of https://github.com/AlineStrass/grupo06-pi
+
+[33mcommit 7b7af50e6618fee323b5f693701a76aca0a69716[m
+Merge: f6eb0af 8de1d8f
+Author: Reginaldo Santos <reginaldo.santosrp@icloud.com>
+Date:   Wed Jul 20 18:18:41 2022 -0300
+
+    commit para merge
+
+[33mcommit f6eb0afbbf490b47d9a3cd60c04f693b68a72d19[m
+Author: Reginaldo Santos <reginaldo.santosrp@icloud.com>
+Date:   Wed Jul 20 18:16:58 2022 -0300
+
+    commit para merge
+
+[33mcommit 8de1d8fdd9d2280d3cb3817ac0da487358073538[m
+Author: Reginaldo Santos <reginaldo.santosrp@icloud.com>
+Date:   Wed Jul 20 18:13:56 2022 -0300
+
+    ajuster footer css
+
+[33mcommit 4a421a6aa5a1e163b495896507c8e73fa5bbe2e6[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 19 13:00:10 2022 -0300
+
+    produtoInterno vinculado ao db
+
+[33mcommit 3bcab0f0f03e5b66a3fda1406e6e86f87da3bc40[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sun Jul 17 15:57:37 2022 -0300
+
+    middleware para admin
+
+[33mcommit 2ee2b39d92af21931c745df7ab0586cfa0dc97fd[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sun Jul 17 13:17:35 2022 -0300
+
+    put e delete de clientes - com erro
+
+[33mcommit de8ccd6be8ee81b52cd6781c841e8b094a6e1a59[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 20:14:16 2022 -0300
+
+    ajuste menu hamburger de categorias
+
+[33mcommit 7411dcb583bd5bc924c3321f9afb50998f8220cd[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 20:10:12 2022 -0300
+
+    menu de categorias trazendo os produtos certos
+
+[33mcommit 35467d2617f59b2eddcb5b3140e9dcbf99accba1[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 13:08:08 2022 -0300
+
+    exclusao campos cadastro cliente
+
+[33mcommit 91ab31a7958ad716dce19b8ce4e584edc18c07ba[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 12:22:28 2022 -0300
+
+    logout clientes
+
+[33mcommit 3c470f156cf0e8fd288693229e9948d70feffc51[m
+Merge: 4eaf47b 8d63c83
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 10:45:26 2022 -0300
+
+    Merge branch 'PI'
+
+[33mcommit 8d63c831d00446bdff412f65c8d28d1519fd7bee[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Sat Jul 16 10:44:33 2022 -0300
+
+    ajuste erro
+
+[33mcommit 4eaf47b8ea89a42c0f7237943c6c7cba6c119652[m
+Merge: 7fd310a 1fdf116
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Sat Jul 16 10:33:17 2022 -0300
+
+    Merge pull request #77 from AlineStrass/beatrice
+    
+    ajuste carrossel
+
+[33mcommit 1fdf116d3df0d079e0ad5ef833fda976eb91be01[m[33m ([m[1;31morigin/beatrice[m[33m)[m
+Merge: e0c3708 7fd310a
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Sat Jul 16 10:33:10 2022 -0300
+
+    Merge branch 'master' into beatrice
+
+[33mcommit e0c37089caa55a3c6c7c3b9393d9324d2f9df70c[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Sat Jul 16 10:12:28 2022 -0300
+
+    ajuste carrosel
+
+[33mcommit 7fd310a938033e30b7492ce239c2eb1c20109858[m
+Merge: 87f64f9 a55f423
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Fri Jul 15 14:54:32 2022 -0300
+
+    Merge pull request #76 from AlineStrass/email-senha-login
+    
+    pagina de login envia mensagem de erro caso email e senha nao batam
+
+[33mcommit a55f4235ec25aa8e340a6264fc1aa2800603fe04[m[33m ([m[1;31morigin/email-senha-login[m[33m)[m
+Merge: 2ffae2a 87f64f9
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Fri Jul 15 14:54:24 2022 -0300
+
+    Merge branch 'master' into email-senha-login
+
+[33mcommit 2ffae2a33c244844fde80538d927e0e5fc4da37c[m
+Author: Pablo <blopa741@gmail.com>
+Date:   Fri Jul 15 14:47:34 2022 -0300
+
+    pagina de login envia mensagem de erro caso email e senha nao batam
+
+[33mcommit 87f64f9cd7c106fb91dc9c844c515d3550355202[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Fri Jul 15 14:10:35 2022 -0300
+
+    exclusao arq .env
+
+[33mcommit 3c0cffa57c7fdec050baf70376427a9155837e94[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Thu Jul 14 18:40:39 2022 -0300
+
+    Co-authored-by: Milléo <Milleo@users.noreply.github.com>
+
+[33mcommit d4e8c8d0c2e99bc14084998e33649ef549a98ffc[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 14 17:47:08 2022 -0300
+
+    funcao adicao de produtos
+
+[33mcommit 769882d9db6e16eab47f6adf86f81cc87d72806e[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 14 16:17:48 2022 -0300
+
+    criação pg edição produtos
+
+[33mcommit 469371440b53ee5550aaca5f29122b1e446c9d95[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 14 14:53:34 2022 -0300
+
+    put e delete painel adm
+
+[33mcommit c1a4162704cdf3f4f65f90e7a4a5ef851e9a5316[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Thu Jul 14 14:45:01 2022 -0300
+
+    put e delete painel adm
+
+[33mcommit 7c889e3fcb1c28a48eb74544e5f62dd311186ad7[m
+Merge: 2e4e567 0bfae6b
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Thu Jul 14 10:58:05 2022 -0300
+
+    Merge pull request #74 from AlineStrass/beatrice
+    
+    search produtos
+
+[33mcommit 0bfae6bff6683c3dde5fc6243514a2c8cca44161[m
+Merge: 9ea6617 2e4e567
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Thu Jul 14 10:57:57 2022 -0300
+
+    Merge branch 'master' into beatrice
+
+[33mcommit 9ea66174e3b0fb565cb1665e4df1dabc1ab38436[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Wed Jul 13 22:46:41 2022 -0300
+
+    search produtos
+
+[33mcommit 2e4e567831984d5c45db39b9c40566c449e12aa6[m
+Merge: 1910515 e25bb36
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Wed Jul 13 20:37:02 2022 -0300
+
+    Merge pull request #73 from AlineStrass/PI
+    
+    obrigatorio login par aacessar painel adm
+
+[33mcommit e25bb367d757557d65e84ed64ad8fa2ddd73a99b[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 20:36:25 2022 -0300
+
+    obrigatorio login par aacessar painel adm
+
+[33mcommit 191051507ed45b64e1de657204bcb99b645a34ff[m
+Merge: aece52a e165697
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Wed Jul 13 18:04:51 2022 -0300
+
+    Merge pull request #72 from AlineStrass/PI
+    
+    add infos seeder produtos-admin-clientes
+
+[33mcommit e165697b9faeab21f57794e7cfdf5dfb1e162595[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 18:04:32 2022 -0300
+
+    add infos seeder produtos-admin-clientes
+
+[33mcommit aece52a6d033f61bc0a7d3db8d066abed8bf8136[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 16:15:58 2022 -0300
+
+    ajuste .env
+
+[33mcommit cefd19eebd380ef97b32fb1b21e4bbdecd13f996[m
+Merge: 5aa564a e1b8665
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Wed Jul 13 16:04:51 2022 -0300
+
+    Merge pull request #71 from AlineStrass/PI
+    
+    cadastro admin - ok
+
+[33mcommit e1b8665c3764558108f63a70112f5883ec080b6c[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 16:04:28 2022 -0300
+
+    cadastro admin - ok
+
+[33mcommit 5aa564a664ae3222fa020b05e95e7e39bc604925[m
+Merge: 3cd0ca1 6bc85d2
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Wed Jul 13 12:09:00 2022 -0300
+
+    Merge pull request #70 from AlineStrass/PI
+    
+    ajustes pg admin-funcao cadastro
+
+[33mcommit 6bc85d22a71e4d37a737dd20c89a9c94d2a39c28[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 12:08:37 2022 -0300
+
+    ajustes pg admin-funcao cadastro
+
+[33mcommit 3cd0ca176206124a9eb2a2e9da58f9bbcd4be7ba[m
+Merge: cdcd77e 7e81fa8
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Wed Jul 13 09:15:01 2022 -0300
+
+    Merge pull request #69 from AlineStrass/PI
+    
+    adicao do .env para não enviar usuario e senha do banco de dados
+
+[33mcommit 7e81fa8c31ea658edd754bbdbf8224edab9f0135[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Wed Jul 13 09:13:38 2022 -0300
+
+    adicao do .env
+
+[33mcommit cdcd77e943bdcf7b05e9d7ba8bcd23b535121fed[m
+Merge: b1722ad 9110961
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Tue Jul 12 22:21:07 2022 -0300
+
+    Merge pull request #68 from AlineStrass/PI
+    
+    ajuste pg produtos-erro associate
+
+[33mcommit 9110961f5fe4e05b5dbde976ee4c213068978a7b[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 22:20:42 2022 -0300
+
+    ajuste pg produtos-erro associate
+
+[33mcommit b1722ad9d853c1bb61d920b16a4e2ba2394628ca[m
+Merge: 496a9af 579096b
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Tue Jul 12 19:12:54 2022 -0300
+
+    Merge pull request #67 from AlineStrass/PI
+    
+    trazer infos do BD para admin
+
+[33mcommit 579096b46926843eade7965876dcc1911fe2787e[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 19:12:18 2022 -0300
+
+    trazer infos do BD para admin
+
+[33mcommit 496a9af8cd31f8cf8e3b422f99eb704ef39b7590[m
+Merge: fc14467 d75907c
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 14:48:59 2022 -0300
+
+    Merge branch 'PI'
+
+[33mcommit d75907c8b258ed7df734dad93ed250abfe8f4f24[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 14:48:41 2022 -0300
+
+    ajustes links acesso admin
+
+[33mcommit fc14467b769373a6e1554e6e9354682a4649af87[m
+Merge: cc6ec86 e8c5a0a
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 14:30:01 2022 -0300
+
+    Merge branch 'PI'
+
+[33mcommit e8c5a0aa5ba1686d6ce3f8080506a14731da15e7[m
+Merge: ae0e110 5255232
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Tue Jul 12 14:29:28 2022 -0300
+
+    Merge pull request #66 from AlineStrass/PI
+    
+    Pi
+
+[33mcommit cc6ec86b6c43f6a0b2133a85d63ef11f065fb9aa[m
+Merge: aa7ac00 5255232
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 14:29:01 2022 -0300
+
+    Merge branch 'PI'
+
+[33mcommit 5255232d44f21c0422957ae6bd61bbf447f08b6f[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 14:28:35 2022 -0300
+
+    ajustes header
+
+[33mcommit ae0e1108afab586c1a7e81dcd78c601a247437bc[m
+Merge: 85bfac1 e99b817
+Author: Beatrice Mathey <102373019+Beatrice-mathey@users.noreply.github.com>
+Date:   Tue Jul 12 13:48:49 2022 -0300
+
+    Merge pull request #65 from AlineStrass/beatrice
+    
+    header usuarios
+
+[33mcommit e99b8172291e77c132bc481e6cf4ca4e31633afd[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Tue Jul 12 13:48:10 2022 -0300
+
+    header usuarios
+
+[33mcommit aa7ac00236d9e2e00d5fc1ebd6dd19b25f3ce7c1[m
+Merge: b4bee15 a1fa39b
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 13:27:54 2022 -0300
+
+    testes
+
+[33mcommit a1fa39b6255807670e2c9b3110ae30985a6013ea[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 13:27:15 2022 -0300
+
+    testes
+
+[33mcommit 85bfac17ef4c0543ada81c9d4b24fe45553af0db[m
+Merge: 4def42d acf0667
+Author: Beatrice Mathey <102373019+Beatrice-mathey@users.noreply.github.com>
+Date:   Tue Jul 12 11:23:33 2022 -0300
+
+    Merge pull request #64 from AlineStrass/beatrice
+    
+    adminCadastrar produtos e usuarios
+
+[33mcommit acf0667ffe9b1e4a077bcfd3c03c307e4dd392a4[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Tue Jul 12 11:22:48 2022 -0300
+
+    adminCadastrar produtos e usuarios
+
+[33mcommit b4bee155d95ccd5bf49882463ce23da675692add[m
+Merge: eadbad6 4def42d
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 09:56:10 2022 -0300
+
+    Merge branch 'PI'
+
+[33mcommit eadbad69590562e4622eebf9cbf64d119e21bebc[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Tue Jul 12 09:55:14 2022 -0300
+
+    testes-carrinho compras
+
+[33mcommit 4def42d706956e4a605b2006ba9093d3ec33b3a3[m
+Merge: 93ea89a 0229c95
+Author: Beatrice Mathey <102373019+Beatrice-mathey@users.noreply.github.com>
+Date:   Mon Jul 11 19:45:32 2022 -0300
+
+    Merge pull request #63 from AlineStrass/beatrice
+    
+    html e css admin
+
+[33mcommit 0229c953f74b4d5aed665d1ca101b0ee50f0ed1e[m
+Author: Beatrice-mathey <beatricemathey@gmail.com>
+Date:   Mon Jul 11 19:44:48 2022 -0300
+
+    html e css admin
+
+[33mcommit 93ea89a5d8041156fe330dcbb3886a0f3ceec036[m
+Merge: dbe674f af760f2
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Mon Jul 11 15:31:04 2022 -0300
+
+    Merge pull request #60 from AlineStrass/cadastro
+    
+    dados de endereço agora são enviados para o banco de dados
+
+[33mcommit af760f26470bc3923d304e913b3ac8a3c0df1367[m[33m ([m[1;31morigin/cadastro[m[33m)[m
+Merge: 663affc dbe674f
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Mon Jul 11 15:30:51 2022 -0300
+
+    Merge branch 'master' into cadastro
+
+[33mcommit dbe674fc38de0c5542be69b55425a3e7eb0fd163[m
+Merge: 0cc7c90 d659907
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Mon Jul 11 14:43:48 2022 -0300
+
+    Merge pull request #62 from AlineStrass/PI
+    
+    testes-carrinho compras
+
+[33mcommit d659907f8ab900d3989dd6b43788cdda42c1f13e[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Mon Jul 11 14:43:13 2022 -0300
+
+    testes-carrinho compras
+
+[33mcommit 0cc7c9051d752b9696f2e28ae213735e429b181a[m
+Merge: d0d4342 66d26a0
+Author: Aline Strassburger <73790019+AlineStrass@users.noreply.github.com>
+Date:   Mon Jul 11 11:04:41 2022 -0300
+
+    Merge pull request #61 from AlineStrass/PI
+    
+    ajustes multer produtos
+
+[33mcommit 66d26a01c5131d5a5a6210ecc611d7f6c2adb641[m
+Author: AlineStrass <flores.aline.89@gmail.com>
+Date:   Mon Jul 11 11:03:50 2022 -0300
+
+    ajustes multer produtos
+
+[33mcommit 663affc01e0d8a698b69e5c5142f51c74623eaef[m
+Author: Pablo <blopa741@gmail.com>
+Date:   Sun Jul 10 17:08:37 2022 -0300
+
+    dados de endereço agora são enviados para o banco de dados
+
+[33mcommit d0d434240

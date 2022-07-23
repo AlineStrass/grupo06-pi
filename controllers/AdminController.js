@@ -180,14 +180,20 @@ const AdminController = {
     editarProduto: async (req, res) => {
         const {id} = req.params;
         const resultado = await db.Produto.findByPk(id);
-        res.render('admin/editarProdutos', {Produto: resultado})
+        const categoria = await db.Categoria.findAll();
+        
+        res.render('admin/editarProdutos', {
+            Produto: resultado,
+            Categoria:categoria,
+            
+        })
     },
 
     acaoEditarProduto: async (req, res) => {
         const {id} = req.params;
         console.log("aqui o id de açãoEditarProduto",id)
         const {nome, preco, descricao,categoria, imagem} = req.body;
-        console.log("aqui o req.body",req.body)
+        console.log("dados produto", nome, preco, descricao,categoria, imagem)
         const resultado = await db.Produto.update({
             nome,
             preco,
