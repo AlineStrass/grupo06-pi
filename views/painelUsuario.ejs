@@ -121,9 +121,14 @@
 
 
                             <form action="/painelUsuario/deletar/<%=Cliente.id%>" method="GET">
-                                <button type="submit" class="btn btn-primary btn-lg" id="submit-button">Excluir</button>
+                                <button type="submit" class="btn btn-primary btn-lg" id="submit-button">
+                                    Excluir
+                                </button>
                             </form>
-
+                           
+                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a
+                                href="/painelUsuario/deletar/<%=Cliente.id%>">Novo excluir</a>
+                        </button>
 
                             <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a
                                     href="/clientes/logout">Sair</a>

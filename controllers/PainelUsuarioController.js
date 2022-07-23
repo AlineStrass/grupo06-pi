@@ -54,15 +54,20 @@ const PainelUsuarioController = {
 
     //não esta deletando por causa do vinculo com a tabela de endereços
     deletarCadastro: async (req, res) => {
+    console.log("entrou deletar cadastro")
         const {id} = req.params;
 
         // const cadastroCliente = await db.Cliente.findAll({
         //     where: {id: cadastroCliente.id}
         // })
-        // await db.Endereco.destroy({where: {id: id}})
+        // console.log("cadastroclente", cadastroCliente)
+        await db.Endereco.destroy({where: {clientes_id: id}})
+        console.log("aqui é o id:", id)
 
-        await db.Cliente.destroy( {where: {id: id} } )
-
+        const resultado = await db.Cliente.destroy({ where:{id: id} })
+        console.log("aqui é o resultado:", resultado)
+        console.log("aqui depois do delete")
+        req.session.logado = false
         res.redirect('/')
     },
 }
