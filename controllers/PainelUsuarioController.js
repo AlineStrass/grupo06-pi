@@ -30,6 +30,7 @@ const PainelUsuarioController = {
         console.log("aqui o ID:" , id)
         console.log("req.body:" , req.body)
         console.log("senha:",senha)
+        console.log("infos cliente:", nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
         const resultado = await db.Cliente.update({
             nomeCompleto: nomeCompleto,
             email: email,
