@@ -86,11 +86,15 @@ h1.home, li.home {
         width: 100%;
         align-items: center;
         border-radius: 10px;
+       
+       
 }
 
     .carrossel-home img{
     width: 33%;
     height: 50vh;
+   
+  
     
     
 }

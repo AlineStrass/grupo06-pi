@@ -1,30 +1,28 @@
 <%- include('./partials/header') %>
+  <%- include('./partials/head') %>
+  
+   <body>
+      <div class="container">
+         <div class="row">
+             <form action="/carrinho" method="POST" class="carrinho" enctype="multipart/form-data"></form>
+               <class style="display: flex; justify-content: center; flex-direction: column;"></style>
+                    <table class="table table-bordered" action="/carrinho" method="GET">
+                        <h1 class="title-admin">CARRINHO</h1>
+                 <thead> 
+                   <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço Unitário</th>
+                    <th scope="col">Preço final</th>
+                    
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                </table>
+                </div>
 
-    <head>
-        <link rel="stylesheet" href="/stylesheets/style.css">
-    </head>
 
-    <body>
-
-        <section class="main-finalizacao">
-            <div class="finalizacao-center">
-
-                <!--main-cta-->
-
-                <section class="finalizacao-container-finalizacao"
-                    style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
-                    <article>
-                        <h2>Descrição</h2>
-                    </article>
-
-                    <article>
-                        <h2>Quantidade</h2>
-                    </article>
-
-                    <article>
-                        <h2>Preço</h2>
-                    </article>
-
+             <div class="col-12 text">
                     <article>
                         <h2>Subtotal</h2>
                         <p>Frete</p>
@@ -52,8 +50,7 @@
                     </section>
 
         </section>
-        <!--main-->
-
+    
 
 
 
@@ -66,4 +63,4 @@
 
     </html>
 
-    <!--carrinho mantive sem footer/INCLUDE (BIA)-->
+    <!--carrinho mantive sem footer/INCLUDE (BIA)--> 
