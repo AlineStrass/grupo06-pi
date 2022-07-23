@@ -50,11 +50,13 @@
                       <%= produto.categoria.categoria %>
                     </td>
 
+
                     <td>
-                      <% for(imagem of ImagemProduto){ %>
-                      <img src="/images/produtos/<%=ImagemProduto.imagem%> " width="90px"/>
+                      
+                        <img src="/images/produtos/<%=ImagemProduto[0].imagem%> " width="90px"/>
+
                       <!-- <img src="/images/produtos/ produto[i].imagem[0]" /> -->
-                      <% } %>
+                      
                     </td>
 
                     <td class="acoes-btn">

@@ -180,7 +180,13 @@ const AdminController = {
     editarProduto: async (req, res) => {
         const {id} = req.params;
         const resultado = await db.Produto.findByPk(id);
-        res.render('admin/editarProdutos', {Produto: resultado})
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll();
+        res.render('admin/editarProdutos', {
+            Produto: resultado,
+            Categoria:categoria,
+            ImagemProduto: imagens,
+        })
     },
 
     acaoEditarProduto: async (req, res) => {

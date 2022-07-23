@@ -28,7 +28,18 @@
                             
                             <div>
                                 <label for="descricao">Categoria:</label>
-                                <input type="text" name="descricao" id="descricao" value="" required>
+                                <select name="categoria" class="form-select" aria-label="Default select example">
+                                        
+                                    <%for(categoria of Categoria) {%>
+                                        <option value="<%=categoria.id%>">
+                                            <%=categoria.categoria%>
+                                        </option>
+                                    <% } %>
+                                    
+                                </select>
+
+
+                                <!-- <input type="text" name="descricao" id="descricao" value="" required> -->
                             </div>
 
                             <div>
