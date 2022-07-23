@@ -1,13 +1,15 @@
 'use strict';
 
+const bcrypt = require("bcryptjs");
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     // PARA RODAR NO TERMINAL: SEQUELIZE DB:SEED:ALL
+    const senhaPadrao = bcrypt.hashSync('1234')
     await queryInterface.bulkInsert('admin', [
       {
-        id: 1,
-        username: "",
-        senha: ""
+        username: "asflores",
+        senha: senhaPadrao
       },
 
     ])

@@ -13,10 +13,9 @@ var PainelUsuarioController = require("../controllers/PainelUsuarioController");
 //ROTAS
 router.get('/',loginMiddleware, PainelUsuarioController.index);
 
-
-router.get('/editarCadastro/:id', PainelUsuarioController.editarCadastro);
-//router.put('/editarCadastro/:id', PainelUsuarioController.acaoEditarCadastro);
-router.delete('/deletar/:id', PainelUsuarioController.deletarCadastro);
+router.get('/editarCadastro/:id',loginMiddleware, PainelUsuarioController.editarCadastro);
+router.post('/editarCadastro/:id',loginMiddleware, PainelUsuarioController.acaoEditarCadastro);
+router.get('/deletar/:id',loginMiddleware, PainelUsuarioController.deletarCadastro);
 
 
 

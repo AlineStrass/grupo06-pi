@@ -14,38 +14,39 @@
                             <div>
                                 <label for="nome">Nome:</label>
                                 <input type="text" name="nome" id="nome" required>
-                            </div>
 
-                            <div>
-                                <label for="preco">Preço:</label>
-                                <input type="text" name="preco" id="preco" required>
-                            </div>
+                                <div>
+                                    <label for="preco">Preço:</label>
+                                    <input type="text" name="preco" id="preco" required>
+                                </div>
 
-                            <div>
-                                <label for="descricao">Descrição:</label>
-                                <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
-                            </div>
+                                <div>
+                                    <label for="descricao">Descrição:</label>
+                                    <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
+                                </div>
 
-                            <div>
-                                <label for="categoria">Categoria:</label>
-                                <select name="categoria">
-                                    <% for(let i = 0; i < Categoria.length; i++) { %>
-                                        <option name="descricao" id="descricao" value="<%= Categoria[i].id %>" required>
-                                            <%= Categoria[i].categoria %>
+                                <!-- erro por causa da option -->
+                                <div>
+                                    <label for="categoria">Categoria:</label>
+                                    <select name="categoria" class="form-select" aria-label="Default select example">
+                                        
+                                        <%for(categoria of Categoria) {%>
+                                            <option value="<%=categoria.id%>">
+                                                <%=categoria.categoria%>
+                                            </option>
                                         <% } %>
-                                    </option>
-                                    <!-- <input type="text" name="descricao" id="descricao" required> -->
-                                </select>
-                                
-                            </div>
+                                        
+                                    </select>
 
-                            <div>
-                                <label>Imagem:</label>
-                                <input type="file" name="imagemProduto" />
-                            </div>
+                                </div>
 
-                            <button class="btn-cadastroUsuarios" type="submit"
-                                action="acaoCadastrarProdutos">Cadastrar</button>
+                                <div>
+                                    <label>Imagem:</label>
+                                    <input type="file" name="imagemProduto" />
+                                </div>
+
+                                <button class="btn-cadastroUsuarios" type="submit"
+                                    action="acaoCadastrarProdutos">Cadastrar</button>
                         </fieldset>
                     </form>
 

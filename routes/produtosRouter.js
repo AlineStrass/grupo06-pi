@@ -16,6 +16,8 @@ router.get('/search', ProdutosController.search);
 
 
 router.get('/produtointerno', ProdutosController.produtoInterno);
+router.get('/produtointerno/:id', ProdutosController.infoProduto);
+
 router.get('/listarCategorias/:id',ProdutosController.listarCategorias);
 
 

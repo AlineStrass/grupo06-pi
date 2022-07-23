@@ -4,7 +4,6 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('clientes', {
       id: { type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-      onDelete: 'CASCADE',
       nomeCompleto: { type: Sequelize.DataTypes.STRING, allowNull: true },
       email: { type: Sequelize.DataTypes.STRING, allowNull: true },
       telefone: { type: Sequelize.DataTypes.STRING, allowNull: true },

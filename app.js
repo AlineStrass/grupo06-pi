@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+// var sessionStore = require('express-session-sequelize')(session.Store);
 var methodOverride = require('method-override');
 const res = require('express/lib/response');
 
@@ -13,6 +14,7 @@ var adminRouter = require('./routes/adminRouter');
 var produtosRouter = require('./routes/produtosRouter');
 var painelUsuarioRouter = require('./routes/painelUsuarioRouter')
 var clientesRouter = require('./routes/clientesRouter');
+const db = require('./database/models');
 
 
 var app = express();
@@ -22,8 +24,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+// var sequelizeSessionStore = new sessionStore({db: db.sequelize});
 app.use(session({
   secret:'projetoIntegrador-grupo06-HappyPet',
+  // store: sequelizeSessionStore,
   resave: true,
   saveUninitialized: true
 }));

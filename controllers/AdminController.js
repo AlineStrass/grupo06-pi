@@ -79,26 +79,27 @@ const AdminController = {
         res.redirect('/admin/usuarios')
     },
 
-    //editar usuarios
+    //editar usuarios - ok
     editarAdmin: async (req, res) =>{
         const {id} = req.params;
         const usuario = await db.Admin.findByPk(id);
-        res.render('admin/editarAdmin', {usuario})
+        res.render('admin/editarAdmin', {Admin: usuario})
     },
 
-    //tras sempre o ultimo usuario cadastrado????
     acaoEditarAdmin: async (req, res) => {
         const {id} = req.params;
-        const {username} = req.body;
-        const {senha} = bcrypt.hashSync(req.body.senha);
+        // console.log("aqui o id de açãoEditarAdmin",id)
+        const {username, senha} = req.body;
+        // console.log("aqui o username de acaoEditarAdmin",username)
+        // console.log("aqui req.body:", req.body)
         const resultado = await db.Admin.update({
             username,
-            senha
+            senha: bcrypt.hashSync(req.body.senha)
         },
         {
             where:{id: id}
         })
-        console.log(resultado)
+        // console.log(resultado)
         // mostra [1] para ok e [0] para erro
         res.redirect('/admin/usuarios')
     },
@@ -116,32 +117,57 @@ const AdminController = {
     //  --------- PRODUTOS -----------
     //renderiza a pg principal da lista de produtos
     adminProdutos: async (req, res) => {
-        const adminProdutos = await db.Produto.findAll({
-            include: ['categoria']
+        const adminProdutos = await db.Produto.findAll({include: ['categoria', 'imagem']});
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll();
+        console.log("imagens:", imagens)
+        console.log("req.file:",req.file)
+        return res.render('admin/adminProdutos', {
+            Produto: adminProdutos,
+            Categoria: categoria,
+            ImagemProduto: imagens
         })
-        return res.render('admin/adminProdutos', {Produto: adminProdutos})
     },
 
     //renderiza a página do formulario para adicionar produtos
-    adminProdutosCadastrar: (req, res) => { 
-        return res.render('admin/adminProdutosCadastrar')
+    //funciona mas sem o option
+    //está adicinando mais categorias, está errado, tem que adicionar produtos com o id da catgoria
+    adminProdutosCadastrar: async (req, res) => {
+        const categoria = await db.Categoria.findAll();
+        const imagens = await db.ImagemProduto.findAll();
+        const produto = await db.Produto.findAll();
+        
+        console.log("imagens:", imagens)
+        console.log(req.file)
+    
+        return res.render('admin/adminProdutosCadastrar',{
+            Categoria:categoria,
+            ImagemProduto: imagens,
+            Produto: produto
+        })
+        
     },
     
-    //cadastra novos produtos - está com ERRO
-    //ver pq não esta funcionando + campo de selec
+    //cadastra novos produtos
     acaoCadastrarProdutos: async (req, res) => {
+        // const {nome, preco, descricao, categoria, imagem} = req.body;
+        // console.log("aqui o req.body:", req.body)
+        // await db.Produto.create({
+        //     nome, preco, descricao, categoria: categoria, imagem
+        // },{ include: ["categoria", "imagem"] })
+        // res.redirect('/admin/produtos')
+        
         const cadastrarProdutos = {
             nome: req.body.nome,
             preco: req.body.preco,
             descricao: req.body.descricao,
             categoria: {
                 id: req.body.id,
-                nome: req.body.nome,
+                categoria: req.body.categoria,
             },
-            imagem: {
+            imagemProduto: {
                 id: req.body.id,
-                imagem: req.body.imagem,
-                //imagem:req.file.imagem,
+                imagem:req.file.imagemProduto,
             },
         }
         await db.Produto.create(cadastrarProdutos, 
@@ -151,13 +177,22 @@ const AdminController = {
 
     },
 
- /*   acaoEditarProdutos: async (req, res) => {
+    editarProduto: async (req, res) => {
         const {id} = req.params;
-        const {nome, preco, descricao, imagem} = req.body;
+        const resultado = await db.Produto.findByPk(id);
+        res.render('admin/editarProdutos', {Produto: resultado})
+    },
+
+    acaoEditarProduto: async (req, res) => {
+        const {id} = req.params;
+        console.log("aqui o id de açãoEditarProduto",id)
+        const {nome, preco, descricao,categoria, imagem} = req.body;
+        console.log("aqui o req.body",req.body)
         const resultado = await db.Produto.update({
             nome,
             preco,
             descricao,
+            categoria,
             imagem
         },
         {
@@ -167,11 +202,11 @@ const AdminController = {
         // mostra [1] para ok e [0] para erro
         res.redirect('/admin/produtos')
     },
-*/
-    
+
+    // excluir produto - ok
     deletarProduto: async (req, res) => {
         const {id} = req.params;
-        const resultado = await db.Admin.destroy({
+        const resultado = await db.Produto.destroy({
             where:{id: id}
         })
         console.log(resultado)

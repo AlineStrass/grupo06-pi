@@ -27,8 +27,9 @@
   </head>
 
   <body>
-    <section class="container sproduct my-5 pt-5">
+    <section class="container sproduct my-5 pt-5" action="/produtos/produtointerno/<%=produto.id%>" method="GET">
       <div class="row mt-5">
+        <!-- carregamento das imagens do produto -->
         <div class="col-lg-5 col-md-12 col-12">
           <img class="img-fluid w-100 pb-1" src="/images/produtos/caixaTransporte5.png" id="MainImg" alt="">
 
@@ -54,16 +55,12 @@
 
         
           <div class="col-lg-6 col-md-12 col-12">
-            <h1 id="nomeProduto" class="py-2" value="<%= produto.nome %>"><%= produto.nome %></h1>
+            <h1 id="nomeProduto" class="py-2" value="<%= Produto.nome %>"><%= produto.nome %></h1>
             <h3 class="mt-3 mb-3">Informações</h3>
             <ul>
-              <li>Indicada para cães e gatos;</li>
-              <li>Oferece conforto e segurança;</li>
-              <li>Desenvolvida para ter o máximo de ventilação com aberturas nas laterais e na parte traseira;</li>
-              <li>Elegante e confortável;</li>
-              <li>Ideal para viagens de curta e longa duração</li>
+              <li><%= produto.descricao %></li>
             </ul>
-            <h2 id="price" class="price">R$ 250,00</h2>
+            <h2 id="price" class="price"><%= produto.preco %></h2>
             <button class="botao-produto-interno">Adicionar ao carrinho</button>
           </div>
         
