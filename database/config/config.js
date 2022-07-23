@@ -1,7 +1,5 @@
 module.exports = {
   "development": {
-    "username": "asflores",
-    "password": 'pitty1508',
     "database": "happyPet", /*happyPet é o nome da nossa DATABASE----- (database_development)ESCRITO antes sequelize*/
     "host": "127.0.0.1",
     "dialect": "mysql"
