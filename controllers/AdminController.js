@@ -130,16 +130,13 @@ const AdminController = {
     },
 
     //renderiza a página do formulario para adicionar produtos
-    //funciona mas sem o option
-    //está adicinando mais categorias, está errado, tem que adicionar produtos com o id da catgoria
     adminProdutosCadastrar: async (req, res) => {
         const categoria = await db.Categoria.findAll();
         const imagens = await db.ImagemProduto.findAll();
         const produto = await db.Produto.findAll();
         
         console.log("imagens:", imagens)
-        console.log(req.file)
-    
+            
         return res.render('admin/adminProdutosCadastrar',{
             Categoria:categoria,
             ImagemProduto: imagens,
@@ -150,13 +147,6 @@ const AdminController = {
     
     //cadastra novos produtos
     acaoCadastrarProdutos: async (req, res) => {
-        // const {nome, preco, descricao, categoria, imagem} = req.body;
-        // console.log("aqui o req.body:", req.body)
-        // await db.Produto.create({
-        //     nome, preco, descricao, categoria: categoria, imagem
-        // },{ include: ["categoria", "imagem"] })
-        // res.redirect('/admin/produtos')
-        
         const cadastrarProdutos = {
             nome: req.body.nome,
             preco: req.body.preco,
@@ -167,11 +157,12 @@ const AdminController = {
             },
             imagemProduto: {
                 id: req.body.id,
-                imagem:req.file.imagemProduto,
+                imagem:req.file,
             },
         }
+        const categoria = await db.Categoria.findAll();
         await db.Produto.create(cadastrarProdutos, 
-            { include: ["categoria", "imagem"] })
+            { include: ["categoria", "imagem"] },{categoria: categoria})
         console.log(cadastrarProdutos)
         res.redirect('/admin/produtos')
 
@@ -182,6 +173,8 @@ const AdminController = {
         const resultado = await db.Produto.findByPk(id);
         const categoria = await db.Categoria.findAll();
         
+        // console.log("id:", id)
+        // console.log("produtos:", resultado)
         res.render('admin/editarProdutos', {
             Produto: resultado,
             Categoria:categoria,
