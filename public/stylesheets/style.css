@@ -84,7 +84,7 @@ h1.admin {
     color: #6A5A95;
 }
 
-/* ------- FIM DA PÁGINA ADMIN -----------------*/
+/* ------- FIM DA P�GINA ADMIN -----------------*/
 
 /* ------- PAGINA HOME -----------------------*/
 .banner-home {
@@ -106,11 +106,15 @@ h1.home, li.home {
         width: 100%;
         align-items: center;
         border-radius: 10px;
+       
+       
 }
 
     .carrossel-home img{
     width: 33%;
     height: 50vh;
+   
+  
     
     
 }
@@ -355,7 +359,7 @@ form button.login-cadastro:hover {
 }
 /*--------- FINAL DO LOGIN E CRIAR CONTA --------------*/
 
-/*--------------- Página DE PRODUTOS ----------------*/
+/*--------------- P�gina DE PRODUTOS ----------------*/
 
 .produtos-container{
     background-color: #EFEFEF;
@@ -647,8 +651,15 @@ button.botao-produto-interno:hover {
 .produto-interno {
     text-decoration: none;
 }
+
+h4.mb-3{ color: #6A5482;}
+
+h6.my-0{ color: #6A5482 }
+h6.text{ color: #6A5482}
+
+
   
-/*CSS da página PAINEL DO USUÁRIO */
+/*CSS da p�gina PAINEL DO USU�RIO */
 
 /* -------css do botao de salvar dos meus dados */
 .col-md-12 {
@@ -690,7 +701,7 @@ th, td {
 
 }
 
-/*--------------- CSS PÁGINAS ADMINISTRATIVAS -------------- */
+/*--------------- CSS P�GINAS ADMINISTRATIVAS -------------- */
 
 /* ADMIN */
  
@@ -937,7 +948,7 @@ main.admin .cadastroProdutos{
     }
 }
 
-/* Página de cadastro--------EM LOGIN---------- */
+/* P�gina de cadastro--------EM LOGIN---------- */
 mains form.criar-conta {
     display: inline;
     
