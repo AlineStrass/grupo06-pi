@@ -1,20 +1,23 @@
 <%- include('./partials/header') %>
-  <%- include('./partials/head') %>
+  
+    <%- include('./partials/head') %>
 
-  <!-- carrinho direito--> 
+ 
+    <!-- carrinho lado direito--> 
 
   <body> 
     <div class="row"> 
        <div class="col-md-4 order-md-2 mb-4"> 
-         <h4 class="d-flex justify-content-between align-items-center mb-3"> 
-            <span class="text-muted">Seu carrinho</span> 
-            <span class="badge badge-secondary badge-pill">3</span> 
+         <h4 class="d-flex justify-content-between align-items-center mb-3">  <!--CENTRALIZAR DIV CARRINHO, E TEXTOS-->
+           <h4 class="mb-3">Seu carrinho</h4>
          </h4> 
+
+            <!--itens carrinho-->
             <ul class="list-group mb-3"> 
             <li class="list-group-item d-flex justify-content-between lh-condensed"> 
     <div> 
             <h6 class="my-0">Nome do produto</h6> 
-            <small class="text-muted">Breve descrição</small> 
+            <small class="text-muted">Breve descrição</small>
     </div> 
             <span class="text-muted">R$12</span> 
         </li> 
@@ -32,14 +35,15 @@
     </div> 
             <span class="text-muted">R$5</span> 
     </li> 
-            
+            <!--total a pagar-->
             <li class="list-group-item d-flex justify-content-between"> 
                 <h6 class="my-0">TOTAL (BRL)</h6> 
             <strong>R$20</strong> 
         </li> 
     </ul> 
 </div> 
- <!--dados do comprador/cliente /--> 
+
+ <!--dados do comprador /--> 
 
     <div class="col-md-8 order-md-1"> 
         <h4 class="mb-3">Dados da compra</h4> 
@@ -47,223 +51,51 @@
                  <div class="col-md-9 mb-3"> 
                    <label for="primeiroNome">Nome </label> 
                    <input type="text" class="form-control" id="primeiroNome" placeholder="" value="" required=""> 
-               </div> 
-               
+                 </div>   
+            </div>
+              
+    <div class="mb-3"> 
+        <div class="col-md-9 mb-3"> 
+            <label for="email">Email <span class="text-muted"></span></label> 
+            <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com"> 
+        </div> 
+    </div>
 
+ <!--Pagamento-->
+
+    <h4 class="mb-3">Pagamento</h4>
+    <div class="d-block my-3"> </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3"> 
+                  <label for="cc-numero">Número do cartão </label> 
+                  <input type="text" class="form-control" id="cc-numero" placeholder="" required=""> 
             </div> 
-
-
- 
-
-            <div class="mb-3"> 
-                <div class="col-md-9 mb-3"> 
-              <label for="email">Email <span class="text-muted"></span></label> 
-
-              <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com"> 
-
-            </div> 
-        </div>
- 
-             <hr class="mb-4"> 
-
-            <div class="custom-control custom-checkbox"> 
-
-              <input type="checkbox" class="custom-control-input" id="mesmo-endereco"> 
-
-              <label class="custom-control-label" for="mesmo-endereco">Endereço de entrega é o mesmo que o de cobrança.</label> 
-
-            </div> 
-
-            <div class="custom-control custom-checkbox"> 
-
-              <input type="checkbox" class="custom-control-input" id="salvar-info"> 
-
-              <label class="custom-control-label" for="salvar-info">Lembrar desta informação, na próxima vez.</label> 
-
-            </div> 
-
-            <hr class="mb-4"> 
-
-     
-
-            <h4 class="mb-3">Pagamento</h4> 
-
- 
-
-            <div class="d-block my-3"> 
-
-              <div class="custom-control custom-radio"> 
-
-                <input id="credito" name="paymentMethod" type="radio" class="custom-control-input" checked="" required=""> 
-
-                <label class="custom-control-label" for="credito">Cartão de crédito</label> 
-
-              </div> 
-
-              <div class="custom-control custom-radio"> 
-
-                <input id="debito" name="paymentMethod" type="radio" class="custom-control-input" required=""> 
-
-                <label class="custom-control-label" for="debito">Cartão de débito</label> 
-
-              </div> 
-
-              <div class="custom-control custom-radio"> 
-
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required=""> 
-
-                <label class="custom-control-label" for="paypal">PayPal</label> 
-
-              </div> 
-
-            </div> 
-
-            <div class="row">
-
-              <div class="col-md-6 mb-3"> 
-
-                <label for="cc-numero">Número do cartão </label> 
-
-                <input type="text" class="form-control" id="cc-numero" placeholder="" required=""> 
-
-
-
-
-              </div> 
-
-            </div> 
-
-            <div class="row"> 
-
-              <div class="col-md-3 mb-3"> 
-
-                <label for="cc-expiracao">Data de expiração</label> 
-
-                <input type="text" class="form-control" id="cc-expiracao" placeholder="" required=""> 
-
-                <div class="invalid-feedback"> 
-
-                  Data de expiração é obrigatória. 
-
-                </div> 
-
-              </div> 
-
-              <div class="col-md-3 mb-3"> 
-
-                <label for="cc-cvv">CVV</label> 
-
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required=""> 
-
-              </div> 
-
-            </div> 
-
-            <hr class="mb-4"> 
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar</button> 
-
-          </form> 
-
+        </div> 
+    
+        <div class="row"> 
+            <div class="col-md-3 mb-3"> 
+                  <label for="cc-expiracao">Data de expiração</label> 
+                  <input type="text" class="form-control" id="cc-expiracao" placeholder="" required=""> 
         </div> 
 
+        <div class="col-md-3 mb-3"> 
+                  <label for="cc-cvv">CVV</label> 
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required=""> 
+            </div> 
+        </div> 
+        
+        <hr class="mb-4"> 
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar</button> 
+
+        </form> 
       </div> 
+    </div> 
+ </body> 
 
 
-
-
-
-</body> 
-
-
+<%- include('./partials/footer') %>
 
 
   
- <!--  <body>
-      <div class="container">
-         <div class="row">
-             <form action="/carrinho" method="POST" class="carrinho" enctype="multipart/form-data"></form>
-               <class style="display: flex; justify-content: center; flex-direction: column;"></style>
-                    <table class="table table-bordered" action="/carrinho" method="GET">
-                        <h1 class="title-admin">CARRINHO</h1>
-                 <thead> 
-                   <tr>
-                    <th scope="col">Produto</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Preço Unitário</th>
-                    <th scope="col">Preço final</th>
-                    
-                    <th>Ações</th>
-                  </tr>
-                </thead>
-                </table>
-                </div>
-             <div class="col-12 text">
-                    <article>
-                        <h2>Subtotal</h2>
-                        <p>Frete</p>
-                        <p>Desconto</p>
-                        <p>Total</p>
-                    </article>
-                </section>
-                <div class="main-finalizacao__cta">
-                    <p>Calcule o frete e prazo</p>
-                    <label for="text"></label>
-                    <input type="text" id="frete" name="frete" placeholder="CEP">
-                    <button class="calcular-frete-finalizacao">Não sei meu CEP</button>
-                </div>
-                <div class="main__cta">
-                    <section class="escolher-finalizacao">
-                       <a href="/produtos">
-                        <button class="calcular-frete-carrinho">Escolher mais produtos</button>
-                    </a>
-                    <a href="/finalizar">
-                        <button class="calcular-frete-carrinho">Finalizar Compra</button>
-                    </a>
-                    </section>
-        </section>
-    
-        <script src="https://kit.fontawesome.com/0822f5875d.js" crossorigin="anonymous"></script>
-    </body>
-    </html>
-    <section class="finalizacao-container" style="display: flex; flex-wrap:wrap; justify-content:space-between; width: 100%;">
-        <article>
-            <h2>Confirmação final</h2>
-            <h5>Dados do comprador</h5>
-            <p>Nome</p>
-            <p>Sobrenome</p>
-            <p>Endereço</p>
-            <p>Cep</p>
-            <p>Cidade</p>
-            <button class = "calcular-frete-finalizacao">Alterar dados</button>
-        </article>
-        <article>
-            <h2>Finalizar compra</h2>
-            <h5>Endereço de entrega</h5>
-            <p>Nome</p>
-            <p>Sobrenome</p>
-            <p>Endereço</p>
-            <p>Cep</p>
-            <p>Cidade</p>
-            <button class ="calcular-frete-finalizacao">Mudar endereço</button>
-        </article>
-        <article>
-            <h2>Produto</h2>
-            <p>Quantidade</p>
-            <p>Valor</p>
-            <p>Desconto</p>
-            <p>Total</p>
-        </article>
-    </section>
-    <section class="entrega-finalizacao" style="margin-top: 50px;">
-        <h2>Previsão de entrega</h2>
-        <p>o prazo de entrega começ a contar apos aprovação da instituição financeira</p>
-    </section>
-    <div class="main-finalizacao__cta">
-        <button class="calcular-frete-finalizacao">Finalizar Compra</button>
-    </div>
-</section>
-<script src="https://kit.fontawesome.com/0822f5875d.js" crossorigin="anonymous"></script>
-</body>
-</html>
-finalizar mantive sem footer/INCLUDE (BIA)-->
+ 
