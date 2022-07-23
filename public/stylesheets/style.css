@@ -631,6 +631,13 @@ button.botao-produto-interno:hover {
 .produto-interno {
     text-decoration: none;
 }
+
+h4.mb-3{ color: #6A5482;}
+
+h6.my-0{ color: #6A5482 }
+h6.text{ color: #6A5482}
+
+
   
 /*CSS da página PAINEL DO USUÁRIO */
 
