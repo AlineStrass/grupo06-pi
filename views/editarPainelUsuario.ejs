@@ -8,19 +8,19 @@
 
     <body>
         <section class="container paine-usuario-conteudo">
-            
+
             <div class="meus-dados">
                 <h2>MEUS DADOS</h2>
 
                 <form action="/painelUsuario/editarCadastro/<%=Cliente.id%>" method="POST" class="meus-dados-form mt-4">
-                                    
+
                     <div class="row" style="
                     height: 58px;">
                         <div class="col-md-12 col-xs-2">
                             <div class="form-group">
                                 <label for="nomeCompleto">Nome Completo</label>
-                                <input type="text" name="nomeCompleto" class="form-control" value="<%= Cliente.nomeCompleto %>"
-                                    required>
+                                <input type="text" name="nomeCompleto" class="form-control"
+                                    value="<%= Cliente.nomeCompleto %>" required>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-md-8 col-xs-4">
                             <div class="form-group">
-                                <label for="senha">Nova senha:</label>
+                                <label for="senha">Nova senha / Confirme sua senha:</label>
                                 <input type="password" name="senha" class="form-control" required>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <label for="cep">CEP:</label>
                                 <input type="text" name="cep" class="form-control"
-                                    value="<%= Cliente.enderecos[0].cep %>" >
+                                    value="<%= Cliente.enderecos[0].cep %>">
                             </div>
                         </div>
                     </div>
@@ -69,12 +69,12 @@
                         </div>
                     </div>
 
-                    <div class="row" >
+                    <div class="row">
                         <div class="col-md-8 col-xs-4">
                             <div class="form-group">
                                 <label for="numero">Número:</label>
                                 <input type="text" name="numero" class="form-control"
-                                    value="<%= Cliente.enderecos[0].numero %>" >
+                                    value="<%= Cliente.enderecos[0].numero %>">
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-4">
@@ -115,16 +115,18 @@
                     <div class="row">
                         <div class="col-md-12 text-end mt-4">
 
-                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit" action="/painelUsuario/acaoEditarCadastro/<%=Cliente.id%>">Salvar</button>
+                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"
+                                action="/painelUsuario/acaoEditarCadastro/<%=Cliente.id%>">Salvar</button>
 
-                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a href="/painelUsuario"> Voltar</a></button>
+                            <button class="btn btn-primary btn-lg" id="submit-button" type="submit"><a
+                                    href="/painelUsuario"> Voltar</a></button>
                         </div>
                     </div>
                 </form>
 
             </div>
 
-           
+
         </section>
 
 

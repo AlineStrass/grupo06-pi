@@ -26,12 +26,12 @@ const PainelUsuarioController = {
     // função que salva as infos - não está salvando no db
     acaoEditarCadastro: async (req, res) => {
         const { id } = req.params;
-        const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body; 
+        const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body;
         console.log("aqui o ID:" , id)
-        console.log("req.body:" , req.body)
         console.log("senha:",senha)
         console.log("infos cliente:", nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
-        const resultado = await db.Cliente.update({
+        const resultado = await db.Cliente.update(
+            {
             nomeCompleto: nomeCompleto,
             email: email,
             telefone: telefone,
@@ -46,7 +46,8 @@ const PainelUsuarioController = {
         },
             {
                 where: { id: id }
-            })
+            },
+        )
         console.log(resultado)
         // mostra [1] para ok e [0] para erro
         res.redirect('/painelUsuario')
