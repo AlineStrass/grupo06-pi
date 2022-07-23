@@ -23,13 +23,13 @@ const PainelUsuarioController = {
         })
     },
     
-    // função que salva as infos - não está salvando no db
+    // função que salva as infos do cliente
     acaoEditarCadastro: async (req, res) => {
         const { id } = req.params;
         const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body;
-        console.log("aqui o ID:" , id)
-        console.log("senha:",senha)
-        console.log("infos cliente:", nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
+        // console.log("aqui o ID:" , id)
+        // console.log("senha:",senha)
+        // console.log("infos cliente:", nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
         const resultado = await db.Cliente.update(
             {
             nomeCompleto: nomeCompleto,
