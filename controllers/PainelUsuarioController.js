@@ -36,6 +36,12 @@ const PainelUsuarioController = {
             email: email,
             telefone: telefone,
             senha: bcrypt.hashSync(req.body.senha),
+        },
+            {
+                where: { id: id }
+            },
+        )
+        const resultEndereco = await db.Endereco.update({ 
             cep: cep,
             rua: rua,
             numero: numero,
@@ -45,29 +51,25 @@ const PainelUsuarioController = {
             estado: estado,
         },
             {
-                where: { id: id }
+                where: { clientes_id: id }
             },
         )
+        console.log(resultEndereco)
         console.log(resultado)
         // mostra [1] para ok e [0] para erro
         res.redirect('/painelUsuario')
     },
 
-    //não esta deletando por causa do vinculo com a tabela de endereços
+    //ação deletar cadastro de cliente
     deletarCadastro: async (req, res) => {
     console.log("entrou deletar cadastro")
         const {id} = req.params;
 
-        // const cadastroCliente = await db.Cliente.findAll({
-        //     where: {id: cadastroCliente.id}
-        // })
-        // console.log("cadastroclente", cadastroCliente)
         await db.Endereco.destroy({where: {clientes_id: id}})
-        console.log("aqui é o id:", id)
+        // console.log("aqui é o id:", id)
 
         const resultado = await db.Cliente.destroy({ where:{id: id} })
-        console.log("aqui é o resultado:", resultado)
-        console.log("aqui depois do delete")
+        // console.log("aqui é o resultado:", resultado)
         req.session.logado = false
         res.redirect('/')
     },
