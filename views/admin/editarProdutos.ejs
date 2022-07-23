@@ -27,7 +27,7 @@
 
                             
                             <div>
-                                <label for="descricao">Categoria:</label>
+                                <label for="categoria">Categoria:</label>
                                 <select name="categoria" class="form-select" aria-label="Default select example">
                                         
                                     <%for(categoria of Categoria) {%>
@@ -37,9 +37,6 @@
                                     <% } %>
                                     
                                 </select>
-
-
-                                <!-- <input type="text" name="descricao" id="descricao" value="" required> -->
                             </div>
 
                             <div>
@@ -47,10 +44,13 @@
                                 <input type="file" name="imagemProduto" multiple/>
                             </div>
 
-                            <button type="submit" action="/admin/acaoEditarProduto/<%=produto.id%>" class="btn-cadastroProdutos">Cadastrar</button>
+                            <button type="submit" action="/admin/acaoEditarProduto/<%=produto.id%>" class="btn-cadastroProdutos">Salvar</button>
+
+                            <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
+
                         </fieldset>
+                        
                     </form>
-                    <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
                 </div>
             </main>
     </body>

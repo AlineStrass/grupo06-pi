@@ -181,11 +181,11 @@ const AdminController = {
         const {id} = req.params;
         const resultado = await db.Produto.findByPk(id);
         const categoria = await db.Categoria.findAll();
-        const imagens = await db.ImagemProduto.findAll();
+        
         res.render('admin/editarProdutos', {
             Produto: resultado,
             Categoria:categoria,
-            ImagemProduto: imagens,
+            
         })
     },
 
@@ -193,7 +193,7 @@ const AdminController = {
         const {id} = req.params;
         console.log("aqui o id de açãoEditarProduto",id)
         const {nome, preco, descricao,categoria, imagem} = req.body;
-        console.log("aqui o req.body",req.body)
+        console.log("dados produto", nome, preco, descricao,categoria, imagem)
         const resultado = await db.Produto.update({
             nome,
             preco,
