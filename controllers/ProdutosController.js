@@ -14,6 +14,7 @@ const ProdutosController = {
 
     // redireciona para a página do produto interno
     produtoInterno: async (req, res) => {
+        const {id} = req.params;
         const produtos = await db.Produto.findByPk(id);
         const imagens = await db.ImagemProduto.findAll();
 
