@@ -20,9 +20,6 @@ function carrinho () {
     let tabela = document.getElementById('infosProdutos');
     
     for(let i = 0; i < chavesValores.length; i++){
-        console.log(i)
-        console.log("chave:", chavesValores[i].chave)
-        console.log("valor:", chavesValores[i].valor)
         let tr = document.createElement('tr');
         tabela.appendChild(tr);
 
@@ -35,4 +32,24 @@ function carrinho () {
         tr.appendChild(thChave);
         tr.appendChild(thValor);
     }
+    let somaCarrinho = 0;
+
+    for(let i=0; i< chavesValores.length; i++){
+        console.log(parseFloat(chavesValores[i].valor))
+        somaCarrinho += parseFloat(chavesValores[i].valor)
+    
+    }
+
+    let tr = document.createElement('tr');
+    tabela.appendChild(tr);
+
+    let total = document.createElement('th');
+    total.innerHTML="Total:";
+
+    let soma = document.createElement('th');
+    soma.innerHTML = somaCarrinho;
+        
+    tr.appendChild(total);
+    tr.appendChild(soma);
+    console.log("soma:",somaCarrinho)
 }

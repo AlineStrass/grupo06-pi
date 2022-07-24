@@ -3,9 +3,9 @@ let botaoComprar = document.querySelector('.botao-produto-interno').addEventList
     let precoProduto = document.getElementById('price').innerText
     console.log(nomeProduto, precoProduto)
     
-    localStorage.clear();
+    // localStorage.clear();
     localStorage.setItem(nomeProduto,precoProduto) 
-    localStorage.setItem("Latinha","50.00")
+    // localStorage.se tItem("Latinha","50.00")
 
    
 
