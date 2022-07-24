@@ -43,7 +43,7 @@
             <section class="produtos-container-section" action="/produtos" method="GET" enctype="multipart/form-data">
                 <% for(produto of Produto) { %>
                     <div class="produtos-container-card">
-                        <a class="box-produtos" href="/produtos/produtointerno">
+                        <a class="box-produtos" href="/produtos/produtointerno/<% produto.id %> ">
                             <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
                                 <img src="/images/produtos/<%= produto.imagem.imagem %>"/>
                             </div>

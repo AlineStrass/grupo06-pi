@@ -9,13 +9,18 @@ const ProdutosController = {
         const produtos = await db.Produto.findAll({
             include: ['categoria', 'imagem'],
         })
-        
         return res.render('produtos', {Produto: produtos})
     },
 
     // redireciona para a página do produto interno
-    produtoInterno: (req, res) => {
-        return res.render('produtoInterno')
+    produtoInterno: async (req, res) => {
+        const produtos = await db.Produto.findByPk(id);
+        const imagens = await db.ImagemProduto.findAll();
+
+        return res.render('produtoInterno',{
+            produto: produtos,
+            ImagemProduto: imagens
+        })
     },
 
     //mostra as informações da pg de produto interno
