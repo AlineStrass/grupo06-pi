@@ -53,3 +53,5 @@ function carrinho () {
     tr.appendChild(soma);
     console.log("soma:",somaCarrinho)
 }
+
+// .toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})

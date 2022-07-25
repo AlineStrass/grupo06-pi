@@ -64,7 +64,7 @@
             </li>
           </ul>
           <h2 id="price" class="price">
-            <%= produto.preco %>
+            <%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
           </h2>
           <button class="botao-produto-interno">Adicionar ao carrinho</button>
         </div>
@@ -107,7 +107,7 @@
     </script>
 
     <!-- <script type="text/javascript" src="/js/carrinho.js"></script> -->
-    <script src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 
   </body>
 
