@@ -11,8 +11,15 @@
             <form class="criar-conta" action="/admin/acaologin" method="post">
                 <h2 class="login">Acesso Painel Administrativo</h2>
 
-                <div class="dados-cadastrais-conta">
+                <% if(typeof(error) != "undefined"){ %>
+                    <div class="alert alert-danger">
+                        <% for(let i = 0; i < error.length; i++){ %>
+                            Usuário e/ou senha não encontrado
+                        <% } %>
+                    </div>
+                <% } %> 
 
+                <div class="dados-cadastrais-conta">
                         <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="username">Username:</label>
                         <input class="inserir-dados-cadastro" type="text" id="username" name="username" placeholder="Nome de usuário">
