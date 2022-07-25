@@ -7,7 +7,7 @@ const ProdutosController = {
     // Trás todos os produtos 
     index: async (req, res) => {
         const produtos = await db.Produto.findAll({
-            include: ['categoria', 'imagem'],
+            include: ['categoria'],
         })
         return res.render('produtos', {Produto: produtos})
     },
@@ -16,11 +16,11 @@ const ProdutosController = {
     produtoInterno: async (req, res) => {
         const {id} = req.params;
         const produtos = await db.Produto.findByPk(id);
-        const imagens = await db.ImagemProduto.findAll();
+        // const imagens = await db.ImagemProduto.findAll();
 
         return res.render('produtoInterno',{
             produto: produtos,
-            ImagemProduto: imagens
+            // ImagemProduto: imagens
         })
     },
 
@@ -55,13 +55,13 @@ const ProdutosController = {
     listarCategorias: async  (req, res) => {
         const {id} = req.params;
         const produtos = await db.Produto.findAll({
-            include: ['categoria', 'imagem'],
+            include: ['categoria'],
         })
-        const imagens = await db.ImagemProduto.findAll();
+        // const imagens = await db.ImagemProduto.findAll();
         const categoria = produtos.filter(({categorias_id}) => categorias_id == id)
         res.render("produtos", {
             Produto: categoria,
-            ImagemProduto: imagens
+            // ImagemProduto: imagens
         })
     },
 

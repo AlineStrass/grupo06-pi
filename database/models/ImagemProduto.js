@@ -12,6 +12,12 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     });
 
+    // ImagemProduto.associate = (listaDeModelos) => {
+    //     ImagemProduto.hasMany(listaDeModelos.Produto, {
+    //     foreignKey: 'produtos_id',
+    //     as: 'imagens'
+    // })
+    // }
    /* ImagemProduto.associate = (listaDeModelos) => {
         ImagemProduto.belongsTo(listaDeModelos.Produto, {
             foreignKey: 'produtos_id',
