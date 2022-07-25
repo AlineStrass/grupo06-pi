@@ -45,10 +45,10 @@ router.get('/deletar/:id', AdminController.deletarAdmin);
 router.get('/produtos',  AdminController.adminProdutos);
 
 router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
-router.post('/acaoCadastrarProdutos', upload.array('imagemProduto'), AdminController.acaoCadastrarProdutos);
+router.post('/acaoCadastrarProdutos', upload.single('imagemProduto'), AdminController.acaoCadastrarProdutos);
 
 router.get('/editarProduto/:id', AdminController.editarProduto);
-router.post('/editarProduto/:id',upload.array('imagemProduto'), AdminController.acaoEditarProduto);
+router.post('/editarProduto/:id',upload.single('imagemProduto'), AdminController.acaoEditarProduto);
 
 router.get('/deletarProduto/:id', AdminController.deletarProduto);
 

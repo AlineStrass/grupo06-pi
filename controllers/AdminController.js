@@ -130,18 +130,15 @@ const AdminController = {
 
     //renderiza a página do formulario para adicionar produtos
     adminProdutosCadastrar: async (req, res) => {
-        const categoria = await db.Categoria.findAll();
-        // const imagens = await db.fotoProduto.findAll();
         const produto = await db.Produto.findAll();
-        
-        console.log("imagens:", imagens)
+        const categoria = await db.Categoria.findAll();
+        // const imagens = await db.ImagemProduto.findAll();
             
         return res.render('admin/adminProdutosCadastrar',{
+            Produto: produto,
             Categoria:categoria,
             // fotoProduto: imagens,
-            Produto: produto
         })
-        
     },
     
     //cadastra novos produtos
@@ -150,20 +147,21 @@ const AdminController = {
             nome: req.body.nome,
             preco: req.body.preco,
             descricao: req.body.descricao,
-            foto: req.body.foto,
+            foto: req.file.filename,
             categoria: {
                 id: req.body.id,
                 categoria: req.body.categoria,
             },
-            // fotoProduto: {
+            // ImagenProduto: {
             //     id: req.body.id,
             //     foto:req.file,
             // },
         }
+        console.log("foto do produto:", cadastrarProdutos.foto)
         // const categoria = await db.Categoria.findAll();
         await db.Produto.create(cadastrarProdutos, 
             { include: ["categoria"] })
-        console.log(cadastrarProdutos)
+        // console.log(cadastrarProdutos)
         res.redirect('/admin/produtos')
 
     },
@@ -184,15 +182,14 @@ const AdminController = {
 
     acaoEditarProduto: async (req, res) => {
         const {id} = req.params;
-        console.log("aqui o id de açãoEditarProduto",id)
         const {nome, preco, descricao,categoria, foto} = req.body;
-        console.log("dados produto", nome, preco, descricao,categoria, foto)
+        // console.log("dados produto", nome, preco, descricao,categoria, foto)
         const resultado = await db.Produto.update({
             nome,
             preco,
             descricao,
+            foto: req.file.filename,
             categoria,
-            foto
         },
         {
             where:{id: id}
