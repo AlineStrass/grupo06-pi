@@ -12,8 +12,8 @@
                 <div class="produtos-container-card">
                     <a class="box-produtos" href="/produtos/produtointerno/<%= produto.id %>">
 
-                        <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
-                            <img src="/images/produtos/<%= produto.imagem.imagem %>" />
+                        <div class="produtos-container-image" value="<%= produto.foto %>" id="produtos-img">
+                            <img src="/images/produtos/<%=produto.foto%> "width="50%"/>
                         </div>
 
                         <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">

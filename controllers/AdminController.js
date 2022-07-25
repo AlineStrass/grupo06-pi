@@ -117,29 +117,28 @@ const AdminController = {
     //  --------- PRODUTOS -----------
     //renderiza a pg principal da lista de produtos
     adminProdutos: async (req, res) => {
-        const adminProdutos = await db.Produto.findAll({include: ['categoria', 'imagem']});
+        const adminProdutos = await db.Produto.findAll({include: ['categoria']});
         const categoria = await db.Categoria.findAll();
-        const imagens = await db.ImagemProduto.findAll();
-        console.log("imagens:", imagens)
-        console.log("req.file:",req.file)
+        // const imagens = await db.fotoProduto.findAll();
+       
         return res.render('admin/adminProdutos', {
             Produto: adminProdutos,
             Categoria: categoria,
-            ImagemProduto: imagens
+            // fotoProduto: imagens
         })
     },
 
     //renderiza a página do formulario para adicionar produtos
     adminProdutosCadastrar: async (req, res) => {
         const categoria = await db.Categoria.findAll();
-        const imagens = await db.ImagemProduto.findAll();
+        // const imagens = await db.fotoProduto.findAll();
         const produto = await db.Produto.findAll();
         
         console.log("imagens:", imagens)
             
         return res.render('admin/adminProdutosCadastrar',{
             Categoria:categoria,
-            ImagemProduto: imagens,
+            // fotoProduto: imagens,
             Produto: produto
         })
         
@@ -151,18 +150,19 @@ const AdminController = {
             nome: req.body.nome,
             preco: req.body.preco,
             descricao: req.body.descricao,
+            foto: req.body.foto,
             categoria: {
                 id: req.body.id,
                 categoria: req.body.categoria,
             },
-            imagemProduto: {
-                id: req.body.id,
-                imagem:req.file,
-            },
+            // fotoProduto: {
+            //     id: req.body.id,
+            //     foto:req.file,
+            // },
         }
-        const categoria = await db.Categoria.findAll();
+        // const categoria = await db.Categoria.findAll();
         await db.Produto.create(cadastrarProdutos, 
-            { include: ["categoria", "imagem"] },{categoria: categoria})
+            { include: ["categoria"] })
         console.log(cadastrarProdutos)
         res.redirect('/admin/produtos')
 
@@ -185,14 +185,14 @@ const AdminController = {
     acaoEditarProduto: async (req, res) => {
         const {id} = req.params;
         console.log("aqui o id de açãoEditarProduto",id)
-        const {nome, preco, descricao,categoria, imagem} = req.body;
-        console.log("dados produto", nome, preco, descricao,categoria, imagem)
+        const {nome, preco, descricao,categoria, foto} = req.body;
+        console.log("dados produto", nome, preco, descricao,categoria, foto)
         const resultado = await db.Produto.update({
             nome,
             preco,
             descricao,
             categoria,
-            imagem
+            foto
         },
         {
             where:{id: id}
