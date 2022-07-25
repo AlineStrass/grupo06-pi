@@ -160,9 +160,9 @@ const AdminController = {
                 imagem:req.file,
             },
         }
-        const categoria = await db.Categoria.findAll();
+        // const categoria = await db.Categoria.findAll();
         await db.Produto.create(cadastrarProdutos, 
-            { include: ["categoria", "imagem"] },{categoria: categoria})
+            { include: ["categoria", "imagem"] })
         console.log(cadastrarProdutos)
         res.redirect('/admin/produtos')
 
