@@ -11,6 +11,16 @@
             <form class="criar-conta" action="/clientes/acaoLogin" method="post">
                 <h2 class="login">Acesse sua conta</h2>
 
+                <% if(typeof(error) != "undefined"){ %>
+                    <div class="alert alert-danger">
+                        <% for(let i = 0; i < error.length; i++){ %>
+                            'Usuário e/ou senha não encontrado'
+                        <% } %>
+                    </div>
+                 <% } %> 
+                    
+                </div>
+
                 <div class="dados-cadastrais-conta">
                     <div class="campo-login">
                         <label class="inserir-dados-cadastro" for="email">E-mail:</label>
@@ -38,3 +48,6 @@
     </body>
 
     </html>
+
+
+    
