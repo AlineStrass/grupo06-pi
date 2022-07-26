@@ -1,6 +1,5 @@
 function carrinho () {
-    // var paragrafo = document.querySelector("#viewSessionSotorage");
-    // paragrafo.textContent =  localStorage.getItem('valueText');
+    
     const chaves = Object.keys(localStorage);
 
     console.log("valores das chavess:", chaves)
