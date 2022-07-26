@@ -29,46 +29,22 @@ const ClientesController = {
         })
         if (usuarioEncontrado != null) {
             let sucessoSenha = bcrypt.compareSync(senha, usuarioEncontrado.senha);
-            console.log(senha, usuarioEncontrado.senha)
-            console.log(sucessoSenha)
+
             if (sucessoSenha) {
                 req.session.logado = true;
                 req.session.idUsuario = usuarioEncontrado.id;
                 res.redirect('/painelUsuario');
 
             } else {
-                res.redirect('/clientes/login');
+                res.render('login', { error: ['Usuário e/ou senha não encontrado']});
+                return;
             }
 
         } else {
-            res.redirect('/clientes/login');
+            res.render('login', { error: ['Usuário e/ou senha não encontrado']});
+                return;
         }
     },
-
-    // ------ Pablo
-    // acaoLogin: async (req, res) => {
-    //     const { email, senha } = req.body;
-    //     const usuarioEncontrado = await db.Cliente.findOne({
-    //         where: { email: email }
-    //     });
-
-    //     if (usuarioEncontrado === null) {
-    //         res.render("login", {
-    //             error: "Usuário ou senha incorretos, por favor tente novamente."
-    //         });
-    //         return;
-    //     }
-
-    //     if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
-    //         res.render("login", {
-    //             error: "Usuário ou senha incorretos, por favor tente novamente."
-    //         });
-    //         return;
-    //     }
-
-    //     req.session.emailUsuario = usuarioEncontrado.email;
-    //     res.redirect("/painelUsuario");
-    // },
 
     login: function (req, res) {
         //acao login verificar se a senha esta certa, criptografar a senha
