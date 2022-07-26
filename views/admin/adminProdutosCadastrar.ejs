@@ -25,13 +25,13 @@
                                     <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
                                 </div>
 
-                                <!-- erro por causa da option -->
+                                
                                 <div>
                                     <label for="categoria">Categoria:</label>
                                     <select name="categoria" class="form-select" aria-label="Default select example">
                                         
                                         <%for(categoria of Categoria) {%>
-                                            <option value="<%=categoria.id%>">
+                                            <option value="<%=categoria.categoria%>">
                                                 <%=categoria.categoria%>
                                             </option>
                                         <% } %>

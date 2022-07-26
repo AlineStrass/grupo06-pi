@@ -15,8 +15,8 @@ router.get('/', ProdutosController.index);
 router.get('/search', ProdutosController.search);
 
 
-router.get('/produtointerno', ProdutosController.produtoInterno);
-router.get('/produtointerno/:id', ProdutosController.infoProduto);
+router.get('/produtointerno/:id', ProdutosController.produtoInterno);
+// router.get('/produtointerno/:id', ProdutosController.infoProduto);
 
 router.get('/listarCategorias/:id',ProdutosController.listarCategorias);
 

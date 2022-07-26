@@ -23,18 +23,25 @@ const PainelUsuarioController = {
         })
     },
     
-    // função que salva as infos - não está salvando no db
+    // função que salva as infos do cliente
     acaoEditarCadastro: async (req, res) => {
         const { id } = req.params;
-        const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body; 
-        console.log("aqui o ID:" , id)
-        console.log("req.body:" , req.body)
-        console.log("senha:",senha)
-        const resultado = await db.Cliente.update({
+        const { nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado } = req.body;
+        // console.log("aqui o ID:" , id)
+        // console.log("senha:",senha)
+        // console.log("infos cliente:", nomeCompleto, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
+        const resultado = await db.Cliente.update(
+            {
             nomeCompleto: nomeCompleto,
             email: email,
             telefone: telefone,
             senha: bcrypt.hashSync(req.body.senha),
+        },
+            {
+                where: { id: id }
+            },
+        )
+        const resultEndereco = await db.Endereco.update({ 
             cep: cep,
             rua: rua,
             numero: numero,
@@ -44,24 +51,26 @@ const PainelUsuarioController = {
             estado: estado,
         },
             {
-                where: { id: id }
-            })
+                where: { clientes_id: id }
+            },
+        )
+        console.log(resultEndereco)
         console.log(resultado)
         // mostra [1] para ok e [0] para erro
         res.redirect('/painelUsuario')
     },
 
-    //não esta deletando por causa do vinculo com a tabela de endereços
+    //ação deletar cadastro de cliente
     deletarCadastro: async (req, res) => {
+    console.log("entrou deletar cadastro")
         const {id} = req.params;
 
-        // const cadastroCliente = await db.Cliente.findAll({
-        //     where: {id: cadastroCliente.id}
-        // })
-        // await db.Endereco.destroy({where: {id: id}})
+        await db.Endereco.destroy({where: {clientes_id: id}})
+        // console.log("aqui é o id:", id)
 
-        await db.Cliente.destroy( {where: {id: id} } )
-
+        const resultado = await db.Cliente.destroy({ where:{id: id} })
+        // console.log("aqui é o resultado:", resultado)
+        req.session.logado = false
         res.redirect('/')
     },
 }

@@ -6,29 +6,37 @@
                 <div class="container">
                     <h1 class="title-admin">Painel administrativo</h1>
 
-                    <form action="/admin/editarProduto/<%=produto.id%>" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
+                    <form action="/admin/editarProduto/<%=Produto.id%>" method="POST" class="cadastroProdutos" enctype="multipart/form-data">
                         <fieldset>
                             <legend class="title-admin">Novo Produto</legend>
 
                             <div>
                                 <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome" value="<%= produto.nome %>" required>
+                                <input type="text" name="nome" id="nome" value="<%= Produto.nome %>" required>
                             </div>
 
                             <div>
                                 <label for="preco">Preço:</label>
-                                <input type="text" name="preco" id="preco" value="<%= produto.preco %>" required>
+                                <input type="text" name="preco" id="preco" value="<%= Produto.preco %>" required>
                             </div>
 
                             <div>
                                 <label for="descricao">Descrição:</label>
-                                <textarea name="descricao" id="descricao" cols="30" rows="5" value="<%= produto.descricao %>"></textarea>
+                                <textarea name="descricao" id="descricao" cols="30" rows="5" value="<%= Produto.descricao %>"></textarea>
                             </div>
 
                             
                             <div>
-                                <label for="descricao">Categoria:</label>
-                                <input type="text" name="descricao" id="descricao" value="" required>
+                                <label for="categoria">Categoria:</label>
+                                <select name="categoria" class="form-select" aria-label="Default select example">
+                                        
+                                    <%for(categoria of Categoria) {%>
+                                        <option value="<%=categoria.id%>">
+                                            <%=categoria.categoria%>
+                                        </option>
+                                    <% } %>
+                                    
+                                </select>
                             </div>
 
                             <div>
@@ -36,10 +44,13 @@
                                 <input type="file" name="imagemProduto" multiple/>
                             </div>
 
-                            <button type="submit" action="/admin/acaoEditarProduto/<%=produto.id%>" class="btn-cadastroProdutos">Cadastrar</button>
+                            <button type="submit" action="/admin/acaoEditarProduto/<%=Produto.id%>" class="btn-cadastroProdutos">Salvar</button>
+
+                            <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
+
                         </fieldset>
+                        
                     </form>
-                    <button class="btn-cadastroUsuarios"> <a href="/admin/produtos">Voltar</a> </button>
                 </div>
             </main>
     </body>

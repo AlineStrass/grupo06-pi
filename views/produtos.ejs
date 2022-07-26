@@ -5,27 +5,29 @@
     </head>
 
     <main class="produtos-container">
-        <section class="produtos-container-section" action="/produtos/listarCategorias" method="GET" enctype="multipart/form-data" 
-                 placeholder="Pesquise um produto" name="key">
-            
+        <section class="produtos-container-section" action="/produtos/listarCategorias" method="GET"
+            enctype="multipart/form-data" placeholder="Pesquise um produto" name="key">
+
             <% for(produto of Produto) { %>
                 <div class="produtos-container-card">
                     <a class="box-produtos" href="/produtos/produtointerno/<%= produto.id %>">
-                        
-                        <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
-                            <img src="/images/produtos/<%= produto.imagem.imagem %>"/>
+
+                        <div class="produtos-container-image" value="<%= produto.foto %>" id="produtos-img">
+                            <img src="/images/produtos/<%=produto.foto%> "width="50%"/>
                         </div>
 
-                        <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome"><%= produto.nome %></h3>
+                        <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">
+                            <%= produto.nome %>
+                        </h3>
 
                         <p class="produtos-container-info">
-                            <span value="<%= produto.preco %>" class='produtos-container-price'>
-                                <%= produto.preco %>
+                            <span value="<%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>" class='produtos-container-price'>
+                                <%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
                             </span>
                         </p>
                     </a>
                 </div>
-            <% } %>
+                <% } %>
         </section>
     </main>
 
