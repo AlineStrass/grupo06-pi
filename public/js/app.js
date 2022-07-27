@@ -7,7 +7,6 @@ let botaoComprar = document.querySelector('.botao-produto-interno').addEventList
     localStorage.setItem(nomeProduto,precoProduto) 
     // localStorage.se tItem("Latinha","50.00")
 
-   
 
 });
 
