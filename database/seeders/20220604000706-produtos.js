@@ -15,7 +15,7 @@ module.exports = {
         preco: 250,
         descricao: "Indicado para gatos; Mantém seu pet entretido e livre de estresse; Feito com material atóxico;",
         foto: "arranhador.png",
-        icategorias_id: 3
+        categorias_id: 3
       },
       {
         nome: "Ração Magnus Premium para Cães Filhotes Sabor Carne 10,1kg",
