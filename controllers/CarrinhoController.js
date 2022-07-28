@@ -4,12 +4,14 @@ const CarrinhoController = {
     index: (req, res) => {
         return res.render('carrinho')
     },
+
     finalizar: (req, res) => {
         return res.render('finalizar')
     },
+
     obrigado: (req, res) => {
         return res.render('obrigado')
-    }
+    },
 
 }
 

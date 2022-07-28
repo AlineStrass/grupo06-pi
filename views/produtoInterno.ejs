@@ -16,7 +16,10 @@
         cursor: pointer;
       }
 
-      h1, h2, h3, li {
+      h1,
+      h2,
+      h3,
+      li {
         color: #6A5495;
       }
     </style>
@@ -24,13 +27,13 @@
   </head>
 
   <body>
-    <section class="container sproduct my-5 pt-5" action="/produtos/produtointerno" method="GET">
+    <section class="container sproduct my-5 pt-5" action="/produtos/produtointerno/<%produto.id%>" method="GET">
       <div class="row mt-5">
         <!-- carregamento das imagens do produto -->
         <div class="col-lg-5 col-md-12 col-12">
-          <img class="img-fluid w-100 pb-1" src="/images/produtos/caixaTransporte5.png" id="MainImg" alt="">
+          <img class="img-fluid w-100 pb-1" src="/images/produtos/<%=produto.foto%>" id="MainImg" alt="">
 
-          <div class="small-img-group">
+          <!-- <div class="small-img-group">
             <div class="small-img-col px-1">
               <img src="/images/produtos/caixaTransporte5.png" width="100%" class="small-img" alt="">
             </div>
@@ -47,20 +50,25 @@
               <img src="/images/produtos/caixaTransporte1.png" width="100%" class="small-img" alt="">
             </div>
 
-          </div>
+          </div> -->
         </div>
 
-        
-          <div class="col-lg-6 col-md-12 col-12">
-            <h1 id="nomeProduto" class="py-2" value="<%= Produto.nome %>"><%= produto.nome %></h1>
-            <h3 class="mt-3 mb-3">Informações</h3>
-            <ul>
-              <li><%= produto.descricao %></li>
-            </ul>
-            <h2 id="price" class="price"><%= produto.preco %></h2>
-            <button class="botao-produto-interno">Adicionar ao carrinho</button>
-          </div>
-        
+        <div class="col-lg-6 col-md-12 col-12">
+          <h1 id="nomeProduto" class="py-2" value="<%= produto.nome %>">
+            <%= produto.nome %>
+          </h1>
+          <h3 class="mt-3 mb-3">Informações</h3>
+          <ul>
+            <li>
+              <%= produto.descricao %>
+            </li>
+          </ul>
+          <h2 id="price" class="price">
+            <%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
+          </h2>
+          <button class="botao-produto-interno">Adicionar ao carrinho</button>
+        </div>
+
       </div>
     </section>
 
@@ -72,7 +80,7 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"></script>
 
-    <script>
+    <!-- <script>
       var MainImg = document.getElementById('MainImg');
       var smallimg = document.getElementsByClassName('small-img');
 
@@ -96,8 +104,11 @@
         MainImg.src = smallimg[4].src;
       }
 
-    </script>
-    <script src="/js/app.js"></script>
+    </script> -->
+
+    <!-- <script type="text/javascript" src="/js/carrinho.js"></script> -->
+    <script type="text/javascript" src="/js/app.js"></script>
+
   </body>
 
   <%- include('./partials/footer') %>

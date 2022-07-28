@@ -43,9 +43,10 @@
             <section class="produtos-container-section" action="/produtos" method="GET" enctype="multipart/form-data">
                 <% for(produto of Produto) { %>
                     <div class="produtos-container-card">
-                        <a class="box-produtos" href="/produtos/produtointerno">
-                            <div class="produtos-container-image" value="<%= produto.imagem.imagem %>" id="produtos-img">
-                                <img src="/images/produtos/<%= produto.imagem.imagem %>"/>
+                        <a class="box-produtos" href="/produtos/produtointerno/<%= produto.id%> ">
+
+                            <div class="produtos-container-image" value="<%= produto.foto %>" id="produtos-img">
+                                <img src="/images/produtos/<%=produto.foto%> "width="50%"/>
                             </div>
     
                             <h3 class="produtos-container-title" value="<%= produto.nome %>" name="nome">
@@ -53,8 +54,8 @@
                             </h3>
     
                             <p class="produtos-container-info">
-                                <span value="<%= produto.preco %>" class='produtos-container-price'>
-                                    <%= produto.preco %>
+                                <span value="<%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>" class='produtos-container-price'>
+                                    <%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
                                 </span>
                             </p>
                         </a>
@@ -63,5 +64,5 @@
             </section>
         </main>
 
-
+        <script type="text/javascript" src="/js/app.js"></script>
     <%- include('./partials/footer') %>
