@@ -373,16 +373,16 @@ form button.login-cadastro:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    align-items: right;
+    align-content: right;
+    justify-content: right;
 }
 
 .produtos-container-card{
     width: 30%;
     display: flex;
     margin: 1% 1%;
-    padding: 15px;
+    padding: 50px;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
@@ -393,8 +393,9 @@ form button.login-cadastro:hover {
 }
 
 .produtos-container-image{
-    height: 350px;
-    width: 390px;
+    height: 225px;
+    width: 150px;
+       
     margin-bottom: 10px;
     background-position: center;
     background-size: cover;
@@ -402,7 +403,9 @@ form button.login-cadastro:hover {
 }
 
 #produtos-img{
-    width: 100%;
+    width: 120%;
+   
+
 }
 
 .produtos-container-title{
@@ -411,8 +414,8 @@ form button.login-cadastro:hover {
     border-left: 5px solid #403653;
     padding-left: 5px;
     font-size: 24px;
-    width: 100%;
-    height: 26px;
+    width: 90%;
+    height: 75px;
 }
 
 .produtos-container-price{ 
