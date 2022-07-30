@@ -36,7 +36,8 @@ function carrinho() {
 
         let quantidadeItens = document.createElement('th')
         quantidadeItens.innerHTML = chavesValores[i].quantidade;
-        quantidadeItens.id = "qnt" + i
+        quantidadeItens.id = "qnt" + i;
+        quantidadeItens.setAttribute("name", "quantidade");
 
         let botaoMenos = document.createElement('button');
         botaoMenos.innerHTML = "-";

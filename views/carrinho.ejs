@@ -1,8 +1,8 @@
 <%- include('./partials/header') %>
-<%- include('./partials/head') %>
+    <%- include('./partials/head') %>
 
-    <body onload="carrinho()">
-        <div class="row row-carrinho">
+        <body onload="carrinho()">
+            <div class="row row-carrinho" action="/painelUsuario/dadosCliente" method="GET">
                 <!------ carrinho lado direito - PRODUTOS    -------->
                 <div class="col-md-4 order-md-2 mb-4 cesta-produtos">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -24,10 +24,10 @@
                         </thead>
 
                         <tbody id="infosProdutos">
-                            
+
                         </tbody>
 
-                    </table> 
+                    </table>
 
                     <div>
                         <h5>Total: </h5>
@@ -79,16 +79,16 @@
                     <h4 class="mb-3">Dados da compra</h4>
                     <div class="row">
                         <div class="col-md-9 mb-3">
-                            <label for="primeiroNome">Nome </label>
-                            <input type="text" class="form-control" id="primeiroNome" placeholder="" value=""
-                                required="">
+                            <label for="nomeCompleto">Nome Completo </label>
+                            <input type="text" class="form-control" id="nomeCompleto"
+                                value="<%= Cliente.nomeCompleto %>" required>
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <div class="col-md-9 mb-3">
                             <label for="email">Email <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com">
+                            <input type="email" class="form-control" id="email" value="<%= Cliente.email %>" required>
                         </div>
                     </div>
 
@@ -100,30 +100,39 @@
                     <div class="row">
                         <div class="col-md-6 mb-3 cesta-pagamento">
                             <label for="cc-numero">Número do cartão </label>
-                            <input type="text" class="form-control" id="cc-numero" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-numero" placeholder="" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="cc-expiracao">Data de expiração</label>
-                            <input type="text" class="form-control" id="cc-expiracao" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-expiracao" placeholder="" required>
                         </div>
 
                         <div class="col-md-3 mb-3">
                             <label for="cc-cvv">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
                         </div>
                     </div>
 
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar</button>
+                    <form action="salvaCompra" method="POST">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">
+                            Finalizar
+                        </button>
 
                     </form>
+                </hr>
+
+
                 </div>
+
+
+
             </div>
         </body>
 
-    <script type="text/javascript" src="/js/carrinho.js"></script>
-    <script type="text/javascript" src="/js/limpaCarrinho.js"></script>
-<%- include('./partials/footer') %>
+        <script type="text/javascript" src="/js/carrinho.js"></script>
+        <script type="text/javascript" src="/js/limpaCarrinho.js"></script>
+        <%- include('./partials/footer') %>
