@@ -16,3 +16,4 @@ console.log("aqui preço:", preco)
 
 /* <script type="text/javascript" src="/js/preco.js"></script> */
 // toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
