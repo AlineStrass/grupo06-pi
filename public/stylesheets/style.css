@@ -684,7 +684,46 @@ input {
     
 }
 
+#tabela {
+    border: solid 1px #ced4da;
+    border-radius: 5px;
+    margin: 10px;
+}
 
+.divTotal {
+    display: flex;
+    color: #6A5482;
+    padding: 5px;
+}
+.totalGeralCarrinho {
+    margin-left: 20px;
+    color: #6A5482
+}
+
+.limpaCarrinho {
+    width: 190px;
+    height: 45px;
+}
+
+.botaoMaisMenos{
+    width: 30px;
+    height: 25px;
+    color: #6A5482;
+    background-color: #EFEFEF;
+    border: solid 1px #6A5482;
+    font-size: 20px bold;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.qntProduto {
+    margin: 10px;
+}
+
+/* .tr-carrinho {
+    border: solid 1px #6A5495;
+    border-radius: 5px;
+} */
 
 /*--- FINAL CARRINHO, FINALIZAR E OBRIGADO --*/
 
