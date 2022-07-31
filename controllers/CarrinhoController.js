@@ -36,10 +36,6 @@ const CarrinhoController = {
         // console.log("aqui o salvar", salvar)
     },
 
-    finalizar: (req, res) => {
-        return res.render('finalizar')
-    },
-
     obrigado: (req, res) => {
         return res.render('obrigado')
     },

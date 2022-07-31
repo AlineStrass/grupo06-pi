@@ -161,7 +161,10 @@ function carrinho() {
             .then((informacoes)=>{
                 console.log("aqui as informações",informacoes)
             })
+
+            localStorage.clear();
     })
+
 }
 
 // .toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
