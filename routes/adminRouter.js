@@ -33,24 +33,21 @@ router.post('/acaologin',AdminController.acaoLoginAdmin);
 router.get('/logout', AdminController.logout);
 
 // ADMIN
-router.get('/usuarios', AdminController.adminUsuarios);
-router.get('/usuariosCadastrar', AdminController.adminUsuariosCadastrar);
-router.post('/acaoCadastrarAdmin', AdminController.acaoCadastrarAdmin);
-router.get('/editar/:id', AdminController.editarAdmin);
-router.post('/editar/:id', AdminController.acaoEditarAdmin);
-router.get('/deletar/:id', AdminController.deletarAdmin);
-//AdminAutenticacao,
+router.get('/usuarios', AdminAutenticacao, AdminController.adminUsuarios);
+router.get('/usuariosCadastrar',AdminAutenticacao, AdminController.adminUsuariosCadastrar);
+router.post('/acaoCadastrarAdmin',AdminAutenticacao, AdminController.acaoCadastrarAdmin);
+router.get('/editar/:id',AdminAutenticacao, AdminController.editarAdmin);
+router.post('/editar/:id',AdminAutenticacao, AdminController.acaoEditarAdmin);
+router.get('/deletar/:id',AdminAutenticacao, AdminController.deletarAdmin);
+
 
 // PRODUTOS
-router.get('/produtos',  AdminController.adminProdutos);
-
-router.get('/produtosCadastrar', AdminController.adminProdutosCadastrar);
-router.post('/acaoCadastrarProdutos', upload.single('imagemProduto'), AdminController.acaoCadastrarProdutos);
-
-router.get('/editarProduto/:id', AdminController.editarProduto);
-router.post('/editarProduto/:id',upload.single('imagemProduto'), AdminController.acaoEditarProduto);
-
-router.get('/deletarProduto/:id', AdminController.deletarProduto);
+router.get('/produtos',AdminAutenticacao,  AdminController.adminProdutos);
+router.get('/produtosCadastrar',AdminAutenticacao, AdminController.adminProdutosCadastrar);
+router.post('/acaoCadastrarProdutos',AdminAutenticacao, upload.single('imagemProduto'), AdminController.acaoCadastrarProdutos);
+router.get('/editarProduto/:id',AdminAutenticacao, AdminController.editarProduto);
+router.post('/editarProduto/:id',AdminAutenticacao,upload.single('imagemProduto'), AdminController.acaoEditarProduto);
+router.get('/deletarProduto/:id',AdminAutenticacao, AdminController.deletarProduto);
 
 
 
