@@ -1,10 +1,10 @@
 <%- include('./partials/header') %>
-<%- include('./partials/head') %>
+    <%- include('./partials/head') %>
 
-    <body onload="carrinho()">
-        <div class="row">
+        <body onload="carrinho()">
+            <div class="row row-carrinho" action="/painelUsuario/dadosCliente" method="GET">
                 <!------ carrinho lado direito - PRODUTOS    -------->
-                <div class="col-md-4 order-md-2 mb-4">
+                <div class="col-md-4 order-md-2 mb-4 cesta-produtos">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <!--CENTRALIZAR DIV CARRINHO, E TEXTOS-->
                         <h4 class="mb-3">Seu carrinho</h4>
@@ -16,16 +16,29 @@
                             <tr>
                                 <th>Produto</th>
                                 <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>-</th>
+                                <th>+</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
 
                         <tbody id="infosProdutos">
-                            
+
                         </tbody>
 
-                    </table> 
+                    </table>
 
+                    <div>
+                        <h5>Total: </h5>
+                        <h5 class="totalGeralCarrinho"> </h5>
+                    </div>
 
+                    <div>
+                        <button class="limpaCarrinho btn btn-primary btn-lg btn-block">
+                            Esvaziar Carrinho
+                        </button>
+                    </div>
 
                     <!-- lista Bia -->
                     <!-- <ul class="list-group mb-3">
@@ -61,20 +74,20 @@
 
                 <!--dados do comprador /-->
 
-                <div class="col-md-8 order-md-1">
+                <div class="col-md-8 order-md-1 cesta-cliente">
                     <h4 class="mb-3">Dados da compra</h4>
                     <div class="row">
                         <div class="col-md-9 mb-3">
-                            <label for="primeiroNome">Nome </label>
-                            <input type="text" class="form-control" id="primeiroNome" placeholder="" value=""
-                                required="">
+                            <label for="nomeCompleto">Nome Completo </label>
+                            <input type="text" class="form-control" id="nomeCompleto"
+                                value="<%= Cliente.nomeCompleto %>" required>
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <div class="col-md-9 mb-3">
                             <label for="email">Email <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com">
+                            <input type="email" class="form-control" id="email" value="<%= Cliente.email %>" required>
                         </div>
                     </div>
 
@@ -84,31 +97,40 @@
                     <div class="d-block my-3"> </div>
 
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 cesta-pagamento">
                             <label for="cc-numero">Número do cartão </label>
-                            <input type="text" class="form-control" id="cc-numero" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-numero" placeholder="" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="cc-expiracao">Data de expiração</label>
-                            <input type="text" class="form-control" id="cc-expiracao" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-expiracao" placeholder="" required>
                         </div>
 
                         <div class="col-md-3 mb-3">
                             <label for="cc-cvv">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
                         </div>
                     </div>
 
+                    <!-- action="salvaCompra" method="POST"  -->
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar</button>
-
+                    <form >
+                        <button id="finalizarCompra" class="btn btn-primary btn-lg btn-block" type="submit">
+                            <a href="/obrigado"> Finalizar </a>
+                        </button>
                     </form>
+                </hr>
+
+
                 </div>
+
             </div>
         </body>
 
-    <script type="text/javascript" src="/js/carrinho.js"></script>
-<%- include('./partials/footer') %>
+        <script type="text/javascript" src="/js/carrinho.js"></script>
+        <script type="text/javascript" src="/js/limpaCarrinho.js"></script>
+        <!-- <script type="text/javascript" src="/js/salvaCompra.js"></script> -->
+        <%- include('./partials/footer') %>

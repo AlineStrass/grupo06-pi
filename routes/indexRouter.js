@@ -14,9 +14,12 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 router.get('/', HomeController.index);
 
 router.get('/carrinho', CarrinhoController.index);
+router.post('/salvaCompra', CarrinhoController.salvaCompra);
+
 router.get('/finalizar', CarrinhoController.finalizar);
 router.get('/obrigado', CarrinhoController.obrigado);
 
 
-
 module.exports = router;
+
+

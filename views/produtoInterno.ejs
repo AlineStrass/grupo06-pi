@@ -32,7 +32,6 @@
         <!-- carregamento das imagens do produto -->
         <div class="col-lg-5 col-md-12 col-12">
           <img class="img-fluid w-100 pb-1" src="/images/produtos/<%=produto.foto%>" id="MainImg" alt="">
-
           <!-- <div class="small-img-group">
             <div class="small-img-col px-1">
               <img src="/images/produtos/caixaTransporte5.png" width="100%" class="small-img" alt="">
@@ -66,8 +65,18 @@
           <h2 id="price" class="price">
             <%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
           </h2>
-          <button class="botao-produto-interno">Adicionar ao carrinho</button>
+          <button onclick="acaoModal()" class="botao-produto-interno">Adicionar ao carrinho</button>
+          
         </div>
+
+       
+        <div class="msg-modal-carrinho">
+
+          <div onclick="fecharModal()" class="fecharModal">Fechar</div>
+        </div>
+     
+
+
 
       </div>
     </section>
@@ -106,7 +115,8 @@
 
     </script> -->
 
-    <!-- <script type="text/javascript" src="/js/carrinho.js"></script> -->
+       
+    <script type="text/javascript" src="/js/modalCarrinho.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
 
   </body>

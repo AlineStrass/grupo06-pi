@@ -150,9 +150,9 @@ const AdminController = {
             descricao: req.body.descricao,
             foto: req.file.filename,
             categorias_id: req.body.categorias_id
-            
+
         }
-        console.log("categoria-id:", cadastrarProdutos)
+        // console.log("categoria-id:", cadastrarProdutos)
         const categoria = await db.Categoria.findAll();
         await db.Produto.create(cadastrarProdutos,
             { include: ["categoria"] })
