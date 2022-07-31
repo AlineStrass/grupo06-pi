@@ -22,18 +22,19 @@ function carrinho() {
 
     let tabela = document.getElementById('infosProdutos');
 
-
     for (let i = 0; i < chavesValores.length; i++) {
         let tr = document.createElement('tr');
         tabela.appendChild(tr);
 
         let thChave = document.createElement('th');
         thChave.innerHTML = chavesValores[i].chave;
+        thChave.setAttribute("name", "nomeProduto");
 
         let thValor = document.createElement('th');
         let formatarValor = chavesValores[i].valor;
-        thValor.innerHTML = "R$ " + formatarValor.toFixed(2)
-
+        thValor.innerHTML = "R$ " + formatarValor.toFixed(2);
+        thValor.setAttribute("name", "valor");
+       
         let quantidadeItens = document.createElement('th')
         quantidadeItens.innerHTML = chavesValores[i].quantidade;
         quantidadeItens.id = "qnt" + i;
@@ -100,6 +101,7 @@ function carrinho() {
         totalItem.id = "totalItem" + i;
         let formataValor = chavesValores[i].totalDoItem;
         totalItem.innerHTML = "R$ " + formataValor.toFixed(2);
+        totalItem.setAttribute("name", "totalItem");
         
 
         tr.appendChild(thChave);
@@ -125,6 +127,7 @@ function carrinho() {
 
         let totalGeralCarrinho = document.querySelector('.totalGeralCarrinho');
         totalGeralCarrinho.innerHTML = "R$ " + somaCarrinho.toFixed(2)
+        totalGeralCarrinho.setAttribute("name", "totalGeralCarrinho");
 
 
         // let tr = document.createElement('tr');
@@ -141,6 +144,24 @@ function carrinho() {
         console.log("soma:", somaCarrinho)
     }
     somaTotalCarrinho()
+
+    
+    let finalizarCompra = document.getElementById('finalizarCompra').addEventListener("click", function () {
+        console.log('clicou')
+        console.log("aqui o finalzer carrinho", chavesValores)
+        let settings = {
+            "method": "POST",
+            "headers": {"content-type": "application/JSON"},
+            "body": JSON.stringify(chavesValores)
+        }
+        fetch("http://localhost:3300/salvaCompra", settings)
+            .then((response)=>{
+                return response.json()
+            })
+            .then((informacoes)=>{
+                console.log("aqui as informações",informacoes)
+            })
+    })
 }
 
 // .toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})

@@ -35,11 +35,10 @@
                     </div>
 
                     <div>
-                        <button class="limpaCarrinho">
+                        <button class="limpaCarrinho btn btn-primary btn-lg btn-block">
                             Esvaziar Carrinho
                         </button>
                     </div>
-
 
                     <!-- lista Bia -->
                     <!-- <ul class="list-group mb-3">
@@ -116,23 +115,22 @@
                         </div>
                     </div>
 
+                    <!-- action="salvaCompra" method="POST"  -->
                     <hr class="mb-4">
-                    <form action="salvaCompra" method="POST">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">
-                            Finalizar
+                    <form >
+                        <button id="finalizarCompra" class="btn btn-primary btn-lg btn-block" type="submit">
+                            <a href="/obrigado"> Finalizar </a>
                         </button>
-
                     </form>
                 </hr>
 
 
                 </div>
 
-
-
             </div>
         </body>
 
         <script type="text/javascript" src="/js/carrinho.js"></script>
         <script type="text/javascript" src="/js/limpaCarrinho.js"></script>
+        <!-- <script type="text/javascript" src="/js/salvaCompra.js"></script> -->
         <%- include('./partials/footer') %>

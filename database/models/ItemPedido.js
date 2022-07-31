@@ -10,10 +10,10 @@ module.exports = (sequelize, DataType) => {
         produtos_id: DataType.INTEGER,
         pedidos_id: DataType.INTEGER,
 
-        pedidos_id: { /* (manter _id?) */
+        pedidos_id: {
             type: DataType.INTEGER
         },
-        produtos_id: { /* (manter _id?) */
+        produtos_id: {
             type: DataType.INTEGER,
         }
     },
@@ -22,13 +22,13 @@ module.exports = (sequelize, DataType) => {
             timestamps: false
         });
 
-    ItemPedido.associate = (listaDeModelos) => {
-        ItemPedido.belongsTo(listaDeModelos.Produto, {
-            foreignKey: 'produtos_id',
-            as: 'produtos'
-        });
+    // ItemPedido.associate = (listaDeModelos) => {
+    //     ItemPedido.belongsTo(listaDeModelos.Produto, {
+    //         foreignKey: 'produtos_id',
+    //         as: 'produtos'
+    //     });
 
-    };
+    // };
 
     return ItemPedido;
 }
