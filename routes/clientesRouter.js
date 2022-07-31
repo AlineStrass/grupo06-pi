@@ -8,9 +8,6 @@ const session = require('express-session');
 //CONTROLLERS
 var ClientesController = require('../controllers/ClientesController');
 
-//MIDDLEWARES
-const loginMiddleware = require('../middlewares/loginMiddleware');
-
 //ROTAS
 router.get('/', ClientesController.index);
 router.get('/login', ClientesController.paginaLogin);
@@ -20,7 +17,5 @@ router.get('/logout', ClientesController.logout);
 
 router.get('/criarconta', ClientesController.criarConta);
 router.post('/acaoCadastrar', ClientesController.acaoCadastrar);
-
-
 
 module.exports = router;

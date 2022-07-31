@@ -11,12 +11,12 @@ var CarrinhoController = require("../controllers/CarrinhoController");
 
 
 //ROTAS
+//HOME
 router.get('/', HomeController.index);
 
+//CARRINHO DE COMPRAS
 router.get('/carrinho', CarrinhoController.index);
 router.post('/salvaCompra', CarrinhoController.salvaCompra);
-
-router.get('/finalizar', CarrinhoController.finalizar);
 router.get('/obrigado', CarrinhoController.obrigado);
 
 

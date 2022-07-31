@@ -18,7 +18,7 @@ function carrinho() {
         console.log("total dos itens inicio:", typeof (totalDoItem), totalDoItem)
         chavesValores.push({ chave, valor, quantidade, totalDoItem })
     }
-    console.log("chave e valores do for:", chavesValores)
+    // console.log("chave e valores do for:", chavesValores)
 
     let tabela = document.getElementById('infosProdutos');
 
@@ -29,20 +29,24 @@ function carrinho() {
         let thChave = document.createElement('th');
         thChave.innerHTML = chavesValores[i].chave;
         thChave.setAttribute("name", "nomeProduto");
+        thChave.className = "nomeProduto";
 
         let thValor = document.createElement('th');
         let formatarValor = chavesValores[i].valor;
         thValor.innerHTML = "R$ " + formatarValor.toFixed(2);
         thValor.setAttribute("name", "valor");
+        thValor.className = "valorProduto";
        
         let quantidadeItens = document.createElement('th')
         quantidadeItens.innerHTML = chavesValores[i].quantidade;
         quantidadeItens.id = "qnt" + i;
+        quantidadeItens.className = "qntProduto"
         quantidadeItens.setAttribute("name", "quantidade");
+
 
         let botaoMenos = document.createElement('button');
         botaoMenos.innerHTML = "-";
-        botaoMenos.style.width = "20px";
+        botaoMenos.className = "botaoMaisMenos";
         botaoMenos.addEventListener("click", function () {
             let qnt = chavesValores[i].quantidade;
             if (qnt >= 1) {
@@ -68,9 +72,10 @@ function carrinho() {
             }
         })
 
+
         let botaoMais = document.createElement('button');
         botaoMais.innerHTML = "+";
-        botaoMais.style.width = "20px";
+        botaoMais.className = "botaoMaisMenos";
         botaoMais.addEventListener("click", function () {
             let qnt = chavesValores[i].quantidade;
             console.log("tyoeof do + :", typeof (qnt), qnt)
@@ -96,21 +101,19 @@ function carrinho() {
             somaTotalCarrinho()
         })
 
-
         let totalItem = document.createElement('th');
         totalItem.id = "totalItem" + i;
         let formataValor = chavesValores[i].totalDoItem;
         totalItem.innerHTML = "R$ " + formataValor.toFixed(2);
         totalItem.setAttribute("name", "totalItem");
+        totalItem.className = "totalItem"
         
-
         tr.appendChild(thChave);
         tr.appendChild(thValor);
         tr.appendChild(quantidadeItens);
         tr.appendChild(botaoMenos);
         tr.appendChild(botaoMais);
         tr.appendChild(totalItem);
-
     }
 
     function somaTotalCarrinho() {
@@ -129,19 +132,7 @@ function carrinho() {
         totalGeralCarrinho.innerHTML = "R$ " + somaCarrinho.toFixed(2)
         totalGeralCarrinho.setAttribute("name", "totalGeralCarrinho");
 
-
-        // let tr = document.createElement('tr');
-        // tabela.appendChild(tr);
-
-        // let total = document.createElement('th');
-        // total.innerHTML = "Total: ";
-
-        // let soma = document.createElement('th');
-        // soma.innerHTML = somaCarrinho.toFixed(2);
-
-        // tr.appendChild(total);
-        // tr.appendChild(soma);
-        console.log("soma:", somaCarrinho)
+        // console.log("soma:", somaCarrinho)
     }
     somaTotalCarrinho()
 
@@ -161,7 +152,8 @@ function carrinho() {
             .then((informacoes)=>{
                 console.log("aqui as informações",informacoes)
             })
-    })
-}
 
-// .toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            localStorage.clear();
+    })
+
+}
