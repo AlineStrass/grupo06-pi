@@ -12,9 +12,9 @@ var ProdutosController = require("../controllers/ProdutosController");
 
 //ROTAS
 router.get('/', ProdutosController.index);
-router.get('/search', ProdutosController.search);
 router.get('/produtointerno/:id', ProdutosController.produtoInterno);
 router.get('/listarCategorias/:id',ProdutosController.listarCategorias);
+router.get('/search', ProdutosController.search);
 
 
 

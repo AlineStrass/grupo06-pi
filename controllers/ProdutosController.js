@@ -30,11 +30,11 @@ const ProdutosController = {
         let produtos = await db.Produto.findAll({
             where:{
                 nome:{
-                    [Op.like]:'%{key}%'
+                    [Op.like]:`%${key}%`
                 }
             }
         });
-        return res.render('produtos',{produtos} )
+        return res.render('produtos',{Produto: produtos} )
     },
  
     //tras os produtos por categoria no menu do header - ok
