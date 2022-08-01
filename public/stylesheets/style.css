@@ -6,6 +6,7 @@
 }
 
 body {
+    margin-top: 230px !important;
     font-family: 'Confortaa', cursiva;
     background: #EFEFEF;
 } 
@@ -89,6 +90,7 @@ h1.admin {
 /* ------- PAGINA HOME -----------------------*/
 .banner-home {
     overflow-x: hidden;
+    
 }
 
 h1.home, li.home {
@@ -98,7 +100,7 @@ h1.home, li.home {
 /* carrossel */
 
     .carrossel-home{
-        margin-top: 15px;
+        margin-top: 230px !important;
         margin: 0 auto;
         box-shadow: 2px 2px 4px black; 
         overflow: hidden;
@@ -275,6 +277,11 @@ input.inserir-dados-cadastro {
     border: none;
     display: block;
     padding: 10px 70px;
+
+}
+
+input:invalid {
+ border: 1px solid;
 }
 
 #datanascimento {
@@ -362,12 +369,14 @@ form button.login-cadastro:hover {
 /*--------------- P�gina DE PRODUTOS ----------------*/
 
 .produtos-container{
+   
     background-color: #EFEFEF;
     min-height: 60vh;
     padding: 50px;
 }
 
 .produtos-container-section{
+
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -448,8 +457,11 @@ form button.login-cadastro:hover {
     margin: 0;
 }
 
-/* ----------- CSS de FINALIZAR, OBRIGADO e CARRINHO  --------- */
+/* ----------- CSS OBRIGADO e CARRINHO  --------- */
+
+
 section.finalizacao { 
+   
     background-color: #6A5495;
     padding: 30px 0;
     border-bottom: 2px solid #FF8CB7;
@@ -457,6 +469,7 @@ section.finalizacao {
 }
 
 .center-finalizacao{
+    margin-top: 230px !important;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 13%;
