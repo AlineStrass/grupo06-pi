@@ -8,14 +8,14 @@ function carrinho() {
     let chavesValores = [];
     for (let i = 0; i < chaves.length; i++) {
         let chave = chaves[i]
-        console.log("chave:", chave)
+        // console.log("chave:", chave)
         valorStorage = (localStorage.getItem(chave))
         valorParaConversao = valorStorage.replace(",", ".").replace("R$", "");
         valor = parseFloat(valorParaConversao)
-        console.log("type of do valor individual:", typeof (valor), valor)
+        // console.log("type of do valor individual:", typeof (valor), valor)
         quantidade = 1;
         totalDoItem = valor * quantidade
-        console.log("total dos itens inicio:", typeof (totalDoItem), totalDoItem)
+        // console.log("total dos itens inicio:", typeof (totalDoItem), totalDoItem)
         chavesValores.push({ chave, valor, quantidade, totalDoItem })
     }
     // console.log("chave e valores do for:", chavesValores)
