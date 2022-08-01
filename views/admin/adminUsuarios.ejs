@@ -2,9 +2,9 @@
 
   <%- include('../partials/head') %>
 
-    <body style="display: flex; height: 50vh; justify-content: center; flex-direction: column;">
+    <body>
       <form action="/admin/adminUsuarios" method="GET" class="cadastroUsuarios">
-        <div class="container">
+        <div class="container" style="display: flex; justify-content: center; flex-direction: column;">
           <div class="row">
             <div class="col-12 text-center">
               <h1 class="title-admin">Painel administrativo</h1>
@@ -41,13 +41,12 @@
                       <%= admin.senha %>
                     </td>
 
-                    <td class="acoes-btn">
+                    <td class="acoes-btn"  style="display: flex; grid-gap: 0 20px;">
                       <a class="btn btn-primary btn-admin" href="/admin/editar/<%=admin.id%>" class="acoes-btn-editar"
                         style="width: 135px;">Editar</a>
 
                       <form action="/admin/deletar/<%=admin.id%>" method="GET">
-                        <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar"
-                          style="width: 135px;">Excluir</button>
+                        <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar">Excluir</button>
                       </form>
                     </td>
                   </tr>
@@ -56,7 +55,7 @@
 
             </table>
 
-            <a href="/admin/usuariosCadastrar" class="btn btn-primary">Adicionar novo</a>
+            <a href="/admin/usuariosCadastrar" class="btn btn-primary" style="margin-right: 10px;">Adicionar novo</a>
             <a href="/admin" class="btn btn-primary">Voltar</a>
           </div>
 

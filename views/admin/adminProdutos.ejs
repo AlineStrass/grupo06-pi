@@ -2,9 +2,9 @@
 <%- include('../partials/headerAdmin') %>
 
 
-    <body style="display: flex; height: 100vh; justify-content: center; flex-direction: column;">
+    <body>
       <form action="/admin/adminProdutos" method="GET" class="cadastroProdutos" enctype="multipart/form-data">
-        <div class="container">
+        <div class="container" style="display: flex; justify-content: center; flex-direction: column;">
           <div class="row">
             <div class="col-12 text-center">
               <h1 class="title-admin">Painel administrativo</h1>
@@ -58,14 +58,12 @@
                         <img src="/images/produtos/<%=produto.foto%> " width="90px"/>
                     </td>
 
-                    <td class="acoes-btn">
+                    <td class="acoes-btn;" style="display: flex; grid-gap: 0 20px;">
 
-                      <a class="btn btn-primary btn-editar" href="/admin/editarProduto/<%=produto.id%>"
-                        style="width: 135px;margin-top: 10px;">Editar</a>
+                      <a class="btn btn-primary btn-editar" href="/admin/editarProduto/<%=produto.id%>">Editar</a>
 
                       <form action="/admin/deletarProduto/<%=produto.id%>" method="GET">
-                        <button type="submit" class=" btn btn-primary btn-adin acoes-btn-editar"
-                          style="width: 135px;">Excluir</button>
+                        <button type="submit" class=" btn btn-primary btn-adin acoes-btn-excluir">Excluir</button>
                       </form>
                     </td>
 
@@ -75,7 +73,7 @@
 
             </table>
 
-            <a href="/admin/produtosCadastrar" class="btn btn-primary">Adicionar novo</a>
+            <a href="/admin/produtosCadastrar" class="btn btn-primary" >Adicionar novo</a>
             <a href="/admin" class="btn btn-primary">Voltar</a>
           </div>
         </div>
