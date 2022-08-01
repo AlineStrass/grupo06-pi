@@ -655,7 +655,7 @@ input {
     /* width: 900px; */
     height: 70px;
     background-color: #FF8CB7;
-    opacity: 0.8;
+    opacity: 0.9;
     font-weight: bold;
     font-size: 30px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
@@ -664,17 +664,12 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border-radius: 10px; */
-    /* align-items: center;
-    justify-content: center; */
     display: none;
     /* transition-property: display;
     transition-duration: 2s;  */
     animation: animate;
     animation-duration: 800ms;
-
-   
-   
+  
    
 }
 /* .msg-modal-carrinho:hover {
@@ -715,18 +710,26 @@ input {
 }
 
 .botaoMaisMenos{
-    width: 30px;
-    height: 25px;
+    width: 40px;
+    height: 35px;
     color: #6A5482;
     background-color: #EFEFEF;
     border: solid 1px #6A5482;
     font-size: 20px bold;
     border-radius: 5px;
     margin: 5px;
+    /* justify-content: center; */
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 .qntProduto {
     margin: 10px;
+    text-align: center;
+}
+
+.totalItem {
+    text-align: center;
 }
 
 /* .tr-carrinho {
