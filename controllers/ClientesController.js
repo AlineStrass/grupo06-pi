@@ -21,7 +21,6 @@ const ClientesController = {
         return res.render('login')
     },
 
-    //antigo do projeto -funcionando
     acaoLogin: async (req, res) => {
         const { email, senha } = req.body;
         const usuarioEncontrado = await db.Cliente.findOne({
@@ -34,7 +33,6 @@ const ClientesController = {
                 req.session.logado = true;
                 req.session.idUsuario = usuarioEncontrado.id;
                 res.redirect('/painelUsuario');
-
             } else {
                 res.render('login', { error: ['Usuário e/ou senha não encontrado']});
                 return;

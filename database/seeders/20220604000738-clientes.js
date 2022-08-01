@@ -6,17 +6,15 @@ module.exports = {
     await queryInterface.bulkInsert('clientes', [
       {
         id: 1,
+        nomeCompleto: "Fulano de Tal",
         email: "meuemail@email.com",
         telefone: "156654824574",
-        nomeCompleto: "Fulano de tal",
-        endereco: "rua dos bobos",
-        numero: "4455",
-        complemento: "135153",
-        cep: "022551541",
+        nomeCompleto: "Fulano de tal"
+        dataDeNascimento: "1999-12-01"
+        endereco: "rua dos bobos"
+        cpf: "0251487745",
         senha: "$2a$10$1A6DngQgxqlcY8ApP/H9oeohMGsggzyxvlpO2e6EH74TesalXjQke"
       },
-      
-
     ])
 
   },
