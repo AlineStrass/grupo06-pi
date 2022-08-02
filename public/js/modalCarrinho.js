@@ -3,13 +3,8 @@ function acaoModal(){
 
     msgModal.innerHTML = "Produto adicionado ao carrinho"
     msgModal.style.display = 'block';
-    // msgModal.style.transitionDuration = "2s";
+    setTimeout(function(){
+        msgModal.style.display = "none";
+    },2000)
+
 }
-
-
-function fecharModal(){
-    let msgModal = document.querySelector('.fecharModal')
-
-    msgModal.style.display = 'none'
-}
-
