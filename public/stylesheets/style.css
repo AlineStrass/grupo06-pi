@@ -384,11 +384,11 @@ form button.login-cadastro:hover {
     flex-wrap: wrap;
     align-items: right;
     align-content: right;
-    justify-content: right;
+    justify-content: space-around;
 }
 
 .produtos-container-card{
-    width: 30%;
+    width: 400px;
     display: flex;
     margin: 1% 1%;
     padding: 50px;
@@ -1019,13 +1019,15 @@ main.admin .cadastroProdutos{
 }
 
 /*MEDIA pagina HOME*/
-@media (max-width: 800px) {
+@media (max-width: 756px) {
     section.lofts article {
         margin: 10px;
     }
 
     .container {
         padding: 0 15px;
+        align-items: center;
+        justify-content: center;
     }
 
 }
