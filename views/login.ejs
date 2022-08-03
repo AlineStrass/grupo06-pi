@@ -12,7 +12,8 @@
                 <h2 class="login">Acesse sua conta</h2>
 
                 <% if(typeof(error) != "undefined"){ %>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger" style="width: 350px; height: 40px; margin: auto; display: flex; 
+                                 justify-content: space-around; align-items: center;">
                         <% for(let i = 0; i < error.length; i++){ %>
                             'Usuário e/ou senha não encontrado'
                         <% } %>
