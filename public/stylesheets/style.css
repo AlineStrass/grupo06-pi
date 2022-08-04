@@ -609,8 +609,9 @@ section.escolher-carrinho{
     padding: 0 10px;
 }
 
+
 /*ver onde puxa estes 'difencial-single' */
-.diferencial-single {
+/*.diferencial-single {
     border-radius: 10px;
     background-color: #EFEFEF;
     width: 20%;
@@ -630,10 +631,65 @@ section.escolher-carrinho{
     margin: 10px 0;
     font-size: 15px;
 }
+*/
 
-.main__cta-obrigado h2 p {
-    color: #6A5495;
+.body-obrigado {
+    background-color: #EFEFEF;
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
 }
+#h1, h2, h3, h5.obrigado {
+    padding: 0px 0px 15px;
+    margin-top: 0px;
+    color: #EFEFEF
+}
+
+.obrigado h4{
+    padding: 0px 0px 15px;
+    margin-top: 0px;
+    color: #EFEFEF;
+    background-color: #ED5EDD;
+    border-radius: 10px;
+    width: 100px;
+    margin: auto;
+    padding-top: 10px;
+    }
+
+
+main.obrigado-final {
+    background-color: #6A5495;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-size: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    width: 1000px;
+    margin: 5px auto;
+}
+
+main form.obrigado-fim {
+   
+        align-content: space-between;
+        background-color: #6A5495;
+        color: #EFEFEF;
+        margin: 5px auto;
+        text-align: center;
+        padding: 90px;
+        display: block;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
+        border-radius: 5px;
+    
+}
+
 
 article p {
     color: #6A5495;
@@ -773,12 +829,23 @@ h6.text{ color: #6A5482}
     margin-bottom: 30px;
 }
 
-#submit-button{
+.btn.btn-primary-user{
+    width: 150px;
+    background-color: #6A5495;
+    border: none;
+    flex-direction: column;
+    align-items: stretch;
+    color: white;
+    
+}
+
+/*#submit-button{
     padding: 1px 20px;
     border-radius: 4px;
     background-color: #6A5495;
     border: none;
-}
+} */
+
 #submit-button:hover{
     background-color: #4d3a74;
 }
@@ -809,19 +876,13 @@ th, td {
 }
 
 /*--------------- CSS P�GINAS ADMINISTRATIVAS -------------- */
-
-/* ADMIN */
  
-  .btn.btn-primary {
-   border: none;
-   background-color: #6A5495;
-   }
 /* Se quiser aumentar o tamanho do card adicionar padding no card body, descomentando codigo abaixo por exemplo */
 /* .card-body
   padding: 50px;
  */
 
- /* ADMIN PRODUTOS e USUARIOS*/
+ /* ADMIN, ADMIN PRODUTOS e ADMIN USUARIOS*/
 
  .title-admin{
     color: #6A5495;
@@ -829,9 +890,13 @@ th, td {
 }
 
 .btn.btn-primary{
-    width: 250px;
+    width: 150px;
     background-color: #6A5495;
     border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
 }
 
 /* ADMIN USUARIOS e PRODUTOS cadastrar */
@@ -864,6 +929,7 @@ main.admin .cadastroProdutos{
     padding: 10px 30px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
    }
    
    main.admin .cadastroProdutos{
@@ -928,10 +994,6 @@ main.admin .cadastroProdutos{
    
    .admin {
     color:#6A5495;
-   }
-
-   .acoes-btn {
-    width: 300px;
    }
 
    select {
