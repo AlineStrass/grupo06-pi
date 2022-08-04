@@ -26,6 +26,7 @@ var upload = multer({
 // const upload = multer({storage: multerDiskStorage});
 
 // LOGIN E ROTA PRINCIPAL
+
 router.get('/', AdminController.index);
 router.get('/login', AdminController.adminLogin);
 router.get('/efetuar',AdminController.efetuarLogin);

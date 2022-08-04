@@ -23,7 +23,7 @@
                 <tr>
                   <th class="admin" scope="col">ID</th>
                   <th class="admin" scope="col">Username</th>
-                  <th class="admin" scope="col">Senha</th>
+                  <!-- <th class="admin" scope="col">Senha</th> -->
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -34,12 +34,10 @@
                     <td class="admin" scope="row">
                       <%= admin.id %>
                     </td>
-                    <td class="admin">
+                    <td class="admin" style="width: 50%;">
                       <%= admin.username %>
                     </td>
-                    <td class="admin">
-                      <%= admin.senha %>
-                    </td>
+                    
               
                     <td class="acoes-btn" style="display: flex; grid-gap: 0 20px; padding-left: 70px;" >
                       <a class="btn btn-primary btn-admin" href="/admin/editar/<%=admin.id%>" class="acoes-btn-editar"

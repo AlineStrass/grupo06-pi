@@ -122,8 +122,8 @@ function carrinho() {
 
         for (let i = 0; i < chavesValores.length; i++) {
             let subtotal = chavesValores[i].totalDoItem;
-            console.log("valor:", typeof (subtotal), subtotal)
-            console.log("somaCarrinho:", somaCarrinho)
+            // console.log("valor:", typeof (subtotal), subtotal)
+            // console.log("somaCarrinho:", somaCarrinho)
 
             somaCarrinho += subtotal
         }
