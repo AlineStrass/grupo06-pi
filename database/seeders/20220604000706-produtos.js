@@ -49,13 +49,13 @@ module.exports = {
         nome: "Ração Úmida Whiskas Sachê para Gatos",
         preco: 2.99,
         descricao: "Indicada para gatos; Refeição completa e balanceada;",
-        foto: "whiskas-gato-lata.png",
+        foto: "wiskas-gato-lata.png",
         categorias_id: 2
       },
       {
         nome: "Areia Higiênica para Gatos Viva Verde",
         preco: 59.99,
-        descricao: "Areia preferida do encantador de gatos, jackson galaxy; Melhor rendimento; Sem poeira; Eliminação imediata e duradoura do odor da urina;",
+        descricao: "Areia preferida do encantador de gatos, jackson galaxy; Melhor rendimento; Sem poeira; Eliminação imediata e duradoura do odor da urina;;",
         foto: "viva-verde.PNG",
         categorias_id: 4
       },
